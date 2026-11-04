@@ -1,0 +1,14 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "F": "minecraft:oak_fence",
+  "#": "minecraft:iron_chain"
+ },
+ "pattern": [
+  "F#F"
+ ],
+ "result": {
+  "id": "deepworld:spit"
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "replace": false,
+ "values": [
+  "deepworld:clay_pot",
+  "deepworld:iron_pot",
+  "deepworld:mantle_pot",
+  "deepworld:iron_skillet",
+  "deepworld:brick_oven",
+  "deepworld:smokehouse",
+  "deepworld:crock",
+  "deepworld:drying_rack",
+  "deepworld:still",
+  "deepworld:ice_box",
+  "deepworld:spit",
+  "deepworld:cutting_board",
+  "deepworld:mill",
+  "deepworld:churn",
+  "deepworld:mortar",
+  "deepworld:cheese_press"
+ ]
+}

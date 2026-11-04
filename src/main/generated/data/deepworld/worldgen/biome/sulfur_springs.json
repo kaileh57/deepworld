@@ -56,7 +56,9 @@
    "deepworld:sulfur_springs/sulfur_spike"
   ],
   [],
-  [],
+  [
+   "deepworld:forage/ash_pepper_bush"
+  ],
   []
  ]
 }

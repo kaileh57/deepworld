@@ -257,6 +257,9 @@ def main():
     for entry in sprites.get("templated", []):
         palette = dict(palettes[entry["palette"]])
         palette.update(palettes.get(entry.get("extra", "handle"), {}))
+        palette.setdefault("x", palette["h"])
+        palette.setdefault("c", palette["m"])
+        palette.setdefault("b", palette["d"])
         outputs.append(save(draw_grid(templates[entry["template"]], palette), "item", entry["name"]))
     for entry in sprites.get("stones", []):
         outputs.append(save(stone(entry), "block", entry["name"]))
@@ -268,11 +271,21 @@ def main():
             outputs.append(save(forge_front(entry), "block", f"{entry['name']}_front"))
     for entry in sprites.get("armor", []):
         outputs.extend(armor_textures(entry))
+    for entry in sprites.get("plants", []):
+        outputs.append(save(draw_grid(templates[entry["template"]], palettes[entry["palette"]]), "block", entry["name"]))
+    for entry in sprites.get("dishes", []) + sprites.get("generic_dishes", []):
+        ramp_colors = [hex_color(c) for c in entry["ramp"]]
+        darkest = tuple(max(0, int(c * 0.45)) for c in ramp_colors[0][:3]) + (255,)
+        palette = {"o": darkest, "d": ramp_colors[0], "m": ramp_colors[1], "l": ramp_colors[2], "h": ramp_colors[3], "x": ramp_colors[4]}
+        palette.update(palettes.get(entry["template"], {}))
+        palette.setdefault("b", ramp_colors[0])
+        palette.setdefault("c", ramp_colors[1])
+        outputs.append(save(draw_grid(templates[entry["template"]], palette), "item/dish", entry["name"]))
     print(f"wrote {len(outputs)} textures")
     if "--preview" in sys.argv:
         preview_dir = project / "build" / "texture_preview"
         preview_dir.mkdir(parents=True, exist_ok=True)
-        icons = [p for p in outputs if p.parent.name in ("item", "block")]
+        icons = [p for p in outputs if p.parent.name in ("item", "block", "dish")]
         sheet = Image.new("RGBA", (8 * 132, ((len(icons) + 7) // 8) * 132), (40, 40, 48, 255))
         for i, path in enumerate(icons):
             icon = Image.open(path).convert("RGBA").resize((128, 128), Image.NEAREST)

@@ -442,6 +442,8 @@ def biome_json(layer, biome):
     steps = [[] for _ in range(11)]
     for spec in biome.get("decor", []):
         steps[spec["step"]].append(relocated_vanilla(spec, lo, hi, tag))
+    for extra in biome.get("extra_features", []):
+        steps[extra["step"]].append(extra["id"])
     for ore in layer.get("ores", []) + biome.get("ores", []):
         feature_id = ore_feature(ore["name"], ore["hosts"], ore["block"], ore["size"], ore.get("discard", 0.0))
         placed_id = f"deepworld:{tag}/ore_{ore['name']}"

@@ -46,6 +46,7 @@ public final class DataExport {
 		Files.createDirectories(out_dir);
 		write(out_dir.resolve("items.json"), export_items(out_dir));
 		write(out_dir.resolve("blocks.json"), export_blocks(out_dir));
+		write(out_dir.resolve("dishes.json"), export_dishes(out_dir));
 		JsonObject meta = new JsonObject();
 		meta.addProperty("mod_version", FabricLoader.getInstance().getModContainer(DeepWorld.mod_id).orElseThrow().getMetadata().getVersion().getFriendlyString());
 		meta.addProperty("minecraft_version", SharedConstants.getCurrentVersion().name());
@@ -82,6 +83,49 @@ public final class DataExport {
 			entry.addProperty("id", block_id.toString());
 			entry.addProperty("name", block.getName().getString());
 			copy_icon(out_dir, "blocks", "block", block_id).ifPresent(icon -> entry.addProperty("icon", icon));
+			entries.add(entry);
+		}
+		return entries;
+	}
+
+	private static JsonArray export_dishes(Path out_dir) throws IOException {
+		JsonArray entries = new JsonArray();
+		for (dev.kaileh57.deepworld.cooking.CookData.Dish dish : dev.kaileh57.deepworld.cooking.CookData.dishes.values()) {
+			JsonObject entry = new JsonObject();
+			entry.addProperty("id", "deepworld:" + dish.id());
+			entry.addProperty("name", dish.name());
+			JsonObject info = new JsonObject();
+			info.addProperty("kind", dish.kind());
+			info.addProperty("station", dish.station().replace('_', ' '));
+			info.addProperty("heat", dish.heat());
+			info.addProperty("tier", dish.tier());
+			info.addProperty("nutrition", dish.nutrition());
+			info.addProperty("lasts", (dish.duration() / 60) + " min");
+			info.addProperty("preserved", dish.preserved() ? "yes" : "no");
+			entry.add("info", info);
+			StringBuilder body = new StringBuilder("ingredients: ");
+			for (int index = 0; index < dish.ingredients().size(); index++) {
+				String key = dish.ingredients().get(index);
+				body.append(index == 0 ? "" : ", ").append(key.substring(key.lastIndexOf(key.contains("/") ? '/' : ':') + 1).replace('_', ' ').replace("#", "any "));
+			}
+			body.append(".\n\nbuffs: ");
+			int count = 0;
+			for (var buff : dish.buffs().entrySet()) {
+				body.append(count++ == 0 ? "" : ", ").append(buff.getKey().replace('_', ' ')).append(' ').append(dev.kaileh57.deepworld.cooking.Dishes.roman(buff.getValue()));
+			}
+			if (!dish.special().isEmpty()) {
+				body.append(". special: ").append(dish.special().replace('_', ' '));
+			}
+			entry.addProperty("description", body + ".");
+			String texture = "assets/deepworld/textures/item/dish/" + dish.id() + ".png";
+			Optional<Path> source = FabricLoader.getInstance().getModContainer(DeepWorld.mod_id).orElseThrow().findPath(texture);
+			if (source.isPresent()) {
+				String icon = "icons/dishes/" + dish.id() + ".png";
+				Path target = out_dir.resolve(icon);
+				Files.createDirectories(target.getParent());
+				Files.copy(source.get(), target, StandardCopyOption.REPLACE_EXISTING);
+				entry.addProperty("icon", icon);
+			}
 			entries.add(entry);
 		}
 		return entries;

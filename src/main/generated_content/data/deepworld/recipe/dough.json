@@ -1,0 +1,13 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "deepworld:flour",
+  "deepworld:flour",
+  "minecraft:water_bucket"
+ ],
+ "result": {
+  "id": "deepworld:dough",
+  "count": 2
+ }
+}

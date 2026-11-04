@@ -1,0 +1,6 @@
+{
+ "parent": "minecraft:block/cross",
+ "textures": {
+  "cross": "deepworld:block/ash_pepper_bush"
+ }
+}

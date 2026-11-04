@@ -55,7 +55,9 @@
   ],
   [],
   [],
-  [],
+  [
+   "deepworld:forage/hush_moss_tuft"
+  ],
   []
  ]
 }

@@ -1,0 +1,15 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "#": "minecraft:stick",
+  "B": "minecraft:barrel"
+ },
+ "pattern": [
+  "#",
+  "B"
+ ],
+ "result": {
+  "id": "deepworld:churn"
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "G": "minecraft:glass",
+  "C": "minecraft:copper_block",
+  "B": "minecraft:brewing_stand"
+ },
+ "pattern": [
+  " G ",
+  "CBC"
+ ],
+ "result": {
+  "id": "deepworld:still"
+ }
+}

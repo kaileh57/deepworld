@@ -1,0 +1,14 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "F": "minecraft:oak_fence",
+  "#": "minecraft:string"
+ },
+ "pattern": [
+  "F#F"
+ ],
+ "result": {
+  "id": "deepworld:drying_rack"
+ }
+}

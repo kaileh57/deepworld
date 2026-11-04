@@ -1,0 +1,15 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "S": "minecraft:oak_slab",
+  "C": "minecraft:crafting_table"
+ },
+ "pattern": [
+  "S",
+  "C"
+ ],
+ "result": {
+  "id": "deepworld:cutting_board"
+ }
+}

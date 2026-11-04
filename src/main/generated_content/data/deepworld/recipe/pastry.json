@@ -1,0 +1,13 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "deepworld:flour",
+  "deepworld:flour",
+  "deepworld:butter"
+ ],
+ "result": {
+  "id": "deepworld:pastry",
+  "count": 2
+ }
+}

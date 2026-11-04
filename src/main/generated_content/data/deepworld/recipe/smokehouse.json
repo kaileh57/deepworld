@@ -1,0 +1,17 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "B": "minecraft:bricks",
+  "S": "minecraft:smoker",
+  "C": "minecraft:campfire"
+ },
+ "pattern": [
+  "BBB",
+  "BSB",
+  "BCB"
+ ],
+ "result": {
+  "id": "deepworld:smokehouse"
+ }
+}

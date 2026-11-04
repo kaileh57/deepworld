@@ -90,6 +90,12 @@
 				"structures": [
 					"trial_chambers",
 					"mineshaft"
+				],
+				"extra_features": [
+					{
+						"id": "deepworld:forage/truffle_patch",
+						"step": 9
+					}
 				]
 			},
 			{
@@ -309,7 +315,13 @@
 							"count": 8
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:forage/truffle_patch",
+						"step": 9
+					}
+				]
 			}
 		]
 	},
@@ -554,7 +566,13 @@
 							"count": 1
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:forage/glowcap_patch",
+						"step": 9
+					}
+				]
 			},
 			{
 				"id": "deepworld:glowcap_grottos",
@@ -595,7 +613,13 @@
 							"count": 2
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:forage/glowcap_patch",
+						"step": 9
+					}
+				]
 			}
 		]
 	},
@@ -682,7 +706,13 @@
 							"count": 2
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:forage/ash_pepper_bush",
+						"step": 9
+					}
+				]
 			},
 			{
 				"id": "deepworld:sulfur_springs",
@@ -730,7 +760,13 @@
 							"count": 2
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:forage/ash_pepper_bush",
+						"step": 9
+					}
+				]
 			}
 		]
 	},
@@ -835,7 +871,13 @@
 							"count": 2
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:forage/ember_root_sprouts",
+						"step": 9
+					}
+				]
 			},
 			{
 				"id": "deepworld:ash_fields",
@@ -874,7 +916,13 @@
 							"count": 2
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:forage/ember_root_sprouts",
+						"step": 9
+					}
+				]
 			}
 		]
 	},
@@ -967,6 +1015,12 @@
 				"spawns": {},
 				"structures": [
 					"ancient_city"
+				],
+				"extra_features": [
+					{
+						"id": "deepworld:forage/hush_moss_tuft",
+						"step": 9
+					}
 				]
 			},
 			{
@@ -999,7 +1053,13 @@
 							"count": 1
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:forage/hush_moss_tuft",
+						"step": 9
+					}
+				]
 			}
 		]
 	},
@@ -1096,7 +1156,13 @@
 							"count": 3
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:forage/forge_fig_bush",
+						"step": 9
+					}
+				]
 			},
 			{
 				"id": "deepworld:magma_rivers",
@@ -1128,7 +1194,13 @@
 							"count": 2
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:forage/forge_fig_bush",
+						"step": 9
+					}
+				]
 			}
 		]
 	},

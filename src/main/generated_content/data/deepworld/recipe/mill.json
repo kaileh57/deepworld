@@ -1,0 +1,15 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "G": "minecraft:grindstone",
+  "B": "minecraft:barrel"
+ },
+ "pattern": [
+  "G",
+  "B"
+ ],
+ "result": {
+  "id": "deepworld:mill"
+ }
+}

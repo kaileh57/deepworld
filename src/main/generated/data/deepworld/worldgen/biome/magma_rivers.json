@@ -84,7 +84,9 @@
   ],
   [],
   [],
-  [],
+  [
+   "deepworld:forage/forge_fig_bush"
+  ],
   []
  ]
 }

@@ -56,7 +56,7 @@ const copy_icons = (kind, entries) => {
 
 fs.rmSync(ref_dir, { recursive: true, force: true });
 fs.rmSync(icon_dir, { recursive: true, force: true });
-for (const kind of ['items', 'blocks']) {
+for (const kind of ['items', 'blocks', 'dishes']) {
 	const entries = read_json(`${kind}.json`);
 	write_pages(kind, entries);
 	copy_icons(kind, entries);

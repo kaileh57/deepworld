@@ -1,0 +1,16 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "B": "minecraft:bricks",
+  "S": "minecraft:smoker"
+ },
+ "pattern": [
+  "BBB",
+  "BSB",
+  "BBB"
+ ],
+ "result": {
+  "id": "deepworld:brick_oven"
+ }
+}

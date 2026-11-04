@@ -116,6 +116,7 @@ def tier_tags():
     tag("block", "minecraft", "incorrect_for_gold_tool", [f"#{v}" for v in own_needs.values()])
     pickaxe = [f"deepworld:{e['id']}" for e in content["stones"] + content["ores"] + content.get("stations", [])]
     tag("block", "minecraft", "mineable/pickaxe", pickaxe)
+    tag("block", "minecraft", "mineable/axe", [f"deepworld:{e['id']}" for e in content.get("cook_stations", [])])
 
 
 def write_recipes():
@@ -180,6 +181,37 @@ def main():
         tag("item", "deepworld", f"repairs_{armor['set']}_armor", [armor["repair"]])
     for tool in content["tools"]:
         tag("item", "deepworld", f"{tool['tier']}_tool_materials", [tool["repair"]])
+    for plant in content.get("plants", []):
+        write(assets / "models" / "block" / f"{plant['id']}.json", {"parent": "minecraft:block/cross", "textures": {"cross": f"deepworld:block/{plant['id']}"}})
+        flat_item(plant["id"], f"deepworld:block/{plant['id']}")
+        lang[f"block.deepworld.{plant['id']}"] = plant["name"]
+        write(data / "deepworld" / "loot_table" / "blocks" / f"{plant['id']}.json", {
+            "type": "minecraft:block",
+            "pools": [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": plant["drop"], "functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": plant["count"][0], "max": plant["count"][1]}}, {"function": "minecraft:apply_bonus", "enchantment": "minecraft:fortune", "formula": "minecraft:uniform_bonus_count", "parameters": {"bonusMultiplier": 1}}]}]}],
+        })
+        state = f"deepworld:{plant['id']}"
+        write(data / "deepworld" / "worldgen" / "feature" / "forage" / f"{plant['id']}.json", {"type": "minecraft:simple_block", "to_place": {"id": state}})
+        spread = lambda xz, y: {"type": "minecraft:offset", "x": {"type": "minecraft:trapezoid", "max": xz, "min": -xz, "plateau": 0}, "y": {"type": "minecraft:trapezoid", "max": y, "min": -y, "plateau": 0}, "z": {"type": "minecraft:trapezoid", "max": xz, "min": -xz, "plateau": 0}}
+        fits = {"type": "minecraft:block_predicate_filter", "predicate": {"type": "minecraft:all_of", "predicates": [{"type": "minecraft:matching_block_tag", "tag": "minecraft:air"}, {"type": "minecraft:would_survive", "state": {"id": state}}]}}
+        if "deep" in plant:
+            placement = [{"type": "minecraft:count", "count": plant.get("count_per_chunk", 3)}, {"type": "minecraft:in_square"},
+                         {"type": "minecraft:height_range", "height": {"type": "minecraft:uniform", "min_inclusive": {"absolute": plant["y"][0]}, "max_inclusive": {"absolute": plant["y"][1]}}},
+                         {"type": "minecraft:environment_scan", "direction_of_search": "down", "max_steps": 24, "target_condition": {"type": "minecraft:solid"}, "allowed_search_condition": {"type": "minecraft:matching_block_tag", "tag": "minecraft:air"}},
+                         {"type": "minecraft:offset", "x": 0, "y": 1, "z": 0}, {"type": "minecraft:biome"},
+                         {"type": "minecraft:count", "count": plant.get("tries", 12) // 2}, spread(4, 1), fits]
+        else:
+            placement = [{"type": "minecraft:rarity_filter", "chance": 4}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"},
+                         {"type": "minecraft:count", "count": plant.get("tries", 12)}, spread(6, 2), fits]
+        write(data / "deepworld" / "worldgen" / "placed_feature" / "forage" / f"{plant['id']}.json", {"feature": f"deepworld:forage/{plant['id']}", "placement": placement})
+    for station in content.get("cook_stations", []):
+        lang[f"block.deepworld.{station['id']}"] = station["name"]
+        loot_self(station["id"])
+    for dish in content.get("dishes", []):
+        write(assets / "models" / "item" / "dish" / f"{dish['id']}.json", {"parent": "minecraft:item/generated", "textures": {"layer0": f"deepworld:item/dish/{dish['id']}"}})
+        item_model(f"dish/{dish['id']}", f"deepworld:item/dish/{dish['id']}")
+    for generic in ["stew", "fry", "bake", "smoke", "pickle", "jerky", "tonic", "chill", "roast", "burnt"]:
+        write(assets / "models" / "item" / "dish" / f"generic_{generic}.json", {"parent": "minecraft:item/generated", "textures": {"layer0": f"deepworld:item/dish/generic_{generic}"}})
+        item_model(f"dish/generic_{generic}", f"deepworld:item/dish/generic_{generic}")
     lang.update(content.get("lang", {}))
     tier_tags()
     write_recipes()

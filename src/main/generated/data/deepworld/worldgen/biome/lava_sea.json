@@ -83,7 +83,9 @@
   ],
   [],
   [],
-  [],
+  [
+   "deepworld:forage/ember_root_sprouts"
+  ],
   []
  ]
 }
