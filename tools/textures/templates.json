@@ -414,22 +414,22 @@
 		"................"
 	],
 	"plate": [
-		"................",
-		"................",
-		"................",
-		"................",
-		"................",
-		"......oooo......",
-		"....oohllmoo....",
-		"...ohllxmmmdo...",
-		"..ohlmmmmmmddo..",
-		".occcolmmmddocco",
-		"occcccooooccccco",
-		".occcccccccccco.",
-		"..ooobbbbbbooo..",
-		".....oooooo.....",
-		"................",
-		"................"
+		"oddddddddddddddo",
+		"dhlllllllllllllm",
+		"dlxmmmmmmmmmmxlm",
+		"dlmmmmmmmmmmmmlm",
+		"dlmmmmmmmmmmmmlm",
+		"dlmmmmmmmmmmmmlm",
+		"dlmmmmmmmmmmmmlm",
+		"dlmmmmmmmmmmmmlm",
+		"oddddddddddddddo",
+		"dhlllllllllllllm",
+		"dlxmmmmmmmmmmxlm",
+		"dlmmmmmmmmmmmmlm",
+		"dlmmmmmmmmmmmmlm",
+		"dlmmmmmmmmmmmmlm",
+		"dlxmmmmmmmmmmxlm",
+		"ommmmmmmmmmmmmmo"
 	],
 	"pie": [
 		"................",
@@ -610,5 +610,23 @@
 		"odmddmdddmdmdddo",
 		"oooooooooooooooo",
 		"................"
+	],
+	"grate": [
+		"xxxxxxxxxxxxxxxx",
+		"xoooooooooooooox",
+		"xolmolmolmolmoox",
+		"xodooddoodooddox",
+		"xolmolmolmolmoox",
+		"xodooddoodooddox",
+		"xolmolmolmolmoox",
+		"xodooddoodooddox",
+		"xolmolmolmolmoox",
+		"xodooddoodooddox",
+		"xolmolmolmolmoox",
+		"xodooddoodooddox",
+		"xolmolmolmolmoox",
+		"xodooddoodooddox",
+		"xoooooooooooooox",
+		"xxxxxxxxxxxxxxxx"
 	]
 }

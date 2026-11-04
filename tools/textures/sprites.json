@@ -1147,5 +1147,17 @@
 				"#4a3e36"
 			]
 		}
+	],
+	"block_templated": [
+		{
+			"name": "cobalt_steel_block",
+			"template": "plate",
+			"palette": "cobalt_steel"
+		},
+		{
+			"name": "lift_station",
+			"template": "grate",
+			"palette": "lift"
+		}
 	]
 }

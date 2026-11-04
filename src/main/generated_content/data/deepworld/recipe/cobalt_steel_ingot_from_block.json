@@ -1,0 +1,14 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "B": "deepworld:cobalt_steel_block"
+ },
+ "pattern": [
+  "B"
+ ],
+ "result": {
+  "id": "deepworld:cobalt_steel_ingot",
+  "count": 9
+ }
+}

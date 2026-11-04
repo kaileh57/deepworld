@@ -274,6 +274,24 @@
    "needs": "cobalt_steel",
    "base": "minecraft:netherrack",
    "texture": "deepworld:block/scorched_rock"
+  },
+  {
+   "id": "cobalt_steel_block",
+   "name": "cobalt steel block",
+   "hardness": 5.0,
+   "resistance": 8.0,
+   "needs": "iron",
+   "base": "minecraft:iron_block",
+   "texture": "deepworld:block/cobalt_steel_block"
+  },
+  {
+   "id": "lift_station",
+   "name": "lift station",
+   "hardness": 3.0,
+   "resistance": 6.0,
+   "needs": "stone",
+   "base": "minecraft:iron_block",
+   "texture": "deepworld:block/lift_station"
   }
  ],
  "ores": [
@@ -671,6 +689,42 @@
     "F": "deepworld:forge",
     "D": "minecraft:ancient_debris",
     "N": "minecraft:netherite_scrap"
+   }
+  },
+  {
+   "result": "deepworld:cobalt_steel_block",
+   "pattern": [
+    "CCC",
+    "CCC",
+    "CCC"
+   ],
+   "key": {
+    "C": "deepworld:cobalt_steel_ingot"
+   }
+  },
+  {
+   "name": "cobalt_steel_ingot_from_block",
+   "result": "deepworld:cobalt_steel_ingot",
+   "count": 9,
+   "pattern": [
+    "B"
+   ],
+   "key": {
+    "B": "deepworld:cobalt_steel_block"
+   }
+  },
+  {
+   "result": "deepworld:lift_station",
+   "count": 2,
+   "pattern": [
+    "GIG",
+    "IRI",
+    "GIG"
+   ],
+   "key": {
+    "G": "minecraft:gold_block",
+    "I": "minecraft:iron_ingot",
+    "R": "minecraft:redstone"
    }
   },
   {

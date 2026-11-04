@@ -261,6 +261,10 @@ def main():
         palette.setdefault("c", palette["m"])
         palette.setdefault("b", palette["d"])
         outputs.append(save(draw_grid(templates[entry["template"]], palette), "item", entry["name"]))
+    for entry in sprites.get("block_templated", []):
+        palette = dict(palettes[entry["palette"]])
+        palette.setdefault("x", palette["h"])
+        outputs.append(save(draw_grid(templates[entry["template"]], palette), "block", entry["name"]))
     for entry in sprites.get("stones", []):
         outputs.append(save(stone(entry), "block", entry["name"]))
     for entry in sprites.get("ores", []):

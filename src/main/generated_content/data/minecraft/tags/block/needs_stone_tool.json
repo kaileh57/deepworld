@@ -2,6 +2,7 @@
  "replace": false,
  "values": [
   "minecraft:deepslate",
+  "deepworld:lift_station",
   "deepworld:tin_ore",
   "deepworld:forge",
   "deepworld:hellforge"

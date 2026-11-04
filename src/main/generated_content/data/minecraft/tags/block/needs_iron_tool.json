@@ -2,6 +2,7 @@
  "replace": false,
  "values": [
   "minecraft:calcite",
+  "deepworld:cobalt_steel_block",
   "deepworld:resonant_amethyst_ore"
  ]
 }

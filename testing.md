@@ -37,3 +37,12 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - forage: wild rice/chili/mint/tea/coffee/beans/oats/herbs on the surface, one plant per cave layer (truffle, glowcap, ash pepper, ember root, hush moss, forge fig).
 - mob drops: glow squid → blind eel, strider → lava fish, hoglin → hoglin chop, bone blocks → fossil marrow, amethyst clusters → geode nectar.
 - simplified: menus are chest layouts with item buttons. chests also stop spoilage, not just the ice box. feasts and the tasting menu come later.
+
+## 5 transit
+
+- rail speed comes from the block under the rail: copper 16 m/s, gold 32, cobalt steel block 48. carts speed up on their own over those beds. straight runs only at top speed, curves can derail.
+- lift: place lift stations at the same x/z on different floors. click one, pick a floor. the shaft between them must be clear. 8 m/s.
+- paved blocks (gravel, cobble, packed mud, paths, stone bricks...) give speed i on foot, speed ii to horses. grass you walk over a lot becomes a path.
+- the deepline terminal sits at spawn (0, 1212, 0). lines run east 250 (depot), west 450 (worker camp), south 1000 and north 2000 (stations). tunnels, bridges, gaps every 500, collapses, signal cabins, derelict chest carts.
+- `/dw map 0 0 320` writes a top-down png.
+- simplified: no junction routing, signals or timetables yet. lift has no cable cost and no express car. shoring blocks are vanilla logs/fences/walls/bars (used by cave-ins in phase 8).

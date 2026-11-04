@@ -5,6 +5,9 @@ import dev.kaileh57.deepworld.content.Content;
 import dev.kaileh57.deepworld.cooking.Cooking;
 import dev.kaileh57.deepworld.cooking.Meals;
 import dev.kaileh57.deepworld.cooking.Spoilage;
+import dev.kaileh57.deepworld.transit.Lifts;
+import dev.kaileh57.deepworld.transit.Roads;
+import dev.kaileh57.deepworld.transit.Transit;
 import dev.kaileh57.deepworld.forge.ForgingRecipes;
 import dev.kaileh57.deepworld.heat.HeatSystem;
 import dev.kaileh57.deepworld.hud.Hud;
@@ -33,6 +36,7 @@ public class DeepWorld implements ModInitializer {
 		PolymerResourcePackUtils.markAsRequired();
 		Content.register();
 		Cooking.register();
+		Transit.register();
 		ServerLifecycleEvents.SERVER_STARTED.register(ForgingRecipes::reload);
 		ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resources, success) -> ForgingRecipes.reload(server));
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
@@ -40,6 +44,8 @@ public class DeepWorld implements ModInitializer {
 			HeatSystem.tick(server, tick);
 			Meals.tick(server, tick);
 			Spoilage.tick(server, tick);
+			Lifts.tick(server);
+			Roads.tick(server, tick);
 			if (tick % 20 == 0) {
 				Hud.flush(server);
 			}

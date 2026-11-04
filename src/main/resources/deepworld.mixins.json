@@ -3,6 +3,7 @@
 	"package": "dev.kaileh57.deepworld.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
+		"AbstractMinecartMixin",
 		"AquiferMixin",
 		"LivingEntityMixin",
 		"NetherFortressStructureMixin",

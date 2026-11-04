@@ -44,6 +44,11 @@ public final class SurveyCommand {
 						.then(Commands.argument("radius", IntegerArgumentType.integer(0, 8))
 							.executes(context -> survey(context, IntegerArgumentType.getInteger(context, "chunk_x"), IntegerArgumentType.getInteger(context, "chunk_z"), IntegerArgumentType.getInteger(context, "radius")))))))
 			.then(Commands.literal("fortress").executes(SurveyCommand::fortress))
+			.then(Commands.literal("map")
+				.then(Commands.argument("x", IntegerArgumentType.integer())
+					.then(Commands.argument("z", IntegerArgumentType.integer())
+						.then(Commands.argument("size", IntegerArgumentType.integer(16, 1024))
+							.executes(context -> map(context, IntegerArgumentType.getInteger(context, "x"), IntegerArgumentType.getInteger(context, "z"), IntegerArgumentType.getInteger(context, "size")))))))
 			.then(Commands.literal("selftest").executes(context -> {
 				java.util.List<String> lines = SelfTest.run(context.getSource().getServer());
 				try {
@@ -161,6 +166,36 @@ public final class SurveyCommand {
 			return 0;
 		}
 		context.getSource().sendSuccess(() -> Component.literal("slice done"), false);
+		return 1;
+	}
+
+	private static int map(CommandContext<CommandSourceStack> context, int center_x, int center_z, int size) {
+		ServerLevel level = context.getSource().getServer().overworld();
+		java.awt.image.BufferedImage image = new java.awt.image.BufferedImage(size, size, java.awt.image.BufferedImage.TYPE_INT_RGB);
+		BlockPos.MutableBlockPos cursor = new BlockPos.MutableBlockPos();
+		int x0 = center_x - size / 2;
+		int z0 = center_z - size / 2;
+		for (int x = 0; x < size; x++) {
+			for (int z = 0; z < size; z++) {
+				ChunkAccess chunk = level.getChunk((x0 + x) >> 4, (z0 + z) >> 4);
+				int top = chunk.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.WORLD_SURFACE, (x0 + x) & 15, (z0 + z) & 15);
+				cursor.set(x0 + x, top, z0 + z);
+				BlockState state = chunk.getBlockState(cursor);
+				int color = state.getMapColor(level, cursor).col;
+				int shade = Math.max(0, Math.min(40, top - 1190));
+				int r = Math.min(255, ((color >> 16) & 255) * (200 + shade) / 240);
+				int g = Math.min(255, ((color >> 8) & 255) * (200 + shade) / 240);
+				int b = Math.min(255, (color & 255) * (200 + shade) / 240);
+				image.setRGB(x, z, (r << 16) | (g << 8) | b);
+			}
+		}
+		try {
+			javax.imageio.ImageIO.write(image, "png", context.getSource().getServer().getServerDirectory().resolve("deepworld_map.png").toFile());
+		} catch (Exception error) {
+			context.getSource().sendFailure(Component.literal("could not write map"));
+			return 0;
+		}
+		context.getSource().sendSuccess(() -> Component.literal("map done"), false);
 		return 1;
 	}
 
