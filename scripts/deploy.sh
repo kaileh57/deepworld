@@ -31,6 +31,21 @@ rm -f "$server_dir"/mods/deepworld-*-sources.jar
 
 [ -f "$server_dir/eula.txt" ] || echo "eula=true" > "$server_dir/eula.txt"
 
+mkdir -p "$server_dir/config/polymer"
+if [ ! -f "$server_dir/config/polymer/auto-host.json" ]; then
+	cat > "$server_dir/config/polymer/auto-host.json" <<'HOST'
+{
+	"enabled": true,
+	"required": true,
+	"type": "polymer:automatic",
+	"message": "deepworld needs a resource pack for its textures. it downloads automatically.",
+	"dialog_title": "the resource pack is still building",
+	"dialog_default_body": "waiting...",
+	"dialog_body_header": "this takes a moment on first start."
+}
+HOST
+fi
+
 if [ ! -f "$server_dir/start.sh" ]; then
 	cat > "$server_dir/start.sh" <<'START'
 #!/bin/sh
