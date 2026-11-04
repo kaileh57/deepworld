@@ -44,6 +44,18 @@ public final class SurveyCommand {
 						.then(Commands.argument("radius", IntegerArgumentType.integer(0, 8))
 							.executes(context -> survey(context, IntegerArgumentType.getInteger(context, "chunk_x"), IntegerArgumentType.getInteger(context, "chunk_z"), IntegerArgumentType.getInteger(context, "radius")))))))
 			.then(Commands.literal("fortress").executes(SurveyCommand::fortress))
+			.then(Commands.literal("selftest").executes(context -> {
+				java.util.List<String> lines = SelfTest.run(context.getSource().getServer());
+				try {
+					Files.writeString(context.getSource().getServer().getServerDirectory().resolve("deepworld_selftest.txt"), String.join("\n", lines) + "\n");
+				} catch (Exception error) {
+					context.getSource().sendFailure(Component.literal("could not write selftest"));
+				}
+				for (String line : lines) {
+					context.getSource().sendSuccess(() -> Component.literal(line + "\n"), false);
+				}
+				return 1;
+			}))
 			.then(Commands.literal("slice")
 				.then(Commands.argument("z", IntegerArgumentType.integer())
 					.then(Commands.argument("x_from", IntegerArgumentType.integer())

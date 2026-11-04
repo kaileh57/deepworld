@@ -116,6 +116,23 @@ def worldgen_gates():
     return results
 
 
+def selftest_gates():
+    out = run_dir / "deepworld_selftest.txt"
+    if out.exists():
+        out.unlink()
+    rcon.run("dw selftest")
+    results = []
+    for text in out.read_text().splitlines() if out.exists() else []:
+        if text.startswith("pass "):
+            results.append(("selftest " + text[5:], True, []))
+        elif text.startswith("FAIL "):
+            name, _, reason = text[5:].partition(": ")
+            results.append(("selftest " + name, False, [reason]))
+    if not results:
+        results.append(("selftest", False, ["no selftest output"]))
+    return results
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--worldgen", action="store_true")
@@ -134,6 +151,7 @@ def main():
     if booted:
         if args.worldgen:
             results.extend(worldgen_gates())
+        results.extend(selftest_gates())
         log_text = log_file.read_text(errors="replace")
         passed, detail = gate_clean_boot(log_text)
         results.insert(0, ("clean boot", passed, detail))
