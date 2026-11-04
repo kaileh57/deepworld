@@ -16,6 +16,12 @@ public class ServerState extends SavedData {
 	public boolean breakthrough_done;
 	public String breakthrough_player = "";
 	public List<String> events = new ArrayList<>();
+	public String goal_counter = "";
+	public int goal_target;
+	public int goal_progress;
+	public long goal_ends;
+	public long bonus_until;
+	public long next_tremor;
 
 	public static final Codec<ServerState> codec = RecordCodecBuilder.create(i -> i.group(
 		Codec.INT.optionalFieldOf("bonus_meal_slots", 0).forGetter(s -> s.bonus_meal_slots),
@@ -23,8 +29,14 @@ public class ServerState extends SavedData {
 		Codec.BOOL.optionalFieldOf("tasting_awarded", false).forGetter(s -> s.tasting_awarded),
 		Codec.BOOL.optionalFieldOf("breakthrough_done", false).forGetter(s -> s.breakthrough_done),
 		Codec.STRING.optionalFieldOf("breakthrough_player", "").forGetter(s -> s.breakthrough_player),
-		Codec.STRING.listOf().optionalFieldOf("events", List.of()).forGetter(s -> s.events)
-	).apply(i, (slots, gourmet, tasting, breakthrough, who, events) -> {
+		Codec.STRING.listOf().optionalFieldOf("events", List.of()).forGetter(s -> s.events),
+		Codec.STRING.optionalFieldOf("goal_counter", "").forGetter(s -> s.goal_counter),
+		Codec.INT.optionalFieldOf("goal_target", 0).forGetter(s -> s.goal_target),
+		Codec.INT.optionalFieldOf("goal_progress", 0).forGetter(s -> s.goal_progress),
+		Codec.LONG.optionalFieldOf("goal_ends", 0L).forGetter(s -> s.goal_ends),
+		Codec.LONG.optionalFieldOf("bonus_until", 0L).forGetter(s -> s.bonus_until),
+		Codec.LONG.optionalFieldOf("next_tremor", 0L).forGetter(s -> s.next_tremor)
+	).apply(i, (slots, gourmet, tasting, breakthrough, who, events, goal_counter, goal_target, goal_progress, goal_ends, bonus_until, next_tremor) -> {
 		ServerState state = new ServerState();
 		state.bonus_meal_slots = slots;
 		state.gourmet_awarded = gourmet;
@@ -32,6 +44,12 @@ public class ServerState extends SavedData {
 		state.breakthrough_done = breakthrough;
 		state.breakthrough_player = who;
 		state.events = new ArrayList<>(events);
+		state.goal_counter = goal_counter;
+		state.goal_target = goal_target;
+		state.goal_progress = goal_progress;
+		state.goal_ends = goal_ends;
+		state.bonus_until = bonus_until;
+		state.next_tremor = next_tremor;
 		return state;
 	}));
 

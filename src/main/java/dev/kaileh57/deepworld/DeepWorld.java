@@ -59,8 +59,11 @@ public class DeepWorld implements ModInitializer {
 		Exploration.register();
 		Hazards.register();
 		Economy.register();
+		dev.kaileh57.deepworld.living.Living.register();
 		ServerLifecycleEvents.SERVER_STARTED.register(server -> Meals.server_bonus_slots = ServerState.get(server).bonus_meal_slots);
 		ServerLifecycleEvents.SERVER_STARTED.register(ForgingRecipes::reload);
+		ServerLifecycleEvents.SERVER_STARTED.register(dev.kaileh57.deepworld.living.Live::start);
+		ServerLifecycleEvents.SERVER_STOPPING.register(server -> dev.kaileh57.deepworld.living.Live.stop());
 		ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resources, success) -> ForgingRecipes.reload(server));
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
 			long tick = server.getTickCount();
@@ -76,12 +79,17 @@ public class DeepWorld implements ModInitializer {
 			Exploration.tick(server, tick);
 			Hazards.tick(server, tick);
 			Settlements.tick(server, tick);
+			dev.kaileh57.deepworld.living.Events.tick(server, tick);
+			dev.kaileh57.deepworld.living.Live.tick(server, tick);
 			if (tick % 20 == 0) {
 				Hud.flush(server);
 			}
 		});
 		ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> Hud.forget(handler.getPlayer().getUUID()));
 		DataExport.register();
-		CommandRegistrationCallback.EVENT.register((dispatcher, registry_access, environment) -> SurveyCommand.register(dispatcher));
+		CommandRegistrationCallback.EVENT.register((dispatcher, registry_access, environment) -> {
+			SurveyCommand.register(dispatcher);
+			dev.kaileh57.deepworld.living.WikiCommand.register(dispatcher);
+		});
 	}
 }

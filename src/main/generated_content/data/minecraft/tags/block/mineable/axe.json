@@ -19,6 +19,8 @@
   "deepworld:cheese_press",
   "deepworld:smithing_bench",
   "deepworld:commissions_board",
-  "deepworld:serving_counter"
+  "deepworld:serving_counter",
+  "deepworld:feast_table",
+  "deepworld:record_board"
  ]
 }

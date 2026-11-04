@@ -62,3 +62,20 @@ for (const kind of ['items', 'blocks', 'dishes']) {
 	copy_icons(kind, entries);
 	console.log(`${kind}: ${entries.length}`);
 }
+
+const content_file = path.resolve(wiki_dir, '..', 'src', 'main', 'generated_content', 'deepworld_content.json');
+const content = fs.existsSync(content_file) ? JSON.parse(fs.readFileSync(content_file, 'utf8')) : {};
+const pages = [...(content.journal_pages ?? [])].sort((a, b) => a.page - b.page);
+const story = [
+	'---',
+	'title: the journal',
+	'description: pages found in landmarks. spoilers.',
+	'---',
+	'',
+	'pages turn up in landmark chests. each one is hidden until you open it.',
+	'',
+	...pages.map((entry) => `<details><summary>page ${entry.page}, ${entry.landmark.replaceAll('_', ' ')}</summary>\n\n${entry.text}\n\n</details>\n`),
+].join('\n');
+fs.mkdirSync(path.join(ref_dir, 'story'), { recursive: true });
+fs.writeFileSync(path.join(ref_dir, 'story', 'journal.md'), story);
+console.log(`journal: ${pages.length}`);

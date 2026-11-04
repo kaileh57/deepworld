@@ -1,0 +1,15 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "G": "minecraft:gold_ingot",
+  "L": "minecraft:lectern"
+ },
+ "pattern": [
+  "G",
+  "L"
+ ],
+ "result": {
+  "id": "deepworld:record_board"
+ }
+}

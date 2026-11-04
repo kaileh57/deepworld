@@ -1083,6 +1083,28 @@
    }
   },
   {
+   "result": "deepworld:feast_table",
+   "pattern": [
+    "SSS",
+    "F F"
+   ],
+   "key": {
+    "S": "minecraft:dark_oak_slab",
+    "F": "minecraft:dark_oak_fence"
+   }
+  },
+  {
+   "result": "deepworld:record_board",
+   "pattern": [
+    "G",
+    "L"
+   ],
+   "key": {
+    "G": "minecraft:gold_ingot",
+    "L": "minecraft:lectern"
+   }
+  },
+  {
    "result": "deepworld:safety_lamp",
    "pattern": [
     "III",
@@ -3147,6 +3169,2072 @@
    "preserved": false,
    "heat": "none",
    "kind": "drink"
+  },
+  {
+   "id": "baked_apples",
+   "name": "baked apples",
+   "station": "oven",
+   "ingredients": [
+    "minecraft:apple",
+    "minecraft:sugar",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "sweet": 2,
+    "fresh": 1
+   },
+   "nutrition": 6,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#6b1f17",
+    "#9c2e21",
+    "#c33a2a",
+    "#d95e50",
+    "#e8c070"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "potato_hash",
+   "name": "potato hash",
+   "station": "skillet",
+   "ingredients": [
+    "minecraft:potato",
+    "deepworld:butter",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "hearty": 2
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#6e521e",
+    "#a1782d",
+    "#c7953a",
+    "#d6b06c",
+    "#4c9a2a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "carrot_soup",
+   "name": "carrot soup",
+   "station": "pot",
+   "ingredients": [
+    "minecraft:carrot",
+    "deepworld:herbs",
+    "deepworld:cream"
+   ],
+   "buffs": {
+    "fresh": 2,
+    "rich": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#7b430e",
+    "#b36114",
+    "#e07a19",
+    "#ea994e",
+    "#ffffff"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "pumpkin_bread",
+   "name": "pumpkin bread",
+   "station": "oven",
+   "ingredients": [
+    "minecraft:pumpkin",
+    "deepworld:flour",
+    "minecraft:sugar"
+   ],
+   "buffs": {
+    "sweet": 1,
+    "hearty": 2
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bread",
+   "palette": [
+    "#6e4017",
+    "#a05e21",
+    "#c87629",
+    "#da9453",
+    "#8a5a2b"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "beetroot_borscht",
+   "name": "beetroot borscht",
+   "station": "pot",
+   "ingredients": [
+    "minecraft:beetroot",
+    "minecraft:potato",
+    "deepworld:cream"
+   ],
+   "buffs": {
+    "earthy": 2,
+    "rich": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#4b0e1f",
+    "#6e142e",
+    "#8a1939",
+    "#ac2048",
+    "#ffffff"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "fried_egg",
+   "name": "fried egg",
+   "station": "skillet",
+   "ingredients": [
+    "minecraft:egg",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "rich": 1
+   },
+   "nutrition": 4,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#9a750a",
+    "#e1aa0e",
+    "#f2c23a",
+    "#f6d780",
+    "#ffffff"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "herb_bread",
+   "name": "herb bread",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:flour",
+    "deepworld:herbs",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "fresh": 1,
+    "hearty": 1
+   },
+   "nutrition": 6,
+   "saturation": 0.8,
+   "template": "bread",
+   "palette": [
+    "#6e4c23",
+    "#a06e33",
+    "#c38a45",
+    "#d3a977",
+    "#4c9a2a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "bean_stew",
+   "name": "bean stew",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:beans",
+    "minecraft:carrot",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "hearty": 3
+   },
+   "nutrition": 9,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#4b2213",
+    "#6e311c",
+    "#8a3e23",
+    "#ac4d2d",
+    "#4c9a2a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "rice_bowl",
+   "name": "rice bowl",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:rice",
+    "deepworld:herbs"
+   ],
+   "buffs": {
+    "hearty": 2,
+    "fresh": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#b3933b",
+    "#d6c084",
+    "#ece2c6",
+    "#f8f5eb",
+    "#4c9a2a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "oat_cakes",
+   "name": "oat cakes",
+   "station": "skillet",
+   "ingredients": [
+    "deepworld:oats",
+    "minecraft:honey_bottle",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "sweet": 2,
+    "hearty": 1
+   },
+   "nutrition": 6,
+   "saturation": 0.8,
+   "template": "bun",
+   "palette": [
+    "#7f672b",
+    "#b8963f",
+    "#ccb069",
+    "#dfcea3",
+    "#e8a62a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "berry_crumble",
+   "name": "berry crumble",
+   "station": "oven",
+   "ingredients": [
+    "minecraft:sweet_berries",
+    "deepworld:oats",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "sweet": 2,
+    "fresh": 2
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "pie",
+   "palette": [
+    "#5c141f",
+    "#861e2e",
+    "#a8263a",
+    "#d03149",
+    "#e8d49a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "roast_chicken",
+   "name": "roast chicken",
+   "station": "spit",
+   "ingredients": [
+    "minecraft:chicken",
+    "deepworld:herbs",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "hearty": 2,
+    "fresh": 1
+   },
+   "nutrition": 9,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#6e4917",
+    "#a06b21",
+    "#c88529",
+    "#daa253",
+    "#4c9a2a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "rabbit_stew_deluxe",
+   "name": "hunter's rabbit stew",
+   "station": "pot",
+   "ingredients": [
+    "minecraft:rabbit",
+    "minecraft:carrot",
+    "minecraft:potato",
+    "deepworld:herbs"
+   ],
+   "buffs": {
+    "hearty": 3,
+    "fresh": 1
+   },
+   "nutrition": 11,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#4b311f",
+    "#6e482e",
+    "#8a5a39",
+    "#ac7048",
+    "#4c9a2a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "cod_cakes",
+   "name": "cod cakes",
+   "station": "skillet",
+   "ingredients": [
+    "minecraft:cod",
+    "minecraft:potato",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "briny": 2,
+    "hearty": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bun",
+   "palette": [
+    "#8c6633",
+    "#c19356",
+    "#d3b48a",
+    "#ebddc9",
+    "#7a9ab0"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "kelp_crisps",
+   "name": "kelp crisps",
+   "station": "drying_rack",
+   "ingredients": [
+    "minecraft:kelp",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "briny": 1
+   },
+   "nutrition": 3,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#1f3a17",
+    "#2e5421",
+    "#396a2a",
+    "#488434",
+    "#ffffff"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": true,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "smoked_beef",
+   "name": "smoked beef",
+   "station": "smokehouse",
+   "ingredients": [
+    "minecraft:beef",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "hearty": 2
+   },
+   "nutrition": 8,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#31170b",
+    "#482110",
+    "#592a14",
+    "#703419",
+    "#3a3a3a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": true,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "smoked_pork",
+   "name": "smoked ham",
+   "station": "smokehouse",
+   "ingredients": [
+    "minecraft:porkchop",
+    "deepworld:salt",
+    "minecraft:honey_bottle"
+   ],
+   "buffs": {
+    "hearty": 2,
+    "rich": 1
+   },
+   "nutrition": 9,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#5c281f",
+    "#863b2e",
+    "#a84a39",
+    "#c46555",
+    "#e8a62a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": true,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "dried_apples",
+   "name": "dried apples",
+   "station": "drying_rack",
+   "ingredients": [
+    "minecraft:apple",
+    "minecraft:sugar"
+   ],
+   "buffs": {
+    "sweet": 1,
+    "fresh": 1
+   },
+   "nutrition": 4,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#6e4917",
+    "#a06b21",
+    "#c88529",
+    "#daa253",
+    "#c43a2a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": true,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "pickled_beets",
+   "name": "pickled beets",
+   "station": "crock",
+   "ingredients": [
+    "minecraft:beetroot",
+    "deepworld:brine"
+   ],
+   "buffs": {
+    "earthy": 1
+   },
+   "nutrition": 4,
+   "saturation": 0.8,
+   "template": "jar",
+   "palette": [
+    "#4b0e1f",
+    "#6e142e",
+    "#8a1939",
+    "#ac2048",
+    "#d4b44a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": true,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "sauerkraut",
+   "name": "cave kraut",
+   "station": "crock",
+   "ingredients": [
+    "deepworld:herbs",
+    "deepworld:salt",
+    "minecraft:carrot"
+   ],
+   "buffs": {
+    "fresh": 1
+   },
+   "nutrition": 4,
+   "saturation": 0.8,
+   "template": "jar",
+   "palette": [
+    "#737123",
+    "#a8a433",
+    "#c7c34a",
+    "#d7d57e",
+    "#4c9a2a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": true,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "melon_sorbet",
+   "name": "melon sorbet",
+   "station": "ice_box",
+   "ingredients": [
+    "minecraft:melon_slice",
+    "minecraft:sugar",
+    "minecraft:ice"
+   ],
+   "buffs": {
+    "cooling": 2,
+    "sweet": 1
+   },
+   "nutrition": 4,
+   "saturation": 0.8,
+   "template": "cup",
+   "palette": [
+    "#831c27",
+    "#be2939",
+    "#d84959",
+    "#e48590",
+    "#4aa83a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "ice_cream",
+   "name": "cave ice cream",
+   "station": "ice_box",
+   "ingredients": [
+    "deepworld:cream",
+    "minecraft:sugar",
+    "minecraft:ice"
+   ],
+   "buffs": {
+    "cooling": 1,
+    "sweet": 2,
+    "rich": 1
+   },
+   "nutrition": 5,
+   "saturation": 0.8,
+   "template": "cup",
+   "palette": [
+    "#c59c37",
+    "#dfc990",
+    "#f4ecd7",
+    "#f9f5eb",
+    "#8a5a3a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "lemonade_ish",
+   "name": "berry cordial",
+   "station": "still",
+   "ingredients": [
+    "minecraft:sweet_berries",
+    "minecraft:sugar"
+   ],
+   "buffs": {
+    "sweet": 2
+   },
+   "nutrition": 2,
+   "saturation": 0.2,
+   "template": "cup",
+   "palette": [
+    "#5c141f",
+    "#861e2e",
+    "#a8263a",
+    "#d03149",
+    "#ffffff"
+   ],
+   "tier": 1,
+   "duration": 180,
+   "preserved": true,
+   "heat": "low",
+   "kind": "drink"
+  },
+  {
+   "id": "mint_tea",
+   "name": "mint tea",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:mint",
+    "deepworld:tea_leaves"
+   ],
+   "buffs": {
+    "cooling": 1,
+    "fresh": 1
+   },
+   "nutrition": 1,
+   "saturation": 0.2,
+   "template": "cup",
+   "palette": [
+    "#285c3a",
+    "#3b8654",
+    "#49a86a",
+    "#6ebf8a",
+    "#ffffff"
+   ],
+   "tier": 1,
+   "duration": 180,
+   "preserved": false,
+   "heat": "low",
+   "kind": "drink"
+  },
+  {
+   "id": "chai",
+   "name": "spiced tea",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:tea_leaves",
+    "deepworld:cream",
+    "deepworld:ash_pepper"
+   ],
+   "buffs": {
+    "warming": 2
+   },
+   "nutrition": 2,
+   "saturation": 0.2,
+   "template": "cup",
+   "palette": [
+    "#5c3f1f",
+    "#865c2e",
+    "#a87439",
+    "#c49055",
+    "#3a3a3a"
+   ],
+   "tier": 2,
+   "duration": 180,
+   "preserved": false,
+   "heat": "low",
+   "kind": "drink"
+  },
+  {
+   "id": "iced_coffee",
+   "name": "iced coffee",
+   "station": "ice_box",
+   "ingredients": [
+    "deepworld:ground_coffee",
+    "minecraft:ice",
+    "deepworld:cream"
+   ],
+   "buffs": {
+    "haste": 1,
+    "cooling": 1
+   },
+   "nutrition": 2,
+   "saturation": 0.2,
+   "template": "cup",
+   "palette": [
+    "#31190b",
+    "#482410",
+    "#592e14",
+    "#703919",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "duration": 180,
+   "preserved": false,
+   "heat": "none",
+   "kind": "drink"
+  },
+  {
+   "id": "truffle_toast",
+   "name": "truffle toast",
+   "station": "oven",
+   "ingredients": [
+    "minecraft:bread",
+    "deepworld:moss_truffle",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "rich": 2,
+    "earthy": 2
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bread",
+   "palette": [
+    "#6e4c23",
+    "#a06e33",
+    "#c38a45",
+    "#d3a977",
+    "#3a2a1a"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "eel_skewers",
+   "name": "eel skewers",
+   "station": "spit",
+   "ingredients": [
+    "deepworld:blind_eel",
+    "deepworld:salt",
+    "deepworld:herbs"
+   ],
+   "buffs": {
+    "briny": 2,
+    "fresh": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "skewer",
+   "palette": [
+    "#3a3f46",
+    "#545c66",
+    "#6a7480",
+    "#88919c",
+    "#4c9a2a"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "smoked_eel",
+   "name": "smoked eel",
+   "station": "smokehouse",
+   "ingredients": [
+    "deepworld:blind_eel",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "briny": 2
+   },
+   "nutrition": 6,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#282c30",
+    "#3b3f46",
+    "#4a4f57",
+    "#5c636d",
+    "#3a3a3a"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": true,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "mushroom_risotto",
+   "name": "cave mushroom risotto",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:rice",
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    "deepworld:cheese"
+   ],
+   "buffs": {
+    "earthy": 2,
+    "rich": 2
+   },
+   "nutrition": 9,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#867545",
+    "#b6a472",
+    "#d0c4a4",
+    "#efebe1",
+    "#8a1a1a"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "marrow_toast",
+   "name": "marrow toast",
+   "station": "oven",
+   "ingredients": [
+    "minecraft:bread",
+    "deepworld:fossil_marrow",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "rich": 3
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bread",
+   "palette": [
+    "#6e4c23",
+    "#a06e33",
+    "#c38a45",
+    "#d3a977",
+    "#f6ecd0"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "salted_fish",
+   "name": "salt fish",
+   "station": "drying_rack",
+   "ingredients": [
+    "minecraft:cod",
+    "deepworld:rock_salt"
+   ],
+   "buffs": {
+    "briny": 2
+   },
+   "nutrition": 6,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#6a6a82",
+    "#a4a4b5",
+    "#d4d4dc",
+    "#f0f0f3",
+    "#7a9ab0"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": true,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "granite_jerky",
+   "name": "trench jerky",
+   "station": "drying_rack",
+   "ingredients": [
+    "minecraft:beef",
+    "deepworld:rock_salt",
+    "deepworld:chili"
+   ],
+   "buffs": {
+    "hearty": 2,
+    "warming": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "skewer",
+   "palette": [
+    "#3a170b",
+    "#542110",
+    "#6a2a14",
+    "#843418",
+    "#c82a1a"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": true,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "nectar_tart",
+   "name": "nectar tart",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:pastry",
+    "deepworld:geode_nectar",
+    "minecraft:sweet_berries"
+   ],
+   "buffs": {
+    "sweet": 3,
+    "fresh": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "pie",
+   "palette": [
+    "#53267e",
+    "#7838b8",
+    "#975ece",
+    "#bc98df",
+    "#c42a2a"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "glow_soup",
+   "name": "glow soup",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:glowcap",
+    "minecraft:glow_berries",
+    "drink:bone_broth"
+   ],
+   "buffs": {
+    "glowing": 3
+   },
+   "nutrition": 6,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#176b65",
+    "#219c93",
+    "#2ac3b7",
+    "#50d9ce",
+    "#ffb12e"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "minnow_fry",
+   "name": "minnow fry",
+   "station": "skillet",
+   "ingredients": [
+    "deepworld:crystal_minnow",
+    "deepworld:butter",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "briny": 1,
+    "glowing": 2
+   },
+   "nutrition": 6,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#53267e",
+    "#7838b8",
+    "#975ece",
+    "#bc98df",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "crystal_candy",
+   "name": "crystal candy",
+   "station": "still",
+   "ingredients": [
+    "deepworld:geode_nectar",
+    "minecraft:sugar"
+   ],
+   "buffs": {
+    "sweet": 3,
+    "haste": 1
+   },
+   "nutrition": 3,
+   "saturation": 0.8,
+   "template": "jar",
+   "palette": [
+    "#701cbc",
+    "#a055e5",
+    "#c69aef",
+    "#f2e8fb",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": true,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "cheese_toast",
+   "name": "cheese toast",
+   "station": "oven",
+   "ingredients": [
+    "minecraft:bread",
+    "deepworld:cheese"
+   ],
+   "buffs": {
+    "rich": 2,
+    "hearty": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bread",
+   "palette": [
+    "#6e4c23",
+    "#a06e33",
+    "#c38a45",
+    "#d3a977",
+    "#f0d878"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "mac_and_cheese",
+   "name": "noodles and cheese",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:dough",
+    "deepworld:cheese",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "rich": 3,
+    "hearty": 2
+   },
+   "nutrition": 10,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#b29213",
+    "#e8c537",
+    "#f0d877",
+    "#f8efc9",
+    "#c48a45"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "fondue",
+   "name": "cave fondue",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:cheese",
+    "minecraft:bread",
+    "minecraft:potato"
+   ],
+   "buffs": {
+    "rich": 3
+   },
+   "nutrition": 9,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#b29213",
+    "#e8c537",
+    "#f0d877",
+    "#f8efc9",
+    "#c48a45"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "bone_marrow_broth",
+   "name": "deep broth",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:fossil_marrow",
+    "minecraft:bone",
+    "deepworld:herbs"
+   ],
+   "buffs": {
+    "rich": 2,
+    "hearty": 2
+   },
+   "nutrition": 5,
+   "saturation": 0.2,
+   "template": "cup",
+   "palette": [
+    "#92743a",
+    "#c2a368",
+    "#d8c49e",
+    "#f2ece0",
+    "#4c9a2a"
+   ],
+   "tier": 2,
+   "duration": 180,
+   "preserved": false,
+   "heat": "low",
+   "kind": "drink"
+  },
+  {
+   "id": "sulfur_pretzels",
+   "name": "sulfur pretzels",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:dough",
+    "deepworld:sulfur_salt"
+   ],
+   "buffs": {
+    "hearty": 2
+   },
+   "nutrition": 6,
+   "saturation": 0.8,
+   "template": "bun",
+   "palette": [
+    "#4b3117",
+    "#6e4822",
+    "#8a5a2a",
+    "#ac7035",
+    "#e8d84a"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": true,
+   "heat": "high",
+   "kind": "dish"
+  },
+  {
+   "id": "pepper_steak",
+   "name": "pepper steak",
+   "station": "skillet",
+   "ingredients": [
+    "minecraft:beef",
+    "deepworld:ash_pepper",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "hearty": 3,
+    "warming": 2
+   },
+   "nutrition": 11,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#31170b",
+    "#482110",
+    "#592a14",
+    "#703419",
+    "#3a3a3a"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": false,
+   "heat": "high",
+   "kind": "dish"
+  },
+  {
+   "id": "basalt_flatbread",
+   "name": "basalt flatbread",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:flour",
+    "deepworld:ash_pepper",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "warming": 1,
+    "hearty": 2
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bread",
+   "palette": [
+    "#433323",
+    "#614b33",
+    "#7a5e40",
+    "#987550",
+    "#3a3a3a"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": true,
+   "heat": "high",
+   "kind": "dish"
+  },
+  {
+   "id": "ash_smoked_fish",
+   "name": "ash-smoked fish",
+   "station": "smokehouse",
+   "ingredients": [
+    "minecraft:salmon",
+    "deepworld:ash_pepper"
+   ],
+   "buffs": {
+    "briny": 2,
+    "warming": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#4b1f17",
+    "#6e2e21",
+    "#893a2a",
+    "#ac4834",
+    "#3a3a3a"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": true,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "ember_skewers",
+   "name": "ember skewers",
+   "station": "spit",
+   "ingredients": [
+    "minecraft:mutton",
+    "deepworld:ember_root",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "warming": 3,
+    "hearty": 1
+   },
+   "nutrition": 9,
+   "saturation": 0.8,
+   "template": "skewer",
+   "palette": [
+    "#5c1f08",
+    "#862e0c",
+    "#a83a10",
+    "#d24813",
+    "#ffd890"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": false,
+   "heat": "high",
+   "kind": "dish"
+  },
+  {
+   "id": "lava_fish_chowder",
+   "name": "magma chowder",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:lava_fish",
+    "minecraft:potato",
+    "deepworld:cream"
+   ],
+   "buffs": {
+    "cooling": 2,
+    "rich": 2
+   },
+   "nutrition": 9,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#7b300e",
+    "#b34614",
+    "#e05819",
+    "#ea7f4e",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "cooling_salad",
+   "name": "frost salad",
+   "station": "ice_box",
+   "ingredients": [
+    "deepworld:mint",
+    "deepworld:herbs",
+    "minecraft:melon_slice"
+   ],
+   "buffs": {
+    "cooling": 2,
+    "fresh": 2
+   },
+   "nutrition": 5,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#285c3a",
+    "#3b8654",
+    "#49a86a",
+    "#6ebf8a",
+    "#d84a5a"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": false,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "mint_oil_noodles",
+   "name": "chilled noodles",
+   "station": "ice_box",
+   "ingredients": [
+    "deepworld:dough",
+    "deepworld:mint_oil",
+    "minecraft:ice"
+   ],
+   "buffs": {
+    "cooling": 3,
+    "hearty": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#ad8231",
+    "#d6b26e",
+    "#e8d4ae",
+    "#f9f4eb",
+    "#4aa86a"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": false,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "ember_jerky",
+   "name": "ember jerky",
+   "station": "drying_rack",
+   "ingredients": [
+    "minecraft:porkchop",
+    "deepworld:ember_extract"
+   ],
+   "buffs": {
+    "warming": 2,
+    "hearty": 2
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "skewer",
+   "palette": [
+    "#5c2813",
+    "#863b1c",
+    "#a84a24",
+    "#d25c2d",
+    "#ffa040"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": true,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "hush_tea",
+   "name": "hush tea",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:hush_moss",
+    "deepworld:tea_leaves"
+   ],
+   "buffs": {
+    "hushed": 2
+   },
+   "nutrition": 1,
+   "saturation": 0.2,
+   "template": "cup",
+   "palette": [
+    "#12464b",
+    "#1b666e",
+    "#21808a",
+    "#2aa0ac",
+    "#ffffff"
+   ],
+   "tier": 3,
+   "duration": 180,
+   "preserved": false,
+   "heat": "soul",
+   "kind": "drink"
+  },
+  {
+   "id": "silent_stew",
+   "name": "silent stew",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:hush_moss",
+    "minecraft:mutton",
+    "minecraft:potato",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "hushed": 2,
+    "hearty": 2
+   },
+   "nutrition": 10,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#0b3033",
+    "#10464b",
+    "#14575e",
+    "#186d75",
+    "#c8b88a"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": false,
+   "heat": "soul",
+   "kind": "dish"
+  },
+  {
+   "id": "glowcap_dumplings",
+   "name": "lantern dumplings",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:dough",
+    "deepworld:glowcap",
+    "minecraft:porkchop"
+   ],
+   "buffs": {
+    "glowing": 2,
+    "hearty": 2
+   },
+   "nutrition": 9,
+   "saturation": 0.8,
+   "template": "bun",
+   "palette": [
+    "#596c6f",
+    "#859a9d",
+    "#aebcbe",
+    "#e0e5e6",
+    "#2ac4b8"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "dark_bread",
+   "name": "gloom bread",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:flour",
+    "deepworld:hush_moss",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "hushed": 1,
+    "hearty": 2
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bread",
+   "palette": [
+    "#283133",
+    "#3b484b",
+    "#4a5a5e",
+    "#5c7075",
+    "#22808a"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": true,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "bone_yard_soup",
+   "name": "bone yard soup",
+   "station": "pot",
+   "ingredients": [
+    "minecraft:bone",
+    "deepworld:fossil_marrow",
+    "deepworld:hush_moss"
+   ],
+   "buffs": {
+    "rich": 2,
+    "hushed": 1,
+    "resistance": 1
+   },
+   "nutrition": 8,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#6d5d3a",
+    "#9f8755",
+    "#b8a479",
+    "#d2c6ab",
+    "#22808a"
+   ],
+   "tier": 3,
+   "duration": 480,
+   "preserved": false,
+   "heat": "soul",
+   "kind": "dish"
+  },
+  {
+   "id": "fig_tart",
+   "name": "fig tart",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:pastry",
+    "deepworld:forge_fig",
+    "minecraft:honey_bottle"
+   ],
+   "buffs": {
+    "sweet": 2,
+    "warming": 1
+   },
+   "nutrition": 8,
+   "saturation": 0.8,
+   "template": "pie",
+   "palette": [
+    "#431330",
+    "#611c46",
+    "#7a2457",
+    "#982d6d",
+    "#e8a62a"
+   ],
+   "tier": 4,
+   "duration": 480,
+   "preserved": false,
+   "heat": "high",
+   "kind": "dish"
+  },
+  {
+   "id": "fig_roast",
+   "name": "fig-roasted hoglin",
+   "station": "spit",
+   "ingredients": [
+    "deepworld:hoglin_chop",
+    "deepworld:forge_fig",
+    "deepworld:salt"
+   ],
+   "buffs": {
+    "hearty": 3,
+    "sweet": 1,
+    "strength": 1
+   },
+   "nutrition": 13,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#431330",
+    "#611c46",
+    "#7a2457",
+    "#982d6d",
+    "#c43a2a"
+   ],
+   "tier": 4,
+   "duration": 480,
+   "preserved": false,
+   "heat": "extreme",
+   "kind": "dish"
+  },
+  {
+   "id": "forge_bread",
+   "name": "forge bread",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:flour",
+    "deepworld:forge_fig",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "sweet": 1,
+    "hearty": 2,
+    "warming": 1
+   },
+   "nutrition": 8,
+   "saturation": 0.8,
+   "template": "bread",
+   "palette": [
+    "#43281f",
+    "#613b2e",
+    "#7a4939",
+    "#985c48",
+    "#7a2458"
+   ],
+   "tier": 4,
+   "duration": 480,
+   "preserved": false,
+   "heat": "high",
+   "kind": "dish"
+  },
+  {
+   "id": "mantle_stew",
+   "name": "mantle stew",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:hoglin_chop",
+    "deepworld:ember_root",
+    "deepworld:forge_fig",
+    "minecraft:potato"
+   ],
+   "buffs": {
+    "hearty": 3,
+    "warming": 2,
+    "fire_resistance": 1
+   },
+   "nutrition": 13,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#3a0e05",
+    "#541408",
+    "#6a1a0a",
+    "#84200c",
+    "#7a2458"
+   ],
+   "tier": 4,
+   "duration": 480,
+   "preserved": false,
+   "heat": "high",
+   "kind": "dish"
+  },
+  {
+   "id": "crimson_skewers",
+   "name": "crimson skewers",
+   "station": "spit",
+   "ingredients": [
+    "minecraft:crimson_fungus",
+    "deepworld:hoglin_chop"
+   ],
+   "buffs": {
+    "hearty": 2,
+    "warming": 1
+   },
+   "nutrition": 9,
+   "saturation": 0.8,
+   "template": "skewer",
+   "palette": [
+    "#5c1717",
+    "#862121",
+    "#a82929",
+    "#cd3838",
+    "#5a0a0a"
+   ],
+   "tier": 4,
+   "duration": 480,
+   "preserved": false,
+   "heat": "high",
+   "kind": "dish"
+  },
+  {
+   "id": "wart_tonic",
+   "name": "wart tonic",
+   "station": "still",
+   "ingredients": [
+    "minecraft:nether_wart",
+    "minecraft:honey_bottle"
+   ],
+   "buffs": {
+    "bitter": 2
+   },
+   "nutrition": 1,
+   "saturation": 0.2,
+   "template": "cup",
+   "palette": [
+    "#4b0e0b",
+    "#6e1410",
+    "#8a1a14",
+    "#ac2018",
+    "#e8a62a"
+   ],
+   "tier": 4,
+   "duration": 180,
+   "preserved": true,
+   "heat": "medium",
+   "kind": "drink"
+  },
+  {
+   "id": "warped_tea",
+   "name": "warped tea",
+   "station": "pot",
+   "ingredients": [
+    "minecraft:warped_fungus",
+    "deepworld:tea_leaves"
+   ],
+   "buffs": {
+    "bitter": 1,
+    "cooling": 1
+   },
+   "nutrition": 1,
+   "saturation": 0.2,
+   "template": "cup",
+   "palette": [
+    "#0b433f",
+    "#10615c",
+    "#147a74",
+    "#189891",
+    "#ffffff"
+   ],
+   "tier": 4,
+   "duration": 180,
+   "preserved": false,
+   "heat": "low",
+   "kind": "drink"
+  },
+  {
+   "id": "hellmouth_chili",
+   "name": "hellmouth chili",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:chili",
+    "deepworld:hoglin_chop",
+    "deepworld:beans",
+    "deepworld:blaze_spice"
+   ],
+   "buffs": {
+    "warming": 3,
+    "hearty": 3,
+    "strength": 1
+   },
+   "nutrition": 13,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#4b0e05",
+    "#6e1408",
+    "#8a1909",
+    "#ac200c",
+    "#ffdc4a"
+   ],
+   "tier": 4,
+   "duration": 480,
+   "preserved": false,
+   "heat": "extreme",
+   "kind": "dish"
+  },
+  {
+   "id": "blaze_bread",
+   "name": "blaze bread",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:flour",
+    "deepworld:blaze_spice"
+   ],
+   "buffs": {
+    "warming": 2,
+    "hearty": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "bread",
+   "palette": [
+    "#5c270e",
+    "#863914",
+    "#a84819",
+    "#d25920",
+    "#ffdc4a"
+   ],
+   "tier": 4,
+   "duration": 480,
+   "preserved": true,
+   "heat": "extreme",
+   "kind": "dish"
+  },
+  {
+   "id": "ghast_soup",
+   "name": "tear soup",
+   "station": "pot",
+   "ingredients": [
+    "minecraft:ghast_tear",
+    "drink:bone_broth",
+    "deepworld:herbs"
+   ],
+   "buffs": {
+    "bitter": 3,
+    "fresh": 2
+   },
+   "nutrition": 6,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#4676a7",
+    "#8bacce",
+    "#c8d7e7",
+    "#edf2f7",
+    "#4c9a2a"
+   ],
+   "tier": 4,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "magma_cream_custard",
+   "name": "magma custard",
+   "station": "oven",
+   "ingredients": [
+    "minecraft:magma_cream",
+    "minecraft:egg",
+    "minecraft:sugar"
+   ],
+   "buffs": {
+    "warming": 2,
+    "sweet": 2,
+    "fire_resistance": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.8,
+   "template": "cup",
+   "palette": [
+    "#7b380e",
+    "#b35114",
+    "#e06619",
+    "#ea8a4e",
+    "#ffdc4a"
+   ],
+   "tier": 4,
+   "duration": 480,
+   "preserved": false,
+   "heat": "high",
+   "kind": "dish"
+  },
+  {
+   "id": "strider_supper",
+   "name": "strider supper",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:lava_fish",
+    "deepworld:ember_root",
+    "deepworld:forge_fig"
+   ],
+   "buffs": {
+    "cooling": 2,
+    "warming": 1,
+    "fire_resistance": 1
+   },
+   "nutrition": 10,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#7b300e",
+    "#b34614",
+    "#e05819",
+    "#ea7f4e",
+    "#7a2458"
+   ],
+   "tier": 4,
+   "duration": 480,
+   "preserved": false,
+   "heat": "high",
+   "kind": "dish"
+  },
+  {
+   "id": "delvers_breakfast",
+   "name": "delver's breakfast",
+   "station": "skillet",
+   "ingredients": [
+    "minecraft:egg",
+    "minecraft:porkchop",
+    "minecraft:potato",
+    "minecraft:bread"
+   ],
+   "buffs": {
+    "hearty": 3,
+    "rich": 2
+   },
+   "nutrition": 12,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#6b4b0e",
+    "#9c6e14",
+    "#c48a19",
+    "#e3a731",
+    "#a84a3a"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "expedition_porridge",
+   "name": "expedition porridge",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:oats",
+    "deepworld:salt",
+    "deepworld:rendered_fat"
+   ],
+   "buffs": {
+    "hearty": 3
+   },
+   "nutrition": 9,
+   "saturation": 0.8,
+   "template": "bowl",
+   "palette": [
+    "#7f672b",
+    "#b8963f",
+    "#ccb069",
+    "#dfcea3",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": true,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "trail_mix",
+   "name": "trail mix",
+   "station": "drying_rack",
+   "ingredients": [
+    "minecraft:sweet_berries",
+    "deepworld:oats",
+    "minecraft:cocoa_beans"
+   ],
+   "buffs": {
+    "sweet": 2,
+    "hearty": 1
+   },
+   "nutrition": 5,
+   "saturation": 0.8,
+   "template": "plate",
+   "palette": [
+    "#4b311f",
+    "#6e482e",
+    "#8a5a39",
+    "#ac7048",
+    "#a8263a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": true,
+   "heat": "none",
+   "kind": "dish"
+  },
+  {
+   "id": "cocoa_cookies",
+   "name": "cocoa cookies",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:flour",
+    "minecraft:cocoa_beans",
+    "minecraft:sugar",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "sweet": 2,
+    "warming": 1
+   },
+   "nutrition": 5,
+   "saturation": 0.8,
+   "template": "bun",
+   "palette": [
+    "#3a1f0e",
+    "#542e14",
+    "#6a3a1a",
+    "#844820",
+    "#3a1a0a"
+   ],
+   "tier": 1,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "honey_cake",
+   "name": "honey cake",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:flour",
+    "minecraft:honey_bottle",
+    "minecraft:egg",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "sweet": 3,
+    "rich": 1
+   },
+   "nutrition": 8,
+   "saturation": 0.8,
+   "template": "pie",
+   "palette": [
+    "#885d0e",
+    "#c58815",
+    "#e8a629",
+    "#eebf67",
+    "#fff4a8"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
   }
  ],
  "processing": [
@@ -3920,6 +6008,104 @@
      "rz": 0
     }
    ]
+  },
+  {
+   "id": "feast_table",
+   "name": "feast table",
+   "kind": "feast",
+   "station": "feast",
+   "icon": "minecraft:dark_oak_slab",
+   "visual": [
+    {
+     "block": "minecraft:dark_oak_fence",
+     "scale": 0.9,
+     "x": -0.3,
+     "y": 0.0,
+     "z": -0.3,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "block": "minecraft:dark_oak_fence",
+     "scale": 0.9,
+     "x": 0.3,
+     "y": 0.0,
+     "z": 0.3,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "block": "minecraft:dark_oak_slab[type=top]",
+     "scale": 1.0,
+     "x": 0.0,
+     "y": 0.0,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "item": "minecraft:cake",
+     "scale": 0.5,
+     "x": 0.0,
+     "y": 1.15,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "item": "minecraft:mushroom_stew",
+     "scale": 0.4,
+     "x": 0.28,
+     "y": 1.05,
+     "z": 0.25,
+     "rx": 90,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "item": "minecraft:bread",
+     "scale": 0.4,
+     "x": -0.28,
+     "y": 1.05,
+     "z": -0.2,
+     "rx": 90,
+     "ry": 0,
+     "rz": 0
+    }
+   ]
+  },
+  {
+   "id": "record_board",
+   "name": "record board",
+   "kind": "records",
+   "station": "records",
+   "icon": "minecraft:lectern",
+   "visual": [
+    {
+     "block": "minecraft:lectern",
+     "scale": 1.0,
+     "x": 0.0,
+     "y": 0.0,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "item": "minecraft:written_book",
+     "scale": 0.5,
+     "x": 0.0,
+     "y": 1.0,
+     "z": 0.0,
+     "rx": 70,
+     "ry": 0,
+     "rz": 0
+    }
+   ]
   }
  ],
  "plants": [
@@ -4156,6 +6342,79 @@
    ],
    "tries": 24,
    "count_per_chunk": 4
+  }
+ ],
+ "tasting_layers": [
+  {
+   "layer": "shallow caverns",
+   "keys": [
+    "minecraft:glow_berries",
+    "minecraft:brown_mushroom"
+   ]
+  },
+  {
+   "layer": "deepslate boundary",
+   "keys": [
+    "deepworld:blind_eel",
+    "deepworld:moss_truffle"
+   ]
+  },
+  {
+   "layer": "granite trenches",
+   "keys": [
+    "deepworld:rock_salt",
+    "deepworld:fossil_marrow"
+   ]
+  },
+  {
+   "layer": "crystal caverns",
+   "keys": [
+    "deepworld:glowcap",
+    "deepworld:geode_nectar",
+    "deepworld:crystal_minnow"
+   ]
+  },
+  {
+   "layer": "obsidian roots",
+   "keys": [
+    "deepworld:sulfur_salt",
+    "deepworld:ash_pepper"
+   ]
+  },
+  {
+   "layer": "molten echoes",
+   "keys": [
+    "deepworld:ember_root",
+    "deepworld:lava_fish"
+   ]
+  },
+  {
+   "layer": "gloomstone trenches",
+   "keys": [
+    "deepworld:hush_moss"
+   ]
+  },
+  {
+   "layer": "mantle crust",
+   "keys": [
+    "deepworld:forge_fig"
+   ]
+  },
+  {
+   "layer": "the hellmouth",
+   "keys": [
+    "minecraft:crimson_fungus",
+    "minecraft:nether_wart",
+    "minecraft:warped_fungus"
+   ]
+  },
+  {
+   "layer": "nether stratum",
+   "keys": [
+    "deepworld:blaze_spice",
+    "deepworld:hoglin_chop",
+    "minecraft:ghast_tear"
+   ]
   }
  ],
  "disciplines": [
@@ -4604,6 +6863,48 @@
     140
    ],
    "rarity": 60
+  }
+ ],
+ "weekly_goals": [
+  {
+   "counter": "dishes_cooked",
+   "target": 300,
+   "name": "cook 300 dishes"
+  },
+  {
+   "counter": "crops_harvested",
+   "target": 600,
+   "name": "harvest 600 crops"
+  },
+  {
+   "counter": "landmarks_found",
+   "target": 12,
+   "name": "find 12 landmarks"
+  },
+  {
+   "counter": "commissions_done",
+   "target": 25,
+   "name": "finish 25 commissions"
+  },
+  {
+   "counter": "forged",
+   "target": 80,
+   "name": "forge 80 items"
+  },
+  {
+   "counter": "deep_kills",
+   "target": 200,
+   "name": "defeat 200 deep monsters"
+  },
+  {
+   "counter": "rails_laid",
+   "target": 800,
+   "name": "lay 800 rails"
+  },
+  {
+   "counter": "feasts",
+   "target": 15,
+   "name": "serve 15 feasts"
   }
  ]
 }

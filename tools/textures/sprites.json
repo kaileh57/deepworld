@@ -1244,6 +1244,798 @@
 				"#ffd0d8",
 				"#4aa83a"
 			]
+		},
+		{
+			"name": "baked_apples",
+			"template": "bowl",
+			"ramp": [
+				"#6b1f17",
+				"#9c2e21",
+				"#c33a2a",
+				"#d95e50",
+				"#e8c070"
+			]
+		},
+		{
+			"name": "potato_hash",
+			"template": "plate",
+			"ramp": [
+				"#6e521e",
+				"#a1782d",
+				"#c7953a",
+				"#d6b06c",
+				"#4c9a2a"
+			]
+		},
+		{
+			"name": "carrot_soup",
+			"template": "bowl",
+			"ramp": [
+				"#7b430e",
+				"#b36114",
+				"#e07a19",
+				"#ea994e",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "pumpkin_bread",
+			"template": "bread",
+			"ramp": [
+				"#6e4017",
+				"#a05e21",
+				"#c87629",
+				"#da9453",
+				"#8a5a2b"
+			]
+		},
+		{
+			"name": "beetroot_borscht",
+			"template": "bowl",
+			"ramp": [
+				"#4b0e1f",
+				"#6e142e",
+				"#8a1939",
+				"#ac2048",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "fried_egg",
+			"template": "plate",
+			"ramp": [
+				"#9a750a",
+				"#e1aa0e",
+				"#f2c23a",
+				"#f6d780",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "herb_bread",
+			"template": "bread",
+			"ramp": [
+				"#6e4c23",
+				"#a06e33",
+				"#c38a45",
+				"#d3a977",
+				"#4c9a2a"
+			]
+		},
+		{
+			"name": "bean_stew",
+			"template": "bowl",
+			"ramp": [
+				"#4b2213",
+				"#6e311c",
+				"#8a3e23",
+				"#ac4d2d",
+				"#4c9a2a"
+			]
+		},
+		{
+			"name": "rice_bowl",
+			"template": "bowl",
+			"ramp": [
+				"#b3933b",
+				"#d6c084",
+				"#ece2c6",
+				"#f8f5eb",
+				"#4c9a2a"
+			]
+		},
+		{
+			"name": "oat_cakes",
+			"template": "bun",
+			"ramp": [
+				"#7f672b",
+				"#b8963f",
+				"#ccb069",
+				"#dfcea3",
+				"#e8a62a"
+			]
+		},
+		{
+			"name": "berry_crumble",
+			"template": "pie",
+			"ramp": [
+				"#5c141f",
+				"#861e2e",
+				"#a8263a",
+				"#d03149",
+				"#e8d49a"
+			]
+		},
+		{
+			"name": "roast_chicken",
+			"template": "plate",
+			"ramp": [
+				"#6e4917",
+				"#a06b21",
+				"#c88529",
+				"#daa253",
+				"#4c9a2a"
+			]
+		},
+		{
+			"name": "rabbit_stew_deluxe",
+			"template": "bowl",
+			"ramp": [
+				"#4b311f",
+				"#6e482e",
+				"#8a5a39",
+				"#ac7048",
+				"#4c9a2a"
+			]
+		},
+		{
+			"name": "cod_cakes",
+			"template": "bun",
+			"ramp": [
+				"#8c6633",
+				"#c19356",
+				"#d3b48a",
+				"#ebddc9",
+				"#7a9ab0"
+			]
+		},
+		{
+			"name": "kelp_crisps",
+			"template": "plate",
+			"ramp": [
+				"#1f3a17",
+				"#2e5421",
+				"#396a2a",
+				"#488434",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "smoked_beef",
+			"template": "plate",
+			"ramp": [
+				"#31170b",
+				"#482110",
+				"#592a14",
+				"#703419",
+				"#3a3a3a"
+			]
+		},
+		{
+			"name": "smoked_pork",
+			"template": "plate",
+			"ramp": [
+				"#5c281f",
+				"#863b2e",
+				"#a84a39",
+				"#c46555",
+				"#e8a62a"
+			]
+		},
+		{
+			"name": "dried_apples",
+			"template": "plate",
+			"ramp": [
+				"#6e4917",
+				"#a06b21",
+				"#c88529",
+				"#daa253",
+				"#c43a2a"
+			]
+		},
+		{
+			"name": "pickled_beets",
+			"template": "jar",
+			"ramp": [
+				"#4b0e1f",
+				"#6e142e",
+				"#8a1939",
+				"#ac2048",
+				"#d4b44a"
+			]
+		},
+		{
+			"name": "sauerkraut",
+			"template": "jar",
+			"ramp": [
+				"#737123",
+				"#a8a433",
+				"#c7c34a",
+				"#d7d57e",
+				"#4c9a2a"
+			]
+		},
+		{
+			"name": "melon_sorbet",
+			"template": "cup",
+			"ramp": [
+				"#831c27",
+				"#be2939",
+				"#d84959",
+				"#e48590",
+				"#4aa83a"
+			]
+		},
+		{
+			"name": "ice_cream",
+			"template": "cup",
+			"ramp": [
+				"#c59c37",
+				"#dfc990",
+				"#f4ecd7",
+				"#f9f5eb",
+				"#8a5a3a"
+			]
+		},
+		{
+			"name": "lemonade_ish",
+			"template": "cup",
+			"ramp": [
+				"#5c141f",
+				"#861e2e",
+				"#a8263a",
+				"#d03149",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "mint_tea",
+			"template": "cup",
+			"ramp": [
+				"#285c3a",
+				"#3b8654",
+				"#49a86a",
+				"#6ebf8a",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "chai",
+			"template": "cup",
+			"ramp": [
+				"#5c3f1f",
+				"#865c2e",
+				"#a87439",
+				"#c49055",
+				"#3a3a3a"
+			]
+		},
+		{
+			"name": "iced_coffee",
+			"template": "cup",
+			"ramp": [
+				"#31190b",
+				"#482410",
+				"#592e14",
+				"#703919",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "truffle_toast",
+			"template": "bread",
+			"ramp": [
+				"#6e4c23",
+				"#a06e33",
+				"#c38a45",
+				"#d3a977",
+				"#3a2a1a"
+			]
+		},
+		{
+			"name": "eel_skewers",
+			"template": "skewer",
+			"ramp": [
+				"#3a3f46",
+				"#545c66",
+				"#6a7480",
+				"#88919c",
+				"#4c9a2a"
+			]
+		},
+		{
+			"name": "smoked_eel",
+			"template": "plate",
+			"ramp": [
+				"#282c30",
+				"#3b3f46",
+				"#4a4f57",
+				"#5c636d",
+				"#3a3a3a"
+			]
+		},
+		{
+			"name": "mushroom_risotto",
+			"template": "bowl",
+			"ramp": [
+				"#867545",
+				"#b6a472",
+				"#d0c4a4",
+				"#efebe1",
+				"#8a1a1a"
+			]
+		},
+		{
+			"name": "marrow_toast",
+			"template": "bread",
+			"ramp": [
+				"#6e4c23",
+				"#a06e33",
+				"#c38a45",
+				"#d3a977",
+				"#f6ecd0"
+			]
+		},
+		{
+			"name": "salted_fish",
+			"template": "plate",
+			"ramp": [
+				"#6a6a82",
+				"#a4a4b5",
+				"#d4d4dc",
+				"#f0f0f3",
+				"#7a9ab0"
+			]
+		},
+		{
+			"name": "granite_jerky",
+			"template": "skewer",
+			"ramp": [
+				"#3a170b",
+				"#542110",
+				"#6a2a14",
+				"#843418",
+				"#c82a1a"
+			]
+		},
+		{
+			"name": "nectar_tart",
+			"template": "pie",
+			"ramp": [
+				"#53267e",
+				"#7838b8",
+				"#975ece",
+				"#bc98df",
+				"#c42a2a"
+			]
+		},
+		{
+			"name": "glow_soup",
+			"template": "bowl",
+			"ramp": [
+				"#176b65",
+				"#219c93",
+				"#2ac3b7",
+				"#50d9ce",
+				"#ffb12e"
+			]
+		},
+		{
+			"name": "minnow_fry",
+			"template": "plate",
+			"ramp": [
+				"#53267e",
+				"#7838b8",
+				"#975ece",
+				"#bc98df",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "crystal_candy",
+			"template": "jar",
+			"ramp": [
+				"#701cbc",
+				"#a055e5",
+				"#c69aef",
+				"#f2e8fb",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "cheese_toast",
+			"template": "bread",
+			"ramp": [
+				"#6e4c23",
+				"#a06e33",
+				"#c38a45",
+				"#d3a977",
+				"#f0d878"
+			]
+		},
+		{
+			"name": "mac_and_cheese",
+			"template": "bowl",
+			"ramp": [
+				"#b29213",
+				"#e8c537",
+				"#f0d877",
+				"#f8efc9",
+				"#c48a45"
+			]
+		},
+		{
+			"name": "fondue",
+			"template": "bowl",
+			"ramp": [
+				"#b29213",
+				"#e8c537",
+				"#f0d877",
+				"#f8efc9",
+				"#c48a45"
+			]
+		},
+		{
+			"name": "bone_marrow_broth",
+			"template": "cup",
+			"ramp": [
+				"#92743a",
+				"#c2a368",
+				"#d8c49e",
+				"#f2ece0",
+				"#4c9a2a"
+			]
+		},
+		{
+			"name": "sulfur_pretzels",
+			"template": "bun",
+			"ramp": [
+				"#4b3117",
+				"#6e4822",
+				"#8a5a2a",
+				"#ac7035",
+				"#e8d84a"
+			]
+		},
+		{
+			"name": "pepper_steak",
+			"template": "plate",
+			"ramp": [
+				"#31170b",
+				"#482110",
+				"#592a14",
+				"#703419",
+				"#3a3a3a"
+			]
+		},
+		{
+			"name": "basalt_flatbread",
+			"template": "bread",
+			"ramp": [
+				"#433323",
+				"#614b33",
+				"#7a5e40",
+				"#987550",
+				"#3a3a3a"
+			]
+		},
+		{
+			"name": "ash_smoked_fish",
+			"template": "plate",
+			"ramp": [
+				"#4b1f17",
+				"#6e2e21",
+				"#893a2a",
+				"#ac4834",
+				"#3a3a3a"
+			]
+		},
+		{
+			"name": "ember_skewers",
+			"template": "skewer",
+			"ramp": [
+				"#5c1f08",
+				"#862e0c",
+				"#a83a10",
+				"#d24813",
+				"#ffd890"
+			]
+		},
+		{
+			"name": "lava_fish_chowder",
+			"template": "bowl",
+			"ramp": [
+				"#7b300e",
+				"#b34614",
+				"#e05819",
+				"#ea7f4e",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "cooling_salad",
+			"template": "bowl",
+			"ramp": [
+				"#285c3a",
+				"#3b8654",
+				"#49a86a",
+				"#6ebf8a",
+				"#d84a5a"
+			]
+		},
+		{
+			"name": "mint_oil_noodles",
+			"template": "bowl",
+			"ramp": [
+				"#ad8231",
+				"#d6b26e",
+				"#e8d4ae",
+				"#f9f4eb",
+				"#4aa86a"
+			]
+		},
+		{
+			"name": "ember_jerky",
+			"template": "skewer",
+			"ramp": [
+				"#5c2813",
+				"#863b1c",
+				"#a84a24",
+				"#d25c2d",
+				"#ffa040"
+			]
+		},
+		{
+			"name": "hush_tea",
+			"template": "cup",
+			"ramp": [
+				"#12464b",
+				"#1b666e",
+				"#21808a",
+				"#2aa0ac",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "silent_stew",
+			"template": "bowl",
+			"ramp": [
+				"#0b3033",
+				"#10464b",
+				"#14575e",
+				"#186d75",
+				"#c8b88a"
+			]
+		},
+		{
+			"name": "glowcap_dumplings",
+			"template": "bun",
+			"ramp": [
+				"#596c6f",
+				"#859a9d",
+				"#aebcbe",
+				"#e0e5e6",
+				"#2ac4b8"
+			]
+		},
+		{
+			"name": "dark_bread",
+			"template": "bread",
+			"ramp": [
+				"#283133",
+				"#3b484b",
+				"#4a5a5e",
+				"#5c7075",
+				"#22808a"
+			]
+		},
+		{
+			"name": "bone_yard_soup",
+			"template": "bowl",
+			"ramp": [
+				"#6d5d3a",
+				"#9f8755",
+				"#b8a479",
+				"#d2c6ab",
+				"#22808a"
+			]
+		},
+		{
+			"name": "fig_tart",
+			"template": "pie",
+			"ramp": [
+				"#431330",
+				"#611c46",
+				"#7a2457",
+				"#982d6d",
+				"#e8a62a"
+			]
+		},
+		{
+			"name": "fig_roast",
+			"template": "plate",
+			"ramp": [
+				"#431330",
+				"#611c46",
+				"#7a2457",
+				"#982d6d",
+				"#c43a2a"
+			]
+		},
+		{
+			"name": "forge_bread",
+			"template": "bread",
+			"ramp": [
+				"#43281f",
+				"#613b2e",
+				"#7a4939",
+				"#985c48",
+				"#7a2458"
+			]
+		},
+		{
+			"name": "mantle_stew",
+			"template": "bowl",
+			"ramp": [
+				"#3a0e05",
+				"#541408",
+				"#6a1a0a",
+				"#84200c",
+				"#7a2458"
+			]
+		},
+		{
+			"name": "crimson_skewers",
+			"template": "skewer",
+			"ramp": [
+				"#5c1717",
+				"#862121",
+				"#a82929",
+				"#cd3838",
+				"#5a0a0a"
+			]
+		},
+		{
+			"name": "wart_tonic",
+			"template": "cup",
+			"ramp": [
+				"#4b0e0b",
+				"#6e1410",
+				"#8a1a14",
+				"#ac2018",
+				"#e8a62a"
+			]
+		},
+		{
+			"name": "warped_tea",
+			"template": "cup",
+			"ramp": [
+				"#0b433f",
+				"#10615c",
+				"#147a74",
+				"#189891",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "hellmouth_chili",
+			"template": "bowl",
+			"ramp": [
+				"#4b0e05",
+				"#6e1408",
+				"#8a1909",
+				"#ac200c",
+				"#ffdc4a"
+			]
+		},
+		{
+			"name": "blaze_bread",
+			"template": "bread",
+			"ramp": [
+				"#5c270e",
+				"#863914",
+				"#a84819",
+				"#d25920",
+				"#ffdc4a"
+			]
+		},
+		{
+			"name": "ghast_soup",
+			"template": "bowl",
+			"ramp": [
+				"#4676a7",
+				"#8bacce",
+				"#c8d7e7",
+				"#edf2f7",
+				"#4c9a2a"
+			]
+		},
+		{
+			"name": "magma_cream_custard",
+			"template": "cup",
+			"ramp": [
+				"#7b380e",
+				"#b35114",
+				"#e06619",
+				"#ea8a4e",
+				"#ffdc4a"
+			]
+		},
+		{
+			"name": "strider_supper",
+			"template": "bowl",
+			"ramp": [
+				"#7b300e",
+				"#b34614",
+				"#e05819",
+				"#ea7f4e",
+				"#7a2458"
+			]
+		},
+		{
+			"name": "delvers_breakfast",
+			"template": "plate",
+			"ramp": [
+				"#6b4b0e",
+				"#9c6e14",
+				"#c48a19",
+				"#e3a731",
+				"#a84a3a"
+			]
+		},
+		{
+			"name": "expedition_porridge",
+			"template": "bowl",
+			"ramp": [
+				"#7f672b",
+				"#b8963f",
+				"#ccb069",
+				"#dfcea3",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "trail_mix",
+			"template": "plate",
+			"ramp": [
+				"#4b311f",
+				"#6e482e",
+				"#8a5a39",
+				"#ac7048",
+				"#a8263a"
+			]
+		},
+		{
+			"name": "cocoa_cookies",
+			"template": "bun",
+			"ramp": [
+				"#3a1f0e",
+				"#542e14",
+				"#6a3a1a",
+				"#844820",
+				"#3a1a0a"
+			]
+		},
+		{
+			"name": "honey_cake",
+			"template": "pie",
+			"ramp": [
+				"#885d0e",
+				"#c58815",
+				"#e8a629",
+				"#eebf67",
+				"#fff4a8"
+			]
 		}
 	],
 	"generic_dishes": [

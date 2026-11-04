@@ -108,6 +108,10 @@ public class StationBlock extends Block implements PolymerBlock, BlockWithElemen
 				new dev.kaileh57.deepworld.economy.BoardGui(server_player).open();
 			} else if (level.getBlockEntity(pos) instanceof dev.kaileh57.deepworld.economy.ShopBlockEntity shop) {
 				new dev.kaileh57.deepworld.economy.ShopGui(server_player, shop).open();
+			} else if (station.kind().equals("feast")) {
+				new dev.kaileh57.deepworld.living.FeastGui(server_player, pos).open();
+			} else if (station.kind().equals("records")) {
+				new dev.kaileh57.deepworld.living.RecordsGui(server_player).open();
 			} else if (station.kind().equals("smith")) {
 				new dev.kaileh57.deepworld.smithing.SmithGui(server_player).open();
 			} else {

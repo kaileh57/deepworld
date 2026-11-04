@@ -47,6 +47,7 @@ public final class Meals {
 	public static final AttachmentType<List<Meal>> meals = AttachmentRegistry.create(DeepWorld.id("meals"), builder -> builder.persistent(Meal.codec.listOf()).initializer(ArrayList::new));
 	private static final Identifier warming_modifier = DeepWorld.id("warming");
 	public static int server_bonus_slots;
+	public static boolean temp_bonus;
 
 	private Meals() {
 	}
@@ -55,11 +56,26 @@ public final class Meals {
 	}
 
 	public static int slot_count() {
-		return 3 + server_bonus_slots;
+		return 3 + server_bonus_slots + (temp_bonus ? 1 : 0);
 	}
 
 	public static List<Meal> of(ServerPlayer player) {
 		return player.getAttachedOrCreate(meals);
+	}
+
+	public static void feast(ServerPlayer player, Map<String, Integer> buffs, int seconds, int bonus_hearts) {
+		List<Meal> list = new ArrayList<>(of(player));
+		list.removeIf(m -> m.id().equals("feast"));
+		List<Meal> dishes = list.stream().filter(m -> !m.kind().equals("drink")).toList();
+		if (dishes.size() >= slot_count()) {
+			list.remove(dishes.stream().min((a, b) -> Integer.compare(a.seconds(), b.seconds())).orElseThrow());
+		}
+		list.add(new Meal("feast", "feast", "dish", buffs, "", seconds));
+		player.setAttached(meals, list);
+		apply_on_eat(player, buffs, "", seconds);
+		if (bonus_hearts > 0) {
+			player.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, seconds * 20, Math.max(0, bonus_hearts - 1), true, false, true));
+		}
 	}
 
 	public static void eat(ServerPlayer player, ItemStack stack) {

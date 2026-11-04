@@ -84,6 +84,10 @@ public final class Guild {
 		next.counters().merge(counter, amount, Integer::sum);
 		player.setAttached(state, next);
 		check(player);
+		if (!(player instanceof net.fabricmc.fabric.api.entity.FakePlayer) && player.level().getServer() != null) {
+			dev.kaileh57.deepworld.living.Records.offer(player.level().getServer(), player.getGameProfile().name(), counter, next.counters().get(counter));
+			dev.kaileh57.deepworld.living.Events.goal_add(player.level().getServer(), counter, amount);
+		}
 	}
 
 	public static void set_max(ServerPlayer player, String counter, int value) {
@@ -94,6 +98,9 @@ public final class Guild {
 		next.counters().put(counter, value);
 		player.setAttached(state, next);
 		check(player);
+		if (!(player instanceof net.fabricmc.fabric.api.entity.FakePlayer) && player.level().getServer() != null) {
+			dev.kaileh57.deepworld.living.Records.offer(player.level().getServer(), player.getGameProfile().name(), counter, value);
+		}
 	}
 
 	private static void check(ServerPlayer player) {

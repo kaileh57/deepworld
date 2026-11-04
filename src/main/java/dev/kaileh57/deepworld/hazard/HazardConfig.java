@@ -19,6 +19,8 @@ public class HazardConfig {
 	public boolean sound = true;
 	public boolean spoilage = true;
 	public boolean tremors = true;
+	public String wiki_url = "http://localhost:4321";
+	public int live_port = 8125;
 
 	public static HazardConfig current = new HazardConfig();
 
