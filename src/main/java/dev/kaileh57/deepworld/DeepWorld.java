@@ -8,6 +8,14 @@ import dev.kaileh57.deepworld.cooking.Spoilage;
 import dev.kaileh57.deepworld.transit.Lifts;
 import dev.kaileh57.deepworld.transit.Roads;
 import dev.kaileh57.deepworld.transit.Transit;
+import dev.kaileh57.deepworld.alchemy.Alchemy;
+import dev.kaileh57.deepworld.alchemy.Blasting;
+import dev.kaileh57.deepworld.farming.Farming;
+import dev.kaileh57.deepworld.farming.Fishing;
+import dev.kaileh57.deepworld.farming.Husbandry;
+import dev.kaileh57.deepworld.guild.GuildHooks;
+import dev.kaileh57.deepworld.smithing.Smithing;
+import dev.kaileh57.deepworld.world.ServerState;
 import dev.kaileh57.deepworld.forge.ForgingRecipes;
 import dev.kaileh57.deepworld.heat.HeatSystem;
 import dev.kaileh57.deepworld.hud.Hud;
@@ -37,6 +45,13 @@ public class DeepWorld implements ModInitializer {
 		Content.register();
 		Cooking.register();
 		Transit.register();
+		GuildHooks.register();
+		Farming.register();
+		Husbandry.register();
+		Fishing.register();
+		Smithing.register();
+		Alchemy.register();
+		ServerLifecycleEvents.SERVER_STARTED.register(server -> Meals.server_bonus_slots = ServerState.get(server).bonus_meal_slots);
 		ServerLifecycleEvents.SERVER_STARTED.register(ForgingRecipes::reload);
 		ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resources, success) -> ForgingRecipes.reload(server));
 		ServerTickEvents.END_SERVER_TICK.register(server -> {
@@ -46,6 +61,9 @@ public class DeepWorld implements ModInitializer {
 			Spoilage.tick(server, tick);
 			Lifts.tick(server);
 			Roads.tick(server, tick);
+			GuildHooks.tick(server, tick);
+			Smithing.tick(server, tick);
+			Blasting.tick(server);
 			if (tick % 20 == 0) {
 				Hud.flush(server);
 			}

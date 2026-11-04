@@ -319,6 +319,81 @@
 			"name": "spoiled_food",
 			"template": "blob",
 			"palette": "spoiled_food"
+		},
+		{
+			"name": "crystal_minnow",
+			"template": "fish",
+			"palette": "crystal_minnow"
+		},
+		{
+			"name": "saltpeter",
+			"template": "dust",
+			"palette": "saltpeter"
+		},
+		{
+			"name": "compost",
+			"template": "dust",
+			"palette": "compost"
+		},
+		{
+			"name": "sulfur_fertilizer",
+			"template": "dust",
+			"palette": "sulfur_fertilizer"
+		},
+		{
+			"name": "growth_tonic",
+			"template": "bottle",
+			"palette": "growth_tonic"
+		},
+		{
+			"name": "rendered_fat",
+			"template": "blob",
+			"palette": "rendered_fat"
+		},
+		{
+			"name": "brine",
+			"template": "bottle",
+			"palette": "brine"
+		},
+		{
+			"name": "mint_oil",
+			"template": "bottle",
+			"palette": "mint_oil"
+		},
+		{
+			"name": "ember_extract",
+			"template": "bottle",
+			"palette": "ember_extract"
+		},
+		{
+			"name": "glowcap_essence",
+			"template": "bottle",
+			"palette": "glowcap_essence"
+		},
+		{
+			"name": "black_powder_charge",
+			"template": "charge",
+			"palette": "charge_black"
+		},
+		{
+			"name": "shaped_charge",
+			"template": "charge",
+			"palette": "charge_shaped"
+		},
+		{
+			"name": "mining_charge",
+			"template": "charge",
+			"palette": "charge_mining"
+		},
+		{
+			"name": "demolition_charge",
+			"template": "charge",
+			"palette": "charge_demolition"
+		},
+		{
+			"name": "guild_journal",
+			"template": "book",
+			"palette": "journal"
 		}
 	],
 	"stones": [
@@ -559,6 +634,11 @@
 			"name": "truffle_patch",
 			"template": "tuft",
 			"palette": "plant_truffle"
+		},
+		{
+			"name": "sprout",
+			"template": "sprout",
+			"palette": "sprout"
 		}
 	],
 	"dishes": [
@@ -1033,6 +1113,116 @@
 				"#dcca9e",
 				"#f6ecd0",
 				"#ffffff"
+			]
+		},
+		{
+			"name": "extract_mint_oil",
+			"template": "cup",
+			"ramp": [
+				"#1e7a3a",
+				"#2eaa54",
+				"#6ad88a",
+				"#c0f8d0",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "extract_ember",
+			"template": "cup",
+			"ramp": [
+				"#a83a10",
+				"#e0661a",
+				"#ffa040",
+				"#ffd890",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "extract_glowcap",
+			"template": "cup",
+			"ramp": [
+				"#1a8a84",
+				"#2ac4b8",
+				"#7ae8e0",
+				"#d0fff8",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "extract_rendered_fat",
+			"template": "cup",
+			"ramp": [
+				"#c8b88a",
+				"#e0d4aa",
+				"#f0e8cc",
+				"#ffffff",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "extract_brine",
+			"template": "cup",
+			"ramp": [
+				"#5a8a9a",
+				"#8abaca",
+				"#c8e8f0",
+				"#ffffff",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "tonic_water",
+			"template": "cup",
+			"ramp": [
+				"#7a9aa8",
+				"#a8c8d4",
+				"#d4ecf2",
+				"#ffffff",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "ember_tonic",
+			"template": "cup",
+			"ramp": [
+				"#a83a10",
+				"#e0661a",
+				"#ffa040",
+				"#ffd890",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "cider",
+			"template": "cup",
+			"ramp": [
+				"#a8742a",
+				"#d4a44a",
+				"#f0cc7a",
+				"#fff0b8",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "mead",
+			"template": "cup",
+			"ramp": [
+				"#a8742a",
+				"#e0a82a",
+				"#f8d05a",
+				"#fff4a8",
+				"#ffffff"
+			]
+		},
+		{
+			"name": "chilled_melon_juice",
+			"template": "cup",
+			"ramp": [
+				"#a82a3a",
+				"#d84a5a",
+				"#f08a94",
+				"#ffd0d8",
+				"#4aa83a"
 			]
 		}
 	],

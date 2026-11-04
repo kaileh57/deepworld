@@ -98,6 +98,8 @@ public class StationBlock extends Block implements PolymerBlock, BlockWithElemen
 		if (player instanceof ServerPlayer server_player) {
 			if (level.getBlockEntity(pos) instanceof CookBlockEntity cook) {
 				new CookGui(server_player, cook).open();
+			} else if (station.kind().equals("smith")) {
+				new dev.kaileh57.deepworld.smithing.SmithGui(server_player).open();
 			} else {
 				new ProcessGui(server_player, station, pos).open();
 			}

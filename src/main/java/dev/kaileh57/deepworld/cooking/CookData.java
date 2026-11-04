@@ -22,7 +22,7 @@ public final class CookData {
 	public record Ingredient(String key, Map<String, Integer> props, int fresh_minutes) {
 	}
 
-	public record Dish(String id, String name, String station, List<String> ingredients, Map<String, Integer> buffs, int nutrition, float saturation, int tier, int duration, boolean preserved, String heat, String kind, String special) {
+	public record Dish(String id, String name, String station, List<String> ingredients, Map<String, Integer> buffs, int nutrition, float saturation, int tier, int duration, boolean preserved, String heat, String kind, String special, String result, int count) {
 		public boolean drink() {
 			return kind.equals("drink");
 		}
@@ -72,7 +72,7 @@ public final class CookData {
 			d.getAsJsonArray("ingredients").forEach(i -> ingredient_keys.add(i.getAsString()));
 			Map<String, Integer> buffs = new LinkedHashMap<>();
 			d.getAsJsonObject("buffs").entrySet().forEach(b -> buffs.put(b.getKey(), b.getValue().getAsInt()));
-			Dish dish = new Dish(d.get("id").getAsString(), d.get("name").getAsString(), d.get("station").getAsString(), ingredient_keys, buffs, d.get("nutrition").getAsInt(), d.get("saturation").getAsFloat(), d.get("tier").getAsInt(), d.get("duration").getAsInt(), d.get("preserved").getAsBoolean(), d.get("heat").getAsString(), d.get("kind").getAsString(), d.has("special") ? d.get("special").getAsString() : "");
+			Dish dish = new Dish(d.get("id").getAsString(), d.get("name").getAsString(), d.get("station").getAsString(), ingredient_keys, buffs, d.get("nutrition").getAsInt(), d.get("saturation").getAsFloat(), d.get("tier").getAsInt(), d.get("duration").getAsInt(), d.get("preserved").getAsBoolean(), d.get("heat").getAsString(), d.get("kind").getAsString(), d.has("special") ? d.get("special").getAsString() : "", d.has("result") ? d.get("result").getAsString() : "", d.has("count") ? d.get("count").getAsInt() : 1);
 			dishes.put(dish.id(), dish);
 			dishes_by_key.put(dish.key(), dish);
 		}

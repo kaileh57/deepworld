@@ -17,6 +17,7 @@ public class ForgeGui extends SimpleGui {
 	public ForgeGui(ServerPlayer player, ForgeBlockEntity forge) {
 		super(MenuType.GENERIC_9x3, player, false);
 		this.forge = forge;
+		forge.last_user = player.getUUID();
 		setTitle(Component.translatable(forge.getBlockState().getBlock().getDescriptionId()));
 		for (int index = 0; index < 27; index++) {
 			setSlot(index, new GuiElementBuilder(Items.STAINED_GLASS_PANE.gray()).hideTooltip().build());

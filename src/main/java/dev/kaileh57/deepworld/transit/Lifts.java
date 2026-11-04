@@ -28,7 +28,7 @@ import dev.kaileh57.deepworld.world.Layers;
 
 public final class Lifts {
 	public static double speed = 0.4;
-	private record Ride(ArmorStand car, ServerPlayer rider, double target_y, int direction) {
+	private record Ride(ArmorStand car, ServerPlayer rider, double target_y, int direction, double speed) {
 	}
 
 	private static final Map<UUID, Ride> rides = new HashMap<>();
@@ -115,7 +115,9 @@ public final class Lifts {
 		level.addFreshEntity(car);
 		player.startRiding(car, true, true);
 		int direction = to.getY() > from.getY() ? 1 : -1;
-		rides.put(player.getUUID(), new Ride(car, player, to.getY() + 1.0, direction));
+		double ride_speed = dev.kaileh57.deepworld.guild.Guild.focused(player, "engineer") ? speed * 1.5 : speed;
+		rides.put(player.getUUID(), new Ride(car, player, to.getY() + 1.0, direction, ride_speed));
+		dev.kaileh57.deepworld.guild.Guild.add(player, "lift_rides", 1);
 		level.playSound(null, from, SoundEvents.CHAIN_PLACE, SoundSource.BLOCKS, 1.0F, 0.6F);
 	}
 
@@ -129,7 +131,7 @@ public final class Lifts {
 				iterator.remove();
 				continue;
 			}
-			double y = car.getY() + speed * ride.direction();
+			double y = car.getY() + ride.speed() * ride.direction();
 			boolean arrived = ride.direction() > 0 ? y >= ride.target_y() : y <= ride.target_y();
 			if (arrived) {
 				car.setPos(car.getX(), ride.target_y(), car.getZ());

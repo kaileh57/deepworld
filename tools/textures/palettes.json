@@ -487,5 +487,140 @@
 		"l": "#8a949e",
 		"h": "#c8d0d8",
 		"x": "#d9a520"
+	},
+	"crystal_minnow": {
+		"o": "#28103d",
+		"d": "#673899",
+		"m": "#975fce",
+		"l": "#c69af0",
+		"h": "#f2e0ff",
+		"x": "#ffffff"
+	},
+	"saltpeter": {
+		"o": "#5a5a50",
+		"d": "#c8c8b8",
+		"m": "#e0e0d0",
+		"l": "#f0f0e6",
+		"h": "#ffffff"
+	},
+	"compost": {
+		"o": "#1a1008",
+		"d": "#3a2614",
+		"m": "#5a3c22",
+		"l": "#7a5634",
+		"h": "#5a8a34"
+	},
+	"sulfur_fertilizer": {
+		"o": "#3a3a10",
+		"d": "#7a7a2a",
+		"m": "#a8a43a",
+		"l": "#d4d05a",
+		"h": "#fffca0"
+	},
+	"growth_tonic": {
+		"o": "#0e3a1e",
+		"d": "#1e7a3a",
+		"m": "#2eaa54",
+		"l": "#6ad88a",
+		"h": "#c0f8d0",
+		"x": "#9a7442",
+		"c": "#c8e6ee"
+	},
+	"rendered_fat": {
+		"o": "#6a5a3a",
+		"d": "#c8b88a",
+		"m": "#e0d4aa",
+		"l": "#f0e8cc",
+		"h": "#ffffff",
+		"x": "#ffffff"
+	},
+	"brine": {
+		"o": "#2a4a5a",
+		"d": "#5a8a9a",
+		"m": "#8abaca",
+		"l": "#c8e8f0",
+		"h": "#ffffff",
+		"x": "#9a7442",
+		"c": "#c8e6ee"
+	},
+	"mint_oil": {
+		"o": "#0e3a1e",
+		"d": "#1e7a3a",
+		"m": "#2eaa54",
+		"l": "#6ad88a",
+		"h": "#c0f8d0",
+		"x": "#9a7442",
+		"c": "#c8e6ee"
+	},
+	"ember_extract": {
+		"o": "#3a1006",
+		"d": "#a83a10",
+		"m": "#e0661a",
+		"l": "#ffa040",
+		"h": "#ffd890",
+		"x": "#9a7442",
+		"c": "#c8e6ee"
+	},
+	"glowcap_essence": {
+		"o": "#0a3a3a",
+		"d": "#1a8a84",
+		"m": "#2ac4b8",
+		"l": "#7ae8e0",
+		"h": "#d0fff8",
+		"x": "#9a7442",
+		"c": "#c8e6ee"
+	},
+	"charge_black": {
+		"o": "#1a1210",
+		"d": "#3a2a24",
+		"m": "#5a443a",
+		"l": "#7a6050",
+		"h": "#a8846a",
+		"b": "#c8a03a",
+		"x": "#ff8a2a"
+	},
+	"charge_shaped": {
+		"o": "#3a1a0a",
+		"d": "#8a4a24",
+		"m": "#b46a3a",
+		"l": "#d98a4a",
+		"h": "#f4b07a",
+		"b": "#5a3a1e",
+		"x": "#ff8a2a"
+	},
+	"charge_mining": {
+		"o": "#2a2a30",
+		"d": "#6a6e78",
+		"m": "#8e929e",
+		"l": "#b4b8c4",
+		"h": "#dadde4",
+		"b": "#a86a3a",
+		"x": "#ff8a2a"
+	},
+	"charge_demolition": {
+		"o": "#09050f",
+		"d": "#25133a",
+		"m": "#3a1f5a",
+		"l": "#5c3a87",
+		"h": "#a07dd2",
+		"b": "#c8c43a",
+		"x": "#ff4a1a"
+	},
+	"journal": {
+		"o": "#2a1408",
+		"d": "#5a2e14",
+		"m": "#7a4424",
+		"l": "#a8683e",
+		"h": "#c88a5a",
+		"x": "#d9a520",
+		"b": "#e8e0c8",
+		"c": "#c8c0a8"
+	},
+	"sprout": {
+		"o": "#0e2a0a",
+		"d": "#2e5a1a",
+		"m": "#4a8a2a",
+		"l": "#7ac44a",
+		"h": "#b8f08a"
 	}
 }

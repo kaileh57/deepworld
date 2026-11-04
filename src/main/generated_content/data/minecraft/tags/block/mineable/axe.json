@@ -16,6 +16,7 @@
   "deepworld:mill",
   "deepworld:churn",
   "deepworld:mortar",
-  "deepworld:cheese_press"
+  "deepworld:cheese_press",
+  "deepworld:smithing_bench"
  ]
 }

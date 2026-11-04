@@ -77,7 +77,15 @@ public final class Content {
 		for (JsonElement element : content.getAsJsonArray("items")) {
 			JsonObject entry = element.getAsJsonObject();
 			Item base = vanilla_item(entry.get("base").getAsString());
-			register_item(entry.get("id").getAsString(), properties -> new SimplePolymerItem(properties, base));
+			String id = entry.get("id").getAsString();
+			if (id.endsWith("_charge")) {
+				String kind = id.substring(0, id.length() - "_charge".length());
+				register_item(id, properties -> new dev.kaileh57.deepworld.alchemy.ChargeItem(properties, kind, base));
+			} else if (id.equals("spoiled_food")) {
+				register_item(id, properties -> new SimplePolymerItem(properties.food(new net.minecraft.world.food.FoodProperties(2, 0.1F, false), net.minecraft.world.item.component.Consumable.builder().onConsume(new net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect(java.util.List.of(new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.NAUSEA, 200, 0), new net.minecraft.world.effect.MobEffectInstance(net.minecraft.world.effect.MobEffects.HUNGER, 400, 0)))).build()), base));
+			} else {
+				register_item(id, properties -> new SimplePolymerItem(properties, base));
+			}
 		}
 		for (JsonElement element : content.getAsJsonArray("stones")) {
 			JsonObject entry = element.getAsJsonObject();

@@ -1,0 +1,12 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "deepworld:compost",
+  "deepworld:sulfur_salt"
+ ],
+ "result": {
+  "id": "deepworld:sulfur_fertilizer",
+  "count": 2
+ }
+}

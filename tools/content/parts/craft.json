@@ -1,0 +1,521 @@
+{
+	"items": [
+		{
+			"id": "crystal_minnow",
+			"name": "crystal minnow",
+			"base": "minecraft:cod"
+		},
+		{
+			"id": "saltpeter",
+			"name": "saltpeter",
+			"base": "minecraft:sugar"
+		},
+		{
+			"id": "compost",
+			"name": "compost",
+			"base": "minecraft:bone_meal"
+		},
+		{
+			"id": "sulfur_fertilizer",
+			"name": "sulfur fertilizer",
+			"base": "minecraft:bone_meal"
+		},
+		{
+			"id": "growth_tonic",
+			"name": "growth tonic",
+			"base": "minecraft:honey_bottle"
+		},
+		{
+			"id": "rendered_fat",
+			"name": "rendered fat",
+			"base": "minecraft:slime_ball"
+		},
+		{
+			"id": "brine",
+			"name": "brine",
+			"base": "minecraft:potion"
+		},
+		{
+			"id": "mint_oil",
+			"name": "mint oil",
+			"base": "minecraft:honey_bottle"
+		},
+		{
+			"id": "ember_extract",
+			"name": "ember extract",
+			"base": "minecraft:honey_bottle"
+		},
+		{
+			"id": "glowcap_essence",
+			"name": "glowcap essence",
+			"base": "minecraft:honey_bottle"
+		},
+		{
+			"id": "black_powder_charge",
+			"name": "black powder charge",
+			"base": "minecraft:tnt"
+		},
+		{
+			"id": "shaped_charge",
+			"name": "shaped charge",
+			"base": "minecraft:tnt"
+		},
+		{
+			"id": "mining_charge",
+			"name": "mining charge",
+			"base": "minecraft:tnt"
+		},
+		{
+			"id": "demolition_charge",
+			"name": "demolition charge",
+			"base": "minecraft:tnt"
+		},
+		{
+			"id": "guild_journal",
+			"name": "guild journal",
+			"base": "minecraft:book"
+		}
+	],
+	"ingredients": {
+		"deepworld:crystal_minnow": {
+			"properties": {
+				"briny": 1,
+				"glowing": 1
+			},
+			"fresh": 2400
+		},
+		"deepworld:mint_oil": {
+			"properties": {
+				"cooling": 3,
+				"fresh": 2
+			},
+			"fresh": 0
+		},
+		"deepworld:ember_extract": {
+			"properties": {
+				"warming": 3,
+				"earthy": 1
+			},
+			"fresh": 0
+		},
+		"deepworld:glowcap_essence": {
+			"properties": {
+				"glowing": 3,
+				"hushed": 1
+			},
+			"fresh": 0
+		},
+		"deepworld:rendered_fat": {
+			"properties": {
+				"rich": 2
+			},
+			"fresh": 0
+		},
+		"deepworld:brine": {
+			"properties": {
+				"briny": 1,
+				"preserved": 2
+			},
+			"fresh": 0
+		}
+	},
+	"dishes": [
+		{
+			"id": "extract_mint_oil",
+			"name": "mint oil",
+			"station": "still",
+			"ingredients": [
+				"deepworld:mint"
+			],
+			"buffs": {},
+			"nutrition": 0,
+			"saturation": 0,
+			"template": "cup",
+			"palette": [
+				"#1e7a3a",
+				"#2eaa54",
+				"#6ad88a",
+				"#c0f8d0",
+				"#ffffff"
+			],
+			"tier": 2,
+			"duration": 0,
+			"preserved": true,
+			"heat": "low",
+			"kind": "extract",
+			"result": "deepworld:mint_oil",
+			"count": 2
+		},
+		{
+			"id": "extract_ember",
+			"name": "ember extract",
+			"station": "still",
+			"ingredients": [
+				"deepworld:ember_root"
+			],
+			"buffs": {},
+			"nutrition": 0,
+			"saturation": 0,
+			"template": "cup",
+			"palette": [
+				"#a83a10",
+				"#e0661a",
+				"#ffa040",
+				"#ffd890",
+				"#ffffff"
+			],
+			"tier": 3,
+			"duration": 0,
+			"preserved": true,
+			"heat": "low",
+			"kind": "extract",
+			"result": "deepworld:ember_extract",
+			"count": 2
+		},
+		{
+			"id": "extract_glowcap",
+			"name": "glowcap essence",
+			"station": "still",
+			"ingredients": [
+				"deepworld:glowcap"
+			],
+			"buffs": {},
+			"nutrition": 0,
+			"saturation": 0,
+			"template": "cup",
+			"palette": [
+				"#1a8a84",
+				"#2ac4b8",
+				"#7ae8e0",
+				"#d0fff8",
+				"#ffffff"
+			],
+			"tier": 2,
+			"duration": 0,
+			"preserved": true,
+			"heat": "low",
+			"kind": "extract",
+			"result": "deepworld:glowcap_essence",
+			"count": 2
+		},
+		{
+			"id": "extract_rendered_fat",
+			"name": "rendered fat",
+			"station": "pot",
+			"ingredients": [
+				"minecraft:porkchop",
+				"deepworld:salt"
+			],
+			"buffs": {},
+			"nutrition": 0,
+			"saturation": 0,
+			"template": "cup",
+			"palette": [
+				"#c8b88a",
+				"#e0d4aa",
+				"#f0e8cc",
+				"#ffffff",
+				"#ffffff"
+			],
+			"tier": 1,
+			"duration": 0,
+			"preserved": true,
+			"heat": "low",
+			"kind": "extract",
+			"result": "deepworld:rendered_fat",
+			"count": 3
+		},
+		{
+			"id": "extract_brine",
+			"name": "brine",
+			"station": "pot",
+			"ingredients": [
+				"deepworld:salt",
+				"minecraft:kelp"
+			],
+			"buffs": {},
+			"nutrition": 0,
+			"saturation": 0,
+			"template": "cup",
+			"palette": [
+				"#5a8a9a",
+				"#8abaca",
+				"#c8e8f0",
+				"#ffffff",
+				"#ffffff"
+			],
+			"tier": 1,
+			"duration": 0,
+			"preserved": true,
+			"heat": "low",
+			"kind": "extract",
+			"result": "deepworld:brine",
+			"count": 3
+		},
+		{
+			"id": "tonic_water",
+			"name": "tonic water",
+			"station": "still",
+			"ingredients": [
+				"minecraft:nether_wart",
+				"minecraft:sugar"
+			],
+			"buffs": {
+				"bitter": 2
+			},
+			"nutrition": 1,
+			"saturation": 0.1,
+			"template": "cup",
+			"palette": [
+				"#7a9aa8",
+				"#a8c8d4",
+				"#d4ecf2",
+				"#ffffff",
+				"#ffffff"
+			],
+			"tier": 2,
+			"duration": 120,
+			"preserved": true,
+			"heat": "low",
+			"kind": "drink",
+			"special": "cleanse_all"
+		},
+		{
+			"id": "ember_tonic",
+			"name": "ember tonic",
+			"station": "still",
+			"ingredients": [
+				"deepworld:ember_root",
+				"minecraft:honey_bottle"
+			],
+			"buffs": {
+				"warming": 2,
+				"fire_resistance": 1
+			},
+			"nutrition": 1,
+			"saturation": 0.1,
+			"template": "cup",
+			"palette": [
+				"#a83a10",
+				"#e0661a",
+				"#ffa040",
+				"#ffd890",
+				"#ffffff"
+			],
+			"tier": 3,
+			"duration": 150,
+			"preserved": true,
+			"heat": "low",
+			"kind": "drink"
+		},
+		{
+			"id": "cider",
+			"name": "cider",
+			"station": "crock",
+			"ingredients": [
+				"minecraft:apple",
+				"minecraft:sugar"
+			],
+			"buffs": {
+				"sweet": 2
+			},
+			"nutrition": 2,
+			"saturation": 0.2,
+			"template": "cup",
+			"palette": [
+				"#a8742a",
+				"#d4a44a",
+				"#f0cc7a",
+				"#fff0b8",
+				"#ffffff"
+			],
+			"tier": 1,
+			"duration": 240,
+			"preserved": true,
+			"heat": "none",
+			"kind": "drink"
+		},
+		{
+			"id": "mead",
+			"name": "mead",
+			"station": "crock",
+			"ingredients": [
+				"minecraft:honey_bottle",
+				"deepworld:oats"
+			],
+			"buffs": {
+				"sweet": 2,
+				"warming": 1
+			},
+			"nutrition": 2,
+			"saturation": 0.2,
+			"template": "cup",
+			"palette": [
+				"#a8742a",
+				"#e0a82a",
+				"#f8d05a",
+				"#fff4a8",
+				"#ffffff"
+			],
+			"tier": 1,
+			"duration": 240,
+			"preserved": true,
+			"heat": "none",
+			"kind": "drink"
+		},
+		{
+			"id": "chilled_melon_juice",
+			"name": "chilled melon juice",
+			"station": "ice_box",
+			"ingredients": [
+				"minecraft:melon_slice",
+				"minecraft:ice"
+			],
+			"buffs": {
+				"cooling": 2
+			},
+			"nutrition": 2,
+			"saturation": 0.2,
+			"template": "cup",
+			"palette": [
+				"#a82a3a",
+				"#d84a5a",
+				"#f08a94",
+				"#ffd0d8",
+				"#4aa83a"
+			],
+			"tier": 2,
+			"duration": 150,
+			"preserved": false,
+			"heat": "none",
+			"kind": "drink"
+		}
+	],
+	"cook_stations": [
+		{
+			"id": "smithing_bench",
+			"name": "smithing bench",
+			"kind": "smith",
+			"station": "smithing_bench",
+			"icon": "minecraft:smithing_table",
+			"visual": [
+				{
+					"block": "minecraft:smithing_table",
+					"scale": 1.0,
+					"x": 0,
+					"y": 0,
+					"z": 0,
+					"rx": 0,
+					"ry": 0,
+					"rz": 0
+				},
+				{
+					"block": "minecraft:water_cauldron[level=3]",
+					"scale": 0.45,
+					"x": 0.25,
+					"y": 1.0,
+					"z": 0.25,
+					"rx": 0,
+					"ry": 0,
+					"rz": 0
+				}
+			]
+		}
+	],
+	"shaped": [
+		{
+			"result": "deepworld:smithing_bench",
+			"pattern": [
+				"C",
+				"S"
+			],
+			"key": {
+				"C": "minecraft:cauldron",
+				"S": "minecraft:smithing_table"
+			}
+		},
+		{
+			"result": "deepworld:guild_journal",
+			"pattern": [
+				" G ",
+				"GBG",
+				" G "
+			],
+			"key": {
+				"G": "minecraft:gold_nugget",
+				"B": "minecraft:book"
+			}
+		},
+		{
+			"result": "deepworld:shaped_charge",
+			"pattern": [
+				"C",
+				"P",
+				"C"
+			],
+			"key": {
+				"C": "minecraft:copper_ingot",
+				"P": "deepworld:black_powder_charge"
+			}
+		},
+		{
+			"result": "deepworld:demolition_charge",
+			"pattern": [
+				"OSO",
+				"OPO",
+				"OGO"
+			],
+			"key": {
+				"O": "minecraft:obsidian",
+				"S": "minecraft:sulfur",
+				"P": "deepworld:black_powder_charge",
+				"G": "minecraft:gunpowder"
+			}
+		}
+	],
+	"shapeless": [
+		{
+			"result": "deepworld:black_powder_charge",
+			"count": 2,
+			"ingredients": [
+				"minecraft:sulfur",
+				"minecraft:charcoal",
+				"deepworld:saltpeter",
+				"minecraft:paper"
+			]
+		},
+		{
+			"result": "deepworld:mining_charge",
+			"ingredients": [
+				"deepworld:black_powder_charge",
+				"minecraft:clay_ball"
+			]
+		},
+		{
+			"result": "deepworld:compost",
+			"count": 3,
+			"ingredients": [
+				"deepworld:spoiled_food",
+				"deepworld:spoiled_food",
+				"minecraft:bone_meal"
+			]
+		},
+		{
+			"result": "deepworld:sulfur_fertilizer",
+			"count": 2,
+			"ingredients": [
+				"deepworld:compost",
+				"deepworld:sulfur_salt"
+			]
+		},
+		{
+			"result": "deepworld:growth_tonic",
+			"ingredients": [
+				"deepworld:compost",
+				"minecraft:glow_berries",
+				"minecraft:honey_bottle"
+			]
+		}
+	],
+	"lang": {}
+}

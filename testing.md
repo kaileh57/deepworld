@@ -46,3 +46,16 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - the deepline terminal sits at spawn (0, 1212, 0). lines run east 250 (depot), west 450 (worker camp), south 1000 and north 2000 (stations). tunnels, bridges, gaps every 500, collapses, signal cabins, derelict chest carts.
 - `/dw map 0 0 320` writes a top-down png.
 - simplified: no junction routing, signals or timetables yet. lift has no cable cost and no express car. shoring blocks are vanilla logs/fences/walls/bars (used by cave-ins in phase 8).
+
+## 6 disciplines and crafts
+
+- guild journal (book + 4 gold nuggets): eight disciplines, milestones with progress, focus up to two (one change per in-game day).
+- focus perks: delver +1 heat protection, cook +1 dish quality, grower double harvest, smith 2x forge speed, alchemist more charge drops and still output, engineer 12 m/s lifts, archivist doubled dowsing range, hunter extra meat from deep kills.
+- gourmet milestone (10 masterwork dishes) gives everyone a fourth meal slot.
+- farming: plant any forage ingredient on a block (sprout → mature). surface crops only grow in their biomes in daylight, cave crops only at their depth. right-click a mature plant to harvest. compost +1 stage, sulfur fertilizer +2 on cave crops, growth tonic +3. bone meal does nothing to them.
+- fishing: bonus blind eel at y 900-1000, crystal minnow at y 700-800 (bring water).
+- husbandry: bred animals inherit plump, rich milk, fast, hardy, calm with small mutations. check with the guild journal on an animal. rich-milk cows give rich milk.
+- smithing bench (cauldron on smithing table): quench with water, rendered fat (tough), brine (keen), lava (tempered), ghast tear cordial (pristine). socket resonant shard (ore hum), lapis (xp), diamond (durability), quartz (mining speed), echo shard.
+- alchemy: brewing stands take sulfur as fuel. still makes mint oil, ember extract, glowcap essence, tonics. rendered fat and brine from the pot. saltpeter drops from tuff.
+- charges: black powder (3x3x3, half drops), shaped (12-deep bore), mining (ore only), demolition (5x5x3, no drops). right-click a block, run.
+- simplified: no truffle pig, pack mule, cave goat. hardy/calm traits are minor. lava fishing isn't in (lava fish come from striders). echo shard socket has no effect yet.

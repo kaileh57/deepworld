@@ -135,7 +135,7 @@ public final class Dishes {
 		String lead = top.isEmpty() ? "plain" : top.getFirst().getKey();
 		int nutrition = Math.min(10, 2 + portions + portions / 2);
 		boolean drink = station.equals("still");
-		return new CookData.Dish("generic_" + word, lead + " " + word, station, List.of(), buffs, nutrition, 0.6F, 0, 300, preserved, "low", drink ? "drink" : "dish", "");
+		return new CookData.Dish("generic_" + word, lead + " " + word, station, List.of(), buffs, nutrition, 0.6F, 0, 300, preserved, "low", drink ? "drink" : "dish", "", "", 1);
 	}
 
 	public static CookData.Dish match(String station, List<ItemStack> inputs) {

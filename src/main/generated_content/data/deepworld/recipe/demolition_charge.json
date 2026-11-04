@@ -1,0 +1,18 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "O": "minecraft:obsidian",
+  "S": "minecraft:sulfur",
+  "P": "deepworld:black_powder_charge",
+  "G": "minecraft:gunpowder"
+ },
+ "pattern": [
+  "OSO",
+  "OPO",
+  "OGO"
+ ],
+ "result": {
+  "id": "deepworld:demolition_charge"
+ }
+}

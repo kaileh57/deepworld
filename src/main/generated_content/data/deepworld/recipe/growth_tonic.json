@@ -1,0 +1,12 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "deepworld:compost",
+  "minecraft:glow_berries",
+  "minecraft:honey_bottle"
+ ],
+ "result": {
+  "id": "deepworld:growth_tonic"
+ }
+}

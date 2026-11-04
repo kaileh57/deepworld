@@ -1,0 +1,270 @@
+{
+	"disciplines": [
+		{
+			"id": "delver",
+			"name": "delver",
+			"icon": "minecraft:iron_pickaxe",
+			"perk": "+1 heat protection"
+		},
+		{
+			"id": "cook",
+			"name": "cook",
+			"icon": "minecraft:mushroom_stew",
+			"perk": "dishes come out one quality higher"
+		},
+		{
+			"id": "grower",
+			"name": "grower",
+			"icon": "minecraft:wheat",
+			"perk": "double harvests"
+		},
+		{
+			"id": "smith",
+			"name": "smith",
+			"icon": "minecraft:anvil",
+			"perk": "forges work twice as fast"
+		},
+		{
+			"id": "alchemist",
+			"name": "alchemist",
+			"icon": "minecraft:brewing_stand",
+			"perk": "charges drop more, stills yield more"
+		},
+		{
+			"id": "engineer",
+			"name": "engineer",
+			"icon": "minecraft:rail",
+			"perk": "lifts run at 12 m/s"
+		},
+		{
+			"id": "archivist",
+			"name": "archivist",
+			"icon": "minecraft:filled_map",
+			"perk": "dowsing and surveys reach twice as far"
+		},
+		{
+			"id": "hunter",
+			"name": "hunter",
+			"icon": "minecraft:bow",
+			"perk": "deep creatures drop extra ingredients"
+		}
+	],
+	"milestones": [
+		{
+			"discipline": "delver",
+			"id": "first_descent",
+			"name": "first descent",
+			"counter": "deepest",
+			"target": 200,
+			"text": "reach y 1000"
+		},
+		{
+			"discipline": "delver",
+			"id": "below_the_heat",
+			"name": "below the heat line",
+			"counter": "deepest",
+			"target": 600,
+			"text": "reach y 600"
+		},
+		{
+			"discipline": "delver",
+			"id": "into_the_mantle",
+			"name": "into the mantle",
+			"counter": "deepest",
+			"target": 1050,
+			"text": "reach y 150"
+		},
+		{
+			"discipline": "delver",
+			"id": "breakthrough",
+			"name": "breakthrough",
+			"counter": "deepest",
+			"target": 1200,
+			"text": "reach y 0"
+		},
+		{
+			"discipline": "delver",
+			"id": "layer_walker",
+			"name": "layer walker",
+			"counter": "layers_seen",
+			"target": 6,
+			"text": "visit six layers"
+		},
+		{
+			"discipline": "cook",
+			"id": "line_cook",
+			"name": "line cook",
+			"counter": "dishes_cooked",
+			"target": 10,
+			"text": "cook 10 dishes"
+		},
+		{
+			"discipline": "cook",
+			"id": "head_chef",
+			"name": "head chef",
+			"counter": "dishes_cooked",
+			"target": 50,
+			"text": "cook 50 dishes"
+		},
+		{
+			"discipline": "cook",
+			"id": "gourmet",
+			"name": "gourmet",
+			"counter": "masterworks",
+			"target": 10,
+			"text": "cook 10 masterwork dishes \u00b7 +1 meal slot for everyone"
+		},
+		{
+			"discipline": "cook",
+			"id": "signature_seeker",
+			"name": "signature seeker",
+			"counter": "signatures_found",
+			"target": 15,
+			"text": "cook 15 different named dishes"
+		},
+		{
+			"discipline": "grower",
+			"id": "green_thumb",
+			"name": "green thumb",
+			"counter": "crops_harvested",
+			"target": 25,
+			"text": "harvest 25 crops"
+		},
+		{
+			"discipline": "grower",
+			"id": "breeder",
+			"name": "breeder",
+			"counter": "animals_bred",
+			"target": 10,
+			"text": "breed 10 animals"
+		},
+		{
+			"discipline": "grower",
+			"id": "deep_farmer",
+			"name": "deep farmer",
+			"counter": "cave_crops",
+			"target": 20,
+			"text": "harvest 20 cave crops"
+		},
+		{
+			"discipline": "smith",
+			"id": "apprentice",
+			"name": "apprentice smith",
+			"counter": "forged",
+			"target": 10,
+			"text": "finish 10 forge jobs"
+		},
+		{
+			"discipline": "smith",
+			"id": "quencher",
+			"name": "quencher",
+			"counter": "quenched",
+			"target": 5,
+			"text": "quench or socket 5 tools"
+		},
+		{
+			"discipline": "smith",
+			"id": "master_smith",
+			"name": "master smith",
+			"counter": "forged",
+			"target": 64,
+			"text": "finish 64 forge jobs"
+		},
+		{
+			"discipline": "alchemist",
+			"id": "powder_monkey",
+			"name": "powder monkey",
+			"counter": "charges_used",
+			"target": 10,
+			"text": "set off 10 charges"
+		},
+		{
+			"discipline": "alchemist",
+			"id": "distiller",
+			"name": "distiller",
+			"counter": "extracts",
+			"target": 10,
+			"text": "distill 10 extracts or tonics"
+		},
+		{
+			"discipline": "alchemist",
+			"id": "fertile",
+			"name": "fertile",
+			"counter": "fertilized",
+			"target": 20,
+			"text": "fertilize 20 crops"
+		},
+		{
+			"discipline": "engineer",
+			"id": "track_layer",
+			"name": "track layer",
+			"counter": "rails_laid",
+			"target": 200,
+			"text": "lay 200 rails"
+		},
+		{
+			"discipline": "engineer",
+			"id": "line_builder",
+			"name": "line builder",
+			"counter": "rails_laid",
+			"target": 1000,
+			"text": "lay 1,000 rails"
+		},
+		{
+			"discipline": "engineer",
+			"id": "lift_operator",
+			"name": "lift operator",
+			"counter": "lift_rides",
+			"target": 10,
+			"text": "ride a lift 10 times"
+		},
+		{
+			"discipline": "archivist",
+			"id": "first_page",
+			"name": "first page",
+			"counter": "pages_found",
+			"target": 1,
+			"text": "find a deepline journal page"
+		},
+		{
+			"discipline": "archivist",
+			"id": "cartographer",
+			"name": "cartographer",
+			"counter": "landmarks_found",
+			"target": 3,
+			"text": "find 3 landmarks"
+		},
+		{
+			"discipline": "archivist",
+			"id": "the_whole_story",
+			"name": "the whole story",
+			"counter": "pages_found",
+			"target": 12,
+			"text": "find every journal page"
+		},
+		{
+			"discipline": "hunter",
+			"id": "deep_hunter",
+			"name": "deep hunter",
+			"counter": "deep_kills",
+			"target": 25,
+			"text": "kill 25 creatures below y 1000"
+		},
+		{
+			"discipline": "hunter",
+			"id": "trophy_hunter",
+			"name": "trophy hunter",
+			"counter": "trophies",
+			"target": 3,
+			"text": "take 3 trophies"
+		},
+		{
+			"discipline": "hunter",
+			"id": "warden_slayer",
+			"name": "warden slayer",
+			"counter": "wardens",
+			"target": 1,
+			"text": "kill a warden"
+		}
+	]
+}

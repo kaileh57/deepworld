@@ -64,7 +64,7 @@ public final class Cooking {
 		for (JsonElement element : Content.data().getAsJsonArray("plants")) {
 			JsonObject plant = element.getAsJsonObject();
 			String id = plant.get("id").getAsString();
-			Block block = Content.register_block(id, properties -> new PlantBlock(properties, DeepWorld.id("block/" + id)), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollision().instabreak().sound(SoundType.SWEET_BERRY_BUSH).offsetType(BlockBehaviour.OffsetType.XZ));
+			Block block = Content.register_block(id, properties -> new PlantBlock(properties, DeepWorld.id("block/" + id), id), BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollision().instabreak().sound(SoundType.SWEET_BERRY_BUSH).offsetType(BlockBehaviour.OffsetType.XZ));
 			Content.register_item(id, properties -> new PolymerBlockItem(block, properties.useBlockDescriptionPrefix(), Items.SHORT_GRASS));
 			if (plant.has("biomes")) {
 				List<ResourceKey<Biome>> biomes = new ArrayList<>();

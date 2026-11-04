@@ -1,0 +1,16 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "G": "minecraft:gold_nugget",
+  "B": "minecraft:book"
+ },
+ "pattern": [
+  " G ",
+  "GBG",
+  " G "
+ ],
+ "result": {
+  "id": "deepworld:guild_journal"
+ }
+}

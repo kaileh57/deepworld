@@ -3,6 +3,15 @@
  "pools": [
   {
    "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:block_state_property",
+     "block": "deepworld:forge_fig_bush",
+     "properties": {
+      "age": "3"
+     }
+    }
+   ],
    "entries": [
     {
      "type": "minecraft:item",
@@ -25,6 +34,27 @@
        }
       }
      ]
+    }
+   ]
+  },
+  {
+   "rolls": 1,
+   "conditions": [
+    {
+     "condition": "minecraft:inverted",
+     "term": {
+      "condition": "minecraft:block_state_property",
+      "block": "deepworld:forge_fig_bush",
+      "properties": {
+       "age": "3"
+      }
+     }
+    }
+   ],
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "deepworld:forge_fig"
     }
    ]
   }

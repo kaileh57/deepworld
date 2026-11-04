@@ -1,0 +1,6 @@
+{
+ "parent": "minecraft:item/generated",
+ "textures": {
+  "layer0": "deepworld:item/dish/chilled_melon_juice"
+ }
+}

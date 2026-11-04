@@ -1,0 +1,13 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "deepworld:spoiled_food",
+  "deepworld:spoiled_food",
+  "minecraft:bone_meal"
+ ],
+ "result": {
+  "id": "deepworld:compost",
+  "count": 3
+ }
+}

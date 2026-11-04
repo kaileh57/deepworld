@@ -1,0 +1,16 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "C": "minecraft:copper_ingot",
+  "P": "deepworld:black_powder_charge"
+ },
+ "pattern": [
+  "C",
+  "P",
+  "C"
+ ],
+ "result": {
+  "id": "deepworld:shaped_charge"
+ }
+}

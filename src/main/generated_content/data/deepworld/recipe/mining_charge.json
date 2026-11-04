@@ -1,0 +1,11 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "deepworld:black_powder_charge",
+  "minecraft:clay_ball"
+ ],
+ "result": {
+  "id": "deepworld:mining_charge"
+ }
+}

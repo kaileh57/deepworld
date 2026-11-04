@@ -41,6 +41,7 @@ public class CookBlockEntity extends BlockEntity implements Container {
 	public CompoundTag generic = new CompoundTag();
 	public int base_quality;
 	public String cook = "";
+	public String cook_uuid = "";
 	public String message = "";
 
 	public CookBlockEntity(BlockPos pos, BlockState state) {
@@ -147,6 +148,7 @@ public class CookBlockEntity extends BlockEntity implements Container {
 		misses = 0;
 		window_open = -1;
 		cook = player.getGameProfile().name();
+		cook_uuid = player.getUUID().toString();
 		status = "cooking";
 		message = "cooking " + result.name();
 		level.playSound(null, worldPosition, SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 0.6F, 1.2F);
@@ -201,7 +203,7 @@ public class CookBlockEntity extends BlockEntity implements Container {
 			setChanged();
 		} else if (status.equals("done")) {
 			done_ticks++;
-			if (stirs() && done_ticks > burn_after && !stacks.get(output_slot).isEmpty() && CookData.tag(stacks.get(output_slot)).getIntOr("quality", 0) > 0) {
+			if (stirs() && done_ticks > burn_after && !stacks.get(output_slot).isEmpty() && !CookData.tag(stacks.get(output_slot)).getStringOr("dish", "").isEmpty() && CookData.tag(stacks.get(output_slot)).getIntOr("quality", 0) > 0) {
 				CookData.Dish def = output_def();
 				if (def != null) {
 					ItemStack burnt = Dishes.make(def, 0, "");
@@ -232,13 +234,39 @@ public class CookBlockEntity extends BlockEntity implements Container {
 		for (String key : buff_tag.keySet()) {
 			buffs.put(key, buff_tag.getIntOr(key, 1));
 		}
-		return new CookData.Dish(generic.getStringOr("id", "generic_stew"), generic.getStringOr("name", "plain stew"), station().station(), List.of(), buffs, generic.getIntOr("nutrition", 4), 0.6F, 0, 300, generic.getBooleanOr("preserved", false), "low", generic.getStringOr("kind", "dish"), "");
+		return new CookData.Dish(generic.getStringOr("id", "generic_stew"), generic.getStringOr("name", "plain stew"), station().station(), List.of(), buffs, generic.getIntOr("nutrition", 4), 0.6F, 0, 300, generic.getBooleanOr("preserved", false), "low", generic.getStringOr("kind", "dish"), "", "", 1);
 	}
 
 	private void finish(ServerLevel level, BlockPos pos) {
+		ServerPlayer owner = cook_uuid.isEmpty() ? null : level.getServer().getPlayerList().getPlayer(java.util.UUID.fromString(cook_uuid));
 		int quality = stirs() ? 1 + hits - misses + base_quality : 2 + base_quality;
+		if (dev.kaileh57.deepworld.guild.Guild.focused(owner, "cook")) {
+			quality++;
+		}
 		quality = Math.max(1, Math.min(stirs() ? 4 : 3, quality));
 		CookData.Dish def = output_def();
+		if (!def.result().isEmpty()) {
+			int count = def.count() + (dev.kaileh57.deepworld.guild.Guild.focused(owner, "alchemist") ? 1 : 0);
+			stacks.set(output_slot, new ItemStack(BuiltInRegistries.ITEM.getValue(net.minecraft.resources.Identifier.parse(def.result())), count));
+			status = "done";
+			done_ticks = 0;
+			window_open = -1;
+			message = def.name() + " is ready";
+			dev.kaileh57.deepworld.guild.Guild.add(owner, "extracts", 1);
+			level.playSound(null, pos, SoundEvents.BREWING_STAND_BREW, SoundSource.BLOCKS, 0.6F, 1.6F);
+			return;
+		}
+		if (def.drink() && station().station().equals("still")) {
+			dev.kaileh57.deepworld.guild.Guild.add(owner, "extracts", 1);
+		}
+		dev.kaileh57.deepworld.guild.Guild.add(owner, "dishes_cooked", 1);
+		if (quality >= 4) {
+			dev.kaileh57.deepworld.guild.Guild.add(owner, "masterworks", 1);
+		}
+		if (owner != null && !dish.isEmpty() && dev.kaileh57.deepworld.guild.Guild.counter(owner, "cooked_" + dish) == 0) {
+			dev.kaileh57.deepworld.guild.Guild.add(owner, "cooked_" + dish, 1);
+			dev.kaileh57.deepworld.guild.Guild.add(owner, "signatures_found", 1);
+		}
 		stacks.set(output_slot, Dishes.make(def, quality, cook));
 		status = "done";
 		done_ticks = 0;
@@ -259,6 +287,7 @@ public class CookBlockEntity extends BlockEntity implements Container {
 		dish = input.getStringOr("dish", "");
 		base_quality = input.getIntOr("base_quality", 0);
 		cook = input.getStringOr("cook", "");
+		cook_uuid = input.getStringOr("cook_uuid", "");
 		generic = input.read("generic", CompoundTag.CODEC).orElse(new CompoundTag());
 	}
 
@@ -274,6 +303,7 @@ public class CookBlockEntity extends BlockEntity implements Container {
 		output.putString("dish", dish);
 		output.putInt("base_quality", base_quality);
 		output.putString("cook", cook);
+		output.putString("cook_uuid", cook_uuid);
 		output.store("generic", CompoundTag.CODEC, generic);
 	}
 

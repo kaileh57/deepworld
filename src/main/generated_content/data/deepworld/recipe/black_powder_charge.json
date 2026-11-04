@@ -1,0 +1,14 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "minecraft:sulfur",
+  "minecraft:charcoal",
+  "deepworld:saltpeter",
+  "minecraft:paper"
+ ],
+ "result": {
+  "id": "deepworld:black_powder_charge",
+  "count": 2
+ }
+}

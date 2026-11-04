@@ -187,7 +187,10 @@ def main():
         lang[f"block.deepworld.{plant['id']}"] = plant["name"]
         write(data / "deepworld" / "loot_table" / "blocks" / f"{plant['id']}.json", {
             "type": "minecraft:block",
-            "pools": [{"rolls": 1, "entries": [{"type": "minecraft:item", "name": plant["drop"], "functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": plant["count"][0], "max": plant["count"][1]}}, {"function": "minecraft:apply_bonus", "enchantment": "minecraft:fortune", "formula": "minecraft:uniform_bonus_count", "parameters": {"bonusMultiplier": 1}}]}]}],
+            "pools": [
+                {"rolls": 1, "conditions": [{"condition": "minecraft:block_state_property", "block": f"deepworld:{plant['id']}", "properties": {"age": "3"}}], "entries": [{"type": "minecraft:item", "name": plant["drop"], "functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": plant["count"][0], "max": plant["count"][1]}}, {"function": "minecraft:apply_bonus", "enchantment": "minecraft:fortune", "formula": "minecraft:uniform_bonus_count", "parameters": {"bonusMultiplier": 1}}]}]},
+                {"rolls": 1, "conditions": [{"condition": "minecraft:inverted", "term": {"condition": "minecraft:block_state_property", "block": f"deepworld:{plant['id']}", "properties": {"age": "3"}}}], "entries": [{"type": "minecraft:item", "name": plant["drop"]}]},
+            ],
         })
         state = f"deepworld:{plant['id']}"
         write(data / "deepworld" / "worldgen" / "feature" / "forage" / f"{plant['id']}.json", {"type": "minecraft:simple_block", "to_place": {"id": state}})
@@ -203,6 +206,7 @@ def main():
             placement = [{"type": "minecraft:rarity_filter", "chance": 4}, {"type": "minecraft:in_square"}, {"type": "minecraft:heightmap", "heightmap": "WORLD_SURFACE_WG"}, {"type": "minecraft:biome"},
                          {"type": "minecraft:count", "count": plant.get("tries", 12)}, spread(6, 2), fits]
         write(data / "deepworld" / "worldgen" / "placed_feature" / "forage" / f"{plant['id']}.json", {"feature": f"deepworld:forage/{plant['id']}", "placement": placement})
+    write(assets / "models" / "block" / "sprout.json", {"parent": "minecraft:block/cross", "textures": {"cross": "deepworld:block/sprout"}})
     for station in content.get("cook_stations", []):
         lang[f"block.deepworld.{station['id']}"] = station["name"]
         loot_self(station["id"])

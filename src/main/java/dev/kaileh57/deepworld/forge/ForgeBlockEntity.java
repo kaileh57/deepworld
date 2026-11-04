@@ -27,6 +27,7 @@ public class ForgeBlockEntity extends BlockEntity implements Container {
 	public int burn_total;
 	public int progress;
 	public int progress_total;
+	public java.util.UUID last_user;
 
 	public ForgeBlockEntity(BlockPos pos, BlockState state) {
 		super(Content.forge_entity, pos, state);
@@ -60,6 +61,10 @@ public class ForgeBlockEntity extends BlockEntity implements Container {
 		if (can_output && burn_left > 0) {
 			progress_total = recipe.time();
 			progress++;
+			net.minecraft.server.level.ServerPlayer user = last_user == null ? null : level.getServer().getPlayerList().getPlayer(last_user);
+			if (dev.kaileh57.deepworld.guild.Guild.focused(user, "smith")) {
+				progress++;
+			}
 			if (progress >= progress_total) {
 				recipe.consume(this, input_first, input_count);
 				ItemStack output = stacks.get(output_slot);
@@ -69,6 +74,8 @@ public class ForgeBlockEntity extends BlockEntity implements Container {
 					output.grow(recipe.result_count());
 				}
 				progress = 0;
+				net.minecraft.server.level.ServerPlayer smith = last_user == null ? null : level.getServer().getPlayerList().getPlayer(last_user);
+				dev.kaileh57.deepworld.guild.Guild.add(smith, "forged", 1);
 			}
 		} else if (progress > 0) {
 			progress = Math.max(0, progress - 2);
