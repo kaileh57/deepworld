@@ -1,0 +1,34 @@
+:root {
+	--sl-color-accent-low: #3a2414;
+	--sl-color-accent: #d9822b;
+	--sl-color-accent-high: #f4c58f;
+}
+:root[data-theme='light'] {
+	--sl-color-accent-low: #f7dcc0;
+	--sl-color-accent: #a85a12;
+	--sl-color-accent-high: #4a2608;
+}
+.infobox {
+	float: right;
+	width: 16rem;
+	margin: 0 0 1rem 1rem;
+	border: 1px solid var(--sl-color-gray-5);
+	background: var(--sl-color-gray-6);
+}
+.infobox img {
+	display: block;
+	width: 8rem;
+	margin: 1rem auto;
+	image-rendering: pixelated;
+}
+.infobox table {
+	width: 100%;
+	margin: 0;
+}
+@media (max-width: 50rem) {
+	.infobox {
+		float: none;
+		width: 100%;
+		margin: 0 0 1rem 0;
+	}
+}

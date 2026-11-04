@@ -1,0 +1,55 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+base {
+	archivesName = 'deepworld'
+}
+
+repositories {
+	maven { url = 'https://maven.nucleoid.xyz' }
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+	for (module in ['polymer-core', 'polymer-blocks', 'polymer-resource-pack', 'polymer-autohost', 'polymer-virtual-entity']) {
+		implementation "eu.pb4:${module}:${project.polymer_version}"
+		include "eu.pb4:${module}:${project.polymer_version}"
+	}
+	implementation "eu.pb4:sgui:${project.sgui_version}"
+	include "eu.pb4:sgui:${project.sgui_version}"
+}
+
+processResources {
+	def version = project.version
+	inputs.property "version", version
+	filesMatching("fabric.mod.json") {
+		expand "version": version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+loom {
+	runs {
+		server {
+			runDir = 'run'
+		}
+		export_data {
+			server()
+			name = 'export data'
+			runDir = 'build/export_run'
+			vmArg "-Ddeepworld.export=${file('export')}"
+		}
+	}
+}

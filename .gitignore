@@ -1,2 +1,15 @@
-temp/
+/temp/
 .DS_Store
+.gradle/
+/build/
+/run/
+.idea/
+*.iml
+out/
+wiki/node_modules/
+wiki/dist/
+wiki/.astro/
+wiki/src/content/docs/ref/
+wiki/src/data/
+/export/
+wiki/public/icons/
