@@ -1,0 +1,1293 @@
+[
+	{
+		"name": "shallow caverns",
+		"y": [
+			1000,
+			1100
+		],
+		"stone": "minecraft:stone",
+		"bands": [
+			{
+				"min": 0.5,
+				"max": 0.62,
+				"block": "minecraft:tuff"
+			},
+			{
+				"min": -0.62,
+				"max": -0.5,
+				"block": "minecraft:andesite"
+			}
+		],
+		"caves": {
+			"kind": "classic",
+			"params": {
+				"t": 0.4,
+				"w": 0.12
+			}
+		},
+		"ores": [
+			{
+				"name": "shallow_coal",
+				"hosts": [
+					"minecraft:stone",
+					"minecraft:andesite"
+				],
+				"block": "minecraft:coal_ore",
+				"size": 17,
+				"count": 18
+			},
+			{
+				"name": "shallow_copper",
+				"hosts": [
+					"minecraft:stone",
+					"minecraft:andesite",
+					"minecraft:tuff"
+				],
+				"block": "minecraft:copper_ore",
+				"size": 12,
+				"count": 16
+			}
+		],
+		"attributes": {},
+		"biomes": [
+			{
+				"id": "deepworld:mossy_hollows",
+				"base": "minecraft:lush_caves",
+				"humidity": [
+					0.1,
+					1.0
+				],
+				"decor": [
+					{
+						"id": "minecraft:lush_caves_ceiling_vegetation",
+						"step": 9
+					},
+					{
+						"id": "minecraft:cave_vines",
+						"step": 9
+					},
+					{
+						"id": "minecraft:lush_caves_vegetation",
+						"step": 9
+					},
+					{
+						"id": "minecraft:rooted_azalea_tree",
+						"step": 9
+					},
+					{
+						"id": "minecraft:spore_blossom",
+						"step": 9
+					},
+					{
+						"id": "minecraft:classic_vines_cave_feature",
+						"step": 9
+					},
+					{
+						"id": "minecraft:glow_lichen",
+						"step": 9
+					}
+				],
+				"structures": [
+					"trial_chambers",
+					"mineshaft"
+				]
+			},
+			{
+				"id": "deepworld:dripstone_hollows",
+				"base": "minecraft:dripstone_caves",
+				"humidity": [
+					-1.0,
+					0.1
+				],
+				"decor": [
+					{
+						"id": "minecraft:large_dripstone",
+						"step": 7
+					},
+					{
+						"id": "minecraft:dripstone_cluster",
+						"step": 9
+					},
+					{
+						"id": "minecraft:pointed_dripstone",
+						"step": 9
+					},
+					{
+						"id": "minecraft:glow_lichen",
+						"step": 9
+					}
+				],
+				"structures": [
+					"trial_chambers",
+					"mineshaft"
+				]
+			}
+		]
+	},
+	{
+		"name": "deepslate boundary",
+		"y": [
+			900,
+			1000
+		],
+		"stone": "minecraft:deepslate",
+		"bands": [
+			{
+				"min": 0.55,
+				"max": 0.66,
+				"block": "minecraft:tuff"
+			}
+		],
+		"caves": {
+			"kind": "classic",
+			"params": {
+				"t": 0.24,
+				"w": 0.12,
+				"y": 0.8
+			}
+		},
+		"ores": [
+			{
+				"name": "boundary_iron",
+				"hosts": [
+					"minecraft:deepslate",
+					"minecraft:tuff"
+				],
+				"block": "minecraft:deepslate_iron_ore",
+				"size": 10,
+				"count": 22
+			},
+			{
+				"name": "boundary_coal",
+				"hosts": [
+					"minecraft:deepslate"
+				],
+				"block": "minecraft:deepslate_coal_ore",
+				"size": 14,
+				"count": 8
+			}
+		],
+		"attributes": {
+			"minecraft:visual/fog_end_distance": 160.0,
+			"minecraft:visual/fog_start_distance": 16.0
+		},
+		"biomes": [
+			{
+				"id": "deepworld:flooded_galleries",
+				"base": "minecraft:dripstone_caves",
+				"humidity": [
+					0.0,
+					1.0
+				],
+				"decor": [
+					{
+						"id": "minecraft:pointed_dripstone",
+						"step": 9
+					},
+					{
+						"id": "minecraft:glow_lichen",
+						"step": 9
+					}
+				],
+				"attributes": {
+					"minecraft:visual/fog_color": "#2b4a5c",
+					"minecraft:visual/water_fog_color": "#0f2a38",
+					"minecraft:audio/background_music": {
+						"default": {
+							"sound": "minecraft:music.overworld.dripstone_caves",
+							"min_delay": 12000,
+							"max_delay": 24000
+						}
+					}
+				},
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:drowned",
+							"weight": 100,
+							"count": 3
+						},
+						{
+							"type": "minecraft:cave_spider",
+							"weight": 60,
+							"count": 3
+						},
+						{
+							"type": "minecraft:zombie",
+							"weight": 40,
+							"count": 2
+						}
+					],
+					"underground_water_creature": [
+						{
+							"type": "minecraft:glow_squid",
+							"weight": 10,
+							"count": 4
+						}
+					],
+					"ambient": [
+						{
+							"type": "minecraft:bat",
+							"weight": 10,
+							"count": 8
+						}
+					]
+				},
+				"structures": [
+					"mineshaft"
+				]
+			},
+			{
+				"id": "deepworld:fungal_hollows",
+				"base": "minecraft:lush_caves",
+				"humidity": [
+					-1.0,
+					0.0
+				],
+				"floor": [
+					"minecraft:mycelium"
+				],
+				"decor": [
+					{
+						"id": "minecraft:brown_mushroom_normal",
+						"step": 9,
+						"count": 40
+					},
+					{
+						"id": "minecraft:red_mushroom_normal",
+						"step": 9,
+						"count": 20
+					},
+					{
+						"id": "minecraft:glow_lichen",
+						"step": 9
+					}
+				],
+				"attributes": {
+					"minecraft:visual/fog_color": "#3b3046",
+					"minecraft:visual/ambient_particles": [
+						{
+							"particle": {
+								"type": "minecraft:mycelium"
+							},
+							"probability": 0.02
+						}
+					]
+				},
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:cave_spider",
+							"weight": 100,
+							"count": 4
+						},
+						{
+							"type": "minecraft:zombie",
+							"weight": 60,
+							"count": 3
+						},
+						{
+							"type": "minecraft:skeleton",
+							"weight": 60,
+							"count": 3
+						}
+					],
+					"ambient": [
+						{
+							"type": "minecraft:bat",
+							"weight": 10,
+							"count": 8
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"name": "granite trenches",
+		"y": [
+			800,
+			900
+		],
+		"stone": "minecraft:granite",
+		"bands": [
+			{
+				"min": 0.45,
+				"max": 0.6,
+				"block": "minecraft:stone"
+			},
+			{
+				"min": -0.3,
+				"max": -0.24,
+				"block": "minecraft:coal_block"
+			}
+		],
+		"caves": {
+			"kind": "seams",
+			"params": {
+				"t": 0.28
+			}
+		},
+		"ores": [
+			{
+				"name": "trench_gold",
+				"hosts": [
+					"minecraft:granite",
+					"minecraft:stone"
+				],
+				"block": "minecraft:gold_ore",
+				"size": 9,
+				"count": 14
+			},
+			{
+				"name": "trench_coal",
+				"hosts": [
+					"minecraft:granite",
+					"minecraft:stone"
+				],
+				"block": "minecraft:coal_ore",
+				"size": 20,
+				"count": 24
+			}
+		],
+		"attributes": {
+			"minecraft:visual/fog_color": "#4a3328",
+			"minecraft:visual/fog_end_distance": 128.0,
+			"minecraft:visual/fog_start_distance": 12.0
+		},
+		"biomes": [
+			{
+				"id": "deepworld:coal_seams",
+				"base": "minecraft:dripstone_caves",
+				"humidity": [
+					0.0,
+					1.0
+				],
+				"decor": [
+					{
+						"id": "minecraft:glow_lichen",
+						"step": 9
+					}
+				],
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:husk",
+							"weight": 100,
+							"count": 3
+						},
+						{
+							"type": "minecraft:skeleton",
+							"weight": 60,
+							"count": 3
+						},
+						{
+							"type": "minecraft:creeper",
+							"weight": 40,
+							"count": 2
+						}
+					]
+				}
+			},
+			{
+				"id": "deepworld:fossil_beds",
+				"base": "minecraft:dripstone_caves",
+				"humidity": [
+					-1.0,
+					0.0
+				],
+				"floor": [
+					"minecraft:gravel"
+				],
+				"decor": [
+					{
+						"id": "minecraft:fossil_upper",
+						"step": 3,
+						"count": 2
+					},
+					{
+						"id": "minecraft:fossil_lower",
+						"step": 3,
+						"count": 2
+					}
+				],
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:husk",
+							"weight": 100,
+							"count": 3
+						},
+						{
+							"type": "minecraft:skeleton",
+							"weight": 80,
+							"count": 3
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"name": "crystal caverns",
+		"y": [
+			700,
+			800
+		],
+		"stone": "minecraft:calcite",
+		"bands": [
+			{
+				"min": 0.4,
+				"max": 0.62,
+				"block": "minecraft:tuff"
+			},
+			{
+				"min": -0.7,
+				"max": -0.6,
+				"block": "minecraft:smooth_basalt"
+			}
+		],
+		"caves": {
+			"kind": "halls",
+			"params": {
+				"t": 0.32
+			}
+		},
+		"ores": [
+			{
+				"name": "crystal_lapis",
+				"hosts": [
+					"minecraft:calcite",
+					"minecraft:tuff"
+				],
+				"block": "minecraft:lapis_ore",
+				"size": 8,
+				"count": 10
+			}
+		],
+		"attributes": {
+			"minecraft:visual/fog_color": "#4b3a66",
+			"minecraft:visual/fog_end_distance": 112.0,
+			"minecraft:visual/fog_start_distance": 8.0,
+			"minecraft:audio/background_music": {
+				"default": {
+					"sound": "minecraft:music.overworld.lush_caves",
+					"min_delay": 12000,
+					"max_delay": 24000
+				}
+			}
+		},
+		"biomes": [
+			{
+				"id": "deepworld:geode_halls",
+				"base": "minecraft:dripstone_caves",
+				"humidity": [
+					0.0,
+					1.0
+				],
+				"decor": [
+					{
+						"id": "minecraft:amethyst_geode",
+						"step": 2,
+						"count": 3
+					},
+					{
+						"id": "minecraft:glow_lichen",
+						"step": 9
+					}
+				],
+				"attributes": {
+					"minecraft:visual/ambient_particles": [
+						{
+							"particle": {
+								"type": "minecraft:end_rod"
+							},
+							"probability": 0.002
+						}
+					]
+				},
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:creeper",
+							"weight": 100,
+							"count": 2
+						},
+						{
+							"type": "minecraft:spider",
+							"weight": 60,
+							"count": 2
+						},
+						{
+							"type": "minecraft:enderman",
+							"weight": 20,
+							"count": 1
+						}
+					]
+				}
+			},
+			{
+				"id": "deepworld:glowcap_grottos",
+				"base": "minecraft:lush_caves",
+				"humidity": [
+					-1.0,
+					0.0
+				],
+				"floor": [
+					"minecraft:moss_block"
+				],
+				"decor": [
+					{
+						"id": "minecraft:glow_lichen",
+						"step": 9,
+						"count": 160
+					},
+					{
+						"id": "minecraft:cave_vines",
+						"step": 9
+					},
+					{
+						"id": "minecraft:amethyst_geode",
+						"step": 2,
+						"count": 1
+					}
+				],
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:creeper",
+							"weight": 100,
+							"count": 2
+						},
+						{
+							"type": "minecraft:spider",
+							"weight": 60,
+							"count": 2
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"name": "obsidian roots",
+		"y": [
+			600,
+			700
+		],
+		"stone": "minecraft:blackstone",
+		"bands": [
+			{
+				"min": 0.66,
+				"max": 0.74,
+				"block": "minecraft:obsidian"
+			},
+			{
+				"min": -0.5,
+				"max": -0.3,
+				"block": "minecraft:basalt"
+			}
+		],
+		"caves": {
+			"kind": "chimneys",
+			"params": {
+				"w": 0.1,
+				"t": 0.55
+			}
+		},
+		"ores": [
+			{
+				"name": "roots_gold",
+				"hosts": [
+					"minecraft:blackstone"
+				],
+				"block": "minecraft:gilded_blackstone",
+				"size": 6,
+				"count": 4
+			}
+		],
+		"attributes": {
+			"minecraft:visual/fog_end_distance": 64.0,
+			"minecraft:visual/fog_start_distance": 4.0
+		},
+		"biomes": [
+			{
+				"id": "deepworld:basalt_groves",
+				"base": "minecraft:basalt_deltas",
+				"humidity": [
+					0.0,
+					1.0
+				],
+				"decor": [
+					{
+						"id": "minecraft:basalt_blobs",
+						"step": 9
+					},
+					{
+						"id": "minecraft:blackstone_blobs",
+						"step": 9
+					}
+				],
+				"attributes": {
+					"minecraft:visual/fog_color": "#3a3438",
+					"minecraft:visual/ambient_particles": [
+						{
+							"particle": {
+								"type": "minecraft:white_ash"
+							},
+							"probability": 0.06
+						}
+					]
+				},
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:magma_cube",
+							"weight": 100,
+							"count": 3
+						},
+						{
+							"type": "minecraft:skeleton",
+							"weight": 40,
+							"count": 2
+						}
+					]
+				}
+			},
+			{
+				"id": "deepworld:sulfur_springs",
+				"base": "minecraft:sulfur_caves",
+				"humidity": [
+					-1.0,
+					0.0
+				],
+				"bands": [
+					{
+						"min": 0.28,
+						"max": 0.4,
+						"block": "minecraft:sulfur"
+					},
+					{
+						"min": -0.36,
+						"max": -0.28,
+						"block": "minecraft:cinnabar"
+					}
+				],
+				"decor": [
+					{
+						"id": "minecraft:sulfur_spike_cluster",
+						"step": 7
+					},
+					{
+						"id": "minecraft:sulfur_spike",
+						"step": 7
+					}
+				],
+				"attributes": {
+					"minecraft:visual/fog_color": "#8cb831",
+					"minecraft:visual/fog_end_distance": 40.0
+				},
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:magma_cube",
+							"weight": 100,
+							"count": 3
+						},
+						{
+							"type": "minecraft:slime",
+							"weight": 40,
+							"count": 2
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"name": "molten echoes",
+		"y": [
+			450,
+			600
+		],
+		"stone": "minecraft:basalt",
+		"bands": [
+			{
+				"min": 0.3,
+				"max": 0.55,
+				"block": "minecraft:smooth_basalt"
+			},
+			{
+				"min": -0.85,
+				"max": -0.75,
+				"block": "minecraft:magma_block"
+			}
+		],
+		"caves": {
+			"kind": "lava_sea",
+			"params": {
+				"center": 512,
+				"half": 30
+			}
+		},
+		"ores": [
+			{
+				"name": "molten_diamond",
+				"hosts": [
+					"minecraft:basalt",
+					"minecraft:smooth_basalt"
+				],
+				"block": "minecraft:deepslate_diamond_ore",
+				"size": 8,
+				"count": 9
+			}
+		],
+		"attributes": {
+			"minecraft:visual/fog_color": "#5a2a12",
+			"minecraft:visual/fog_end_distance": 96.0,
+			"minecraft:visual/fog_start_distance": 8.0,
+			"minecraft:audio/background_music": {
+				"default": {
+					"sound": "minecraft:music.nether.basalt_deltas",
+					"min_delay": 12000,
+					"max_delay": 24000
+				}
+			}
+		},
+		"biomes": [
+			{
+				"id": "deepworld:lava_sea",
+				"base": "minecraft:basalt_deltas",
+				"humidity": [
+					-0.2,
+					1.0
+				],
+				"floor": [
+					"minecraft:magma_block"
+				],
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:ghast",
+							"weight": 50,
+							"count": 1
+						},
+						{
+							"type": "minecraft:magma_cube",
+							"weight": 100,
+							"count": 3
+						}
+					],
+					"creature": [
+						{
+							"type": "minecraft:strider",
+							"weight": 60,
+							"count": 2
+						}
+					]
+				}
+			},
+			{
+				"id": "deepworld:ash_fields",
+				"base": "minecraft:basalt_deltas",
+				"humidity": [
+					-1.0,
+					-0.2
+				],
+				"decor": [
+					{
+						"id": "minecraft:basalt_blobs",
+						"step": 9
+					}
+				],
+				"attributes": {
+					"minecraft:visual/ambient_particles": [
+						{
+							"particle": {
+								"type": "minecraft:white_ash"
+							},
+							"probability": 0.12
+						}
+					],
+					"minecraft:visual/fog_color": "#6b5f60"
+				},
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:magma_cube",
+							"weight": 100,
+							"count": 3
+						},
+						{
+							"type": "minecraft:skeleton",
+							"weight": 40,
+							"count": 2
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"name": "gloomstone trenches",
+		"y": [
+			300,
+			450
+		],
+		"stone": "minecraft:deepslate",
+		"bands": [
+			{
+				"min": 0.5,
+				"max": 0.6,
+				"block": "minecraft:tuff"
+			},
+			{
+				"min": -0.66,
+				"max": -0.6,
+				"block": "minecraft:sculk"
+			}
+		],
+		"caves": {
+			"kind": "noodle",
+			"params": {
+				"w": 0.12
+			}
+		},
+		"ores": [
+			{
+				"name": "gloom_lapis",
+				"hosts": [
+					"minecraft:deepslate",
+					"minecraft:tuff"
+				],
+				"block": "minecraft:deepslate_lapis_ore",
+				"size": 9,
+				"count": 10
+			},
+			{
+				"name": "gloom_redstone",
+				"hosts": [
+					"minecraft:deepslate",
+					"minecraft:tuff"
+				],
+				"block": "minecraft:deepslate_redstone_ore",
+				"size": 8,
+				"count": 8
+			}
+		],
+		"attributes": {
+			"minecraft:visual/fog_color": "#05090c",
+			"minecraft:visual/fog_end_distance": 40.0,
+			"minecraft:visual/fog_start_distance": 0.0,
+			"minecraft:audio/background_music": {
+				"default": {
+					"sound": "minecraft:music.overworld.deep_dark",
+					"min_delay": 12000,
+					"max_delay": 24000
+				}
+			}
+		},
+		"biomes": [
+			{
+				"id": "deepworld:gloom_dark",
+				"base": "minecraft:deep_dark",
+				"humidity": [
+					-0.3,
+					1.0
+				],
+				"decor": [
+					{
+						"id": "minecraft:sculk_vein",
+						"step": 9
+					},
+					{
+						"id": "minecraft:sculk_patch_deep_dark",
+						"step": 9
+					}
+				],
+				"spawns": {},
+				"structures": [
+					"ancient_city"
+				]
+			},
+			{
+				"id": "deepworld:bone_yards",
+				"base": "minecraft:deep_dark",
+				"humidity": [
+					-1.0,
+					-0.3
+				],
+				"floor": [
+					"minecraft:soul_soil"
+				],
+				"decor": [
+					{
+						"id": "minecraft:fossil_lower",
+						"step": 3,
+						"count": 3
+					}
+				],
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:skeleton",
+							"weight": 100,
+							"count": 4
+						},
+						{
+							"type": "minecraft:wither_skeleton",
+							"weight": 10,
+							"count": 1
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"name": "mantle crust",
+		"y": [
+			150,
+			300
+		],
+		"stone": "minecraft:blackstone",
+		"bands": [
+			{
+				"min": 0.5,
+				"max": 0.65,
+				"block": "minecraft:basalt"
+			},
+			{
+				"min": -0.8,
+				"max": -0.72,
+				"block": "minecraft:magma_block"
+			}
+		],
+		"caves": {
+			"kind": "rivers",
+			"params": {
+				"river_y": 192,
+				"cavern_lo": 205,
+				"cavern_hi": 292,
+				"t": 0.34,
+				"river_w": 0.16
+			}
+		},
+		"ores": [
+			{
+				"name": "mantle_debris",
+				"hosts": [
+					"minecraft:blackstone",
+					"minecraft:basalt"
+				],
+				"block": "minecraft:ancient_debris",
+				"size": 3,
+				"count": 3,
+				"discard": 1.0
+			},
+			{
+				"name": "mantle_gold",
+				"hosts": [
+					"minecraft:blackstone"
+				],
+				"block": "minecraft:gilded_blackstone",
+				"size": 8,
+				"count": 6
+			}
+		],
+		"attributes": {
+			"minecraft:visual/fog_color": "#3d1a10",
+			"minecraft:visual/fog_end_distance": 72.0,
+			"minecraft:visual/fog_start_distance": 6.0,
+			"minecraft:gameplay/piglins_zombify": false,
+			"minecraft:gameplay/water_evaporates": true
+		},
+		"biomes": [
+			{
+				"id": "deepworld:blackstone_forges",
+				"base": "minecraft:basalt_deltas",
+				"humidity": [
+					0.0,
+					1.0
+				],
+				"decor": [
+					{
+						"id": "minecraft:blackstone_blobs",
+						"step": 9
+					}
+				],
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:piglin",
+							"weight": 60,
+							"count": 3
+						},
+						{
+							"type": "minecraft:magma_cube",
+							"weight": 40,
+							"count": 2
+						}
+					],
+					"creature": [
+						{
+							"type": "minecraft:hoglin",
+							"weight": 60,
+							"count": 3
+						}
+					]
+				}
+			},
+			{
+				"id": "deepworld:magma_rivers",
+				"base": "minecraft:basalt_deltas",
+				"humidity": [
+					-1.0,
+					0.0
+				],
+				"floor": [
+					"minecraft:magma_block"
+				],
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:magma_cube",
+							"weight": 100,
+							"count": 3
+						}
+					],
+					"creature": [
+						{
+							"type": "minecraft:strider",
+							"weight": 60,
+							"count": 2
+						},
+						{
+							"type": "minecraft:hoglin",
+							"weight": 30,
+							"count": 2
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"name": "the hellmouth",
+		"y": [
+			0,
+			150
+		],
+		"stone": "minecraft:netherrack",
+		"bands": [
+			{
+				"min": 0.45,
+				"max": 0.62,
+				"block": "minecraft:blackstone"
+			},
+			{
+				"min": -0.8,
+				"max": -0.7,
+				"block": "minecraft:magma_block"
+			}
+		],
+		"caves": {
+			"kind": "rivers",
+			"params": {
+				"river_y": 44,
+				"cavern_lo": 58,
+				"cavern_hi": 144,
+				"t": 0.14,
+				"river_w": 0.18
+			}
+		},
+		"ores": [
+			{
+				"name": "hellmouth_quartz",
+				"hosts": [
+					"minecraft:netherrack"
+				],
+				"block": "minecraft:nether_quartz_ore",
+				"size": 14,
+				"count": 16
+			},
+			{
+				"name": "hellmouth_gold",
+				"hosts": [
+					"minecraft:netherrack"
+				],
+				"block": "minecraft:nether_gold_ore",
+				"size": 10,
+				"count": 10
+			}
+		],
+		"attributes": {
+			"minecraft:visual/fog_end_distance": 72.0,
+			"minecraft:visual/fog_start_distance": 6.0,
+			"minecraft:gameplay/piglins_zombify": false,
+			"minecraft:gameplay/water_evaporates": true
+		},
+		"biomes": [
+			{
+				"id": "deepworld:scorched_transition",
+				"base": "minecraft:nether_wastes",
+				"humidity": [
+					-1.0,
+					0.0
+				],
+				"decor": [
+					{
+						"id": "minecraft:glowstone_extra",
+						"step": 9
+					},
+					{
+						"id": "minecraft:patch_fire",
+						"step": 9
+					}
+				],
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:zombified_piglin",
+							"weight": 100,
+							"count": 4
+						},
+						{
+							"type": "minecraft:magma_cube",
+							"weight": 40,
+							"count": 2
+						},
+						{
+							"type": "minecraft:ghast",
+							"weight": 20,
+							"count": 1
+						}
+					]
+				}
+			},
+			{
+				"id": "deepworld:crimson_fringe",
+				"base": "minecraft:crimson_forest",
+				"humidity": [
+					0.0,
+					1.0
+				],
+				"floor": [
+					"minecraft:crimson_nylium"
+				],
+				"decor": [
+					{
+						"id": "minecraft:weeping_vines",
+						"step": 9
+					},
+					{
+						"id": "minecraft:glowstone",
+						"step": 9
+					}
+				],
+				"spawns": {
+					"monster": [
+						{
+							"type": "minecraft:zombified_piglin",
+							"weight": 60,
+							"count": 3
+						},
+						{
+							"type": "minecraft:piglin",
+							"weight": 30,
+							"count": 3
+						}
+					],
+					"creature": [
+						{
+							"type": "minecraft:hoglin",
+							"weight": 60,
+							"count": 3
+						},
+						{
+							"type": "minecraft:strider",
+							"weight": 30,
+							"count": 2
+						}
+					]
+				}
+			}
+		]
+	},
+	{
+		"name": "nether stratum",
+		"y": [
+			-256,
+			0
+		],
+		"cave_y": [
+			-120,
+			0
+		],
+		"stone": "minecraft:netherrack",
+		"material": "nether",
+		"caves": {
+			"kind": "nether_halls",
+			"params": {
+				"t": 0.05
+			}
+		},
+		"biomes": [
+			{
+				"id": "minecraft:nether_wastes",
+				"temperature": [
+					-0.3,
+					0.3
+				],
+				"humidity": [
+					-0.3,
+					0.3
+				]
+			},
+			{
+				"id": "minecraft:soul_sand_valley",
+				"temperature": [
+					-1.0,
+					-0.3
+				],
+				"humidity": [
+					-1.0,
+					0.0
+				]
+			},
+			{
+				"id": "minecraft:warped_forest",
+				"temperature": [
+					-1.0,
+					1.0
+				],
+				"humidity": [
+					0.3,
+					1.0
+				]
+			},
+			{
+				"id": "minecraft:crimson_forest",
+				"temperature": [
+					0.3,
+					1.0
+				],
+				"humidity": [
+					-0.3,
+					0.3
+				]
+			},
+			{
+				"id": "minecraft:basalt_deltas",
+				"temperature": [
+					0.3,
+					1.0
+				],
+				"humidity": [
+					-1.0,
+					-0.3
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,133 @@
+{
+ "has_precipitation": false,
+ "temperature": 0.5,
+ "downfall": 0.5,
+ "attributes": {
+  "minecraft:audio/background_music": {
+   "default": {
+    "max_delay": 24000,
+    "min_delay": 12000,
+    "sound": "minecraft:music.overworld.lush_caves"
+   }
+  },
+  "minecraft:gameplay/natural_mob_spawns": {
+   "argument": {
+    "spawn_costs": {},
+    "spawns_by_category": {
+     "ambient": [
+      {
+       "type": "minecraft:bat",
+       "count": 8,
+       "weight": 10
+      }
+     ],
+     "axolotls": [
+      {
+       "type": "minecraft:axolotl",
+       "count": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 6,
+        "min_inclusive": 4
+       },
+       "weight": 10
+      }
+     ],
+     "monster": [
+      {
+       "type": "minecraft:spider",
+       "count": 4,
+       "weight": 100
+      },
+      {
+       "type": "minecraft:zombie",
+       "count": 4,
+       "weight": 95
+      },
+      {
+       "type": "minecraft:zombie_villager",
+       "count": 1,
+       "weight": 5
+      },
+      {
+       "type": "minecraft:skeleton",
+       "count": 4,
+       "weight": 100
+      },
+      {
+       "type": "minecraft:creeper",
+       "count": 4,
+       "weight": 100
+      },
+      {
+       "type": "minecraft:slime",
+       "count": 4,
+       "weight": 100
+      },
+      {
+       "type": "minecraft:enderman",
+       "count": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 4,
+        "min_inclusive": 1
+       },
+       "weight": 10
+      },
+      {
+       "type": "minecraft:witch",
+       "count": 1,
+       "weight": 5
+      }
+     ],
+     "underground_water_creature": [
+      {
+       "type": "minecraft:glow_squid",
+       "count": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 6,
+        "min_inclusive": 4
+       },
+       "weight": 10
+      }
+     ],
+     "water_ambient": [
+      {
+       "type": "minecraft:tropical_fish",
+       "count": 8,
+       "weight": 25
+      }
+     ]
+    }
+   },
+   "modifier": "overlay"
+  },
+  "minecraft:visual/sky_color": "#7ba4ff"
+ },
+ "effects": {
+  "water_color": "#3f76e4"
+ },
+ "carvers": [],
+ "features": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   "deepworld:mossy_hollows/ore_shallow_coal",
+   "deepworld:mossy_hollows/ore_shallow_copper"
+  ],
+  [],
+  [],
+  [
+   "deepworld:mossy_hollows/lush_caves_ceiling_vegetation",
+   "deepworld:mossy_hollows/cave_vines",
+   "deepworld:mossy_hollows/lush_caves_vegetation",
+   "deepworld:mossy_hollows/rooted_azalea_tree",
+   "deepworld:mossy_hollows/spore_blossom",
+   "deepworld:mossy_hollows/classic_vines_cave_feature",
+   "deepworld:mossy_hollows/glow_lichen"
+  ],
+  []
+ ]
+}

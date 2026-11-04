@@ -1,0 +1,48 @@
+{
+ "has_precipitation": false,
+ "temperature": 0.8,
+ "downfall": 0.4,
+ "attributes": {
+  "minecraft:audio/background_music": {
+   "default": {
+    "sound": "minecraft:music.overworld.deep_dark",
+    "min_delay": 12000,
+    "max_delay": 24000
+   }
+  },
+  "minecraft:gameplay/natural_mob_spawns": {
+   "argument": {
+    "spawn_costs": {},
+    "spawns_by_category": {}
+   },
+   "modifier": "override"
+  },
+  "minecraft:visual/sky_color": "#78a7ff",
+  "minecraft:visual/fog_color": "#05090c",
+  "minecraft:visual/fog_end_distance": 40.0,
+  "minecraft:visual/fog_start_distance": 0.0
+ },
+ "effects": {
+  "water_color": "#3f76e4"
+ },
+ "carvers": [],
+ "features": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   "deepworld:gloom_dark/ore_gloom_lapis",
+   "deepworld:gloom_dark/ore_gloom_redstone"
+  ],
+  [],
+  [],
+  [
+   "deepworld:gloom_dark/sculk_vein",
+   "deepworld:gloom_dark/sculk_patch_deep_dark"
+  ],
+  []
+ ]
+}

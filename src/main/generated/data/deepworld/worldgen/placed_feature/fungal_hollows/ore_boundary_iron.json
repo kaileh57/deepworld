@@ -1,0 +1,27 @@
+{
+ "feature": "deepworld:ore/boundary_iron",
+ "placement": [
+  {
+   "type": "minecraft:count",
+   "count": 22
+  },
+  {
+   "type": "minecraft:in_square"
+  },
+  {
+   "type": "minecraft:height_range",
+   "height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+     "absolute": 900
+    },
+    "max_inclusive": {
+     "absolute": 1000
+    }
+   }
+  },
+  {
+   "type": "minecraft:biome"
+  }
+ ]
+}

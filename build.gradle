@@ -23,6 +23,14 @@ dependencies {
 	include "eu.pb4:sgui:${project.sgui_version}"
 }
 
+sourceSets {
+	main {
+		resources {
+			srcDirs += ['src/main/generated']
+		}
+	}
+}
+
 processResources {
 	def version = project.version
 	inputs.property "version", version

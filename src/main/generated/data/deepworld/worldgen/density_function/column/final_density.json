@@ -1,0 +1,1003 @@
+{
+ "type": "minecraft:min",
+ "left": {
+  "type": "minecraft:min",
+  "left": {
+   "type": "minecraft:range_choice",
+   "input": "minecraft:y",
+   "min_inclusive": 1060.0,
+   "max_exclusive": 4096.0,
+   "when_in_range": "deepworld:shifted/surface/overworld/final_density",
+   "when_out_of_range": 1.0
+  },
+  "right": {
+   "type": "minecraft:interpolated",
+   "cell_size_xz": 4,
+   "cell_size_y": 4,
+   "input": {
+    "type": "minecraft:range_choice",
+    "input": "minecraft:y",
+    "min_inclusive": -120.0,
+    "max_exclusive": 0.0,
+    "when_in_range": {
+     "type": "minecraft:max",
+     "left": {
+      "type": "minecraft:add",
+      "left": 0.05,
+      "right": {
+       "type": "minecraft:mul",
+       "left": {
+        "type": "minecraft:noise",
+        "noise": "deepworld:cave_a",
+        "xz_scale": 0.7,
+        "y_scale": 0.5
+       },
+       "right": -1.0
+      }
+     },
+     "right": {
+      "type": "minecraft:add",
+      "left": {
+       "type": "minecraft:add",
+       "left": {
+        "type": "minecraft:mul",
+        "left": {
+         "type": "minecraft:add",
+         "left": {
+          "type": "minecraft:mul",
+          "left": {
+           "type": "minecraft:abs",
+           "input": {
+            "type": "minecraft:add",
+            "left": "minecraft:y",
+            "right": 60.0
+           }
+          },
+          "right": 0.016666666666666666
+         },
+         "right": -1.0
+        },
+        "right": 10.0
+       },
+       "right": 1.0
+      },
+      "right": {
+       "type": "minecraft:mul",
+       "left": {
+        "type": "minecraft:noise",
+        "noise": "deepworld:cave_c",
+        "xz_scale": 2.0,
+        "y_scale": 2.0
+       },
+       "right": -0.9
+      }
+     }
+    },
+    "when_out_of_range": {
+     "type": "minecraft:range_choice",
+     "input": "minecraft:y",
+     "min_inclusive": 0.0,
+     "max_exclusive": 150.0,
+     "when_in_range": {
+      "type": "minecraft:max",
+      "left": {
+       "type": "minecraft:min",
+       "left": {
+        "type": "minecraft:max",
+        "left": {
+         "type": "minecraft:add",
+         "left": {
+          "type": "minecraft:abs",
+          "input": {
+           "type": "minecraft:noise",
+           "noise": "deepworld:river",
+           "xz_scale": 1.0,
+           "y_scale": 0.0
+          }
+         },
+         "right": -0.18
+        },
+        "right": {
+         "type": "minecraft:add",
+         "left": {
+          "type": "minecraft:mul",
+          "left": {
+           "type": "minecraft:abs",
+           "input": {
+            "type": "minecraft:add",
+            "left": "minecraft:y",
+            "right": -44.0
+           }
+          },
+          "right": 0.125
+         },
+         "right": {
+          "type": "minecraft:add",
+          "left": {
+           "type": "minecraft:mul",
+           "left": {
+            "type": "minecraft:noise",
+            "noise": "deepworld:cave_c",
+            "xz_scale": 1.0,
+            "y_scale": 0.0
+           },
+           "right": 0.3
+          },
+          "right": -1.0
+         }
+        }
+       },
+       "right": {
+        "type": "minecraft:range_choice",
+        "input": "minecraft:y",
+        "min_inclusive": 58.0,
+        "max_exclusive": 144.0,
+        "when_in_range": {
+         "type": "minecraft:add",
+         "left": 0.14,
+         "right": {
+          "type": "minecraft:mul",
+          "left": {
+           "type": "minecraft:noise",
+           "noise": "deepworld:cave_a",
+           "xz_scale": 0.8,
+           "y_scale": 0.6
+          },
+          "right": -1.0
+         }
+        },
+        "when_out_of_range": 1.0
+       }
+      },
+      "right": {
+       "type": "minecraft:add",
+       "left": {
+        "type": "minecraft:add",
+        "left": {
+         "type": "minecraft:mul",
+         "left": {
+          "type": "minecraft:add",
+          "left": {
+           "type": "minecraft:mul",
+           "left": {
+            "type": "minecraft:abs",
+            "input": {
+             "type": "minecraft:add",
+             "left": "minecraft:y",
+             "right": -75.0
+            }
+           },
+           "right": 0.013333333333333334
+          },
+          "right": -1.0
+         },
+         "right": 12.5
+        },
+        "right": 1.0
+       },
+       "right": {
+        "type": "minecraft:mul",
+        "left": {
+         "type": "minecraft:noise",
+         "noise": "deepworld:cave_c",
+         "xz_scale": 2.0,
+         "y_scale": 2.0
+        },
+        "right": -0.9
+       }
+      }
+     },
+     "when_out_of_range": {
+      "type": "minecraft:range_choice",
+      "input": "minecraft:y",
+      "min_inclusive": 150.0,
+      "max_exclusive": 300.0,
+      "when_in_range": {
+       "type": "minecraft:max",
+       "left": {
+        "type": "minecraft:min",
+        "left": {
+         "type": "minecraft:max",
+         "left": {
+          "type": "minecraft:add",
+          "left": {
+           "type": "minecraft:abs",
+           "input": {
+            "type": "minecraft:noise",
+            "noise": "deepworld:river",
+            "xz_scale": 1.0,
+            "y_scale": 0.0
+           }
+          },
+          "right": -0.16
+         },
+         "right": {
+          "type": "minecraft:add",
+          "left": {
+           "type": "minecraft:mul",
+           "left": {
+            "type": "minecraft:abs",
+            "input": {
+             "type": "minecraft:add",
+             "left": "minecraft:y",
+             "right": -192.0
+            }
+           },
+           "right": 0.125
+          },
+          "right": {
+           "type": "minecraft:add",
+           "left": {
+            "type": "minecraft:mul",
+            "left": {
+             "type": "minecraft:noise",
+             "noise": "deepworld:cave_c",
+             "xz_scale": 1.0,
+             "y_scale": 0.0
+            },
+            "right": 0.3
+           },
+           "right": -1.0
+          }
+         }
+        },
+        "right": {
+         "type": "minecraft:range_choice",
+         "input": "minecraft:y",
+         "min_inclusive": 205.0,
+         "max_exclusive": 292.0,
+         "when_in_range": {
+          "type": "minecraft:add",
+          "left": 0.34,
+          "right": {
+           "type": "minecraft:mul",
+           "left": {
+            "type": "minecraft:noise",
+            "noise": "deepworld:cave_a",
+            "xz_scale": 0.8,
+            "y_scale": 0.6
+           },
+           "right": -1.0
+          }
+         },
+         "when_out_of_range": 1.0
+        }
+       },
+       "right": {
+        "type": "minecraft:add",
+        "left": {
+         "type": "minecraft:add",
+         "left": {
+          "type": "minecraft:mul",
+          "left": {
+           "type": "minecraft:add",
+           "left": {
+            "type": "minecraft:mul",
+            "left": {
+             "type": "minecraft:abs",
+             "input": {
+              "type": "minecraft:add",
+              "left": "minecraft:y",
+              "right": -225.0
+             }
+            },
+            "right": 0.013333333333333334
+           },
+           "right": -1.0
+          },
+          "right": 12.5
+         },
+         "right": 1.0
+        },
+        "right": {
+         "type": "minecraft:mul",
+         "left": {
+          "type": "minecraft:noise",
+          "noise": "deepworld:cave_c",
+          "xz_scale": 2.0,
+          "y_scale": 2.0
+         },
+         "right": -0.9
+        }
+       }
+      },
+      "when_out_of_range": {
+       "type": "minecraft:range_choice",
+       "input": "minecraft:y",
+       "min_inclusive": 300.0,
+       "max_exclusive": 450.0,
+       "when_in_range": {
+        "type": "minecraft:max",
+        "left": {
+         "type": "minecraft:min",
+         "left": {
+          "type": "minecraft:add",
+          "left": {
+           "type": "minecraft:add",
+           "left": {
+            "type": "minecraft:abs",
+            "input": {
+             "type": "minecraft:noise",
+             "noise": "deepworld:cave_a",
+             "xz_scale": 2.6,
+             "y_scale": 2.6
+            }
+           },
+           "right": {
+            "type": "minecraft:abs",
+            "input": {
+             "type": "minecraft:noise",
+             "noise": "deepworld:cave_b",
+             "xz_scale": 2.6,
+             "y_scale": 2.6
+            }
+           }
+          },
+          "right": -0.12
+         },
+         "right": {
+          "type": "minecraft:add",
+          "left": 0.42,
+          "right": {
+           "type": "minecraft:mul",
+           "left": {
+            "type": "minecraft:noise",
+            "noise": "deepworld:cave_c",
+            "xz_scale": 0.8,
+            "y_scale": 0.8
+           },
+           "right": -1.0
+          }
+         }
+        },
+        "right": {
+         "type": "minecraft:add",
+         "left": {
+          "type": "minecraft:add",
+          "left": {
+           "type": "minecraft:mul",
+           "left": {
+            "type": "minecraft:add",
+            "left": {
+             "type": "minecraft:mul",
+             "left": {
+              "type": "minecraft:abs",
+              "input": {
+               "type": "minecraft:add",
+               "left": "minecraft:y",
+               "right": -375.0
+              }
+             },
+             "right": 0.013333333333333334
+            },
+            "right": -1.0
+           },
+           "right": 12.5
+          },
+          "right": 1.0
+         },
+         "right": {
+          "type": "minecraft:mul",
+          "left": {
+           "type": "minecraft:noise",
+           "noise": "deepworld:cave_c",
+           "xz_scale": 2.0,
+           "y_scale": 2.0
+          },
+          "right": -0.9
+         }
+        }
+       },
+       "when_out_of_range": {
+        "type": "minecraft:range_choice",
+        "input": "minecraft:y",
+        "min_inclusive": 450.0,
+        "max_exclusive": 600.0,
+        "when_in_range": {
+         "type": "minecraft:max",
+         "left": {
+          "type": "minecraft:min",
+          "left": {
+           "type": "minecraft:max",
+           "left": {
+            "type": "minecraft:add",
+            "left": {
+             "type": "minecraft:add",
+             "left": {
+              "type": "minecraft:mul",
+              "left": {
+               "type": "minecraft:abs",
+               "input": {
+                "type": "minecraft:add",
+                "left": "minecraft:y",
+                "right": -512.0
+               }
+              },
+              "right": 0.03333333333333333
+             },
+             "right": -1.0
+            },
+            "right": {
+             "type": "minecraft:mul",
+             "left": {
+              "type": "minecraft:noise",
+              "noise": "deepworld:cave_a",
+              "xz_scale": 0.8,
+              "y_scale": 0.0
+             },
+             "right": 0.35
+            }
+           },
+           "right": {
+            "type": "minecraft:add",
+            "left": {
+             "type": "minecraft:mul",
+             "left": {
+              "type": "minecraft:abs",
+              "input": {
+               "type": "minecraft:noise",
+               "noise": "deepworld:cave_c",
+               "xz_scale": 3.0,
+               "y_scale": 0.2
+              }
+             },
+             "right": -12.0
+            },
+            "right": 0.9
+           }
+          },
+          "right": {
+           "type": "minecraft:add",
+           "left": 0.4,
+           "right": {
+            "type": "minecraft:mul",
+            "left": {
+             "type": "minecraft:noise",
+             "noise": "deepworld:cave_b",
+             "xz_scale": 0.9,
+             "y_scale": 0.8
+            },
+            "right": -1.0
+           }
+          }
+         },
+         "right": {
+          "type": "minecraft:add",
+          "left": {
+           "type": "minecraft:add",
+           "left": {
+            "type": "minecraft:mul",
+            "left": {
+             "type": "minecraft:add",
+             "left": {
+              "type": "minecraft:mul",
+              "left": {
+               "type": "minecraft:abs",
+               "input": {
+                "type": "minecraft:add",
+                "left": "minecraft:y",
+                "right": -525.0
+               }
+              },
+              "right": 0.013333333333333334
+             },
+             "right": -1.0
+            },
+            "right": 12.5
+           },
+           "right": 1.0
+          },
+          "right": {
+           "type": "minecraft:mul",
+           "left": {
+            "type": "minecraft:noise",
+            "noise": "deepworld:cave_c",
+            "xz_scale": 2.0,
+            "y_scale": 2.0
+           },
+           "right": -0.9
+          }
+         }
+        },
+        "when_out_of_range": {
+         "type": "minecraft:range_choice",
+         "input": "minecraft:y",
+         "min_inclusive": 600.0,
+         "max_exclusive": 700.0,
+         "when_in_range": {
+          "type": "minecraft:max",
+          "left": {
+           "type": "minecraft:min",
+           "left": {
+            "type": "minecraft:add",
+            "left": {
+             "type": "minecraft:add",
+             "left": {
+              "type": "minecraft:abs",
+              "input": {
+               "type": "minecraft:noise",
+               "noise": "deepworld:cave_b",
+               "xz_scale": 3.0,
+               "y_scale": 0.08
+              }
+             },
+             "right": {
+              "type": "minecraft:abs",
+              "input": {
+               "type": "minecraft:noise",
+               "noise": "deepworld:cave_c",
+               "xz_scale": 3.0,
+               "y_scale": 0.08
+              }
+             }
+            },
+            "right": -0.1
+           },
+           "right": {
+            "type": "minecraft:add",
+            "left": 0.55,
+            "right": {
+             "type": "minecraft:mul",
+             "left": {
+              "type": "minecraft:noise",
+              "noise": "deepworld:cave_a",
+              "xz_scale": 1.0,
+              "y_scale": 1.0
+             },
+             "right": -1.0
+            }
+           }
+          },
+          "right": {
+           "type": "minecraft:add",
+           "left": {
+            "type": "minecraft:add",
+            "left": {
+             "type": "minecraft:mul",
+             "left": {
+              "type": "minecraft:add",
+              "left": {
+               "type": "minecraft:mul",
+               "left": {
+                "type": "minecraft:abs",
+                "input": {
+                 "type": "minecraft:add",
+                 "left": "minecraft:y",
+                 "right": -650.0
+                }
+               },
+               "right": 0.02
+              },
+              "right": -1.0
+             },
+             "right": 8.333333333333334
+            },
+            "right": 1.0
+           },
+           "right": {
+            "type": "minecraft:mul",
+            "left": {
+             "type": "minecraft:noise",
+             "noise": "deepworld:cave_c",
+             "xz_scale": 2.0,
+             "y_scale": 2.0
+            },
+            "right": -0.9
+           }
+          }
+         },
+         "when_out_of_range": {
+          "type": "minecraft:range_choice",
+          "input": "minecraft:y",
+          "min_inclusive": 700.0,
+          "max_exclusive": 800.0,
+          "when_in_range": {
+           "type": "minecraft:max",
+           "left": {
+            "type": "minecraft:min",
+            "left": {
+             "type": "minecraft:add",
+             "left": 0.32,
+             "right": {
+              "type": "minecraft:mul",
+              "left": {
+               "type": "minecraft:noise",
+               "noise": "deepworld:cave_a",
+               "xz_scale": 0.6,
+               "y_scale": 0.22
+              },
+              "right": -1.0
+             }
+            },
+            "right": {
+             "type": "minecraft:add",
+             "left": {
+              "type": "minecraft:add",
+              "left": {
+               "type": "minecraft:abs",
+               "input": {
+                "type": "minecraft:noise",
+                "noise": "deepworld:cave_b",
+                "xz_scale": 1.4,
+                "y_scale": 1.4
+               }
+              },
+              "right": {
+               "type": "minecraft:abs",
+               "input": {
+                "type": "minecraft:noise",
+                "noise": "deepworld:cave_c",
+                "xz_scale": 1.4,
+                "y_scale": 1.4
+               }
+              }
+             },
+             "right": -0.08
+            }
+           },
+           "right": {
+            "type": "minecraft:add",
+            "left": {
+             "type": "minecraft:add",
+             "left": {
+              "type": "minecraft:mul",
+              "left": {
+               "type": "minecraft:add",
+               "left": {
+                "type": "minecraft:mul",
+                "left": {
+                 "type": "minecraft:abs",
+                 "input": {
+                  "type": "minecraft:add",
+                  "left": "minecraft:y",
+                  "right": -750.0
+                 }
+                },
+                "right": 0.02
+               },
+               "right": -1.0
+              },
+              "right": 8.333333333333334
+             },
+             "right": 1.0
+            },
+            "right": {
+             "type": "minecraft:mul",
+             "left": {
+              "type": "minecraft:noise",
+              "noise": "deepworld:cave_c",
+              "xz_scale": 2.0,
+              "y_scale": 2.0
+             },
+             "right": -0.9
+            }
+           }
+          },
+          "when_out_of_range": {
+           "type": "minecraft:range_choice",
+           "input": "minecraft:y",
+           "min_inclusive": 800.0,
+           "max_exclusive": 900.0,
+           "when_in_range": {
+            "type": "minecraft:max",
+            "left": {
+             "type": "minecraft:min",
+             "left": {
+              "type": "minecraft:add",
+              "left": 0.28,
+              "right": {
+               "type": "minecraft:mul",
+               "left": {
+                "type": "minecraft:noise",
+                "noise": "deepworld:cave_b",
+                "xz_scale": 0.5,
+                "y_scale": 4.0
+               },
+               "right": -1.0
+              }
+             },
+             "right": {
+              "type": "minecraft:add",
+              "left": {
+               "type": "minecraft:add",
+               "left": {
+                "type": "minecraft:abs",
+                "input": {
+                 "type": "minecraft:noise",
+                 "noise": "deepworld:cave_a",
+                 "xz_scale": 1.2,
+                 "y_scale": 3.0
+                }
+               },
+               "right": {
+                "type": "minecraft:abs",
+                "input": {
+                 "type": "minecraft:noise",
+                 "noise": "deepworld:cave_c",
+                 "xz_scale": 1.2,
+                 "y_scale": 3.0
+                }
+               }
+              },
+              "right": -0.1
+             }
+            },
+            "right": {
+             "type": "minecraft:add",
+             "left": {
+              "type": "minecraft:add",
+              "left": {
+               "type": "minecraft:mul",
+               "left": {
+                "type": "minecraft:add",
+                "left": {
+                 "type": "minecraft:mul",
+                 "left": {
+                  "type": "minecraft:abs",
+                  "input": {
+                   "type": "minecraft:add",
+                   "left": "minecraft:y",
+                   "right": -850.0
+                  }
+                 },
+                 "right": 0.02
+                },
+                "right": -1.0
+               },
+               "right": 8.333333333333334
+              },
+              "right": 1.0
+             },
+             "right": {
+              "type": "minecraft:mul",
+              "left": {
+               "type": "minecraft:noise",
+               "noise": "deepworld:cave_c",
+               "xz_scale": 2.0,
+               "y_scale": 2.0
+              },
+              "right": -0.9
+             }
+            }
+           },
+           "when_out_of_range": {
+            "type": "minecraft:range_choice",
+            "input": "minecraft:y",
+            "min_inclusive": 900.0,
+            "max_exclusive": 1000.0,
+            "when_in_range": {
+             "type": "minecraft:max",
+             "left": {
+              "type": "minecraft:min",
+              "left": {
+               "type": "minecraft:add",
+               "left": 0.24,
+               "right": {
+                "type": "minecraft:mul",
+                "left": {
+                 "type": "minecraft:noise",
+                 "noise": "deepworld:cave_a",
+                 "xz_scale": 1.0,
+                 "y_scale": 0.8
+                },
+                "right": -1.0
+               }
+              },
+              "right": {
+               "type": "minecraft:add",
+               "left": {
+                "type": "minecraft:add",
+                "left": {
+                 "type": "minecraft:abs",
+                 "input": {
+                  "type": "minecraft:noise",
+                  "noise": "deepworld:cave_b",
+                  "xz_scale": 1.6,
+                  "y_scale": 1.6
+                 }
+                },
+                "right": {
+                 "type": "minecraft:abs",
+                 "input": {
+                  "type": "minecraft:noise",
+                  "noise": "deepworld:cave_c",
+                  "xz_scale": 1.6,
+                  "y_scale": 1.6
+                 }
+                }
+               },
+               "right": -0.12
+              }
+             },
+             "right": {
+              "type": "minecraft:add",
+              "left": {
+               "type": "minecraft:add",
+               "left": {
+                "type": "minecraft:mul",
+                "left": {
+                 "type": "minecraft:add",
+                 "left": {
+                  "type": "minecraft:mul",
+                  "left": {
+                   "type": "minecraft:abs",
+                   "input": {
+                    "type": "minecraft:add",
+                    "left": "minecraft:y",
+                    "right": -950.0
+                   }
+                  },
+                  "right": 0.02
+                 },
+                 "right": -1.0
+                },
+                "right": 8.333333333333334
+               },
+               "right": 1.0
+              },
+              "right": {
+               "type": "minecraft:mul",
+               "left": {
+                "type": "minecraft:noise",
+                "noise": "deepworld:cave_c",
+                "xz_scale": 2.0,
+                "y_scale": 2.0
+               },
+               "right": -0.9
+              }
+             }
+            },
+            "when_out_of_range": {
+             "type": "minecraft:range_choice",
+             "input": "minecraft:y",
+             "min_inclusive": 1000.0,
+             "max_exclusive": 1100.0,
+             "when_in_range": {
+              "type": "minecraft:max",
+              "left": {
+               "type": "minecraft:min",
+               "left": {
+                "type": "minecraft:add",
+                "left": 0.4,
+                "right": {
+                 "type": "minecraft:mul",
+                 "left": {
+                  "type": "minecraft:noise",
+                  "noise": "deepworld:cave_a",
+                  "xz_scale": 1.0,
+                  "y_scale": 0.66
+                 },
+                 "right": -1.0
+                }
+               },
+               "right": {
+                "type": "minecraft:add",
+                "left": {
+                 "type": "minecraft:add",
+                 "left": {
+                  "type": "minecraft:abs",
+                  "input": {
+                   "type": "minecraft:noise",
+                   "noise": "deepworld:cave_b",
+                   "xz_scale": 1.6,
+                   "y_scale": 1.6
+                  }
+                 },
+                 "right": {
+                  "type": "minecraft:abs",
+                  "input": {
+                   "type": "minecraft:noise",
+                   "noise": "deepworld:cave_c",
+                   "xz_scale": 1.6,
+                   "y_scale": 1.6
+                  }
+                 }
+                },
+                "right": -0.12
+               }
+              },
+              "right": {
+               "type": "minecraft:add",
+               "left": {
+                "type": "minecraft:add",
+                "left": {
+                 "type": "minecraft:mul",
+                 "left": {
+                  "type": "minecraft:add",
+                  "left": {
+                   "type": "minecraft:mul",
+                   "left": {
+                    "type": "minecraft:abs",
+                    "input": {
+                     "type": "minecraft:add",
+                     "left": "minecraft:y",
+                     "right": -1050.0
+                    }
+                   },
+                   "right": 0.02
+                  },
+                  "right": -1.0
+                 },
+                 "right": 8.333333333333334
+                },
+                "right": 1.0
+               },
+               "right": {
+                "type": "minecraft:mul",
+                "left": {
+                 "type": "minecraft:noise",
+                 "noise": "deepworld:cave_c",
+                 "xz_scale": 2.0,
+                 "y_scale": 2.0
+                },
+                "right": -0.9
+               }
+              }
+             },
+             "when_out_of_range": 1.0
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "right": {
+  "type": "minecraft:range_choice",
+  "input": "minecraft:y",
+  "min_inclusive": -256.0,
+  "max_exclusive": -120.0,
+  "when_in_range": {
+   "type": "minecraft:add",
+   "left": {
+    "type": "minecraft:squeeze",
+    "input": {
+     "type": "minecraft:interpolated",
+     "cell_size_xz": 4,
+     "cell_size_y": 8,
+     "input": {
+      "type": "minecraft:mul",
+      "left": {
+       "type": "minecraft:blend_density",
+       "input": {
+        "type": "minecraft:lerp",
+        "alpha": {
+         "type": "minecraft:gradient",
+         "axis": "y",
+         "from_coordinate": -264,
+         "from_value": 0.0,
+         "to_coordinate": -232,
+         "to_value": 1.0
+        },
+        "first": 2.5,
+        "second": {
+         "type": "minecraft:lerp",
+         "alpha": {
+          "type": "minecraft:gradient",
+          "axis": "y",
+          "from_coordinate": -152,
+          "from_value": 1.0,
+          "to_coordinate": -128,
+          "to_value": 0.0
+         },
+         "first": 0.9375,
+         "second": "minecraft:nether/base_3d_noise"
+        }
+       }
+      },
+      "right": 0.64
+     }
+    }
+   },
+   "right": {
+    "type": "minecraft:beardifier"
+   }
+  },
+  "when_out_of_range": 1.0
+ }
+}

@@ -4,15 +4,22 @@
 	"version": "${version}",
 	"name": "deepworld",
 	"description": "one column, ten layers, the nether at the bottom.",
-	"authors": ["kaileh57"],
+	"authors": [
+		"kaileh57"
+	],
 	"environment": "*",
 	"entrypoints": {
-		"main": ["dev.kaileh57.deepworld.DeepWorld"]
+		"main": [
+			"dev.kaileh57.deepworld.DeepWorld"
+		]
 	},
 	"depends": {
 		"fabricloader": ">=0.20.1",
 		"minecraft": "~26.3",
 		"java": ">=25",
 		"fabric-api": "*"
-	}
+	},
+	"mixins": [
+		"deepworld.mixins.json"
+	]
 }

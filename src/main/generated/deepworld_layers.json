@@ -1,0 +1,149 @@
+[
+ {
+  "name": "shallow caverns",
+  "y": [
+   1000,
+   1100
+  ],
+  "biomes": [
+   "deepworld:mossy_hollows",
+   "deepworld:dripstone_hollows"
+  ],
+  "ores": [
+   "minecraft:coal_ore",
+   "minecraft:copper_ore"
+  ]
+ },
+ {
+  "name": "deepslate boundary",
+  "y": [
+   900,
+   1000
+  ],
+  "biomes": [
+   "deepworld:flooded_galleries",
+   "deepworld:fungal_hollows"
+  ],
+  "ores": [
+   "minecraft:deepslate_coal_ore",
+   "minecraft:deepslate_iron_ore"
+  ]
+ },
+ {
+  "name": "granite trenches",
+  "y": [
+   800,
+   900
+  ],
+  "biomes": [
+   "deepworld:coal_seams",
+   "deepworld:fossil_beds"
+  ],
+  "ores": [
+   "minecraft:coal_ore",
+   "minecraft:gold_ore"
+  ]
+ },
+ {
+  "name": "crystal caverns",
+  "y": [
+   700,
+   800
+  ],
+  "biomes": [
+   "deepworld:geode_halls",
+   "deepworld:glowcap_grottos"
+  ],
+  "ores": [
+   "minecraft:lapis_ore"
+  ]
+ },
+ {
+  "name": "obsidian roots",
+  "y": [
+   600,
+   700
+  ],
+  "biomes": [
+   "deepworld:basalt_groves",
+   "deepworld:sulfur_springs"
+  ],
+  "ores": [
+   "minecraft:gilded_blackstone"
+  ]
+ },
+ {
+  "name": "molten echoes",
+  "y": [
+   450,
+   600
+  ],
+  "biomes": [
+   "deepworld:lava_sea",
+   "deepworld:ash_fields"
+  ],
+  "ores": [
+   "minecraft:deepslate_diamond_ore"
+  ]
+ },
+ {
+  "name": "gloomstone trenches",
+  "y": [
+   300,
+   450
+  ],
+  "biomes": [
+   "deepworld:gloom_dark",
+   "deepworld:bone_yards"
+  ],
+  "ores": [
+   "minecraft:deepslate_lapis_ore",
+   "minecraft:deepslate_redstone_ore"
+  ]
+ },
+ {
+  "name": "mantle crust",
+  "y": [
+   150,
+   300
+  ],
+  "biomes": [
+   "deepworld:blackstone_forges",
+   "deepworld:magma_rivers"
+  ],
+  "ores": [
+   "minecraft:ancient_debris",
+   "minecraft:gilded_blackstone"
+  ]
+ },
+ {
+  "name": "the hellmouth",
+  "y": [
+   0,
+   150
+  ],
+  "biomes": [
+   "deepworld:scorched_transition",
+   "deepworld:crimson_fringe"
+  ],
+  "ores": [
+   "minecraft:nether_gold_ore",
+   "minecraft:nether_quartz_ore"
+  ]
+ },
+ {
+  "name": "nether stratum",
+  "y": [
+   -256,
+   0
+  ],
+  "biomes": [
+   "minecraft:nether_wastes",
+   "minecraft:soul_sand_valley",
+   "minecraft:warped_forest",
+   "minecraft:crimson_forest",
+   "minecraft:basalt_deltas"
+  ],
+  "ores": []
+ }
+]

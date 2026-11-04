@@ -1,0 +1,98 @@
+{
+ "has_precipitation": false,
+ "temperature": 2.0,
+ "downfall": 0.0,
+ "attributes": {
+  "minecraft:audio/ambient_sounds": {
+   "additions": {
+    "sound": "minecraft:ambient.crimson_forest.additions",
+    "tick_chance": 0.0111
+   },
+   "loop": "minecraft:ambient.crimson_forest.loop",
+   "mood": {
+    "block_search_extent": 8,
+    "offset": 2.0,
+    "sound": "minecraft:ambient.crimson_forest.mood",
+    "tick_delay": 6000
+   }
+  },
+  "minecraft:audio/background_music": {
+   "default": {
+    "max_delay": 24000,
+    "min_delay": 12000,
+    "sound": "minecraft:music.nether.crimson_forest"
+   }
+  },
+  "minecraft:gameplay/natural_mob_spawns": {
+   "argument": {
+    "spawn_costs": {},
+    "spawns_by_category": {
+     "monster": [
+      {
+       "type": "minecraft:zombified_piglin",
+       "weight": 60,
+       "count": 3
+      },
+      {
+       "type": "minecraft:piglin",
+       "weight": 30,
+       "count": 3
+      }
+     ],
+     "creature": [
+      {
+       "type": "minecraft:hoglin",
+       "weight": 60,
+       "count": 3
+      },
+      {
+       "type": "minecraft:strider",
+       "weight": 30,
+       "count": 2
+      }
+     ]
+    }
+   },
+   "modifier": "override"
+  },
+  "minecraft:visual/ambient_particles": {
+   "argument": [
+    {
+     "particle": {
+      "type": "minecraft:crimson_spore"
+     },
+     "probability": 0.025
+    }
+   ],
+   "modifier": "append"
+  },
+  "minecraft:visual/fog_color": "#330303",
+  "minecraft:visual/fog_end_distance": 72.0,
+  "minecraft:visual/fog_start_distance": 6.0,
+  "minecraft:gameplay/piglins_zombify": false,
+  "minecraft:gameplay/water_evaporates": true
+ },
+ "effects": {
+  "water_color": "#3f76e4"
+ },
+ "carvers": [],
+ "features": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   "deepworld:crimson_fringe/ore_hellmouth_quartz",
+   "deepworld:crimson_fringe/ore_hellmouth_gold"
+  ],
+  [],
+  [],
+  [
+   "deepworld:crimson_fringe/weeping_vines",
+   "deepworld:crimson_fringe/glowstone"
+  ],
+  []
+ ]
+}

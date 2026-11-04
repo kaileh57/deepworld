@@ -29,9 +29,9 @@ def read_packet(sock):
     return request_id, data[8:-2].decode(errors="replace")
 
 
-def run(command, host="127.0.0.1"):
+def run(command, host="127.0.0.1", timeout=600):
     props = read_props()
-    with socket.create_connection((host, int(props.get("rcon.port", "25575"))), timeout=10) as sock:
+    with socket.create_connection((host, int(props.get("rcon.port", "25575"))), timeout=timeout) as sock:
         send_packet(sock, 1, 3, props["rcon.password"])
         if read_packet(sock)[0] == -1:
             raise RuntimeError("rcon auth failed")

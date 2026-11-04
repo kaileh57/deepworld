@@ -1,0 +1,92 @@
+{
+ "has_precipitation": false,
+ "temperature": 2.0,
+ "downfall": 0.0,
+ "attributes": {
+  "minecraft:audio/ambient_sounds": {
+   "additions": {
+    "sound": "minecraft:ambient.basalt_deltas.additions",
+    "tick_chance": 0.0111
+   },
+   "loop": "minecraft:ambient.basalt_deltas.loop",
+   "mood": {
+    "block_search_extent": 8,
+    "offset": 2.0,
+    "sound": "minecraft:ambient.basalt_deltas.mood",
+    "tick_delay": 6000
+   }
+  },
+  "minecraft:audio/background_music": {
+   "default": {
+    "max_delay": 24000,
+    "min_delay": 12000,
+    "sound": "minecraft:music.nether.basalt_deltas"
+   }
+  },
+  "minecraft:gameplay/natural_mob_spawns": {
+   "argument": {
+    "spawn_costs": {},
+    "spawns_by_category": {
+     "monster": [
+      {
+       "type": "minecraft:piglin",
+       "weight": 60,
+       "count": 3
+      },
+      {
+       "type": "minecraft:magma_cube",
+       "weight": 40,
+       "count": 2
+      }
+     ],
+     "creature": [
+      {
+       "type": "minecraft:hoglin",
+       "weight": 60,
+       "count": 3
+      }
+     ]
+    }
+   },
+   "modifier": "override"
+  },
+  "minecraft:visual/ambient_particles": {
+   "argument": [
+    {
+     "particle": {
+      "type": "minecraft:white_ash"
+     },
+     "probability": 0.118093334
+    }
+   ],
+   "modifier": "append"
+  },
+  "minecraft:visual/fog_color": "#3d1a10",
+  "minecraft:visual/fog_end_distance": 72.0,
+  "minecraft:visual/fog_start_distance": 6.0,
+  "minecraft:gameplay/piglins_zombify": false,
+  "minecraft:gameplay/water_evaporates": true
+ },
+ "effects": {
+  "water_color": "#3f76e4"
+ },
+ "carvers": [],
+ "features": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   "deepworld:blackstone_forges/ore_mantle_debris",
+   "deepworld:blackstone_forges/ore_mantle_gold"
+  ],
+  [],
+  [],
+  [
+   "deepworld:blackstone_forges/blackstone_blobs"
+  ],
+  []
+ ]
+}

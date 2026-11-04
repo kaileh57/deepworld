@@ -1,0 +1,21 @@
+{
+ "type": "minecraft:ore",
+ "size": 3,
+ "discard_chance_on_air_exposure": 1.0,
+ "targets": [
+  {
+   "target": {
+    "predicate_type": "minecraft:block_match",
+    "block": "minecraft:blackstone"
+   },
+   "state": "minecraft:ancient_debris"
+  },
+  {
+   "target": {
+    "predicate_type": "minecraft:block_match",
+    "block": "minecraft:basalt"
+   },
+   "state": "minecraft:ancient_debris"
+  }
+ ]
+}

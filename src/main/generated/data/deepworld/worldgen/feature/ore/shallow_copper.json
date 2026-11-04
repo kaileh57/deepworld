@@ -1,0 +1,28 @@
+{
+ "type": "minecraft:ore",
+ "size": 12,
+ "discard_chance_on_air_exposure": 0.0,
+ "targets": [
+  {
+   "target": {
+    "predicate_type": "minecraft:block_match",
+    "block": "minecraft:stone"
+   },
+   "state": "minecraft:copper_ore"
+  },
+  {
+   "target": {
+    "predicate_type": "minecraft:block_match",
+    "block": "minecraft:andesite"
+   },
+   "state": "minecraft:copper_ore"
+  },
+  {
+   "target": {
+    "predicate_type": "minecraft:block_match",
+    "block": "minecraft:tuff"
+   },
+   "state": "minecraft:copper_ore"
+  }
+ ]
+}

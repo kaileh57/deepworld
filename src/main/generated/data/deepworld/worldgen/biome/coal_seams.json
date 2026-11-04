@@ -1,0 +1,65 @@
+{
+ "has_precipitation": false,
+ "temperature": 0.8,
+ "downfall": 0.4,
+ "attributes": {
+  "minecraft:audio/background_music": {
+   "default": {
+    "max_delay": 24000,
+    "min_delay": 12000,
+    "sound": "minecraft:music.overworld.dripstone_caves"
+   }
+  },
+  "minecraft:gameplay/natural_mob_spawns": {
+   "argument": {
+    "spawn_costs": {},
+    "spawns_by_category": {
+     "monster": [
+      {
+       "type": "minecraft:husk",
+       "weight": 100,
+       "count": 3
+      },
+      {
+       "type": "minecraft:skeleton",
+       "weight": 60,
+       "count": 3
+      },
+      {
+       "type": "minecraft:creeper",
+       "weight": 40,
+       "count": 2
+      }
+     ]
+    }
+   },
+   "modifier": "override"
+  },
+  "minecraft:visual/sky_color": "#78a7ff",
+  "minecraft:visual/fog_color": "#4a3328",
+  "minecraft:visual/fog_end_distance": 128.0,
+  "minecraft:visual/fog_start_distance": 12.0
+ },
+ "effects": {
+  "water_color": "#3f76e4"
+ },
+ "carvers": [],
+ "features": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   "deepworld:coal_seams/ore_trench_gold",
+   "deepworld:coal_seams/ore_trench_coal"
+  ],
+  [],
+  [],
+  [
+   "deepworld:coal_seams/glow_lichen"
+  ],
+  []
+ ]
+}

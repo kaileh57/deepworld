@@ -1,0 +1,8 @@
+{
+ "replace": false,
+ "values": [
+  "deepworld:mossy_hollows",
+  "deepworld:dripstone_hollows",
+  "deepworld:flooded_galleries"
+ ]
+}

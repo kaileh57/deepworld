@@ -1,0 +1,27 @@
+{
+ "feature": "deepworld:ore/shallow_coal",
+ "placement": [
+  {
+   "type": "minecraft:count",
+   "count": 18
+  },
+  {
+   "type": "minecraft:in_square"
+  },
+  {
+   "type": "minecraft:height_range",
+   "height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+     "absolute": 1000
+    },
+    "max_inclusive": {
+     "absolute": 1100
+    }
+   }
+  },
+  {
+   "type": "minecraft:biome"
+  }
+ ]
+}

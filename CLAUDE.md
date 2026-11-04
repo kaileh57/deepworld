@@ -16,3 +16,7 @@
 - `scripts/export.sh` dumps registries to `export/`. `wiki/` builds pages from it.
 - `scripts/deploy.sh` installs the server to `~/deepworld-server` on this mac.
 - the wiki uses astro 5 because node here is 20. astro 7 needs node 22.
+- worldgen is generated: edit `tools/worldgen/layers.json` or `gen.py`, run `python3 tools/worldgen/gen.py`. output in `src/main/generated` is committed.
+- `python3 scripts/verify.py --worldgen` runs the worldgen gates on a fresh seeded world. `tools/worldgen/calibrate.py` prints per-layer stats.
+- `/dw survey`, `/dw fortress`, `/dw slice <z> <x> <width>` are debug commands. slice writes `run/deepworld_slice.png`.
+- `python3 scripts/devserver.py start|stop` runs the dev server for rcon checks.

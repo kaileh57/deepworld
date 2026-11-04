@@ -1,0 +1,31 @@
+{
+ "feature": "minecraft:sulfur_spike_cluster",
+ "placement": [
+  {
+   "type": "minecraft:count",
+   "count": {
+    "type": "minecraft:uniform",
+    "max_inclusive": 96,
+    "min_inclusive": 48
+   }
+  },
+  {
+   "type": "minecraft:in_square"
+  },
+  {
+   "type": "minecraft:height_range",
+   "height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+     "absolute": 600
+    },
+    "max_inclusive": {
+     "absolute": 700
+    }
+   }
+  },
+  {
+   "type": "minecraft:biome"
+  }
+ ]
+}

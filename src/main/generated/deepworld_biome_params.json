@@ -1,0 +1,347 @@
+[
+ {
+  "biome": "deepworld:mossy_hollows",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   0.1,
+   1.0
+  ],
+  "depth": [
+   3.0,
+   4.0
+  ]
+ },
+ {
+  "biome": "deepworld:dripstone_hollows",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -1.0,
+   0.1
+  ],
+  "depth": [
+   3.0,
+   4.0
+  ]
+ },
+ {
+  "biome": "deepworld:flooded_galleries",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   0.0,
+   1.0
+  ],
+  "depth": [
+   4.0,
+   5.0
+  ]
+ },
+ {
+  "biome": "deepworld:fungal_hollows",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -1.0,
+   0.0
+  ],
+  "depth": [
+   4.0,
+   5.0
+  ]
+ },
+ {
+  "biome": "deepworld:coal_seams",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   0.0,
+   1.0
+  ],
+  "depth": [
+   5.0,
+   6.0
+  ]
+ },
+ {
+  "biome": "deepworld:fossil_beds",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -1.0,
+   0.0
+  ],
+  "depth": [
+   5.0,
+   6.0
+  ]
+ },
+ {
+  "biome": "deepworld:geode_halls",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   0.0,
+   1.0
+  ],
+  "depth": [
+   6.0,
+   7.0
+  ]
+ },
+ {
+  "biome": "deepworld:glowcap_grottos",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -1.0,
+   0.0
+  ],
+  "depth": [
+   6.0,
+   7.0
+  ]
+ },
+ {
+  "biome": "deepworld:basalt_groves",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   0.0,
+   1.0
+  ],
+  "depth": [
+   7.0,
+   8.0
+  ]
+ },
+ {
+  "biome": "deepworld:sulfur_springs",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -1.0,
+   0.0
+  ],
+  "depth": [
+   7.0,
+   8.0
+  ]
+ },
+ {
+  "biome": "deepworld:lava_sea",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -0.2,
+   1.0
+  ],
+  "depth": [
+   8.0,
+   9.0
+  ]
+ },
+ {
+  "biome": "deepworld:ash_fields",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -1.0,
+   -0.2
+  ],
+  "depth": [
+   8.0,
+   9.0
+  ]
+ },
+ {
+  "biome": "deepworld:gloom_dark",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -0.3,
+   1.0
+  ],
+  "depth": [
+   9.0,
+   10.0
+  ]
+ },
+ {
+  "biome": "deepworld:bone_yards",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -1.0,
+   -0.3
+  ],
+  "depth": [
+   9.0,
+   10.0
+  ]
+ },
+ {
+  "biome": "deepworld:blackstone_forges",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   0.0,
+   1.0
+  ],
+  "depth": [
+   10.0,
+   11.0
+  ]
+ },
+ {
+  "biome": "deepworld:magma_rivers",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -1.0,
+   0.0
+  ],
+  "depth": [
+   10.0,
+   11.0
+  ]
+ },
+ {
+  "biome": "deepworld:scorched_transition",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   -1.0,
+   0.0
+  ],
+  "depth": [
+   11.0,
+   12.0
+  ]
+ },
+ {
+  "biome": "deepworld:crimson_fringe",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   0.0,
+   1.0
+  ],
+  "depth": [
+   11.0,
+   12.0
+  ]
+ },
+ {
+  "biome": "minecraft:nether_wastes",
+  "temperature": [
+   -0.3,
+   0.3
+  ],
+  "humidity": [
+   -0.3,
+   0.3
+  ],
+  "depth": [
+   12.0,
+   13.0
+  ]
+ },
+ {
+  "biome": "minecraft:soul_sand_valley",
+  "temperature": [
+   -1.0,
+   -0.3
+  ],
+  "humidity": [
+   -1.0,
+   0.0
+  ],
+  "depth": [
+   12.0,
+   13.0
+  ]
+ },
+ {
+  "biome": "minecraft:warped_forest",
+  "temperature": [
+   -1.0,
+   1.0
+  ],
+  "humidity": [
+   0.3,
+   1.0
+  ],
+  "depth": [
+   12.0,
+   13.0
+  ]
+ },
+ {
+  "biome": "minecraft:crimson_forest",
+  "temperature": [
+   0.3,
+   1.0
+  ],
+  "humidity": [
+   -0.3,
+   0.3
+  ],
+  "depth": [
+   12.0,
+   13.0
+  ]
+ },
+ {
+  "biome": "minecraft:basalt_deltas",
+  "temperature": [
+   0.3,
+   1.0
+  ],
+  "humidity": [
+   -1.0,
+   -0.3
+  ],
+  "depth": [
+   12.0,
+   13.0
+  ]
+ }
+]

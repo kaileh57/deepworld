@@ -1,0 +1,85 @@
+{
+ "has_precipitation": false,
+ "temperature": 0.5,
+ "downfall": 0.5,
+ "attributes": {
+  "minecraft:audio/background_music": {
+   "default": {
+    "max_delay": 24000,
+    "min_delay": 12000,
+    "sound": "minecraft:music.overworld.lush_caves"
+   }
+  },
+  "minecraft:gameplay/natural_mob_spawns": {
+   "argument": {
+    "spawn_costs": {},
+    "spawns_by_category": {
+     "monster": [
+      {
+       "type": "minecraft:cave_spider",
+       "weight": 100,
+       "count": 4
+      },
+      {
+       "type": "minecraft:zombie",
+       "weight": 60,
+       "count": 3
+      },
+      {
+       "type": "minecraft:skeleton",
+       "weight": 60,
+       "count": 3
+      }
+     ],
+     "ambient": [
+      {
+       "type": "minecraft:bat",
+       "weight": 10,
+       "count": 8
+      }
+     ]
+    }
+   },
+   "modifier": "override"
+  },
+  "minecraft:visual/sky_color": "#7ba4ff",
+  "minecraft:visual/fog_end_distance": 160.0,
+  "minecraft:visual/fog_start_distance": 16.0,
+  "minecraft:visual/fog_color": "#3b3046",
+  "minecraft:visual/ambient_particles": {
+   "argument": [
+    {
+     "particle": {
+      "type": "minecraft:mycelium"
+     },
+     "probability": 0.02
+    }
+   ],
+   "modifier": "append"
+  }
+ },
+ "effects": {
+  "water_color": "#3f76e4"
+ },
+ "carvers": [],
+ "features": [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [
+   "deepworld:fungal_hollows/ore_boundary_iron",
+   "deepworld:fungal_hollows/ore_boundary_coal"
+  ],
+  [],
+  [],
+  [
+   "deepworld:fungal_hollows/brown_mushroom_normal",
+   "deepworld:fungal_hollows/red_mushroom_normal",
+   "deepworld:fungal_hollows/glow_lichen"
+  ],
+  []
+ ]
+}
