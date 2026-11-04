@@ -1,0 +1,9 @@
+{
+ "replace": false,
+ "values": [
+  "minecraft:deepslate",
+  "deepworld:tin_ore",
+  "deepworld:forge",
+  "deepworld:hellforge"
+ ]
+}

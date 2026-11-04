@@ -1,0 +1,21 @@
+{
+ "type": "minecraft:ore",
+ "size": 12,
+ "discard_chance_on_air_exposure": 0.0,
+ "targets": [
+  {
+   "target": {
+    "predicate_type": "minecraft:block_match",
+    "block": "minecraft:basalt"
+   },
+   "state": "deepworld:natron_ore"
+  },
+  {
+   "target": {
+    "predicate_type": "minecraft:block_match",
+    "block": "minecraft:smooth_basalt"
+   },
+   "state": "deepworld:natron_ore"
+  }
+ ]
+}

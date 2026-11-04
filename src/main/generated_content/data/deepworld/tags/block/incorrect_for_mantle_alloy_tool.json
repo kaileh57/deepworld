@@ -1,0 +1,7 @@
+{
+ "replace": false,
+ "values": [
+  "#deepworld:needs_cobalt_steel_tool",
+  "#deepworld:needs_hellsteel_tool"
+ ]
+}

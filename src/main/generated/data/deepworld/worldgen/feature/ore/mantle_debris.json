@@ -6,7 +6,7 @@
   {
    "target": {
     "predicate_type": "minecraft:block_match",
-    "block": "minecraft:blackstone"
+    "block": "deepworld:mantle_rock"
    },
    "state": "minecraft:ancient_debris"
   },

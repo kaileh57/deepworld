@@ -1,0 +1,22 @@
+{
+ "station": "forge",
+ "inputs": [
+  {
+   "item": "minecraft:iron_ingot",
+   "count": 2
+  },
+  {
+   "item": "minecraft:coal",
+   "count": 1
+  },
+  {
+   "item": "deepworld:flux",
+   "count": 1
+  }
+ ],
+ "result": {
+  "item": "deepworld:steel_ingot",
+  "count": 2
+ },
+ "time": 240
+}

@@ -1,0 +1,43 @@
+{
+ "type": "minecraft:block",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:alternatives",
+     "children": [
+      {
+       "type": "minecraft:item",
+       "condition": "minecraft:tool/can_silk_touch",
+       "name": "deepworld:resonant_amethyst_ore"
+      },
+      {
+       "type": "minecraft:item",
+       "functions": [
+        {
+         "function": "minecraft:set_count",
+         "count": {
+          "type": "minecraft:uniform",
+          "min": 1,
+          "max": 2
+         }
+        },
+        {
+         "function": "minecraft:apply_bonus",
+         "enchantment": "minecraft:fortune",
+         "formula": "minecraft:ore_drops"
+        },
+        {
+         "function": "minecraft:explosion_decay"
+        }
+       ],
+       "name": "deepworld:resonant_shard"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "random_sequence": "deepworld:blocks/resonant_amethyst_ore"
+}

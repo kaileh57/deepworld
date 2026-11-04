@@ -1,0 +1,10 @@
+{
+ "type": "minecraft:smelting",
+ "category": "misc",
+ "cookingtime": 200,
+ "experience": 0.7,
+ "ingredient": "deepworld:raw_tin",
+ "result": {
+  "id": "deepworld:tin_ingot"
+ }
+}

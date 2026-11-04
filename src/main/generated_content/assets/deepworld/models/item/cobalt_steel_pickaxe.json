@@ -1,0 +1,6 @@
+{
+ "parent": "minecraft:item/handheld",
+ "textures": {
+  "layer0": "deepworld:item/cobalt_steel_pickaxe"
+ }
+}

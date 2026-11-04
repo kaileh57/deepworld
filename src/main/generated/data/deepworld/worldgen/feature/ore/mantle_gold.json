@@ -6,7 +6,14 @@
   {
    "target": {
     "predicate_type": "minecraft:block_match",
-    "block": "minecraft:blackstone"
+    "block": "deepworld:mantle_rock"
+   },
+   "state": "minecraft:gilded_blackstone"
+  },
+  {
+   "target": {
+    "predicate_type": "minecraft:block_match",
+    "block": "minecraft:basalt"
    },
    "state": "minecraft:gilded_blackstone"
   }

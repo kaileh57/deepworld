@@ -1,0 +1,531 @@
+{
+	"tiers": [
+		"wood",
+		"stone",
+		"copper",
+		"iron",
+		"steel",
+		"diamond",
+		"mantle_alloy",
+		"cobalt_steel",
+		"hellsteel",
+		"netherite"
+	],
+	"vanilla_needs": {
+		"minecraft:deepslate": "stone",
+		"minecraft:granite": "copper",
+		"minecraft:calcite": "iron",
+		"minecraft:blackstone": "steel",
+		"minecraft:gilded_blackstone": "steel",
+		"minecraft:basalt": "steel",
+		"minecraft:smooth_basalt": "steel"
+	},
+	"items": [
+		{
+			"id": "rock_salt",
+			"name": "rock salt",
+			"base": "minecraft:sugar"
+		},
+		{
+			"id": "raw_tin",
+			"name": "raw tin",
+			"base": "minecraft:raw_iron"
+		},
+		{
+			"id": "tin_ingot",
+			"name": "tin ingot",
+			"base": "minecraft:iron_ingot"
+		},
+		{
+			"id": "bronze_ingot",
+			"name": "bronze ingot",
+			"base": "minecraft:copper_ingot"
+		},
+		{
+			"id": "steel_ingot",
+			"name": "steel ingot",
+			"base": "minecraft:iron_ingot"
+		},
+		{
+			"id": "raw_cobalt",
+			"name": "raw cobalt",
+			"base": "minecraft:raw_iron"
+		},
+		{
+			"id": "cobalt_ingot",
+			"name": "cobalt ingot",
+			"base": "minecraft:iron_ingot"
+		},
+		{
+			"id": "cobalt_steel_ingot",
+			"name": "cobalt steel ingot",
+			"base": "minecraft:iron_ingot"
+		},
+		{
+			"id": "mantle_iron_chunk",
+			"name": "mantle iron chunk",
+			"base": "minecraft:raw_iron"
+		},
+		{
+			"id": "mantle_alloy_ingot",
+			"name": "mantle alloy ingot",
+			"base": "minecraft:iron_ingot"
+		},
+		{
+			"id": "hellsteel_ingot",
+			"name": "hellsteel ingot",
+			"base": "minecraft:netherite_ingot"
+		},
+		{
+			"id": "natron",
+			"name": "natron",
+			"base": "minecraft:sugar"
+		},
+		{
+			"id": "flux",
+			"name": "flux",
+			"base": "minecraft:sugar"
+		},
+		{
+			"id": "resonant_shard",
+			"name": "resonant shard",
+			"base": "minecraft:amethyst_shard"
+		},
+		{
+			"id": "obsidian_plate",
+			"name": "obsidian plate",
+			"base": "minecraft:iron_ingot"
+		}
+	],
+	"stones": [
+		{
+			"id": "gloomstone",
+			"name": "gloomstone",
+			"hardness": 4.0,
+			"resistance": 8.0,
+			"needs": "diamond",
+			"base": "minecraft:deepslate",
+			"texture": "deepworld:block/gloomstone"
+		},
+		{
+			"id": "mantle_rock",
+			"name": "mantle rock",
+			"hardness": 5.0,
+			"resistance": 10.0,
+			"needs": "mantle_alloy",
+			"base": "minecraft:blackstone",
+			"texture": "deepworld:block/mantle_rock"
+		},
+		{
+			"id": "scorched_rock",
+			"name": "scorched rock",
+			"hardness": 5.5,
+			"resistance": 10.0,
+			"needs": "cobalt_steel",
+			"base": "minecraft:netherrack",
+			"texture": "deepworld:block/scorched_rock"
+		}
+	],
+	"ores": [
+		{
+			"id": "tin_ore",
+			"name": "tin ore",
+			"host": "minecraft:block/deepslate",
+			"drop": "deepworld:raw_tin",
+			"xp": [
+				0,
+				1
+			],
+			"hardness": 4.5,
+			"needs": "stone",
+			"base": "minecraft:deepslate_iron_ore"
+		},
+		{
+			"id": "rock_salt_ore",
+			"name": "rock salt ore",
+			"host": "minecraft:block/granite",
+			"drop": "deepworld:rock_salt",
+			"xp": [
+				0,
+				1
+			],
+			"hardness": 3.0,
+			"needs": "copper",
+			"count": [
+				2,
+				4
+			],
+			"base": "minecraft:granite"
+		},
+		{
+			"id": "resonant_amethyst_ore",
+			"name": "resonant amethyst ore",
+			"host": "minecraft:block/calcite",
+			"drop": "deepworld:resonant_shard",
+			"xp": [
+				2,
+				5
+			],
+			"hardness": 3.0,
+			"needs": "iron",
+			"count": [
+				1,
+				2
+			],
+			"base": "minecraft:calcite"
+		},
+		{
+			"id": "mantle_iron_ore",
+			"name": "mantle iron ore",
+			"host": "minecraft:block/basalt_side",
+			"drop": "deepworld:mantle_iron_chunk",
+			"xp": [
+				1,
+				3
+			],
+			"hardness": 5.0,
+			"needs": "steel",
+			"base": "minecraft:basalt"
+		},
+		{
+			"id": "natron_ore",
+			"name": "natron ore",
+			"host": "minecraft:block/basalt_side",
+			"drop": "deepworld:natron",
+			"xp": [
+				0,
+				2
+			],
+			"hardness": 3.5,
+			"needs": "steel",
+			"count": [
+				2,
+				5
+			],
+			"base": "minecraft:basalt"
+		},
+		{
+			"id": "cobalt_ore",
+			"name": "cobalt ore",
+			"host": "deepworld:block/gloomstone",
+			"drop": "deepworld:raw_cobalt",
+			"xp": [
+				2,
+				4
+			],
+			"hardness": 5.0,
+			"needs": "diamond",
+			"base": "minecraft:deepslate_lapis_ore"
+		}
+	],
+	"tools": [
+		{
+			"id": "steel_pickaxe",
+			"name": "steel pickaxe",
+			"tier": "steel",
+			"durability": 640,
+			"speed": 7.0,
+			"damage": 2.5,
+			"base": "minecraft:iron_pickaxe",
+			"repair": "deepworld:steel_ingot"
+		},
+		{
+			"id": "mantle_alloy_pickaxe",
+			"name": "mantle alloy pickaxe",
+			"tier": "mantle_alloy",
+			"durability": 1800,
+			"speed": 9.0,
+			"damage": 3.0,
+			"base": "minecraft:diamond_pickaxe",
+			"repair": "deepworld:mantle_alloy_ingot"
+		},
+		{
+			"id": "cobalt_steel_pickaxe",
+			"name": "cobalt steel pickaxe",
+			"tier": "cobalt_steel",
+			"durability": 2200,
+			"speed": 10.0,
+			"damage": 3.0,
+			"base": "minecraft:diamond_pickaxe",
+			"repair": "deepworld:cobalt_steel_ingot"
+		},
+		{
+			"id": "hellsteel_pickaxe",
+			"name": "hellsteel pickaxe",
+			"tier": "hellsteel",
+			"durability": 2600,
+			"speed": 11.0,
+			"damage": 3.5,
+			"base": "minecraft:netherite_pickaxe",
+			"repair": "deepworld:hellsteel_ingot"
+		}
+	],
+	"armor": [
+		{
+			"set": "obsidian_inlaid",
+			"name": "obsidian-inlaid",
+			"durability": 30,
+			"heat": 0.5,
+			"repair": "deepworld:obsidian_plate",
+			"base": "diamond"
+		},
+		{
+			"set": "mantle_alloy",
+			"name": "mantle alloy",
+			"durability": 34,
+			"heat": 0.75,
+			"repair": "deepworld:mantle_alloy_ingot",
+			"base": "diamond"
+		},
+		{
+			"set": "cobalt",
+			"name": "cobalt",
+			"durability": 36,
+			"heat": 1.0,
+			"repair": "deepworld:cobalt_ingot",
+			"base": "diamond"
+		},
+		{
+			"set": "hellforged",
+			"name": "hellforged",
+			"durability": 38,
+			"heat": 1.25,
+			"repair": "deepworld:hellsteel_ingot",
+			"base": "netherite"
+		}
+	],
+	"stations": [
+		{
+			"id": "forge",
+			"name": "forge",
+			"base": "minecraft:blast_furnace",
+			"fuel": {
+				"minecraft:coal": 1600,
+				"minecraft:charcoal": 1600,
+				"minecraft:coal_block": 16000,
+				"minecraft:blaze_rod": 2400,
+				"minecraft:lava_bucket": 20000
+			}
+		},
+		{
+			"id": "hellforge",
+			"name": "hellforge",
+			"base": "minecraft:blast_furnace",
+			"fuel": {
+				"minecraft:blaze_rod": 2400,
+				"minecraft:lava_bucket": 20000,
+				"minecraft:magma_block": 800
+			}
+		}
+	],
+	"forging": [
+		{
+			"id": "bronze",
+			"station": "forge",
+			"inputs": [
+				[
+					"minecraft:copper_ingot",
+					3
+				],
+				[
+					"deepworld:tin_ingot",
+					1
+				]
+			],
+			"result": [
+				"deepworld:bronze_ingot",
+				4
+			],
+			"time": 200
+		},
+		{
+			"id": "steel",
+			"station": "forge",
+			"inputs": [
+				[
+					"minecraft:iron_ingot",
+					2
+				],
+				[
+					"minecraft:coal",
+					1
+				],
+				[
+					"deepworld:flux",
+					1
+				]
+			],
+			"result": [
+				"deepworld:steel_ingot",
+				2
+			],
+			"time": 240
+		},
+		{
+			"id": "steel_charcoal",
+			"station": "forge",
+			"inputs": [
+				[
+					"minecraft:iron_ingot",
+					2
+				],
+				[
+					"minecraft:charcoal",
+					1
+				],
+				[
+					"deepworld:flux",
+					1
+				]
+			],
+			"result": [
+				"deepworld:steel_ingot",
+				2
+			],
+			"time": 240
+		},
+		{
+			"id": "obsidian_plate",
+			"station": "forge",
+			"inputs": [
+				[
+					"minecraft:obsidian",
+					2
+				],
+				[
+					"minecraft:iron_ingot",
+					1
+				]
+			],
+			"result": [
+				"deepworld:obsidian_plate",
+				2
+			],
+			"time": 300
+		},
+		{
+			"id": "mantle_alloy",
+			"station": "forge",
+			"inputs": [
+				[
+					"deepworld:mantle_iron_chunk",
+					2
+				],
+				[
+					"minecraft:diamond",
+					1
+				],
+				[
+					"deepworld:flux",
+					1
+				]
+			],
+			"result": [
+				"deepworld:mantle_alloy_ingot",
+				2
+			],
+			"time": 320
+		},
+		{
+			"id": "cobalt_steel",
+			"station": "forge",
+			"inputs": [
+				[
+					"deepworld:cobalt_ingot",
+					1
+				],
+				[
+					"deepworld:steel_ingot",
+					1
+				],
+				[
+					"deepworld:flux",
+					1
+				]
+			],
+			"result": [
+				"deepworld:cobalt_steel_ingot",
+				2
+			],
+			"time": 360
+		},
+		{
+			"id": "hellsteel",
+			"station": "hellforge",
+			"inputs": [
+				[
+					"minecraft:netherite_scrap",
+					1
+				],
+				[
+					"deepworld:cobalt_steel_ingot",
+					2
+				],
+				[
+					"minecraft:blaze_powder",
+					1
+				]
+			],
+			"result": [
+				"deepworld:hellsteel_ingot",
+				2
+			],
+			"time": 400
+		}
+	],
+	"smelting": [
+		{
+			"input": "deepworld:raw_tin",
+			"result": "deepworld:tin_ingot",
+			"xp": 0.7
+		},
+		{
+			"input": "deepworld:raw_cobalt",
+			"result": "deepworld:cobalt_ingot",
+			"xp": 1.0
+		}
+	],
+	"shaped": [
+		{
+			"result": "deepworld:flux",
+			"count": 2,
+			"pattern": [
+				"SB"
+			],
+			"key": {
+				"S": "deepworld:rock_salt",
+				"B": "minecraft:bone_meal"
+			}
+		},
+		{
+			"result": "deepworld:forge",
+			"pattern": [
+				"BBB",
+				"BFB",
+				"BBB"
+			],
+			"key": {
+				"B": "minecraft:bricks",
+				"F": "minecraft:blast_furnace"
+			}
+		},
+		{
+			"result": "deepworld:hellforge",
+			"pattern": [
+				"DND",
+				"BFB",
+				"BBB"
+			],
+			"key": {
+				"B": "minecraft:polished_blackstone_bricks",
+				"F": "deepworld:forge",
+				"D": "minecraft:ancient_debris",
+				"N": "minecraft:netherite_scrap"
+			}
+		}
+	],
+	"lang": {
+		"death.attack.deepworld.heat": "%1$s cooked in the deep",
+		"death.attack.deepworld.heat.player": "%1$s cooked in the deep while fighting %2$s"
+	}
+}

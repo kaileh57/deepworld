@@ -1,0 +1,11 @@
+{
+ "replace": false,
+ "values": [
+  "minecraft:blackstone",
+  "minecraft:gilded_blackstone",
+  "minecraft:basalt",
+  "minecraft:smooth_basalt",
+  "deepworld:mantle_iron_ore",
+  "deepworld:natron_ore"
+ ]
+}

@@ -25,6 +25,7 @@
    "deepworld:fungal_hollows"
   ],
   "ores": [
+   "deepworld:tin_ore",
    "minecraft:deepslate_coal_ore",
    "minecraft:deepslate_iron_ore"
   ]
@@ -40,6 +41,7 @@
    "deepworld:fossil_beds"
   ],
   "ores": [
+   "deepworld:rock_salt_ore",
    "minecraft:coal_ore",
    "minecraft:gold_ore"
   ]
@@ -55,6 +57,7 @@
    "deepworld:glowcap_grottos"
   ],
   "ores": [
+   "deepworld:resonant_amethyst_ore",
    "minecraft:lapis_ore"
   ]
  },
@@ -83,6 +86,8 @@
    "deepworld:ash_fields"
   ],
   "ores": [
+   "deepworld:mantle_iron_ore",
+   "deepworld:natron_ore",
    "minecraft:deepslate_diamond_ore"
   ]
  },
@@ -97,6 +102,7 @@
    "deepworld:bone_yards"
   ],
   "ores": [
+   "deepworld:cobalt_ore",
    "minecraft:deepslate_lapis_ore",
    "minecraft:deepslate_redstone_ore"
   ]

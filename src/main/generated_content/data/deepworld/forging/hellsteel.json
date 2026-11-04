@@ -1,0 +1,22 @@
+{
+ "station": "hellforge",
+ "inputs": [
+  {
+   "item": "minecraft:netherite_scrap",
+   "count": 1
+  },
+  {
+   "item": "deepworld:cobalt_steel_ingot",
+   "count": 2
+  },
+  {
+   "item": "minecraft:blaze_powder",
+   "count": 1
+  }
+ ],
+ "result": {
+  "item": "deepworld:hellsteel_ingot",
+  "count": 2
+ },
+ "time": 400
+}

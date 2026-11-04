@@ -1,0 +1,27 @@
+{
+ "feature": "deepworld:ore/crystal_resonant",
+ "placement": [
+  {
+   "type": "minecraft:count",
+   "count": 8
+  },
+  {
+   "type": "minecraft:in_square"
+  },
+  {
+   "type": "minecraft:height_range",
+   "height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+     "absolute": 700
+    },
+    "max_inclusive": {
+     "absolute": 800
+    }
+   }
+  },
+  {
+   "type": "minecraft:biome"
+  }
+ ]
+}

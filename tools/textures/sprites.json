@@ -1,0 +1,342 @@
+{
+	"templated": [
+		{
+			"name": "tin_ingot",
+			"template": "ingot",
+			"palette": "tin"
+		},
+		{
+			"name": "bronze_ingot",
+			"template": "ingot",
+			"palette": "bronze"
+		},
+		{
+			"name": "steel_ingot",
+			"template": "ingot",
+			"palette": "steel"
+		},
+		{
+			"name": "cobalt_ingot",
+			"template": "ingot",
+			"palette": "cobalt"
+		},
+		{
+			"name": "cobalt_steel_ingot",
+			"template": "ingot",
+			"palette": "cobalt_steel"
+		},
+		{
+			"name": "mantle_alloy_ingot",
+			"template": "ingot",
+			"palette": "mantle_alloy"
+		},
+		{
+			"name": "hellsteel_ingot",
+			"template": "ingot",
+			"palette": "hellsteel"
+		},
+		{
+			"name": "raw_tin",
+			"template": "raw",
+			"palette": "tin"
+		},
+		{
+			"name": "raw_cobalt",
+			"template": "raw",
+			"palette": "cobalt"
+		},
+		{
+			"name": "mantle_iron_chunk",
+			"template": "raw",
+			"palette": "mantle"
+		},
+		{
+			"name": "natron",
+			"template": "dust",
+			"palette": "natron"
+		},
+		{
+			"name": "flux",
+			"template": "dust",
+			"palette": "flux"
+		},
+		{
+			"name": "resonant_shard",
+			"template": "shard",
+			"palette": "resonant"
+		},
+		{
+			"name": "obsidian_plate",
+			"template": "ingot",
+			"palette": "obsidian"
+		},
+		{
+			"name": "steel_pickaxe",
+			"template": "pickaxe",
+			"palette": "steel"
+		},
+		{
+			"name": "mantle_alloy_pickaxe",
+			"template": "pickaxe",
+			"palette": "mantle_alloy"
+		},
+		{
+			"name": "cobalt_steel_pickaxe",
+			"template": "pickaxe",
+			"palette": "cobalt_steel"
+		},
+		{
+			"name": "hellsteel_pickaxe",
+			"template": "pickaxe",
+			"palette": "hellsteel"
+		},
+		{
+			"name": "obsidian_inlaid_helmet",
+			"template": "helmet",
+			"palette": "obsidian"
+		},
+		{
+			"name": "obsidian_inlaid_chestplate",
+			"template": "chestplate",
+			"palette": "obsidian"
+		},
+		{
+			"name": "obsidian_inlaid_leggings",
+			"template": "leggings",
+			"palette": "obsidian"
+		},
+		{
+			"name": "obsidian_inlaid_boots",
+			"template": "boots",
+			"palette": "obsidian"
+		},
+		{
+			"name": "mantle_alloy_helmet",
+			"template": "helmet",
+			"palette": "mantle_alloy"
+		},
+		{
+			"name": "mantle_alloy_chestplate",
+			"template": "chestplate",
+			"palette": "mantle_alloy"
+		},
+		{
+			"name": "mantle_alloy_leggings",
+			"template": "leggings",
+			"palette": "mantle_alloy"
+		},
+		{
+			"name": "mantle_alloy_boots",
+			"template": "boots",
+			"palette": "mantle_alloy"
+		},
+		{
+			"name": "cobalt_helmet",
+			"template": "helmet",
+			"palette": "cobalt"
+		},
+		{
+			"name": "cobalt_chestplate",
+			"template": "chestplate",
+			"palette": "cobalt"
+		},
+		{
+			"name": "cobalt_leggings",
+			"template": "leggings",
+			"palette": "cobalt"
+		},
+		{
+			"name": "cobalt_boots",
+			"template": "boots",
+			"palette": "cobalt"
+		},
+		{
+			"name": "hellforged_helmet",
+			"template": "helmet",
+			"palette": "hellsteel"
+		},
+		{
+			"name": "hellforged_chestplate",
+			"template": "chestplate",
+			"palette": "hellsteel"
+		},
+		{
+			"name": "hellforged_leggings",
+			"template": "leggings",
+			"palette": "hellsteel"
+		},
+		{
+			"name": "hellforged_boots",
+			"template": "boots",
+			"palette": "hellsteel"
+		}
+	],
+	"stones": [
+		{
+			"name": "gloomstone",
+			"seed": 31,
+			"shades": [
+				"#0b0e14",
+				"#121722",
+				"#19202d",
+				"#212a3a",
+				"#2b374b"
+			],
+			"strata": 0.06,
+			"pores": 6,
+			"veins": [
+				{
+					"color": "#2c6670",
+					"length": 7
+				}
+			],
+			"flecks": [
+				{
+					"color": "#3d8a94",
+					"count": 2
+				}
+			]
+		},
+		{
+			"name": "mantle_rock",
+			"seed": 47,
+			"shades": [
+				"#170b08",
+				"#251310",
+				"#341c16",
+				"#45261d",
+				"#573126"
+			],
+			"strata": 0.04,
+			"pores": 5,
+			"flecks": [
+				{
+					"color": "#c8461c",
+					"count": 3
+				},
+				{
+					"color": "#ff8a3d",
+					"count": 1
+				}
+			]
+		},
+		{
+			"name": "scorched_rock",
+			"seed": 59,
+			"shades": [
+				"#260c0a",
+				"#3d1512",
+				"#55201b",
+				"#6e2a23",
+				"#86362c"
+			],
+			"pores": 8,
+			"flecks": [
+				{
+					"color": "#6b6260",
+					"count": 5
+				}
+			]
+		}
+	],
+	"ores": [
+		{
+			"name": "tin_ore",
+			"palette": "tin",
+			"seed": 11,
+			"clusters": 5
+		},
+		{
+			"name": "cobalt_ore",
+			"palette": "cobalt",
+			"seed": 13,
+			"clusters": 5
+		},
+		{
+			"name": "mantle_iron_ore",
+			"palette": "mantle",
+			"seed": 17,
+			"clusters": 6
+		},
+		{
+			"name": "natron_ore",
+			"palette": "natron",
+			"seed": 19,
+			"clusters": 6
+		},
+		{
+			"name": "resonant_amethyst_ore",
+			"palette": "resonant",
+			"seed": 23,
+			"clusters": 4
+		},
+		{
+			"name": "rock_salt_ore",
+			"palette": "rock_salt",
+			"seed": 29,
+			"clusters": 6
+		}
+	],
+	"bricks": [
+		{
+			"name": "forge",
+			"seed": 5,
+			"shades": [
+				"#3b3633",
+				"#4d4642",
+				"#615853",
+				"#776c66"
+			],
+			"mortar": "#1f1b19",
+			"glow": [
+				"#7a2a08",
+				"#d4580f",
+				"#ff9a2e",
+				"#ffd27a"
+			]
+		},
+		{
+			"name": "hellforge",
+			"seed": 7,
+			"shades": [
+				"#1c1013",
+				"#2a171b",
+				"#3a2025",
+				"#4c2a30"
+			],
+			"mortar": "#0b0607",
+			"glow": [
+				"#5c0b0b",
+				"#b81d10",
+				"#ff5a1f",
+				"#ffc070"
+			]
+		}
+	],
+	"armor": [
+		{
+			"name": "obsidian_inlaid",
+			"palette": "obsidian",
+			"trim": "#9a9aa8",
+			"seed": 1
+		},
+		{
+			"name": "mantle_alloy",
+			"palette": "mantle_alloy",
+			"trim": "#ffb26e",
+			"seed": 2
+		},
+		{
+			"name": "cobalt",
+			"palette": "cobalt",
+			"trim": "#d3def4",
+			"seed": 3
+		},
+		{
+			"name": "hellforged",
+			"palette": "hellsteel",
+			"trim": "#ffd27a",
+			"seed": 4
+		}
+	]
+}

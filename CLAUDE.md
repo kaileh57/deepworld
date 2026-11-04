@@ -20,3 +20,5 @@
 - `python3 scripts/verify.py --worldgen` runs the worldgen gates on a fresh seeded world. `tools/worldgen/calibrate.py` prints per-layer stats.
 - `/dw survey`, `/dw fortress`, `/dw slice <z> <x> <width>` are debug commands. slice writes `run/deepworld_slice.png`.
 - `python3 scripts/devserver.py start|stop` runs the dev server for rcon checks.
+- content is data: `tools/content/content.json` (+ `tools/content/parts/*.json`) → `python3 tools/content/gen.py` → `src/main/generated_content` (models, lang, loot, tags, recipes, `deepworld_content.json` read by java).
+- textures: `tools/textures/sprites.json`, `templates.json`, `palettes.json` → `python3 tools/textures/gen.py --preview` → check `build/texture_preview/sheet.png`.

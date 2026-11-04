@@ -1088,13 +1088,13 @@
       "if_true": {
        "type": "minecraft:noise_threshold",
        "noise": "deepworld:stone_band",
-       "min_threshold": 0.45,
+       "min_threshold": 0.4,
        "max_threshold": 0.62,
        "is_3d": true
       },
       "then_run": {
        "type": "minecraft:block",
-       "result_state": "minecraft:blackstone"
+       "result_state": "minecraft:netherrack"
       }
      },
      {
@@ -1113,7 +1113,7 @@
      },
      {
       "type": "minecraft:block",
-      "result_state": "minecraft:netherrack"
+      "result_state": "deepworld:scorched_rock"
      }
     ]
    }
@@ -1180,7 +1180,7 @@
      },
      {
       "type": "minecraft:block",
-      "result_state": "minecraft:blackstone"
+      "result_state": "deepworld:mantle_rock"
      }
     ]
    }
@@ -1247,7 +1247,7 @@
      },
      {
       "type": "minecraft:block",
-      "result_state": "minecraft:deepslate"
+      "result_state": "deepworld:gloomstone"
      }
     ]
    }

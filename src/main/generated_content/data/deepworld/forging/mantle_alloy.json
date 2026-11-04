@@ -1,0 +1,22 @@
+{
+ "station": "forge",
+ "inputs": [
+  {
+   "item": "deepworld:mantle_iron_chunk",
+   "count": 2
+  },
+  {
+   "item": "minecraft:diamond",
+   "count": 1
+  },
+  {
+   "item": "deepworld:flux",
+   "count": 1
+  }
+ ],
+ "result": {
+  "item": "deepworld:mantle_alloy_ingot",
+  "count": 2
+ },
+ "time": 320
+}

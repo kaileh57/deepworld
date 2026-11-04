@@ -165,6 +165,16 @@
 				"block": "minecraft:deepslate_coal_ore",
 				"size": 14,
 				"count": 8
+			},
+			{
+				"name": "boundary_tin",
+				"hosts": [
+					"minecraft:deepslate",
+					"minecraft:tuff"
+				],
+				"block": "deepworld:tin_ore",
+				"size": 9,
+				"count": 14
 			}
 		],
 		"attributes": {
@@ -348,6 +358,16 @@
 				"block": "minecraft:coal_ore",
 				"size": 20,
 				"count": 24
+			},
+			{
+				"name": "trench_rock_salt",
+				"hosts": [
+					"minecraft:granite",
+					"minecraft:stone"
+				],
+				"block": "deepworld:rock_salt_ore",
+				"size": 12,
+				"count": 10
 			}
 		],
 		"attributes": {
@@ -463,6 +483,16 @@
 				"block": "minecraft:lapis_ore",
 				"size": 8,
 				"count": 10
+			},
+			{
+				"name": "crystal_resonant",
+				"hosts": [
+					"minecraft:calcite",
+					"minecraft:tuff"
+				],
+				"block": "deepworld:resonant_amethyst_ore",
+				"size": 6,
+				"count": 8
 			}
 		],
 		"attributes": {
@@ -740,6 +770,26 @@
 				"block": "minecraft:deepslate_diamond_ore",
 				"size": 8,
 				"count": 9
+			},
+			{
+				"name": "molten_mantle_iron",
+				"hosts": [
+					"minecraft:basalt",
+					"minecraft:smooth_basalt"
+				],
+				"block": "deepworld:mantle_iron_ore",
+				"size": 9,
+				"count": 12
+			},
+			{
+				"name": "molten_natron",
+				"hosts": [
+					"minecraft:basalt",
+					"minecraft:smooth_basalt"
+				],
+				"block": "deepworld:natron_ore",
+				"size": 12,
+				"count": 8
 			}
 		],
 		"attributes": {
@@ -834,7 +884,7 @@
 			300,
 			450
 		],
-		"stone": "minecraft:deepslate",
+		"stone": "deepworld:gloomstone",
 		"bands": [
 			{
 				"min": 0.5,
@@ -857,7 +907,7 @@
 			{
 				"name": "gloom_lapis",
 				"hosts": [
-					"minecraft:deepslate",
+					"deepworld:gloomstone",
 					"minecraft:tuff"
 				],
 				"block": "minecraft:deepslate_lapis_ore",
@@ -867,12 +917,21 @@
 			{
 				"name": "gloom_redstone",
 				"hosts": [
-					"minecraft:deepslate",
+					"deepworld:gloomstone",
 					"minecraft:tuff"
 				],
 				"block": "minecraft:deepslate_redstone_ore",
 				"size": 8,
 				"count": 8
+			},
+			{
+				"name": "gloom_cobalt",
+				"hosts": [
+					"deepworld:gloomstone"
+				],
+				"block": "deepworld:cobalt_ore",
+				"size": 8,
+				"count": 10
 			}
 		],
 		"attributes": {
@@ -950,7 +1009,7 @@
 			150,
 			300
 		],
-		"stone": "minecraft:blackstone",
+		"stone": "deepworld:mantle_rock",
 		"bands": [
 			{
 				"min": 0.5,
@@ -977,7 +1036,7 @@
 			{
 				"name": "mantle_debris",
 				"hosts": [
-					"minecraft:blackstone",
+					"deepworld:mantle_rock",
 					"minecraft:basalt"
 				],
 				"block": "minecraft:ancient_debris",
@@ -988,7 +1047,8 @@
 			{
 				"name": "mantle_gold",
 				"hosts": [
-					"minecraft:blackstone"
+					"deepworld:mantle_rock",
+					"minecraft:basalt"
 				],
 				"block": "minecraft:gilded_blackstone",
 				"size": 8,
@@ -1078,12 +1138,12 @@
 			0,
 			150
 		],
-		"stone": "minecraft:netherrack",
+		"stone": "deepworld:scorched_rock",
 		"bands": [
 			{
-				"min": 0.45,
+				"min": 0.4,
 				"max": 0.62,
-				"block": "minecraft:blackstone"
+				"block": "minecraft:netherrack"
 			},
 			{
 				"min": -0.8,
@@ -1105,6 +1165,7 @@
 			{
 				"name": "hellmouth_quartz",
 				"hosts": [
+					"deepworld:scorched_rock",
 					"minecraft:netherrack"
 				],
 				"block": "minecraft:nether_quartz_ore",
@@ -1114,6 +1175,7 @@
 			{
 				"name": "hellmouth_gold",
 				"hosts": [
+					"deepworld:scorched_rock",
 					"minecraft:netherrack"
 				],
 				"block": "minecraft:nether_gold_ore",

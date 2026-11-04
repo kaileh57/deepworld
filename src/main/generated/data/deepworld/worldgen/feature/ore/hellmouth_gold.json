@@ -6,6 +6,13 @@
   {
    "target": {
     "predicate_type": "minecraft:block_match",
+    "block": "deepworld:scorched_rock"
+   },
+   "state": "minecraft:nether_gold_ore"
+  },
+  {
+   "target": {
+    "predicate_type": "minecraft:block_match",
     "block": "minecraft:netherrack"
    },
    "state": "minecraft:nether_gold_ore"

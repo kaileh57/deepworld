@@ -1,0 +1,14 @@
+{
+ "layers": {
+  "humanoid": [
+   {
+    "texture": "deepworld:hellforged"
+   }
+  ],
+  "humanoid_leggings": [
+   {
+    "texture": "deepworld:hellforged"
+   }
+  ]
+ }
+}

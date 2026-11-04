@@ -1,0 +1,8 @@
+{
+ "parent": "minecraft:block/orientable",
+ "textures": {
+  "top": "deepworld:block/hellforge",
+  "front": "deepworld:block/hellforge_front",
+  "side": "deepworld:block/hellforge"
+ }
+}

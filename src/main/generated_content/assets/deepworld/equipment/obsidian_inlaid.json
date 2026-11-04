@@ -1,0 +1,14 @@
+{
+ "layers": {
+  "humanoid": [
+   {
+    "texture": "deepworld:obsidian_inlaid"
+   }
+  ],
+  "humanoid_leggings": [
+   {
+    "texture": "deepworld:obsidian_inlaid"
+   }
+  ]
+ }
+}

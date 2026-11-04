@@ -1,0 +1,14 @@
+{
+ "layers": {
+  "humanoid": [
+   {
+    "texture": "deepworld:mantle_alloy"
+   }
+  ],
+  "humanoid_leggings": [
+   {
+    "texture": "deepworld:mantle_alloy"
+   }
+  ]
+ }
+}

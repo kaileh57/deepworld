@@ -1,0 +1,8 @@
+{
+ "parent": "minecraft:block/orientable",
+ "textures": {
+  "top": "deepworld:block/forge",
+  "front": "deepworld:block/forge_front",
+  "side": "deepworld:block/forge"
+ }
+}

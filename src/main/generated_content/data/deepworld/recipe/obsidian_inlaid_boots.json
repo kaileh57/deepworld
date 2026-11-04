@@ -1,0 +1,14 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "key": {
+  "X": "deepworld:obsidian_plate"
+ },
+ "pattern": [
+  "X X",
+  "X X"
+ ],
+ "result": {
+  "id": "deepworld:obsidian_inlaid_boots"
+ }
+}

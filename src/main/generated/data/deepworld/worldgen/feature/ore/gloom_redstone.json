@@ -6,7 +6,7 @@
   {
    "target": {
     "predicate_type": "minecraft:block_match",
-    "block": "minecraft:deepslate"
+    "block": "deepworld:gloomstone"
    },
    "state": "minecraft:deepslate_redstone_ore"
   },

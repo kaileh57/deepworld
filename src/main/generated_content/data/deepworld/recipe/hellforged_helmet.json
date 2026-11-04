@@ -1,0 +1,14 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "equipment",
+ "key": {
+  "X": "deepworld:hellsteel_ingot"
+ },
+ "pattern": [
+  "XXX",
+  "X X"
+ ],
+ "result": {
+  "id": "deepworld:hellforged_helmet"
+ }
+}

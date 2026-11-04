@@ -1,0 +1,10 @@
+{
+ "replace": false,
+ "values": [
+  "#deepworld:needs_copper_tool",
+  "#deepworld:needs_steel_tool",
+  "#deepworld:needs_mantle_alloy_tool",
+  "#deepworld:needs_cobalt_steel_tool",
+  "#deepworld:needs_hellsteel_tool"
+ ]
+}

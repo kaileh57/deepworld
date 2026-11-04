@@ -1,0 +1,18 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "B": "minecraft:polished_blackstone_bricks",
+  "F": "deepworld:forge",
+  "D": "minecraft:ancient_debris",
+  "N": "minecraft:netherite_scrap"
+ },
+ "pattern": [
+  "DND",
+  "BFB",
+  "BBB"
+ ],
+ "result": {
+  "id": "deepworld:hellforge"
+ }
+}
