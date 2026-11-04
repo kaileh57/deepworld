@@ -82,7 +82,13 @@ public class StationBlock extends Block implements PolymerBlock, BlockWithElemen
 
 	@Override
 	public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-		return station.kind().equals("cook") ? new CookBlockEntity(pos, state) : null;
+		if (station.kind().equals("cook")) {
+			return new CookBlockEntity(pos, state);
+		}
+		if (station.kind().equals("counter")) {
+			return new dev.kaileh57.deepworld.economy.ShopBlockEntity(pos, state);
+		}
+		return null;
 	}
 
 	@Override
@@ -98,6 +104,10 @@ public class StationBlock extends Block implements PolymerBlock, BlockWithElemen
 		if (player instanceof ServerPlayer server_player) {
 			if (level.getBlockEntity(pos) instanceof CookBlockEntity cook) {
 				new CookGui(server_player, cook).open();
+			} else if (station.kind().equals("board")) {
+				new dev.kaileh57.deepworld.economy.BoardGui(server_player).open();
+			} else if (level.getBlockEntity(pos) instanceof dev.kaileh57.deepworld.economy.ShopBlockEntity shop) {
+				new dev.kaileh57.deepworld.economy.ShopGui(server_player, shop).open();
 			} else if (station.kind().equals("smith")) {
 				new dev.kaileh57.deepworld.smithing.SmithGui(server_player).open();
 			} else {

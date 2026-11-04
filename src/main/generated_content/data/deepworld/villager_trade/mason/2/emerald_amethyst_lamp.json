@@ -1,0 +1,13 @@
+{
+ "gives": {
+  "id": "deepworld:amethyst_lamp",
+  "count": 2
+ },
+ "max_uses": 12,
+ "reputation_discount": 0.05,
+ "wants": {
+  "id": "minecraft:emerald",
+  "count": 5
+ },
+ "xp": 5
+}

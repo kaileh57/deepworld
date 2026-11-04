@@ -1,0 +1,11 @@
+{
+ "replace": true,
+ "values": [
+  "#minecraft:common_smith/level_1",
+  "minecraft:toolsmith/1/emerald_stone_axe",
+  "minecraft:toolsmith/1/emerald_stone_shovel",
+  "minecraft:toolsmith/1/emerald_stone_pickaxe",
+  "minecraft:toolsmith/1/emerald_stone_hoe",
+  "deepworld:toolsmith/1/emerald_rail"
+ ]
+}

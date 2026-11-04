@@ -261,6 +261,8 @@ def main():
     write(assets / "lang" / "en_us.json", dict(sorted(lang.items())))
     write(out_root / "deepworld_content.json", content)
     print(f"content: {len(lang)} names")
+    import subprocess, sys
+    subprocess.run([sys.executable, str(root / "trades.py")], check=True)
 
 
 if __name__ == "__main__":

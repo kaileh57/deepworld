@@ -1,0 +1,9 @@
+{
+ "replace": true,
+ "values": [
+  "minecraft:farmer/1/emerald_bread",
+  "deepworld:farmer/1/emerald_rice",
+  "deepworld:farmer/1/emerald_beans",
+  "deepworld:farmer/1/emerald_oats"
+ ]
+}

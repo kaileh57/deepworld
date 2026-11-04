@@ -1059,6 +1059,30 @@
    }
   },
   {
+   "result": "deepworld:commissions_board",
+   "pattern": [
+    "PPP",
+    "PBP",
+    "F F"
+   ],
+   "key": {
+    "P": "minecraft:dark_oak_planks",
+    "B": "minecraft:book",
+    "F": "minecraft:dark_oak_fence"
+   }
+  },
+  {
+   "result": "deepworld:serving_counter",
+   "pattern": [
+    "SSS",
+    "B B"
+   ],
+   "key": {
+    "S": "minecraft:spruce_slab",
+    "B": "minecraft:barrel"
+   }
+  },
+  {
    "result": "deepworld:safety_lamp",
    "pattern": [
     "III",
@@ -3794,6 +3818,104 @@
      "y": 1.0,
      "z": 0.25,
      "rx": 0,
+     "ry": 0,
+     "rz": 0
+    }
+   ]
+  },
+  {
+   "id": "commissions_board",
+   "name": "commissions board",
+   "kind": "board",
+   "station": "board",
+   "icon": "minecraft:dark_oak_planks",
+   "visual": [
+    {
+     "block": "minecraft:dark_oak_fence",
+     "scale": 1.0,
+     "x": -0.35,
+     "y": 0.0,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "block": "minecraft:dark_oak_fence",
+     "scale": 1.0,
+     "x": 0.35,
+     "y": 0.0,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "block": "minecraft:dark_oak_planks",
+     "scale": 0.9,
+     "x": 0.0,
+     "y": 0.55,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "item": "minecraft:paper",
+     "scale": 0.5,
+     "x": 0.0,
+     "y": 1.05,
+     "z": -0.46,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "item": "minecraft:map",
+     "scale": 0.4,
+     "x": 0.2,
+     "y": 0.95,
+     "z": -0.46,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    }
+   ]
+  },
+  {
+   "id": "serving_counter",
+   "name": "serving counter",
+   "kind": "counter",
+   "station": "counter",
+   "icon": "minecraft:barrel",
+   "visual": [
+    {
+     "block": "minecraft:barrel[facing=up]",
+     "scale": 1.0,
+     "x": 0.0,
+     "y": 0.0,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "block": "minecraft:spruce_slab[type=top]",
+     "scale": 1.02,
+     "x": 0.0,
+     "y": 0.0,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "item": "minecraft:emerald",
+     "scale": 0.4,
+     "x": 0.0,
+     "y": 1.05,
+     "z": 0.0,
+     "rx": 90,
      "ry": 0,
      "rz": 0
     }

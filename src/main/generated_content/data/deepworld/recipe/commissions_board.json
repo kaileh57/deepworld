@@ -1,0 +1,17 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "P": "minecraft:dark_oak_planks",
+  "B": "minecraft:book",
+  "F": "minecraft:dark_oak_fence"
+ },
+ "pattern": [
+  "PPP",
+  "PBP",
+  "F F"
+ ],
+ "result": {
+  "id": "deepworld:commissions_board"
+ }
+}

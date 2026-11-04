@@ -86,3 +86,11 @@ each one can be turned off in `config/deepworld.json` (cave_ins, firedamp, cold_
 - darkness (y 300-450): torches burn out after 5 minutes. amethyst lamps (craftable) don't.
 - sound: hushed ii food or an echo-shard tool keeps sculk sensors and wardens from hearing you.
 - simplified: tides only move lava near players. firedamp pockets are invisible noise cells, not real gas blocks.
+
+## 9 economy
+
+- commissions board (craftable, put one at spawn): post a request with a reward (put the reward in the top row, one of the wanted item in the slot, set the count, post). others accept, then deliver; you collect what they brought from "collect deliveries". the deepline co-op posts up to 3 npc requests every half day.
+- serving counter: the first person to open it owns it. owner view: 18 stock slots, the till, and 4 trades (example stack to sell on top, price below and right). everyone else sees a shop and buys straight from your stock, even while you're offline.
+- villagers: trades are fixed per villager (rerolling the job block gives the same list). farmers no longer buy crops for emeralds; diamond gear is gone from smiths. new trades: regional seeds, spices, cookware, rails, lift stations, survey kits, journals, safety lamps, amethyst lamps.
+- settlements: places where people spend 90+ minutes attract a wandering trader every half day and slowly gain lamp posts, benches and barrels. deep outposts get a trader that buys torches, ice and food for deep goods.
+- simplified: no chef villager profession (the butcher sells spices instead). no player-minted currency.

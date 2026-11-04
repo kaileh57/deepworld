@@ -1,0 +1,10 @@
+{
+ "replace": true,
+ "values": [
+  "minecraft:farmer/2/emerald_pumpkin_pie",
+  "minecraft:farmer/2/emerald_apple",
+  "deepworld:farmer/2/emerald_chili",
+  "deepworld:farmer/2/emerald_mint",
+  "deepworld:farmer/2/compost_emerald"
+ ]
+}

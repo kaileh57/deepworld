@@ -1,0 +1,7 @@
+{
+ "replace": true,
+ "values": [
+  "#minecraft:common_smith/level_5",
+  "deepworld:toolsmith/5/emerald_smithing_bench"
+ ]
+}

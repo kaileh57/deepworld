@@ -1,0 +1,12 @@
+{
+ "replace": true,
+ "values": [
+  "#minecraft:common_smith/level_3",
+  "minecraft:toolsmith/3/flint_emerald",
+  "minecraft:toolsmith/3/emerald_enchanted_iron_axe",
+  "minecraft:toolsmith/3/emerald_enchanted_iron_shovel",
+  "minecraft:toolsmith/3/emerald_enchanted_iron_pickaxe",
+  "deepworld:toolsmith/3/emerald_powered_rail",
+  "deepworld:toolsmith/3/emerald_flux"
+ ]
+}

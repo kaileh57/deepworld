@@ -1,0 +1,9 @@
+{
+ "replace": true,
+ "values": [
+  "minecraft:cleric/3/rabbit_foot_emerald",
+  "minecraft:cleric/3/emerald_glowstone",
+  "deepworld:cleric/3/emerald_sulfur_salt",
+  "deepworld:cleric/3/emerald_glowcap_essence"
+ ]
+}

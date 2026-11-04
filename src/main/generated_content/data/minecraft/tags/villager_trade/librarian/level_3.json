@@ -1,0 +1,9 @@
+{
+ "replace": true,
+ "values": [
+  "minecraft:librarian/3/ink_sac_emerald",
+  "minecraft:librarian/3/emerald_and_book_enchanted_book",
+  "minecraft:librarian/3/emerald_glass",
+  "deepworld:librarian/3/emerald_guild_journal"
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "replace": true,
+ "values": [
+  "minecraft:butcher/3/mutton_emerald",
+  "minecraft:butcher/3/beef_emerald",
+  "deepworld:butcher/3/emerald_ash_pepper",
+  "deepworld:butcher/3/emerald_cheese"
+ ]
+}

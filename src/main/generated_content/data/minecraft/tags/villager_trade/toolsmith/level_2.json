@@ -1,0 +1,8 @@
+{
+ "replace": true,
+ "values": [
+  "#minecraft:common_smith/level_2",
+  "deepworld:toolsmith/2/emerald_iron_pot",
+  "deepworld:toolsmith/2/emerald_iron_skillet"
+ ]
+}

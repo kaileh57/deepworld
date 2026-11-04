@@ -1,0 +1,15 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "S": "minecraft:spruce_slab",
+  "B": "minecraft:barrel"
+ },
+ "pattern": [
+  "SSS",
+  "B B"
+ ],
+ "result": {
+  "id": "deepworld:serving_counter"
+ }
+}
