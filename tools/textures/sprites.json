@@ -409,6 +409,11 @@
 			"name": "logbook",
 			"template": "book",
 			"palette": "logbook"
+		},
+		{
+			"name": "safety_lamp",
+			"template": "lantern",
+			"palette": "safety_lamp"
 		}
 	],
 	"stones": [
@@ -1363,6 +1368,11 @@
 			"name": "lift_station",
 			"template": "grate",
 			"palette": "lift"
+		},
+		{
+			"name": "vent",
+			"template": "grate",
+			"palette": "steel"
 		}
 	]
 }

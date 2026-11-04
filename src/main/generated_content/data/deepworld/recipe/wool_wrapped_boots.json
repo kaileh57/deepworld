@@ -1,0 +1,20 @@
+{
+ "type": "minecraft:crafting_shapeless",
+ "category": "misc",
+ "ingredients": [
+  "minecraft:leather_boots",
+  "minecraft:white_wool",
+  "minecraft:white_wool"
+ ],
+ "result": {
+  "id": "minecraft:leather_boots",
+  "components": {
+   "minecraft:custom_data": {
+    "deepworld": {
+     "hushed": true
+    }
+   },
+   "minecraft:item_name": "wool-wrapped boots"
+  }
+ }
+}

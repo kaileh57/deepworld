@@ -1,0 +1,18 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "I": "minecraft:iron_ingot",
+  "B": "minecraft:iron_bars",
+  "R": "minecraft:redstone"
+ },
+ "pattern": [
+  "IBI",
+  "BRB",
+  "IBI"
+ ],
+ "result": {
+  "id": "deepworld:vent",
+  "count": 2
+ }
+}

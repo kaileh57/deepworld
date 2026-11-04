@@ -322,6 +322,11 @@
    "base": "minecraft:book"
   },
   {
+   "id": "safety_lamp",
+   "name": "safety lamp",
+   "base": "minecraft:soul_lantern"
+  },
+  {
    "id": "dowsing_rod",
    "name": "dowsing rod",
    "base": "minecraft:stick"
@@ -382,6 +387,15 @@
    "needs": "stone",
    "base": "minecraft:iron_block",
    "texture": "deepworld:block/lift_station"
+  },
+  {
+   "id": "vent",
+   "name": "ventilation fan",
+   "hardness": 3.0,
+   "resistance": 6.0,
+   "needs": "stone",
+   "base": "minecraft:iron_bars",
+   "texture": "deepworld:block/vent"
   }
  ],
  "ores": [
@@ -1045,6 +1059,47 @@
    }
   },
   {
+   "result": "deepworld:safety_lamp",
+   "pattern": [
+    "III",
+    "GTG",
+    "III"
+   ],
+   "key": {
+    "I": "minecraft:iron_nugget",
+    "G": "minecraft:glass_pane",
+    "T": "minecraft:torch"
+   }
+  },
+  {
+   "result": "deepworld:vent",
+   "count": 2,
+   "pattern": [
+    "IBI",
+    "BRB",
+    "IBI"
+   ],
+   "key": {
+    "I": "minecraft:iron_ingot",
+    "B": "minecraft:iron_bars",
+    "R": "minecraft:redstone"
+   }
+  },
+  {
+   "result": "deepworld:amethyst_lamp",
+   "count": 2,
+   "pattern": [
+    "SAS",
+    "AGA",
+    "SAS"
+   ],
+   "key": {
+    "S": "minecraft:amethyst_shard",
+    "A": "minecraft:amethyst_block",
+    "G": "minecraft:glowstone"
+   }
+  },
+  {
    "result": "deepworld:dowsing_rod",
    "pattern": [
     "  R",
@@ -1083,7 +1138,8 @@
  ],
  "lang": {
   "death.attack.deepworld.heat": "%1$s cooked in the deep",
-  "death.attack.deepworld.heat.player": "%1$s cooked in the deep while fighting %2$s"
+  "death.attack.deepworld.heat.player": "%1$s cooked in the deep while fighting %2$s",
+  "block.deepworld.amethyst_lamp": "amethyst lamp"
  },
  "ingredients": {
   "minecraft:bread": {
@@ -3196,6 +3252,23 @@
     "minecraft:glow_berries",
     "minecraft:honey_bottle"
    ]
+  },
+  {
+   "name": "wool_wrapped_boots",
+   "result": "minecraft:leather_boots",
+   "ingredients": [
+    "minecraft:leather_boots",
+    "minecraft:white_wool",
+    "minecraft:white_wool"
+   ],
+   "components": {
+    "minecraft:custom_data": {
+     "deepworld": {
+      "hushed": true
+     }
+    },
+    "minecraft:item_name": "wool-wrapped boots"
+   }
   }
  ],
  "cook_stations": [

@@ -18,6 +18,7 @@ import dev.kaileh57.deepworld.smithing.Smithing;
 import dev.kaileh57.deepworld.world.ServerState;
 import dev.kaileh57.deepworld.exploration.Exploration;
 import dev.kaileh57.deepworld.exploration.Landmarks;
+import dev.kaileh57.deepworld.hazard.Hazards;
 import dev.kaileh57.deepworld.forge.ForgingRecipes;
 import dev.kaileh57.deepworld.heat.HeatSystem;
 import dev.kaileh57.deepworld.hud.Hud;
@@ -54,6 +55,7 @@ public class DeepWorld implements ModInitializer {
 		Smithing.register();
 		Alchemy.register();
 		Exploration.register();
+		Hazards.register();
 		ServerLifecycleEvents.SERVER_STARTED.register(server -> Meals.server_bonus_slots = ServerState.get(server).bonus_meal_slots);
 		ServerLifecycleEvents.SERVER_STARTED.register(ForgingRecipes::reload);
 		ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resources, success) -> ForgingRecipes.reload(server));
@@ -69,6 +71,7 @@ public class DeepWorld implements ModInitializer {
 			Blasting.tick(server);
 			Landmarks.tick(server, tick);
 			Exploration.tick(server, tick);
+			Hazards.tick(server, tick);
 			if (tick % 20 == 0) {
 				Hud.flush(server);
 			}

@@ -61,7 +61,7 @@ public final class HeatSystem {
 	}
 
 	public static void tick(MinecraftServer server, long tick) {
-		if (tick % 20 != 0) {
+		if (tick % 20 != 0 || !dev.kaileh57.deepworld.hazard.HazardConfig.current.heat) {
 			return;
 		}
 		for (ServerPlayer player : server.getPlayerList().getPlayers()) {

@@ -111,6 +111,8 @@ public final class Content {
 			}
 			station_fuel.put(id, fuel);
 		}
+		Block lamp = register_block("amethyst_lamp", properties -> new eu.pb4.polymer.core.api.block.SimplePolymerBlock(properties, net.minecraft.world.level.block.Blocks.PEARLESCENT_FROGLIGHT), BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).strength(1.0F).sound(SoundType.AMETHYST).lightLevel(state -> 15));
+		register_item("amethyst_lamp", properties -> new PolymerBlockItem(lamp, properties.useBlockDescriptionPrefix(), net.minecraft.world.item.Items.PEARLESCENT_FROGLIGHT));
 		Block[] station_blocks = content.getAsJsonArray("stations").asList().stream().map(e -> blocks.get(e.getAsJsonObject().get("id").getAsString())).toArray(Block[]::new);
 		forge_entity = Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, DeepWorld.id("forge"), new BlockEntityType<>(ForgeBlockEntity::new, Set.of(station_blocks)));
 		PolymerBlockUtils.registerBlockEntity(forge_entity);

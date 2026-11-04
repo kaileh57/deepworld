@@ -136,6 +136,8 @@ def write_recipes():
         recipe = {"type": "minecraft:crafting_shapeless", "category": entry.get("category", "misc"), "ingredients": entry["ingredients"], "result": {"id": entry["result"]}}
         if entry.get("count", 1) != 1:
             recipe["result"]["count"] = entry["count"]
+        if "components" in entry:
+            recipe["result"]["components"] = entry["components"]
         write(recipe_dir / f"{name}.json", recipe)
     for tool in content["tools"]:
         write(recipe_dir / f"{tool['id']}.json", {"type": "minecraft:crafting_shaped", "category": "equipment", "key": {"#": "minecraft:stick", "X": tool["repair"]}, "pattern": ["XXX", " # ", " # "], "result": {"id": f"deepworld:{tool['id']}"}})

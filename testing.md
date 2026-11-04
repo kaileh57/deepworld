@@ -72,3 +72,17 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - expedition logbook (leather + book and quill): writes itself. layers, landmarks, pages, deaths.
 - `/dw landmarks` lists generated landmarks.
 - simplified: landmarks are small builds, not jigsaw structures. no explorer maps yet (phase 9 trades). cathedral hint isn't written.
+
+## 8 hazards
+
+each one can be turned off in `config/deepworld.json` (cave_ins, firedamp, cold_water, echoes, fumes, heat, magma_tides, darkness, sound, spoilage, tremors).
+
+- cave-ins (y 600-1000): breaking blocks in a room 5+ wide with no logs, fences, walls, bars, chains or stairs within 4 blocks can drop the ceiling after a rumble. charges make it likely.
+- firedamp (coal seams, y 800-900): some pockets hold gas. placing a torch, lantern, campfire or using flint and steel there explodes. hold a safety lamp to check the air. a ventilation fan within 12 blocks clears it.
+- cold water (y 900-1000): swimming freezes you and drains hunger unless you wear any leather armor or ate something warming.
+- echoes (y 700-800): mining calls monsters from 40 blocks unless you're hushed (hushed food or wool-wrapped boots) or using an echo-shard tool.
+- fumes (sulfur springs, y 600-700): nausea and poison unless a fan is near or you ate something bitter.
+- magma tides (lava sea): the sea rises and falls 5 blocks over two in-game days. tide shows on the action bar.
+- darkness (y 300-450): torches burn out after 5 minutes. amethyst lamps (craftable) don't.
+- sound: hushed ii food or an echo-shard tool keeps sculk sensors and wardens from hearing you.
+- simplified: tides only move lava near players. firedamp pockets are invisible noise cells, not real gas blocks.

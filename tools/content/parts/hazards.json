@@ -1,0 +1,85 @@
+{
+	"items": [
+		{
+			"id": "safety_lamp",
+			"name": "safety lamp",
+			"base": "minecraft:soul_lantern"
+		}
+	],
+	"shaped": [
+		{
+			"result": "deepworld:safety_lamp",
+			"pattern": [
+				"III",
+				"GTG",
+				"III"
+			],
+			"key": {
+				"I": "minecraft:iron_nugget",
+				"G": "minecraft:glass_pane",
+				"T": "minecraft:torch"
+			}
+		},
+		{
+			"result": "deepworld:vent",
+			"count": 2,
+			"pattern": [
+				"IBI",
+				"BRB",
+				"IBI"
+			],
+			"key": {
+				"I": "minecraft:iron_ingot",
+				"B": "minecraft:iron_bars",
+				"R": "minecraft:redstone"
+			}
+		},
+		{
+			"result": "deepworld:amethyst_lamp",
+			"count": 2,
+			"pattern": [
+				"SAS",
+				"AGA",
+				"SAS"
+			],
+			"key": {
+				"S": "minecraft:amethyst_shard",
+				"A": "minecraft:amethyst_block",
+				"G": "minecraft:glowstone"
+			}
+		}
+	],
+	"shapeless": [
+		{
+			"name": "wool_wrapped_boots",
+			"result": "minecraft:leather_boots",
+			"ingredients": [
+				"minecraft:leather_boots",
+				"minecraft:white_wool",
+				"minecraft:white_wool"
+			],
+			"components": {
+				"minecraft:custom_data": {
+					"deepworld": {
+						"hushed": true
+					}
+				},
+				"minecraft:item_name": "wool-wrapped boots"
+			}
+		}
+	],
+	"stones": [
+		{
+			"id": "vent",
+			"name": "ventilation fan",
+			"hardness": 3.0,
+			"resistance": 6.0,
+			"needs": "stone",
+			"base": "minecraft:iron_bars",
+			"texture": "deepworld:block/vent"
+		}
+	],
+	"lang": {
+		"block.deepworld.amethyst_lamp": "amethyst lamp"
+	}
+}

@@ -1,4 +1,5 @@
 {
+ "block.deepworld.amethyst_lamp": "amethyst lamp",
  "block.deepworld.ash_pepper_bush": "ash pepper bush",
  "block.deepworld.brick_oven": "brick oven",
  "block.deepworld.cheese_press": "cheese press",
@@ -37,6 +38,7 @@
  "block.deepworld.tea_bush": "tea bush",
  "block.deepworld.tin_ore": "tin ore",
  "block.deepworld.truffle_patch": "truffle patch",
+ "block.deepworld.vent": "ventilation fan",
  "block.deepworld.wild_beans": "wild beans",
  "block.deepworld.wild_chili": "wild chili",
  "block.deepworld.wild_herbs": "wild herbs",
@@ -117,6 +119,7 @@
  "item.deepworld.resonant_shard": "resonant shard",
  "item.deepworld.rice": "rice",
  "item.deepworld.rock_salt": "rock salt",
+ "item.deepworld.safety_lamp": "safety lamp",
  "item.deepworld.salt": "salt",
  "item.deepworld.saltpeter": "saltpeter",
  "item.deepworld.shaped_charge": "shaped charge",
