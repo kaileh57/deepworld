@@ -216,6 +216,43 @@ def main():
     for generic in ["stew", "fry", "bake", "smoke", "pickle", "jerky", "tonic", "chill", "roast", "burnt"]:
         write(assets / "models" / "item" / "dish" / f"generic_{generic}.json", {"parent": "minecraft:item/generated", "textures": {"layer0": f"deepworld:item/dish/generic_{generic}"}})
         item_model(f"dish/generic_{generic}", f"deepworld:item/dish/generic_{generic}")
+    for landmark in content.get("landmarks", []):
+        write(data / "deepworld" / "worldgen" / "feature" / "landmark" / f"{landmark['kind']}.json", {"type": "deepworld:landmark", "kind": landmark["kind"]})
+        write(data / "deepworld" / "worldgen" / "placed_feature" / "landmark" / f"{landmark['kind']}.json", {"feature": f"deepworld:landmark/{landmark['kind']}", "placement": [
+            {"type": "minecraft:rarity_filter", "chance": max(2, landmark["rarity"] // 2)}, {"type": "minecraft:count", "count": 8}, {"type": "minecraft:in_square"},
+            {"type": "minecraft:height_range", "height": {"type": "minecraft:uniform", "min_inclusive": {"absolute": landmark["y"][0]}, "max_inclusive": {"absolute": landmark["y"][1]}}},
+            {"type": "minecraft:environment_scan", "direction_of_search": "down", "max_steps": 32, "target_condition": {"type": "minecraft:solid"}, "allowed_search_condition": {"type": "minecraft:matching_block_tag", "tag": "minecraft:air"}},
+            {"type": "minecraft:offset", "x": 0, "y": 1, "z": 0}, {"type": "minecraft:biome"}]})
+    pages_by_landmark = {}
+    for page in content.get("journal_pages", []):
+        pages_by_landmark.setdefault(page["landmark"], []).append(page)
+    for landmark in content.get("landmarks", []):
+        entries = []
+        for page in pages_by_landmark.get(landmark["kind"], []):
+            entries.append({"type": "minecraft:item", "name": "minecraft:written_book", "weight": 1, "functions": [
+                {"function": "minecraft:set_book_cover", "title": {"raw": f"deepline journal, page {page['page']}"}, "author": "deepline transit co.", "generation": 2},
+                {"function": "minecraft:set_written_book_pages", "pages": [{"raw": page["text"]}], "mode": "replace_all"},
+            ]})
+        pools = []
+        if entries:
+            pools.append({"rolls": 1, "entries": entries})
+        pools.append({"rolls": {"type": "minecraft:uniform", "min": 3, "max": 6}, "entries": landmark.get("loot", [
+            {"type": "minecraft:item", "name": "minecraft:torch", "weight": 10, "functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": 3, "max": 10}}]},
+            {"type": "minecraft:item", "name": "deepworld:salt", "weight": 8, "functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": 2, "max": 6}}]},
+            {"type": "minecraft:item", "name": "minecraft:iron_ingot", "weight": 6, "functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": 1, "max": 4}}]},
+            {"type": "minecraft:item", "name": "deepworld:steel_ingot", "weight": 3},
+            {"type": "minecraft:item", "name": "minecraft:map", "weight": 3},
+            {"type": "minecraft:item", "name": "minecraft:diamond", "weight": 1},
+        ])})
+        write(data / "deepworld" / "loot_table" / "landmarks" / f"{landmark['kind']}.json", {"type": "minecraft:chest", "pools": pools})
+    write(data / "deepworld" / "loot_table" / "archaeology" / "fossil_dig.json", {"type": "minecraft:archaeology", "pools": [{"rolls": 1, "entries": [
+        {"type": "minecraft:item", "name": "deepworld:fossil_marrow", "weight": 6},
+        {"type": "minecraft:item", "name": "minecraft:bone", "weight": 6},
+        {"type": "minecraft:item", "name": "minecraft:archer_pottery_sherd", "weight": 1},
+        {"type": "minecraft:item", "name": "minecraft:skull_pottery_sherd", "weight": 1},
+        {"type": "minecraft:item", "name": "minecraft:iron_pickaxe", "weight": 2},
+        {"type": "minecraft:item", "name": "deepworld:rock_salt", "weight": 4},
+    ]}]})
     lang.update(content.get("lang", {}))
     tier_tags()
     write_recipes()

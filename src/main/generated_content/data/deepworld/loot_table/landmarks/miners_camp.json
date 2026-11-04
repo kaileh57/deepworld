@@ -1,0 +1,127 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:written_book",
+     "weight": 1,
+     "functions": [
+      {
+       "function": "minecraft:set_book_cover",
+       "title": {
+        "raw": "deepline journal, page 1"
+       },
+       "author": "deepline transit co.",
+       "generation": 2
+      },
+      {
+       "function": "minecraft:set_written_book_pages",
+       "pages": [
+        {
+         "raw": "we broke ground at the terminal today. the company says the column goes down further than anyone has dug. the pay is good. the food is bad. i've started cooking for the crew myself."
+        }
+       ],
+       "mode": "replace_all"
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:written_book",
+     "weight": 1,
+     "functions": [
+      {
+       "function": "minecraft:set_book_cover",
+       "title": {
+        "raw": "deepline journal, page 2"
+       },
+       "author": "deepline transit co.",
+       "generation": 2
+      },
+      {
+       "function": "minecraft:set_written_book_pages",
+       "pages": [
+        {
+         "raw": "first camp below the grass line. dripstone everywhere, the air is wet and kind. foreman says the real seam is past the deepslate. bring salt, he says. salt keeps."
+        }
+       ],
+       "mode": "replace_all"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 3,
+    "max": 6
+   },
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:torch",
+     "weight": 10,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 3,
+        "max": 10
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "deepworld:salt",
+     "weight": 8,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 6
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:iron_ingot",
+     "weight": 6,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 4
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "deepworld:steel_ingot",
+     "weight": 3
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:map",
+     "weight": 3
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:diamond",
+     "weight": 1
+    }
+   ]
+  }
+ ]
+}

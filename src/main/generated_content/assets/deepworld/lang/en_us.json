@@ -68,6 +68,7 @@
  "item.deepworld.crystal_minnow": "crystal minnow",
  "item.deepworld.demolition_charge": "demolition charge",
  "item.deepworld.dough": "dough",
+ "item.deepworld.dowsing_rod": "dowsing rod",
  "item.deepworld.ember_extract": "ember extract",
  "item.deepworld.ember_root": "ember root",
  "item.deepworld.flour": "flour",
@@ -90,6 +91,7 @@
  "item.deepworld.hoglin_chop": "hoglin chop",
  "item.deepworld.hush_moss": "hush moss",
  "item.deepworld.lava_fish": "lava fish",
+ "item.deepworld.logbook": "expedition logbook",
  "item.deepworld.mantle_alloy_boots": "mantle alloy boots",
  "item.deepworld.mantle_alloy_chestplate": "mantle alloy chestplate",
  "item.deepworld.mantle_alloy_helmet": "mantle alloy helmet",
@@ -123,6 +125,7 @@
  "item.deepworld.steel_pickaxe": "steel pickaxe",
  "item.deepworld.sulfur_fertilizer": "sulfur fertilizer",
  "item.deepworld.sulfur_salt": "sulfur salt",
+ "item.deepworld.survey_kit": "survey kit",
  "item.deepworld.tea_leaves": "tea leaves",
  "item.deepworld.tin_ingot": "tin ingot"
 }

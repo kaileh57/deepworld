@@ -117,7 +117,9 @@
    "deepworld:mossy_hollows/ore_shallow_coal",
    "deepworld:mossy_hollows/ore_shallow_copper"
   ],
-  [],
+  [
+   "deepworld:landmark/miners_camp"
+  ],
   [],
   [
    "deepworld:mossy_hollows/lush_caves_ceiling_vegetation",

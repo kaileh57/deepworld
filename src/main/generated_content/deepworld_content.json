@@ -320,6 +320,21 @@
    "id": "guild_journal",
    "name": "guild journal",
    "base": "minecraft:book"
+  },
+  {
+   "id": "dowsing_rod",
+   "name": "dowsing rod",
+   "base": "minecraft:stick"
+  },
+  {
+   "id": "survey_kit",
+   "name": "survey kit",
+   "base": "minecraft:compass"
+  },
+  {
+   "id": "logbook",
+   "name": "expedition logbook",
+   "base": "minecraft:writable_book"
   }
  ],
  "stones": [
@@ -1027,6 +1042,42 @@
     "S": "minecraft:sulfur",
     "P": "deepworld:black_powder_charge",
     "G": "minecraft:gunpowder"
+   }
+  },
+  {
+   "result": "deepworld:dowsing_rod",
+   "pattern": [
+    "  R",
+    " S ",
+    "S  "
+   ],
+   "key": {
+    "R": "deepworld:resonant_shard",
+    "S": "minecraft:stick"
+   }
+  },
+  {
+   "result": "deepworld:survey_kit",
+   "pattern": [
+    " C ",
+    "PMP",
+    " C "
+   ],
+   "key": {
+    "C": "minecraft:copper_ingot",
+    "P": "minecraft:paper",
+    "M": "minecraft:compass"
+   }
+  },
+  {
+   "result": "deepworld:logbook",
+   "pattern": [
+    "L",
+    "B"
+   ],
+   "key": {
+    "L": "minecraft:leather",
+    "B": "minecraft:writable_book"
    }
   }
  ],
@@ -4178,6 +4229,186 @@
    "counter": "wardens",
    "target": 1,
    "text": "kill a warden"
+  }
+ ],
+ "journal_pages": [
+  {
+   "page": 1,
+   "landmark": "miners_camp",
+   "text": "we broke ground at the terminal today. the company says the column goes down further than anyone has dug. the pay is good. the food is bad. i've started cooking for the crew myself."
+  },
+  {
+   "page": 2,
+   "landmark": "miners_camp",
+   "text": "first camp below the grass line. dripstone everywhere, the air is wet and kind. foreman says the real seam is past the deepslate. bring salt, he says. salt keeps."
+  },
+  {
+   "page": 3,
+   "landmark": "drowned_pump_station",
+   "text": "the galleries flood if you stop pumping for a day. we built the station to hold the water back. the eels down here have no eyes. they taste fine in a pie."
+  },
+  {
+   "page": 4,
+   "landmark": "fossil_dig",
+   "text": "found bones in the granite, big ones, older than anything. the marrow is still good somehow. cook boiled it and the whole crew slept like stones."
+  },
+  {
+   "page": 5,
+   "landmark": "crystal_cathedral",
+   "text": "the crystals sing when you strike the right notes. somebody before us built a hall around them and locked something inside. the company wants it opened."
+  },
+  {
+   "page": 6,
+   "landmark": "crystal_cathedral",
+   "text": "we opened the vault. inside were maps of the column, drawn by hands that were not ours. they knew about the heat. they knew about the gate. the company doubled our pay."
+  },
+  {
+   "page": 7,
+   "landmark": "sulfur_works",
+   "text": "the fumes rise through the chimneys. we cut vents and they still rise. two men sick this week. the sulfur makes a better fuel than blaze powder, at least. the stands never go cold."
+  },
+  {
+   "page": 8,
+   "landmark": "bridge_pylons",
+   "text": "the lava sea is as wide as a city. we're building the crossing pylon by pylon. the tide came up last night and took the scaffold at pylon six. we start again tomorrow."
+  },
+  {
+   "page": 9,
+   "landmark": "sculk_shrine",
+   "text": "something down here listens. we cook in silence now, soul fire only, wrapped boots. the men who talk too loud do not come back up."
+  },
+  {
+   "page": 10,
+   "landmark": "mantle_forge",
+   "text": "found a forge already lit. no fuel, no keeper, just heat. the smiths say the metal from it is the best they've ever worked. nobody asks who lit it."
+  },
+  {
+   "page": 11,
+   "landmark": "the_gate",
+   "text": "we broke through into the red country today. it is not a cave. it is another place, under ours, burning. the company says this is what we came for."
+  },
+  {
+   "page": 12,
+   "landmark": "the_gate",
+   "text": "the last of us are leaving. the company did not come down to see the gate. take the stew recipe: truffle, ember root, hush moss, marrow, glowcap, fig. it mends what the deep wears out. it is the only thing we found worth keeping."
+  }
+ ],
+ "landmarks": [
+  {
+   "kind": "miners_camp",
+   "name": "miner's camp",
+   "biomes": [
+    "deepworld:mossy_hollows",
+    "deepworld:dripstone_hollows"
+   ],
+   "y": [
+    1005,
+    1090
+   ],
+   "rarity": 24
+  },
+  {
+   "kind": "drowned_pump_station",
+   "name": "drowned pump station",
+   "biomes": [
+    "deepworld:flooded_galleries"
+   ],
+   "y": [
+    905,
+    990
+   ],
+   "rarity": 28
+  },
+  {
+   "kind": "fossil_dig",
+   "name": "fossil dig",
+   "biomes": [
+    "deepworld:fossil_beds",
+    "deepworld:coal_seams"
+   ],
+   "y": [
+    805,
+    890
+   ],
+   "rarity": 24
+  },
+  {
+   "kind": "crystal_cathedral",
+   "name": "crystal cathedral",
+   "biomes": [
+    "deepworld:geode_halls",
+    "deepworld:glowcap_grottos"
+   ],
+   "y": [
+    705,
+    790
+   ],
+   "rarity": 40
+  },
+  {
+   "kind": "sulfur_works",
+   "name": "sulfur works",
+   "biomes": [
+    "deepworld:sulfur_springs",
+    "deepworld:basalt_groves"
+   ],
+   "y": [
+    605,
+    690
+   ],
+   "rarity": 28
+  },
+  {
+   "kind": "bridge_pylons",
+   "name": "bridge pylons",
+   "biomes": [
+    "deepworld:lava_sea",
+    "deepworld:ash_fields"
+   ],
+   "y": [
+    492,
+    500
+   ],
+   "rarity": 30
+  },
+  {
+   "kind": "sculk_shrine",
+   "name": "sculk shrine",
+   "biomes": [
+    "deepworld:gloom_dark",
+    "deepworld:bone_yards"
+   ],
+   "y": [
+    305,
+    440
+   ],
+   "rarity": 28
+  },
+  {
+   "kind": "mantle_forge",
+   "name": "mantle forge",
+   "biomes": [
+    "deepworld:blackstone_forges",
+    "deepworld:magma_rivers"
+   ],
+   "y": [
+    205,
+    290
+   ],
+   "rarity": 32
+  },
+  {
+   "kind": "the_gate",
+   "name": "the gate",
+   "biomes": [
+    "deepworld:scorched_transition",
+    "deepworld:crimson_fringe"
+   ],
+   "y": [
+    58,
+    140
+   ],
+   "rarity": 60
   }
  ]
 }

@@ -95,6 +95,10 @@
 					{
 						"id": "deepworld:forage/truffle_patch",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/miners_camp",
+						"step": 7
 					}
 				]
 			},
@@ -126,6 +130,12 @@
 				"structures": [
 					"trial_chambers",
 					"mineshaft"
+				],
+				"extra_features": [
+					{
+						"id": "deepworld:landmark/miners_camp",
+						"step": 7
+					}
 				]
 			}
 		]
@@ -251,6 +261,12 @@
 				},
 				"structures": [
 					"mineshaft"
+				],
+				"extra_features": [
+					{
+						"id": "deepworld:landmark/drowned_pump_station",
+						"step": 7
+					}
 				]
 			},
 			{
@@ -419,7 +435,13 @@
 							"count": 2
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:landmark/fossil_dig",
+						"step": 7
+					}
+				]
 			},
 			{
 				"id": "deepworld:fossil_beds",
@@ -456,7 +478,13 @@
 							"count": 3
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:landmark/fossil_dig",
+						"step": 7
+					}
+				]
 			}
 		]
 	},
@@ -571,6 +599,10 @@
 					{
 						"id": "deepworld:forage/glowcap_patch",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/crystal_cathedral",
+						"step": 7
 					}
 				]
 			},
@@ -618,6 +650,10 @@
 					{
 						"id": "deepworld:forage/glowcap_patch",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/crystal_cathedral",
+						"step": 7
 					}
 				]
 			}
@@ -711,6 +747,10 @@
 					{
 						"id": "deepworld:forage/ash_pepper_bush",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/sulfur_works",
+						"step": 7
 					}
 				]
 			},
@@ -765,6 +805,10 @@
 					{
 						"id": "deepworld:forage/ash_pepper_bush",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/sulfur_works",
+						"step": 7
 					}
 				]
 			}
@@ -876,6 +920,10 @@
 					{
 						"id": "deepworld:forage/ember_root_sprouts",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/bridge_pylons",
+						"step": 7
 					}
 				]
 			},
@@ -921,6 +969,10 @@
 					{
 						"id": "deepworld:forage/ember_root_sprouts",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/bridge_pylons",
+						"step": 7
 					}
 				]
 			}
@@ -1020,6 +1072,10 @@
 					{
 						"id": "deepworld:forage/hush_moss_tuft",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/sculk_shrine",
+						"step": 7
 					}
 				]
 			},
@@ -1058,6 +1114,10 @@
 					{
 						"id": "deepworld:forage/hush_moss_tuft",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/sculk_shrine",
+						"step": 7
 					}
 				]
 			}
@@ -1161,6 +1221,10 @@
 					{
 						"id": "deepworld:forage/forge_fig_bush",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/mantle_forge",
+						"step": 7
 					}
 				]
 			},
@@ -1199,6 +1263,10 @@
 					{
 						"id": "deepworld:forage/forge_fig_bush",
 						"step": 9
+					},
+					{
+						"id": "deepworld:landmark/mantle_forge",
+						"step": 7
 					}
 				]
 			}
@@ -1297,7 +1365,13 @@
 							"count": 1
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:landmark/the_gate",
+						"step": 7
+					}
+				]
 			},
 			{
 				"id": "deepworld:crimson_fringe",
@@ -1344,7 +1418,13 @@
 							"count": 2
 						}
 					]
-				}
+				},
+				"extra_features": [
+					{
+						"id": "deepworld:landmark/the_gate",
+						"step": 7
+					}
+				]
 			}
 		]
 	},

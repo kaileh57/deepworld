@@ -56,7 +56,9 @@
    "deepworld:coal_seams/ore_trench_coal",
    "deepworld:coal_seams/ore_trench_rock_salt"
   ],
-  [],
+  [
+   "deepworld:landmark/fossil_dig"
+  ],
   [],
   [
    "deepworld:coal_seams/glow_lichen"

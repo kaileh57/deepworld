@@ -109,6 +109,11 @@ def worldgen_gates():
     results.append(("caves are dry", not water_fail, water_fail))
     results.append(("layer identity", not biome_fail, biome_fail))
     results.append(("ores land", not ore_fail, ore_fail))
+    rcon.run("dw landmarks")
+    landmark_text = (run_dir / "deepworld_landmarks.txt").read_text() if (run_dir / "deepworld_landmarks.txt").exists() else ""
+    kinds = re.findall(r"([a-z_]+)=\d+", landmark_text)
+    real = [k for k in kinds if k not in ("pump", "cathedral")]
+    results.append(("landmarks generate", len(real) >= 4, [landmark_text.strip(), f"{len(real)} kinds"]))
     fortress = rcon.run("dw fortress")
     match = re.search(r"fortress (-?\d+) (-?\d+) y (-?\d+)\.\.(-?\d+)", fortress)
     fortress_ok = bool(match) and int(match.group(4)) < 0 and abs(int(match.group(1))) <= 2000 and abs(int(match.group(2))) <= 2000

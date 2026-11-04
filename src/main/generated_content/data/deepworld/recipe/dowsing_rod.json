@@ -1,0 +1,16 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "R": "deepworld:resonant_shard",
+  "S": "minecraft:stick"
+ },
+ "pattern": [
+  "  R",
+  " S ",
+  "S  "
+ ],
+ "result": {
+  "id": "deepworld:dowsing_rod"
+ }
+}

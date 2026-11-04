@@ -72,7 +72,9 @@
   [
    "deepworld:basalt_groves/ore_roots_gold"
   ],
-  [],
+  [
+   "deepworld:landmark/sulfur_works"
+  ],
   [],
   [
    "deepworld:basalt_groves/basalt_blobs",

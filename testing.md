@@ -59,3 +59,16 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - alchemy: brewing stands take sulfur as fuel. still makes mint oil, ember extract, glowcap essence, tonics. rendered fat and brine from the pot. saltpeter drops from tuff.
 - charges: black powder (3x3x3, half drops), shaped (12-deep bore), mining (ore only), demolition (5x5x3, no drops). right-click a block, run.
 - simplified: no truffle pig, pack mule, cave goat. hardy/calm traits are minor. lava fishing isn't in (lava fish come from striders). echo shard socket has no effect yet.
+
+## 7 exploration
+
+- landmarks, one kind per layer: miner's camp, drowned pump station, fossil dig, crystal cathedral, sulfur works, bridge pylons, sculk shrine, mantle forge, the gate. each has a chest; most hold deepline journal pages (12 total, the whole story).
+- walking within 24 blocks of a landmark counts it as found (archivist milestones, logbook).
+- pump station: right-click the dispenser with 4 copper ingots to drain the gallery around it.
+- crystal cathedral: tune the four note blocks to the right notes and the vault wall shatters. the right notes differ per cathedral; there's no in-world hint yet besides trial and error.
+- fossil dig: brush the suspicious gravel.
+- survey kit (compass + copper + paper): layer, biome and known landmarks within 500 blocks.
+- dowsing rod (resonant shard + sticks): right-click an ore to tune it, then hold it. it chimes louder and higher as you face the nearest one.
+- expedition logbook (leather + book and quill): writes itself. layers, landmarks, pages, deaths.
+- `/dw landmarks` lists generated landmarks.
+- simplified: landmarks are small builds, not jigsaw structures. no explorer maps yet (phase 9 trades). cathedral hint isn't written.

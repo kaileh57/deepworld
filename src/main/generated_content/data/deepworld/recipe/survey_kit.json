@@ -1,0 +1,17 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "C": "minecraft:copper_ingot",
+  "P": "minecraft:paper",
+  "M": "minecraft:compass"
+ },
+ "pattern": [
+  " C ",
+  "PMP",
+  " C "
+ ],
+ "result": {
+  "id": "deepworld:survey_kit"
+ }
+}

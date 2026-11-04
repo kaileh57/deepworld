@@ -71,7 +71,9 @@
    "deepworld:flooded_galleries/ore_boundary_coal",
    "deepworld:flooded_galleries/ore_boundary_tin"
   ],
-  [],
+  [
+   "deepworld:landmark/drowned_pump_station"
+  ],
   [],
   [
    "deepworld:flooded_galleries/pointed_dripstone",

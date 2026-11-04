@@ -394,6 +394,21 @@
 			"name": "guild_journal",
 			"template": "book",
 			"palette": "journal"
+		},
+		{
+			"name": "dowsing_rod",
+			"template": "rod",
+			"palette": "dowsing"
+		},
+		{
+			"name": "survey_kit",
+			"template": "kit",
+			"palette": "kit"
+		},
+		{
+			"name": "logbook",
+			"template": "book",
+			"palette": "logbook"
 		}
 	],
 	"stones": [

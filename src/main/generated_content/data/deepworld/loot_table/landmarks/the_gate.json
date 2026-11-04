@@ -1,0 +1,127 @@
+{
+ "type": "minecraft:chest",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:written_book",
+     "weight": 1,
+     "functions": [
+      {
+       "function": "minecraft:set_book_cover",
+       "title": {
+        "raw": "deepline journal, page 11"
+       },
+       "author": "deepline transit co.",
+       "generation": 2
+      },
+      {
+       "function": "minecraft:set_written_book_pages",
+       "pages": [
+        {
+         "raw": "we broke through into the red country today. it is not a cave. it is another place, under ours, burning. the company says this is what we came for."
+        }
+       ],
+       "mode": "replace_all"
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:written_book",
+     "weight": 1,
+     "functions": [
+      {
+       "function": "minecraft:set_book_cover",
+       "title": {
+        "raw": "deepline journal, page 12"
+       },
+       "author": "deepline transit co.",
+       "generation": 2
+      },
+      {
+       "function": "minecraft:set_written_book_pages",
+       "pages": [
+        {
+         "raw": "the last of us are leaving. the company did not come down to see the gate. take the stew recipe: truffle, ember root, hush moss, marrow, glowcap, fig. it mends what the deep wears out. it is the only thing we found worth keeping."
+        }
+       ],
+       "mode": "replace_all"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "rolls": {
+    "type": "minecraft:uniform",
+    "min": 3,
+    "max": 6
+   },
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:torch",
+     "weight": 10,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 3,
+        "max": 10
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "deepworld:salt",
+     "weight": 8,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 6
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:iron_ingot",
+     "weight": 6,
+     "functions": [
+      {
+       "function": "minecraft:set_count",
+       "count": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 4
+       }
+      }
+     ]
+    },
+    {
+     "type": "minecraft:item",
+     "name": "deepworld:steel_ingot",
+     "weight": 3
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:map",
+     "weight": 3
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:diamond",
+     "weight": 1
+    }
+   ]
+  }
+ ]
+}

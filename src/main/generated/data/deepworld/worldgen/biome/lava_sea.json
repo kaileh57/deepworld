@@ -81,7 +81,9 @@
    "deepworld:lava_sea/ore_molten_mantle_iron",
    "deepworld:lava_sea/ore_molten_natron"
   ],
-  [],
+  [
+   "deepworld:landmark/bridge_pylons"
+  ],
   [],
   [
    "deepworld:forage/ember_root_sprouts"

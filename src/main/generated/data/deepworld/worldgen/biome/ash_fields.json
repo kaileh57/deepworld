@@ -74,7 +74,9 @@
    "deepworld:ash_fields/ore_molten_mantle_iron",
    "deepworld:ash_fields/ore_molten_natron"
   ],
-  [],
+  [
+   "deepworld:landmark/bridge_pylons"
+  ],
   [],
   [
    "deepworld:ash_fields/basalt_blobs",

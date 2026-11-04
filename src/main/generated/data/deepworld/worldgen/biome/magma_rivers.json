@@ -82,7 +82,9 @@
    "deepworld:magma_rivers/ore_mantle_debris",
    "deepworld:magma_rivers/ore_mantle_gold"
   ],
-  [],
+  [
+   "deepworld:landmark/mantle_forge"
+  ],
   [],
   [
    "deepworld:forage/forge_fig_bush"

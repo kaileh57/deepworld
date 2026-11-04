@@ -53,7 +53,9 @@
    "deepworld:bone_yards/ore_gloom_redstone",
    "deepworld:bone_yards/ore_gloom_cobalt"
   ],
-  [],
+  [
+   "deepworld:landmark/sculk_shrine"
+  ],
   [],
   [
    "deepworld:forage/hush_moss_tuft"

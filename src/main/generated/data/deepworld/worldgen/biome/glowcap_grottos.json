@@ -52,7 +52,9 @@
    "deepworld:glowcap_grottos/ore_crystal_lapis",
    "deepworld:glowcap_grottos/ore_crystal_resonant"
   ],
-  [],
+  [
+   "deepworld:landmark/crystal_cathedral"
+  ],
   [],
   [
    "deepworld:glowcap_grottos/glow_lichen",

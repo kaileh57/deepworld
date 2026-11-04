@@ -54,7 +54,9 @@
    "deepworld:fossil_beds/ore_trench_coal",
    "deepworld:fossil_beds/ore_trench_rock_salt"
   ],
-  [],
+  [
+   "deepworld:landmark/fossil_dig"
+  ],
   [],
   [],
   []

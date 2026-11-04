@@ -44,6 +44,20 @@ public final class SurveyCommand {
 						.then(Commands.argument("radius", IntegerArgumentType.integer(0, 8))
 							.executes(context -> survey(context, IntegerArgumentType.getInteger(context, "chunk_x"), IntegerArgumentType.getInteger(context, "chunk_z"), IntegerArgumentType.getInteger(context, "radius")))))))
 			.then(Commands.literal("fortress").executes(SurveyCommand::fortress))
+			.then(Commands.literal("landmarks").executes(context -> {
+				java.util.Map<String, Integer> counts = new java.util.TreeMap<>();
+				for (var entry : dev.kaileh57.deepworld.exploration.Landmarks.all(context.getSource().getServer())) {
+					counts.merge(entry.kind(), 1, Integer::sum);
+				}
+				String text = "landmarks " + counts;
+				try {
+					Files.writeString(context.getSource().getServer().getServerDirectory().resolve("deepworld_landmarks.txt"), text + "\n");
+				} catch (Exception error) {
+					return 0;
+				}
+				context.getSource().sendSuccess(() -> Component.literal(text), false);
+				return 1;
+			}))
 			.then(Commands.literal("map")
 				.then(Commands.argument("x", IntegerArgumentType.integer())
 					.then(Commands.argument("z", IntegerArgumentType.integer())

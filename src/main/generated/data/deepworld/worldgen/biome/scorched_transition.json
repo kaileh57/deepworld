@@ -69,7 +69,9 @@
    "deepworld:scorched_transition/ore_hellmouth_quartz",
    "deepworld:scorched_transition/ore_hellmouth_gold"
   ],
-  [],
+  [
+   "deepworld:landmark/the_gate"
+  ],
   [],
   [
    "deepworld:scorched_transition/glowstone_extra",

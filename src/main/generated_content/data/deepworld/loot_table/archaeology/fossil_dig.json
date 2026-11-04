@@ -1,0 +1,40 @@
+{
+ "type": "minecraft:archaeology",
+ "pools": [
+  {
+   "rolls": 1,
+   "entries": [
+    {
+     "type": "minecraft:item",
+     "name": "deepworld:fossil_marrow",
+     "weight": 6
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:bone",
+     "weight": 6
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:archer_pottery_sherd",
+     "weight": 1
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:skull_pottery_sherd",
+     "weight": 1
+    },
+    {
+     "type": "minecraft:item",
+     "name": "minecraft:iron_pickaxe",
+     "weight": 2
+    },
+    {
+     "type": "minecraft:item",
+     "name": "deepworld:rock_salt",
+     "weight": 4
+    }
+   ]
+  }
+ ]
+}

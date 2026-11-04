@@ -82,7 +82,9 @@
    "deepworld:blackstone_forges/ore_mantle_debris",
    "deepworld:blackstone_forges/ore_mantle_gold"
   ],
-  [],
+  [
+   "deepworld:landmark/mantle_forge"
+  ],
   [],
   [
    "deepworld:blackstone_forges/blackstone_blobs",
