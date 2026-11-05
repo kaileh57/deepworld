@@ -6,8 +6,6 @@ import dev.kaileh57.deepworld.DeepWorld;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.saveddata.SavedDataType;
@@ -60,9 +58,6 @@ public class Records extends SavedData {
 		}
 		records.best.put(counter, new Entry(name, value));
 		records.setDirty();
-		if (current != null && !current.name().equals(name)) {
-			server.getPlayerList().broadcastSystemMessage(Component.literal(name + " now holds the record for " + tracked.get(counter) + ": " + value).withStyle(ChatFormatting.GOLD), false);
-		}
 		return true;
 	}
 }

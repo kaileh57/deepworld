@@ -77,7 +77,7 @@ public final class Exploration {
 				}
 				stack.shrink(4);
 				int drained = drain(server_level, pos, 22);
-				server_player.sendSystemMessage(Component.literal("the pump shudders back to life. " + drained + " blocks of water drained."));
+				dev.kaileh57.deepworld.hud.Hud.notice(server_player, Component.literal("the pump shudders back to life. " + drained + " blocks drained"));
 				Logbook.add(server_player, "repaired a drowned pump station");
 				forget(server_level.getServer(), "pump", pos);
 				return InteractionResult.SUCCESS_SERVER;
@@ -154,7 +154,7 @@ public final class Exploration {
 			level.destroyBlock(pos, false);
 		}
 		level.playSound(null, origin, SoundEvents.AMETHYST_BLOCK_RESONATE, SoundSource.BLOCKS, 2.0F, 0.6F);
-		player.sendSystemMessage(Component.literal("the crystals ring together and the vault wall shatters").withStyle(ChatFormatting.LIGHT_PURPLE));
+		dev.kaileh57.deepworld.hud.Hud.notice(player, Component.literal("the crystals ring together and the vault wall shatters").withStyle(ChatFormatting.LIGHT_PURPLE));
 		Logbook.add(player, "opened the crystal cathedral vault");
 		forget(level.getServer(), "cathedral", origin);
 	}

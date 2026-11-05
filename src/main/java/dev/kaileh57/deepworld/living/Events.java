@@ -5,6 +5,8 @@ import com.google.gson.JsonObject;
 import dev.kaileh57.deepworld.content.Content;
 import dev.kaileh57.deepworld.cooking.Meals;
 import dev.kaileh57.deepworld.hazard.Hazards;
+import dev.kaileh57.deepworld.hud.Hud;
+import dev.kaileh57.deepworld.hud.Shake;
 import dev.kaileh57.deepworld.world.Layers;
 import dev.kaileh57.deepworld.world.ServerState;
 import java.util.ArrayList;
@@ -12,10 +14,9 @@ import java.util.List;
 import java.util.Optional;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.game.ClientboundSetSubtitleTextPacket;
-import net.minecraft.network.protocol.game.ClientboundSetTitleTextPacket;
 import net.minecraft.resources.Identifier;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
@@ -24,6 +25,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 
 public final class Events {
@@ -84,15 +86,15 @@ public final class Events {
 		state.breakthrough_player = name;
 		state.log(name + " broke through to the nether stratum");
 		state.setDirty();
-		Component title = Component.literal("breakthrough").withStyle(ChatFormatting.GOLD);
-		Component subtitle = Component.literal(name + " reached the nether stratum").withStyle(ChatFormatting.GRAY);
+		Hud.title_all(server, Component.literal("breakthrough").withStyle(ChatFormatting.GOLD), Component.literal(name + " reached the nether stratum").withStyle(ChatFormatting.GRAY));
 		for (ServerPlayer other : server.getPlayerList().getPlayers()) {
-			other.connection.send(new ClientboundSetTitleTextPacket(title));
-			other.connection.send(new ClientboundSetSubtitleTextPacket(subtitle));
 			other.level().playSound(null, other.blockPosition(), SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, SoundSource.PLAYERS, 1.0F, 0.6F);
 		}
-		server.getPlayerList().broadcastSystemMessage(Component.literal(name + " is the first to break through to the nether stratum.").withStyle(ChatFormatting.GOLD), false);
 		dev.kaileh57.deepworld.exploration.Logbook.add(player, "first to break through to the nether stratum");
+	}
+
+	public static boolean underground(ServerLevel level, BlockPos pos) {
+		return pos.getY() < level.getHeight(Heightmap.Types.OCEAN_FLOOR, pos.getX(), pos.getZ()) - 12 && !level.canSeeSky(pos);
 	}
 
 	public static int tremor(ServerLevel level, ServerPlayer center) {
@@ -103,30 +105,26 @@ public final class Events {
 		RandomSource random = level.getRandom();
 		List<ServerPlayer> near = new ArrayList<>();
 		for (ServerPlayer player : level.players()) {
-			if (layer.contains(player.getBlockY())) {
+			if (layer.contains(player.getBlockY()) && !player.isSpectator()) {
 				near.add(player);
 			}
 		}
-		for (ServerPlayer player : near) {
-			player.sendSystemMessage(Component.literal("a tremor rolls through the " + layer.name()).withStyle(ChatFormatting.GOLD));
-			level.playSound(null, player.blockPosition(), SoundEvents.WARDEN_EMERGE, SoundSource.AMBIENT, 1.2F, 0.4F);
-		}
-		int caves = 0;
 		if (Hazards.config().cave_ins) {
 			for (ServerPlayer player : near) {
 				for (int attempt = 0; attempt < 6; attempt++) {
 					BlockPos pos = player.blockPosition().offset(random.nextInt(25) - 12, 0, random.nextInt(25) - 12);
-					if (level.getBlockState(pos).isAir() && !level.getBlockState(pos.below()).isAir()) {
-						caves += Hazards.maybe_cave_in(level, pos, 0.25F) > 0 ? 1 : 0;
+					if (underground(level, pos) && level.getBlockState(pos).isAir() && !level.getBlockState(pos.below()).isAir()) {
+						Hazards.maybe_cave_in(level, pos, 0.25F);
 					}
 				}
 			}
 		}
-		int ore = seam(level, center.blockPosition(), layer, random, 16);
-		if (ore > 0) {
-			for (ServerPlayer player : near) {
-				player.sendSystemMessage(Component.literal("the shaking opened a fresh seam nearby").withStyle(ChatFormatting.GRAY));
-			}
+		int ore = underground(level, center.blockPosition()) ? seam(level, center.blockPosition(), layer, random, 16) : 0;
+		Component text = Component.literal("a tremor rolls through the " + layer.name() + (ore > 0 ? ". a fresh seam opened nearby" : "")).withStyle(ChatFormatting.GOLD);
+		for (ServerPlayer player : near) {
+			Shake.start(player, 50, 3.0F);
+			level.playSound(null, player.blockPosition(), SoundEvents.WARDEN_EMERGE, SoundSource.AMBIENT, 1.2F, 0.4F);
+			Hud.notice(player, text);
 		}
 		ServerState.get(level.getServer()).log("a tremor shook the " + layer.name());
 		return ore;
@@ -139,13 +137,13 @@ public final class Events {
 		Block ore = BuiltInRegistries.BLOCK.getValue(Identifier.parse(layer.ores().get(random.nextInt(layer.ores().size()))));
 		for (int attempt = 0; attempt < 20; attempt++) {
 			BlockPos start = around.offset(random.nextInt(spread * 2 + 1) - spread, random.nextInt(spread + 1) - spread / 2, random.nextInt(spread * 2 + 1) - spread);
-			if (!layer.contains(start.getY()) || !solid_stone(level.getBlockState(start))) {
+			if (!layer.contains(start.getY()) || !buried(level, start)) {
 				continue;
 			}
 			int placed = 0;
 			BlockPos.MutableBlockPos pos = start.mutable();
 			for (int step = 0; step < 10; step++) {
-				if (solid_stone(level.getBlockState(pos))) {
+				if (buried(level, pos)) {
 					level.setBlock(pos, ore.defaultBlockState(), Block.UPDATE_CLIENTS);
 					placed++;
 				}
@@ -156,6 +154,19 @@ public final class Events {
 			}
 		}
 		return 0;
+	}
+
+	private static boolean buried(ServerLevel level, BlockPos pos) {
+		if (!solid_stone(level.getBlockState(pos)) || !underground(level, pos)) {
+			return false;
+		}
+		for (Direction direction : Direction.values()) {
+			BlockState next = level.getBlockState(pos.relative(direction));
+			if (next.isAir() || !next.getFluidState().isEmpty()) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	private static boolean solid_stone(BlockState state) {
@@ -179,7 +190,7 @@ public final class Events {
 		state.goal_progress = 0;
 		state.goal_ends = (week + 1L) * week_ms;
 		state.setDirty();
-		server.getPlayerList().broadcastSystemMessage(Component.literal("this week's server goal: " + goal.get("name").getAsString()).withStyle(ChatFormatting.GOLD), false);
+		Hud.notice_all(server, Component.literal("new weekly goal: " + goal.get("name").getAsString()).withStyle(ChatFormatting.GOLD));
 	}
 
 	public static void goal_add(MinecraftServer server, String counter, int amount) {
@@ -196,7 +207,7 @@ public final class Events {
 			state.bonus_until = System.currentTimeMillis() + week_ms;
 			Meals.temp_bonus = true;
 			state.log("the server goal was met");
-			server.getPlayerList().broadcastSystemMessage(Component.literal("server goal met. everyone gets an extra meal slot for a week.").withStyle(ChatFormatting.GOLD), false);
+			Hud.notice_all(server, Component.literal("weekly goal met. an extra meal slot for a week").withStyle(ChatFormatting.GOLD));
 		}
 	}
 

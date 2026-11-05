@@ -132,6 +132,14 @@ public final class Living {
 			saved.forEach((pos, state) -> level.setBlock(pos, state, 2));
 			return placed > 0 && ores == placed ? null : "placed " + placed + " found " + ores + " in " + layer.name();
 		});
+		SelfTest.add("tremors leave the surface alone", server -> {
+			ServerLevel level = server.overworld();
+			BlockPos column = SelfTest.test_pos(level, 32);
+			int top = level.getHeight(net.minecraft.world.level.levelgen.Heightmap.Types.OCEAN_FLOOR, column.getX(), column.getZ());
+			boolean surface = Events.underground(level, new BlockPos(column.getX(), top - 2, column.getZ()));
+			boolean deep = Events.underground(level, new BlockPos(column.getX(), top - 80, column.getZ()));
+			return !surface && deep ? null : "surface " + surface + " deep " + deep + " top " + top;
+		});
 		SelfTest.add("wiki links resolve names", server -> {
 			String dish = CookData.dishes.keySet().iterator().next();
 			String block = Content.blocks.keySet().iterator().next();

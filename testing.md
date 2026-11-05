@@ -100,14 +100,15 @@ each one can be turned off in `config/deepworld.json` (cave_ins, firedamp, cold_
 - feast table (dark oak slabs over fences): put up to 10 dishes in, hit serve. everyone within 8 blocks gets one "feast" meal with every buff merged, lasting 25% longer, plus 1 absorption heart per 4 dishes.
 - tasting menu: serve 10 dishes that between them use a signature ingredient from every layer (list in `tools/content/parts/economy.json`, `tasting_layers`). the first time, everyone gets a permanent extra meal slot.
 - 72 more dishes, 125 total.
-- record board (lectern recipe): server bests for depth, dishes, feasts, landmarks, pages, commissions, forging and more. new holders are announced.
-- breakthrough: the first player below y=0 gets a title for everyone and a log entry. only fires once per world.
-- tremors: every 30-60 minutes a random layer with players in it shakes. wide unsupported rooms may cave in, and a fresh ore seam appears nearby. off with `tremors` in the config.
+- record board (lectern recipe): server bests for depth, dishes, feasts, landmarks, pages, commissions, forging and more. nothing is announced.
+- breakthrough: the first player below y=0 puts a title on everyone's screen. only fires once per world.
+- tremors: every 30-60 minutes a random layer with players in it shakes. your camera shakes for 2-3 seconds. wide unsupported rooms may cave in, and a fresh ore seam appears inside nearby rock. tremors only touch blocks 12+ below the surface and out of the sky. off with `tremors` in the config.
 - weekly goal: one shared counter per real week (shown on the record board). meeting it gives everyone an extra meal slot for a week.
 - `/wiki` links the held item's page. `/wiki <name>` links any item, block or dish. set `wiki_url` in `config/deepworld.json`.
 - live data: the server serves `http://<host>:8125/live.json` (online players and their layer, records, commissions, goal, recent events) and writes `deepworld_live.json`. the wiki's server page reads it. `live_port: 0` turns it off.
 - wiki: `cd wiki && npm run build && npm run preview`, then open `localhost:4321`. the journal page hides each page behind a spoiler.
-- simplified: shops aren't listed on the live page. tremors don't shake the camera. the weekly goal resets on real-time weeks, even if the server is off.
+- messages: the mod never posts to chat on its own. notices go on the action bar for 4 seconds, and big moments (milestones, breakthrough, tasting menu) are titles. only things you ask for (survey kit, trait check) answer in chat.
+- simplified: shops aren't listed on the live page. the weekly goal resets on real-time weeks, even if the server is off.
 
 ## not tested
 
@@ -116,5 +117,5 @@ each one can be turned off in `config/deepworld.json` (cave_ins, firedamp, cold_
 - the resource pack is generated and auto-hosted by polymer. check that it downloads on join.
 - worldgen checks ran on the seed `deepworld`. the deployed server uses a random seed, so its caves and landmarks weren't checked.
 - the live port is open to anyone who can reach it and shows player names. fine for a private server.
-- record holders are announced every time they change, so two players racing for depth will spam chat a bit.
-- tremor seams can turn placed plain stone into ore. cobble and bricks are safe.
+- tremor seams only replace stone with no air or water next to it, so walls you can see never change.
+- the tremor camera shake was never seen on a real client. it nudges your view each tick and puts it back, so mouse aim survives.

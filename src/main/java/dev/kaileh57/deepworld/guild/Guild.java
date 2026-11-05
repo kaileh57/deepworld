@@ -113,7 +113,7 @@ public final class Guild {
 			next.milestones().add(milestone.id());
 			player.setAttached(state, next);
 			Discipline discipline = disciplines.get(milestone.discipline());
-			player.level().getServer().getPlayerList().broadcastSystemMessage(Component.literal(player.getGameProfile().name() + " earned ").withStyle(ChatFormatting.GRAY).append(Component.literal(milestone.name()).withStyle(ChatFormatting.GOLD)).append(Component.literal(" (" + (discipline == null ? milestone.discipline() : discipline.name()) + ")").withStyle(ChatFormatting.GRAY)), false);
+			dev.kaileh57.deepworld.hud.Hud.title(player, Component.literal(milestone.name()).withStyle(ChatFormatting.GOLD), Component.literal(discipline == null ? milestone.discipline() : discipline.name()).withStyle(ChatFormatting.GRAY));
 			player.level().playSound(null, player.blockPosition(), SoundEvents.UI_TOAST_CHALLENGE_COMPLETE, SoundSource.PLAYERS, 0.6F, 1.0F);
 			Rewards.grant(player, milestone);
 		}

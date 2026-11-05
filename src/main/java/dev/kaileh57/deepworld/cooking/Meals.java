@@ -140,7 +140,7 @@ public final class Meals {
 			ItemStack tool = player.getItemInHand(InteractionHand.OFF_HAND);
 			if (tool.isDamageableItem()) {
 				tool.setDamageValue(0);
-				player.sendSystemMessage(Component.literal("your " + tool.getHoverName().getString() + " feels new"));
+				Hud.notice(player, Component.literal("your " + tool.getHoverName().getString() + " feels new"));
 			}
 		}
 	}

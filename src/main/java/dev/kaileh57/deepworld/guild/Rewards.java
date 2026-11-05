@@ -17,7 +17,7 @@ public final class Rewards {
 				state.bonus_meal_slots++;
 				state.setDirty();
 				Meals.server_bonus_slots = state.bonus_meal_slots;
-				player.level().getServer().getPlayerList().broadcastSystemMessage(Component.literal("everyone gains a fourth meal slot"), false);
+				dev.kaileh57.deepworld.hud.Hud.notice_all(player.level().getServer(), Component.literal("everyone gains a fourth meal slot").withStyle(net.minecraft.ChatFormatting.GOLD));
 			}
 		}
 	}

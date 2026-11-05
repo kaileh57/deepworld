@@ -100,7 +100,7 @@ public class Landmarks extends SavedData {
 				Guild.add(player, key, 1);
 				Guild.add(player, "landmarks_found", 1);
 				Logbook.add(player, "found the " + display(entry.kind()) + " at y " + entry.pos().getY());
-				player.sendSystemMessage(Component.literal("landmark found: " + display(entry.kind())).withStyle(ChatFormatting.GOLD));
+				dev.kaileh57.deepworld.hud.Hud.notice(player, Component.literal("landmark found: " + display(entry.kind())).withStyle(ChatFormatting.GOLD));
 			}
 		}
 	}

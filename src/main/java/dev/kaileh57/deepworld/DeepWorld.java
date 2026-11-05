@@ -81,11 +81,15 @@ public class DeepWorld implements ModInitializer {
 			Settlements.tick(server, tick);
 			dev.kaileh57.deepworld.living.Events.tick(server, tick);
 			dev.kaileh57.deepworld.living.Live.tick(server, tick);
+			dev.kaileh57.deepworld.hud.Shake.tick(server);
 			if (tick % 20 == 0) {
 				Hud.flush(server);
 			}
 		});
-		ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> Hud.forget(handler.getPlayer().getUUID()));
+		ServerPlayConnectionEvents.DISCONNECT.register((handler, server) -> {
+			Hud.forget(handler.getPlayer().getUUID());
+			dev.kaileh57.deepworld.hud.Shake.forget(handler.getPlayer().getUUID());
+		});
 		DataExport.register();
 		CommandRegistrationCallback.EVENT.register((dispatcher, registry_access, environment) -> {
 			SurveyCommand.register(dispatcher);

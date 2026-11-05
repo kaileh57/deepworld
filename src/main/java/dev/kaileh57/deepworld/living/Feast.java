@@ -106,7 +106,7 @@ public final class Feast {
 		}
 		for (ServerPlayer guest : guests) {
 			Meals.feast(guest, buffs, seconds, hearts);
-			guest.sendSystemMessage(Component.literal("you share a feast of " + ids.size() + " dishes").withStyle(ChatFormatting.GOLD));
+			dev.kaileh57.deepworld.hud.Hud.notice(guest, Component.literal("you share a feast of " + ids.size() + " dishes").withStyle(ChatFormatting.GOLD));
 			Logbook.add(guest, "shared a feast of " + ids.size() + " dishes");
 		}
 		level.playSound(null, table, SoundEvents.PLAYER_BURP, SoundSource.PLAYERS, 1.0F, 1.0F);
@@ -120,7 +120,7 @@ public final class Feast {
 				Meals.server_bonus_slots = state.bonus_meal_slots;
 				state.log(host.getGameProfile().name() + " served the tasting menu");
 				state.setDirty();
-				level.getServer().getPlayerList().broadcastSystemMessage(Component.literal(host.getGameProfile().name() + " served the ten-course tasting menu. everyone gains a meal slot.").withStyle(ChatFormatting.GOLD), false);
+				dev.kaileh57.deepworld.hud.Hud.title_all(level.getServer(), Component.literal("tasting menu").withStyle(ChatFormatting.GOLD), Component.literal(host.getGameProfile().name() + " served it. everyone gains a meal slot").withStyle(ChatFormatting.GRAY));
 			}
 			return "the tasting menu is complete";
 		}

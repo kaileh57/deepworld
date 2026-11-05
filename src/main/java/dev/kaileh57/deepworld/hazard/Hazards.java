@@ -145,7 +145,7 @@ public final class Hazards {
 	private static void ignite(ServerLevel level, BlockPos pos) {
 		level.explode(null, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 3.5F, true, Level.ExplosionInteraction.BLOCK);
 		for (ServerPlayer player : level.getEntitiesOfClass(ServerPlayer.class, new AABB(pos).inflate(16))) {
-			player.sendSystemMessage(Component.literal("firedamp! the gas caught.").withStyle(ChatFormatting.RED));
+			dev.kaileh57.deepworld.hud.Hud.notice(player, Component.literal("firedamp! the gas caught.").withStyle(ChatFormatting.RED));
 		}
 	}
 
@@ -217,7 +217,7 @@ public final class Hazards {
 			}
 		}
 		for (ServerPlayer player : level.getEntitiesOfClass(ServerPlayer.class, new AABB(pos).inflate(12))) {
-			player.sendSystemMessage(Component.literal("cave-in! shore up wide ceilings with timber or iron.").withStyle(ChatFormatting.GOLD));
+			dev.kaileh57.deepworld.hud.Hud.notice(player, Component.literal("cave-in! shore up wide ceilings with timber or iron").withStyle(ChatFormatting.GOLD));
 		}
 		return dropped;
 	}
