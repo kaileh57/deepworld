@@ -102,7 +102,7 @@ each one can be turned off in `config/deepworld.json` (cave_ins, firedamp, cold_
 - 72 more dishes, 125 total.
 - record board (lectern recipe): server bests for depth, dishes, feasts, landmarks, pages, commissions, forging and more. nothing is announced.
 - breakthrough: the first player below y=0 puts a title on everyone's screen. only fires once per world.
-- tremors: every 30-60 minutes a random layer with players in it shakes. your camera shakes for 2-3 seconds. wide unsupported rooms may cave in, and a fresh ore seam appears inside nearby rock. tremors only touch blocks 12+ below the surface and out of the sky. off with `tremors` in the config.
+- tremors: every 30-60 minutes a random layer with players in it shakes. your camera shakes for 2-3 seconds. wide unsupported rooms may cave in, and a fresh ore seam appears inside nearby rock. tremors only touch blocks 12+ below the surface and out of the sky. off with `tremors` in the config. `/dw tremor` starts one where you stand.
 - weekly goal: one shared counter per real week (shown on the record board). meeting it gives everyone an extra meal slot for a week.
 - `/wiki` links the held item's page. `/wiki <name>` links any item, block or dish. set `wiki_url` in `config/deepworld.json`.
 - live data: the server serves `http://<host>:8125/live.json` (online players and their layer, records, commissions, goal, recent events) and writes `deepworld_live.json`. the wiki's server page reads it. `live_port: 0` turns it off.

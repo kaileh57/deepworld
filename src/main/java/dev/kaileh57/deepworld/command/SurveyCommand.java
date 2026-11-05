@@ -44,6 +44,15 @@ public final class SurveyCommand {
 						.then(Commands.argument("radius", IntegerArgumentType.integer(0, 8))
 							.executes(context -> survey(context, IntegerArgumentType.getInteger(context, "chunk_x"), IntegerArgumentType.getInteger(context, "chunk_z"), IntegerArgumentType.getInteger(context, "radius")))))))
 			.then(Commands.literal("fortress").executes(SurveyCommand::fortress))
+			.then(Commands.literal("tremor").executes(context -> {
+				net.minecraft.server.level.ServerPlayer player = context.getSource().getPlayerOrException();
+				if (dev.kaileh57.deepworld.world.Layers.at(player.getBlockY()) == null) {
+					context.getSource().sendFailure(Component.literal("tremors only happen below y 1100"));
+					return 0;
+				}
+				dev.kaileh57.deepworld.living.Events.tremor(context.getSource().getLevel(), player);
+				return 1;
+			}))
 			.then(Commands.literal("landmarks").executes(context -> {
 				java.util.Map<String, Integer> counts = new java.util.TreeMap<>();
 				for (var entry : dev.kaileh57.deepworld.exploration.Landmarks.all(context.getSource().getServer())) {
