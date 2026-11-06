@@ -25,7 +25,7 @@ coal seams, y 800 to 900. some pockets hold gas. a torch, lantern, campfire or f
 
 ## echoes
 
-y 700 to 800. mining calls monsters from 40 blocks away unless you're hushed (hushed food or wool-wrapped boots) or using an echo-shard tool.
+y 700 to 800. mining calls monsters from 40 blocks away unless you're hushed (hushed food or wool-wrapped boots) or mining with an echo shard socketed in your tool.
 
 ## fumes
 
@@ -41,7 +41,7 @@ y 300 to 450. torches burn out after 5 minutes. amethyst lamps don't.
 
 ## sound
 
-hushed ii food or an echo-shard tool keeps sculk sensors and wardens from hearing you.
+hushed ii food keeps sculk sensors and wardens from hearing you. an echo shard socketed in your tool hides the sound of mining.
 
 ## tremors
 

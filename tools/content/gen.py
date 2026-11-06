@@ -238,6 +238,7 @@ def main():
         pools = []
         if entries:
             pools.append({"rolls": 1, "entries": entries})
+        pools.append({"rolls": 1, "entries": [{"type": "minecraft:item", "name": "deepworld:cooking_notes", "functions": [{"function": "minecraft:set_custom_data", "tag": {"deepworld": {"tier": landmark.get("note_tier", 2)}}}]}]})
         pools.append({"rolls": {"type": "minecraft:uniform", "min": 3, "max": 6}, "entries": landmark.get("loot", [
             {"type": "minecraft:item", "name": "minecraft:torch", "weight": 10, "functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": 3, "max": 10}}]},
             {"type": "minecraft:item", "name": "deepworld:salt", "weight": 8, "functions": [{"function": "minecraft:set_count", "count": {"type": "minecraft:uniform", "min": 2, "max": 6}}]},

@@ -39,7 +39,7 @@ a feast table takes up to 10 dishes. hit serve and everyone within 8 blocks gets
 
 ## tasting menu
 
-serve 10 dishes at a feast that between them use a signature ingredient from every layer. each [layer page](/tools/layers/) lists its signature ingredients.
+serve 10 dishes at a feast that between them use a signature ingredient from every layer. each layer page lists its signature ingredients. start at the [layer explorer](/tools/layers/).
 
 ## generic dishes
 

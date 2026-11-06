@@ -2,6 +2,7 @@
  "replace": true,
  "values": [
   "minecraft:butcher/4/dried_kelp_block_emerald",
-  "deepworld:butcher/4/emerald_blaze_spice"
+  "deepworld:butcher/4/emerald_blaze_spice",
+  "deepworld:butcher/4/emerald_notes_4"
  ]
 }

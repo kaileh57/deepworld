@@ -169,6 +169,16 @@
 			"id": "insulated_hamper",
 			"name": "insulated hamper",
 			"base": "minecraft:paper"
+		},
+		{
+			"id": "cooking_notes",
+			"name": "cooking notes",
+			"base": "minecraft:paper"
+		},
+		{
+			"id": "cookbook",
+			"name": "cookbook",
+			"base": "minecraft:book"
 		}
 	],
 	"ingredients": {
@@ -1928,6 +1938,14 @@
 				"deepworld:flour",
 				"deepworld:flour",
 				"deepworld:butter"
+			]
+		},
+		{
+			"result": "deepworld:cookbook",
+			"count": 1,
+			"ingredients": [
+				"minecraft:book",
+				"minecraft:bowl"
 			]
 		}
 	],

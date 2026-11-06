@@ -52,6 +52,17 @@ public final class ExtraTests {
 			int melted = CookData.tag(FoodContainers.contents(hamper).get(1)).getIntOr("fresh", -1);
 			return iced == -1 && melted > 0 ? null : "iced " + iced + " melted " + melted;
 		});
+		SelfTest.add("cooking notes teach recipes up to their tier", server -> {
+			net.fabricmc.fabric.api.entity.FakePlayer cook = net.fabricmc.fabric.api.entity.FakePlayer.get(server.overworld());
+			cook.setAttached(dev.kaileh57.deepworld.cooking.Cookbook.learned, new java.util.ArrayList<>());
+			int before = dev.kaileh57.deepworld.cooking.Cookbook.known(cook).size();
+			CookData.Dish first = dev.kaileh57.deepworld.cooking.Cookbook.learn_random(cook, 1);
+			boolean knows = first != null && dev.kaileh57.deepworld.cooking.Cookbook.knows(cook, first.id());
+			int after = dev.kaileh57.deepworld.cooking.Cookbook.known(cook).size();
+			String name = dev.kaileh57.deepworld.cooking.Cookbook.ingredient_name("deepworld:dish/bone_broth") + "|" + dev.kaileh57.deepworld.cooking.Cookbook.ingredient_name("minecraft:potato");
+			cook.setAttached(dev.kaileh57.deepworld.cooking.Cookbook.learned, new java.util.ArrayList<>());
+			return knows && first.tier() <= 1 && after == before + 1 && name.equals("bone broth|potato") ? null : "first " + (first == null ? "none" : first.id() + " t" + first.tier()) + " " + before + "->" + after + " " + name;
+		});
 		SelfTest.add("world border is the column width", server -> {
 			double size = server.overworld().getWorldBorder().getSize();
 			return size <= DeepWorld.world_border ? null : "border " + size;

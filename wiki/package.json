@@ -6,7 +6,8 @@
 		"gen": "node scripts/gen.mjs",
 		"dev": "node scripts/gen.mjs && astro dev",
 		"build": "node scripts/gen.mjs && astro build",
-		"preview": "astro preview"
+		"preview": "astro preview",
+		"check": "node scripts/check_links.mjs"
 	},
 	"dependencies": {
 		"@astrojs/starlight": "0.37.7",

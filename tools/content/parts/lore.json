@@ -128,7 +128,8 @@
 				1005,
 				1090
 			],
-			"rarity": 24
+			"rarity": 24,
+			"note_tier": 1
 		},
 		{
 			"kind": "drowned_pump_station",
@@ -140,7 +141,8 @@
 				905,
 				990
 			],
-			"rarity": 28
+			"rarity": 28,
+			"note_tier": 2
 		},
 		{
 			"kind": "fossil_dig",
@@ -153,7 +155,8 @@
 				805,
 				890
 			],
-			"rarity": 24
+			"rarity": 24,
+			"note_tier": 2
 		},
 		{
 			"kind": "crystal_cathedral",
@@ -166,7 +169,8 @@
 				705,
 				790
 			],
-			"rarity": 40
+			"rarity": 40,
+			"note_tier": 3
 		},
 		{
 			"kind": "sulfur_works",
@@ -179,7 +183,8 @@
 				605,
 				690
 			],
-			"rarity": 28
+			"rarity": 28,
+			"note_tier": 3
 		},
 		{
 			"kind": "bridge_pylons",
@@ -192,7 +197,8 @@
 				492,
 				500
 			],
-			"rarity": 30
+			"rarity": 30,
+			"note_tier": 3
 		},
 		{
 			"kind": "sculk_shrine",
@@ -205,7 +211,8 @@
 				305,
 				440
 			],
-			"rarity": 28
+			"rarity": 28,
+			"note_tier": 4
 		},
 		{
 			"kind": "mantle_forge",
@@ -218,7 +225,8 @@
 				205,
 				290
 			],
-			"rarity": 32
+			"rarity": 32,
+			"note_tier": 4
 		},
 		{
 			"kind": "the_gate",
@@ -231,7 +239,8 @@
 				58,
 				140
 			],
-			"rarity": 60
+			"rarity": 60,
+			"note_tier": 4
 		}
 	]
 }

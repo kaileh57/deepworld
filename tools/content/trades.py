@@ -26,14 +26,21 @@ def trade(wants, wants_count, gives, gives_count, max_uses=12, xp=5):
     return entry
 
 
+def notes(tier, price):
+    entry = trade("minecraft:emerald", price, "deepworld:cooking_notes", 1, max_uses=4)
+    entry["gives"]["components"] = {"minecraft:custom_data": {"deepworld": {"tier": tier}}}
+    return entry
+
+
 add = {
     ("farmer", 1): {"emerald_rice": trade("minecraft:emerald", 1, "deepworld:rice", 6), "emerald_beans": trade("minecraft:emerald", 1, "deepworld:beans", 6), "emerald_oats": trade("minecraft:emerald", 1, "deepworld:oats", 6)},
     ("farmer", 2): {"emerald_chili": trade("minecraft:emerald", 2, "deepworld:chili", 4), "emerald_mint": trade("minecraft:emerald", 2, "deepworld:mint", 4), "compost_emerald": trade("deepworld:compost", 8, "minecraft:emerald", 1)},
     ("farmer", 3): {"emerald_tea": trade("minecraft:emerald", 3, "deepworld:tea_leaves", 4), "emerald_coffee": trade("minecraft:emerald", 3, "deepworld:coffee_beans", 4)},
     ("butcher", 1): {"emerald_salt": trade("minecraft:emerald", 1, "deepworld:salt", 8)},
-    ("butcher", 2): {"emerald_butter": trade("minecraft:emerald", 2, "deepworld:butter", 4), "emerald_herbs": trade("minecraft:emerald", 1, "deepworld:herbs", 6)},
-    ("butcher", 3): {"emerald_ash_pepper": trade("minecraft:emerald", 4, "deepworld:ash_pepper", 3), "emerald_cheese": trade("minecraft:emerald", 3, "deepworld:cheese", 2)},
-    ("butcher", 4): {"emerald_blaze_spice": trade("minecraft:emerald", 8, "deepworld:blaze_spice", 2)},
+    ("butcher", 2): {"emerald_butter": trade("minecraft:emerald", 2, "deepworld:butter", 4), "emerald_herbs": trade("minecraft:emerald", 1, "deepworld:herbs", 6), "emerald_notes_1": notes(1, 3)},
+    ("butcher", 3): {"emerald_ash_pepper": trade("minecraft:emerald", 4, "deepworld:ash_pepper", 3), "emerald_cheese": trade("minecraft:emerald", 3, "deepworld:cheese", 2), "emerald_notes_2": notes(2, 5)},
+    ("butcher", 4): {"emerald_blaze_spice": trade("minecraft:emerald", 8, "deepworld:blaze_spice", 2), "emerald_notes_4": notes(4, 12)},
+    ("butcher", 5): {"emerald_notes_3": notes(3, 8)},
     ("toolsmith", 1): {"emerald_rail": trade("minecraft:emerald", 1, "minecraft:rail", 16)},
     ("toolsmith", 2): {"emerald_iron_pot": trade("minecraft:emerald", 6, "deepworld:iron_pot", 1), "emerald_iron_skillet": trade("minecraft:emerald", 5, "deepworld:iron_skillet", 1)},
     ("toolsmith", 3): {"emerald_powered_rail": trade("minecraft:emerald", 4, "minecraft:powered_rail", 6), "emerald_flux": trade("minecraft:emerald", 3, "deepworld:flux", 4)},

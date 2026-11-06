@@ -22,3 +22,13 @@ heated stations read the block below them.
 | ancient debris or a lit hellforge | extreme |
 
 each station has a top heat, so some dishes need an iron pot or a brick oven. the crock, drying rack and ice box need no heat.
+
+## pots
+
+| pot | slots | top heat |
+| --- | --- | --- |
+| clay pot | 4 | medium |
+| copper pot | 5 | medium |
+| iron pot | 5 | high |
+| enameled pot | 5 | high, never burns |
+| mantle pot | 6 | extreme |

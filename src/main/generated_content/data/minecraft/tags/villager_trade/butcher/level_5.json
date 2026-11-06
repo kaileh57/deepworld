@@ -1,0 +1,7 @@
+{
+ "replace": true,
+ "values": [
+  "minecraft:butcher/5/sweet_berries_emerald",
+  "deepworld:butcher/5/emerald_notes_3"
+ ]
+}

@@ -434,6 +434,16 @@
 			"name": "insulated_hamper",
 			"template": "hamper",
 			"palette": "insulated_hamper"
+		},
+		{
+			"name": "cookbook",
+			"template": "book",
+			"palette": "cookbook"
+		},
+		{
+			"name": "cooking_notes",
+			"template": "notes",
+			"palette": "cooking_notes"
 		}
 	],
 	"stones": [

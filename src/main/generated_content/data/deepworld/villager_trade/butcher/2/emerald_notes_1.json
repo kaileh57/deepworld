@@ -1,0 +1,19 @@
+{
+ "gives": {
+  "id": "deepworld:cooking_notes",
+  "components": {
+   "minecraft:custom_data": {
+    "deepworld": {
+     "tier": 1
+    }
+   }
+  }
+ },
+ "max_uses": 4,
+ "reputation_discount": 0.05,
+ "wants": {
+  "id": "minecraft:emerald",
+  "count": 3
+ },
+ "xp": 5
+}

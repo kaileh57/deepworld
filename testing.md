@@ -34,7 +34,10 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - stations: clay/iron/mantle pot, iron skillet, brick oven, smokehouse, crock, drying rack, still, ice box, spit, cutting board, mill, churn, mortar, cheese press. all craftable.
 - heated stations read the block below: campfire low, soul campfire soul, lit furnace or coal block medium, magma/lava high, ancient debris or lit hellforge extreme.
 - put 2-6 ingredients in, press cook. when the stick glows, click stir. hits raise quality, misses lower it. take the dish out within 30s or it burns.
-- known recipes make named dishes; anything else makes a generic one (hearty stew etc.). 43 dishes and drinks, see the wiki.
+- known recipes make named dishes; anything else makes a generic one (hearty stew etc.). any signature combination works even if you haven't learned it, and cooking it adds it to your cookbook.
+- cookbook (book + bowl): shows only the dishes you've cooked or learned, with station, ingredients and buffs.
+- cooking notes: found in every landmark chest and sold by the chef. read one to learn a recipe you don't know, up to its tier.
+- the chef: butchers are renamed chef by the resource pack and sell spices, butter, cheese and cooking notes.
 - three meal slots plus one drink slot, on the action bar. same family refreshes. natural regen is off; fresh food heals.
 - food in your inventory spoils while you're online, 10x faster below y=600. preserved food doesn't. spoiled food stays edible but makes you sick.
 - forage: wild rice/chili/mint/tea/coffee/beans/oats/herbs on the surface, one plant per cave layer (truffle, glowcap, ash pepper, ember root, hush moss, forge fig).
@@ -74,7 +77,7 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - smithing bench (cauldron on smithing table): quench with water, rendered fat (tough), brine (keen), lava (tempered), ghast tear cordial (pristine). socket resonant shard (ore hum), lapis (xp), diamond (durability), quartz (mining speed), echo shard.
 - alchemy: brewing stands take sulfur as fuel. still makes mint oil, ember extract, glowcap essence, tonics. rendered fat and brine from the pot. saltpeter drops from tuff.
 - charges: black powder (3x3x3, half drops), shaped (12-deep bore), mining (ore only), demolition (5x5x3, no drops). right-click a block, run.
-- simplified: no truffle pig, pack mule, cave goat. hardy/calm traits are minor. lava fishing isn't in (lava fish come from striders). echo shard socket has no effect yet.
+- simplified: no truffle pig, pack mule, cave goat. hardy/calm traits are minor. lava fishing isn't in (lava fish come from striders).
 
 ## 7 exploration
 
@@ -125,6 +128,8 @@ each one can be turned off in `config/deepworld.json` (cave_ins, firedamp, cold_
 - live data: the server serves `http://<host>:8125/live.json` (online players and their layer, records, commissions, shops, goal, recent events) and writes `deepworld_live.json`. the wiki's server page reads it. `live_port: 0` turns it off.
 - wiki: `cd wiki && npm run build && npm run preview`, then open `localhost:4321`. the journal page hides each page behind a spoiler.
 - messages: the mod never posts to chat on its own. notices go on the action bar for 4 seconds, and big moments (milestones, breakthrough, tasting menu) are titles. only things you ask for (survey kit, trait check) answer in chat.
+- wiki pages: every item, block, dish, layer, landmark and discipline, a guide per discipline, mechanics pages and the journal.
+- wiki tools: recipe browser (filter, "what can i make"), dish planner (ingredient tree), expedition planner, heat calculator, rail calculator, layer explorer.
 - simplified: the weekly goal resets on real-time weeks, even if the server is off.
 
 ## not tested

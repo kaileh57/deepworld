@@ -255,7 +255,7 @@ const layer_pages = layers.map((layer, index) => {
 		['layer', layer.number],
 		['y', `${layer.y[0]} to ${layer.y[1]}`],
 		['rock', layer.rock_name],
-		['pickaxe', tier_name(layer.needs)],
+		['pickaxe', layer.needs === 'wood' ? 'any' : tier_name(layer.needs)],
 		['heat', layer.heat],
 		['biomes', layer.biomes.map(plain).join(', ')],
 		['ores', layer.ores.length ? chips(layer.ores) : 'none'],
@@ -270,7 +270,7 @@ const layer_pages = layers.map((layer, index) => {
 	const nav = [above ? `up: [${above.name}](/ref/layers/${above.slug}/)` : 'up: the surface', below ? `down: [${below.name}](/ref/layers/${below.slug}/)` : 'down: nothing'].join(' · ');
 	const body = [
 		box(rows),
-		`y ${layer.y[0]} to ${layer.y[1]}. ${layer.rock_name ?? 'rock'} needs a ${tier_name(layer.needs)} pickaxe or better.`,
+		`y ${layer.y[0]} to ${layer.y[1]}. ${layer.needs === 'wood' ? `any pickaxe breaks ${layer.rock_name ?? 'the rock'}` : `${layer.rock_name ?? 'rock'} needs ${/^[aeiou]/.test(layer.needs) ? 'an' : 'a'} ${tier_name(layer.needs)} pickaxe or better`}.`,
 		layer.heat > 0 ? `heat ${layer.heat} of 5. see the [heat calculator](/tools/heat/).` : 'no heat here.',
 		'## mobs',
 		mob_lines,
@@ -289,7 +289,7 @@ const layer_pages = layers.map((layer, index) => {
 const landmark_notes = {
 	drowned_pump_station: 'right-click the dispenser with 4 copper ingots to drain the gallery around it.',
 	fossil_dig: 'brush the suspicious gravel.',
-	crystal_cathedral: 'tune the four note blocks to the right notes and the vault wall shatters. the notes differ per cathedral and there is no hint yet, so try them.',
+	crystal_cathedral: 'tune the four note blocks to the right notes and the vault wall shatters. the notes differ per cathedral. the lectern inside holds them.',
 };
 (content.landmarks ?? []).forEach((landmark, index) => {
 	const layer = layers.find((entry) => entry.landmark === landmark.kind);
