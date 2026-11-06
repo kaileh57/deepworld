@@ -1,0 +1,17 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "C": "minecraft:copper_nugget",
+  "G": "minecraft:glass"
+ },
+ "pattern": [
+  "C",
+  "G",
+  "G"
+ ],
+ "result": {
+  "id": "deepworld:jar",
+  "count": 4
+ }
+}

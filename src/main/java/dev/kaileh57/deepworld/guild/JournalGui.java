@@ -10,7 +10,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Items;
 
-public class JournalGui extends SimpleGui {
+public class JournalGui extends dev.kaileh57.deepworld.hud.DwGui {
 	private String open_discipline = "";
 	private String note = "";
 

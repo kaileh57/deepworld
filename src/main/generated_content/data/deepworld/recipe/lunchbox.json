@@ -1,0 +1,15 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "I": "minecraft:iron_ingot",
+  "C": "minecraft:chest"
+ },
+ "pattern": [
+  " I ",
+  "ICI"
+ ],
+ "result": {
+  "id": "deepworld:lunchbox"
+ }
+}

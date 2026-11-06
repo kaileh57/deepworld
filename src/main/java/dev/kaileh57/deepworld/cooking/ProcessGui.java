@@ -15,7 +15,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public class ProcessGui extends SimpleGui {
+public class ProcessGui extends dev.kaileh57.deepworld.hud.DwGui {
 	private final CookData.Station station;
 	private final BlockPos pos;
 	private final SimpleContainer work = new SimpleContainer(2);

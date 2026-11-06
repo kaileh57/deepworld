@@ -38,6 +38,7 @@ import org.slf4j.LoggerFactory;
 public class DeepWorld implements ModInitializer {
 	public static final String mod_id = "deepworld";
 	public static final Logger logger = LoggerFactory.getLogger(mod_id);
+	public static final double world_border = 6144.0;
 
 	public static Identifier id(String path) {
 		return Identifier.fromNamespaceAndPath(mod_id, path);
@@ -63,6 +64,11 @@ public class DeepWorld implements ModInitializer {
 		ServerLifecycleEvents.SERVER_STARTED.register(server -> Meals.server_bonus_slots = ServerState.get(server).bonus_meal_slots);
 		ServerLifecycleEvents.SERVER_STARTED.register(ForgingRecipes::reload);
 		ServerLifecycleEvents.SERVER_STARTED.register(dev.kaileh57.deepworld.living.Live::start);
+		ServerLifecycleEvents.SERVER_STARTED.register(server -> {
+			if (server.overworld().getWorldBorder().getSize() > world_border) {
+				server.overworld().getWorldBorder().setSize(world_border);
+			}
+		});
 		ServerLifecycleEvents.SERVER_STOPPING.register(server -> dev.kaileh57.deepworld.living.Live.stop());
 		ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resources, success) -> ForgingRecipes.reload(server));
 		ServerTickEvents.END_SERVER_TICK.register(server -> {

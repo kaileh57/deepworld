@@ -1,0 +1,16 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "W": "minecraft:white_wool",
+  "C": "minecraft:barrel"
+ },
+ "pattern": [
+  "WWW",
+  "WCW",
+  "WWW"
+ ],
+ "result": {
+  "id": "deepworld:insulated_hamper"
+ }
+}

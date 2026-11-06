@@ -9,7 +9,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public class CookGui extends SimpleGui {
+public class CookGui extends dev.kaileh57.deepworld.hud.DwGui {
 	private static final int[] input_indexes = {10, 11, 12, 13, 14, 15};
 	private static final int heat_index = 19;
 	private static final int cook_index = 21;

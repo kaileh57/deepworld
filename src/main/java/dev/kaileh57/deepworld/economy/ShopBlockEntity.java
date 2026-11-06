@@ -139,6 +139,9 @@ public class ShopBlockEntity extends BlockEntity implements Container {
 
 	@Override
 	public void preRemoveSideEffects(BlockPos pos, BlockState state) {
+		if (level != null && level.getServer() != null) {
+			Shops.forget(level.getServer(), pos);
+		}
 		if (level != null) {
 			for (int slot = 0; slot < config_first; slot++) {
 				Containers.dropItemStack(level, pos.getX(), pos.getY(), pos.getZ(), stacks.get(slot));

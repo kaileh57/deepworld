@@ -9,7 +9,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public class ForgeGui extends SimpleGui {
+public class ForgeGui extends dev.kaileh57.deepworld.hud.DwGui {
 	private static final int progress_index = 14;
 	private static final int flame_index = 21;
 	private final ForgeBlockEntity forge;

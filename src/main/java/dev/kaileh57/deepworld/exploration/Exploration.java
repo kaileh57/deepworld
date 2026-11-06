@@ -141,6 +141,14 @@ public final class Exploration {
 		return notes;
 	}
 
+	public static net.minecraft.world.item.ItemStack tuning_notes(BlockPos origin) {
+		int[] notes = cathedral_notes(origin);
+		String text = "the four bells only answer when tuned together.\n\nnorth-west: " + notes[0] + "\nnorth-east: " + notes[1] + "\nsouth-west: " + notes[2] + "\nsouth-east: " + notes[3] + "\n\ncount each from the lowest note.";
+		net.minecraft.world.item.ItemStack book = new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.WRITTEN_BOOK);
+		book.set(net.minecraft.core.component.DataComponents.WRITTEN_BOOK_CONTENT, new net.minecraft.world.item.component.WrittenBookContent(net.minecraft.server.network.Filterable.passThrough("tuning notes"), "deepline survey", 0, java.util.List.of(net.minecraft.server.network.Filterable.passThrough(Component.literal(text))), true));
+		return book;
+	}
+
 	public static void check_cathedral(ServerLevel level, ServerPlayer player, BlockPos origin) {
 		int[][] spots = {{-2, -3}, {2, -3}, {-2, 3}, {2, 3}};
 		int[] targets = cathedral_notes(origin);

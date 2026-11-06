@@ -10,7 +10,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public class SmithGui extends SimpleGui {
+public class SmithGui extends dev.kaileh57.deepworld.hud.DwGui {
 	private final SimpleContainer work = new SimpleContainer(2);
 	private String note = "tool left, quench liquid or gem right";
 

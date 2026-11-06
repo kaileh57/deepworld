@@ -203,7 +203,7 @@ public class CookBlockEntity extends BlockEntity implements Container {
 			setChanged();
 		} else if (status.equals("done")) {
 			done_ticks++;
-			if (stirs() && done_ticks > burn_after && !stacks.get(output_slot).isEmpty() && !CookData.tag(stacks.get(output_slot)).getStringOr("dish", "").isEmpty() && CookData.tag(stacks.get(output_slot)).getIntOr("quality", 0) > 0) {
+			if (stirs() && !station().no_burn() && done_ticks > burn_after && !stacks.get(output_slot).isEmpty() && !CookData.tag(stacks.get(output_slot)).getStringOr("dish", "").isEmpty() && CookData.tag(stacks.get(output_slot)).getIntOr("quality", 0) > 0) {
 				CookData.Dish def = output_def();
 				if (def != null) {
 					ItemStack burnt = Dishes.make(def, 0, "");

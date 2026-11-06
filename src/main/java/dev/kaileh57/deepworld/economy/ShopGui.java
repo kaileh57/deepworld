@@ -10,7 +10,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public class ShopGui extends SimpleGui {
+public class ShopGui extends dev.kaileh57.deepworld.hud.DwGui {
 	private final ShopBlockEntity shop;
 	private final boolean owner_mode;
 	private String note = "";
@@ -79,6 +79,13 @@ public class ShopGui extends SimpleGui {
 	public void onTick() {
 		if (shop.isRemoved()) {
 			close();
+		}
+	}
+
+	@Override
+	public void onRemoved() {
+		if (owner_mode && player.level().getServer() != null) {
+			Shops.record(player.level().getServer(), shop.getBlockPos(), shop);
 		}
 	}
 }

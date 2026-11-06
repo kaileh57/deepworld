@@ -13,7 +13,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public class FeastGui extends SimpleGui {
+public class FeastGui extends dev.kaileh57.deepworld.hud.DwGui {
 	private final SimpleContainer plates = new SimpleContainer(10);
 	private final BlockPos table;
 	private String note = "place up to 10 dishes, then serve";

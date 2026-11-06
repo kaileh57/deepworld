@@ -140,7 +140,10 @@ public record LandmarkFeature(String kind) implements Feature {
 				fill(level, o.offset(-2, -1, 6), o.offset(2, 3, 9), Blocks.CALCITE.defaultBlockState());
 				fill(level, o.offset(-1, 0, 6), o.offset(1, 2, 8), Blocks.AIR.defaultBlockState());
 				chest(level, o.offset(0, 0, 8), "landmarks/crystal_cathedral");
-				set(level, o.offset(0, 0, -5), Blocks.LECTERN.defaultBlockState());
+				set(level, o.offset(0, 0, -5), Blocks.LECTERN.defaultBlockState().setValue(net.minecraft.world.level.block.LecternBlock.HAS_BOOK, true));
+				if (level.getBlockEntity(o.offset(0, 0, -5)) instanceof net.minecraft.world.level.block.entity.LecternBlockEntity lectern) {
+					lectern.setBook(Exploration.tuning_notes(o));
+				}
 				Landmarks.record("cathedral", o);
 			}
 			case "sulfur_works" -> {

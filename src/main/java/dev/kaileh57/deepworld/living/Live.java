@@ -62,6 +62,19 @@ public final class Live {
 			commissions.add(entry);
 		}
 		root.add("commissions", commissions);
+		JsonArray shops = new JsonArray();
+		dev.kaileh57.deepworld.economy.Shops.get(server).listings.forEach((pos, lines) -> {
+			if (lines.size() > 1) {
+				JsonObject entry = new JsonObject();
+				entry.addProperty("owner", lines.get(0));
+				entry.addProperty("pos", pos);
+				JsonArray offers = new JsonArray();
+				lines.subList(1, lines.size()).forEach(offers::add);
+				entry.add("offers", offers);
+				shops.add(entry);
+			}
+		});
+		root.add("shops", shops);
 		ServerState state = ServerState.get(server);
 		Events.describe_goal(server).ifPresent(text -> root.addProperty("goal", text));
 		root.addProperty("goal_met", state.goal_target > 0 && state.goal_progress >= state.goal_target);

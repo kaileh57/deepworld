@@ -32,7 +32,7 @@ public final class CookData {
 		}
 	}
 
-	public record Station(String id, String name, String kind, String station, int slots, int max_heat, float speed, int time, String icon, List<JsonObject> visual) {
+	public record Station(String id, String name, String kind, String station, int slots, int max_heat, float speed, int time, String icon, List<JsonObject> visual, boolean no_burn) {
 	}
 
 	public record Process(String station, String input, String output, int count, int labor, String remainder) {
@@ -80,7 +80,7 @@ public final class CookData {
 			JsonObject s = element.getAsJsonObject();
 			List<JsonObject> visual = new ArrayList<>();
 			s.getAsJsonArray("visual").forEach(v -> visual.add(v.getAsJsonObject()));
-			stations.put(s.get("id").getAsString(), new Station(s.get("id").getAsString(), s.get("name").getAsString(), s.get("kind").getAsString(), s.get("station").getAsString(), s.has("slots") ? s.get("slots").getAsInt() : 1, s.has("max_heat") ? heat_level(s.get("max_heat").getAsString()) : 0, s.has("speed") ? s.get("speed").getAsFloat() : 1.0F, s.has("time") ? s.get("time").getAsInt() : 0, s.get("icon").getAsString(), visual));
+			stations.put(s.get("id").getAsString(), new Station(s.get("id").getAsString(), s.get("name").getAsString(), s.get("kind").getAsString(), s.get("station").getAsString(), s.has("slots") ? s.get("slots").getAsInt() : 1, s.has("max_heat") ? heat_level(s.get("max_heat").getAsString()) : 0, s.has("speed") ? s.get("speed").getAsFloat() : 1.0F, s.has("time") ? s.get("time").getAsInt() : 0, s.get("icon").getAsString(), visual, s.has("no_burn") && s.get("no_burn").getAsBoolean()));
 		}
 		for (JsonElement element : content.getAsJsonArray("processing")) {
 			JsonObject p = element.getAsJsonObject();

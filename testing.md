@@ -11,6 +11,9 @@ scripts/deploy.sh
 
 join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 
+- middle-click any item in a deepworld menu to get its wiki link.
+- the world border is 6144 blocks across.
+
 ## 2 the column
 
 - surface at y=1200. ten layers down to y=0, nether biomes below.
@@ -36,7 +39,12 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - food in your inventory spoils while you're online, 10x faster below y=600. preserved food doesn't. spoiled food stays edible but makes you sick.
 - forage: wild rice/chili/mint/tea/coffee/beans/oats/herbs on the surface, one plant per cave layer (truffle, glowcap, ash pepper, ember root, hush moss, forge fig).
 - mob drops: glow squid → blind eel, strider → lava fish, hoglin → hoglin chop, bone blocks → fossil marrow, amethyst clusters → geode nectar.
-- simplified: menus are chest layouts with item buttons. chests also stop spoilage, not just the ice box. feasts and the tasting menu come later.
+- cookware: clay pot (4 slots), copper pot (5), iron pot (5, high heat), enameled pot (5, high heat, never burns), mantle pot (6, extreme heat).
+- jar (copper nugget over 2 glass): hold a dish in the other hand and use the jar to seal it. jarred dishes never spoil.
+- lunchbox: 4 slots, nothing inside spoils. put jerky, pickled glowcaps, rice and aged cheese in and hit assemble for a miner's bento.
+- ration pack: 8 slots, preserved food only.
+- insulated hamper: 8 food slots plus ice in the first slot. food stays fresh while there's ice. one ice lasts an in-game day.
+- simplified: menus are chest layouts with item buttons. chests also stop spoilage, not just the ice box.
 
 ## 5 transit
 
@@ -71,7 +79,8 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - dowsing rod (resonant shard + sticks): right-click an ore to tune it, then hold it. it chimes louder and higher as you face the nearest one.
 - expedition logbook (leather + book and quill): writes itself. layers, landmarks, pages, deaths.
 - `/dw landmarks` lists generated landmarks.
-- simplified: landmarks are small builds, not jigsaw structures. no explorer maps yet (phase 9 trades). cathedral hint isn't written.
+- the cathedral lectern holds the tuning notes for that cathedral.
+- simplified: landmarks are small builds, not jigsaw structures. no explorer maps yet (phase 9 trades).
 
 ## 8 hazards
 
@@ -105,10 +114,10 @@ each one can be turned off in `config/deepworld.json` (cave_ins, firedamp, cold_
 - tremors: every 30-60 minutes a random layer with players in it shakes. your camera shakes for 2-3 seconds. wide unsupported rooms may cave in, and a fresh ore seam appears inside nearby rock. tremors only touch blocks 12+ below the surface and out of the sky. off with `tremors` in the config. `/dw tremor` starts one where you stand.
 - weekly goal: one shared counter per real week (shown on the record board). meeting it gives everyone an extra meal slot for a week.
 - `/wiki` links the held item's page. `/wiki <name>` links any item, block or dish. set `wiki_url` in `config/deepworld.json`.
-- live data: the server serves `http://<host>:8125/live.json` (online players and their layer, records, commissions, goal, recent events) and writes `deepworld_live.json`. the wiki's server page reads it. `live_port: 0` turns it off.
+- live data: the server serves `http://<host>:8125/live.json` (online players and their layer, records, commissions, shops, goal, recent events) and writes `deepworld_live.json`. the wiki's server page reads it. `live_port: 0` turns it off.
 - wiki: `cd wiki && npm run build && npm run preview`, then open `localhost:4321`. the journal page hides each page behind a spoiler.
 - messages: the mod never posts to chat on its own. notices go on the action bar for 4 seconds, and big moments (milestones, breakthrough, tasting menu) are titles. only things you ask for (survey kit, trait check) answer in chat.
-- simplified: shops aren't listed on the live page. the weekly goal resets on real-time weeks, even if the server is off.
+- simplified: the weekly goal resets on real-time weeks, even if the server is off.
 
 ## not tested
 

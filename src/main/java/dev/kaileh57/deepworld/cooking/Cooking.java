@@ -79,6 +79,7 @@ public final class Cooking {
 		});
 		Meals.init();
 		CookingTests.register();
+		FoodContainers.register();
 		LootTableEvents.MODIFY.register((key, builder, source, registries) -> {
 			if (!source.isBuiltin()) {
 				return;

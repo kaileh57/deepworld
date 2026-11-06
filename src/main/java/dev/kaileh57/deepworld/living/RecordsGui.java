@@ -10,7 +10,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
-public class RecordsGui extends SimpleGui {
+public class RecordsGui extends dev.kaileh57.deepworld.hud.DwGui {
 	private static final int[] slots = {1, 2, 3, 5, 6, 7, 10, 11, 12, 14, 15, 16};
 	private static final List<Item> icons = List.of(Items.DEEPSLATE, Items.BOWL, Items.CAKE, Items.COMPASS, Items.WRITABLE_BOOK, Items.EMERALD, Items.ANVIL, Items.NETHERITE_INGOT, Items.WHEAT, Items.EGG, Items.IRON_SWORD, Items.RAIL);
 

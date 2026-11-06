@@ -149,6 +149,26 @@
 			"id": "spoiled_food",
 			"name": "spoiled food",
 			"base": "minecraft:rotten_flesh"
+		},
+		{
+			"id": "jar",
+			"name": "jar",
+			"base": "minecraft:glass_bottle"
+		},
+		{
+			"id": "lunchbox",
+			"name": "lunchbox",
+			"base": "minecraft:paper"
+		},
+		{
+			"id": "ration_pack",
+			"name": "ration pack",
+			"base": "minecraft:paper"
+		},
+		{
+			"id": "insulated_hamper",
+			"name": "insulated hamper",
+			"base": "minecraft:paper"
 		}
 	],
 	"ingredients": {
@@ -2410,6 +2430,73 @@
 					"rz": 0
 				}
 			]
+		},
+		{
+			"id": "copper_pot",
+			"name": "copper pot",
+			"kind": "cook",
+			"station": "pot",
+			"slots": 5,
+			"max_heat": "medium",
+			"speed": 1.0,
+			"time": 30,
+			"icon": "minecraft:cauldron",
+			"visual": [
+				{
+					"block": "minecraft:water_cauldron[level=3]",
+					"scale": 0.8,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 0.0,
+					"rx": 0,
+					"ry": 0,
+					"rz": 0
+				},
+				{
+					"block": "minecraft:cut_copper",
+					"scale": 0.82,
+					"x": 0.0,
+					"y": -0.02,
+					"z": 0.0,
+					"rx": 0,
+					"ry": 0,
+					"rz": 0
+				}
+			]
+		},
+		{
+			"id": "enameled_pot",
+			"name": "enameled pot",
+			"kind": "cook",
+			"station": "pot",
+			"slots": 5,
+			"max_heat": "high",
+			"speed": 0.8,
+			"time": 30,
+			"no_burn": true,
+			"icon": "minecraft:cauldron",
+			"visual": [
+				{
+					"block": "minecraft:water_cauldron[level=3]",
+					"scale": 0.85,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 0.0,
+					"rx": 0,
+					"ry": 0,
+					"rz": 0
+				},
+				{
+					"block": "minecraft:white_glazed_terracotta",
+					"scale": 0.87,
+					"x": 0.0,
+					"y": -0.02,
+					"z": 0.0,
+					"rx": 0,
+					"ry": 0,
+					"rz": 0
+				}
+			]
 		}
 	],
 	"shaped": [
@@ -2589,6 +2676,77 @@
 			"key": {
 				"P": "minecraft:piston",
 				"B": "minecraft:barrel"
+			}
+		},
+		{
+			"result": "deepworld:copper_pot",
+			"pattern": [
+				"C C",
+				"C C",
+				"CCC"
+			],
+			"key": {
+				"C": "minecraft:copper_ingot"
+			}
+		},
+		{
+			"result": "deepworld:enameled_pot",
+			"pattern": [
+				"O",
+				"P"
+			],
+			"key": {
+				"O": "deepworld:obsidian_plate",
+				"P": "deepworld:iron_pot"
+			}
+		},
+		{
+			"result": "deepworld:jar",
+			"count": 4,
+			"pattern": [
+				"C",
+				"G",
+				"G"
+			],
+			"key": {
+				"C": "minecraft:copper_nugget",
+				"G": "minecraft:glass"
+			}
+		},
+		{
+			"result": "deepworld:lunchbox",
+			"pattern": [
+				" I ",
+				"ICI"
+			],
+			"key": {
+				"I": "minecraft:iron_ingot",
+				"C": "minecraft:chest"
+			}
+		},
+		{
+			"result": "deepworld:ration_pack",
+			"pattern": [
+				"SLS",
+				"LBL",
+				"SLS"
+			],
+			"key": {
+				"S": "minecraft:string",
+				"L": "minecraft:leather",
+				"B": "deepworld:salt"
+			}
+		},
+		{
+			"result": "deepworld:insulated_hamper",
+			"pattern": [
+				"WWW",
+				"WCW",
+				"WWW"
+			],
+			"key": {
+				"W": "minecraft:white_wool",
+				"C": "minecraft:barrel"
 			}
 		}
 	],

@@ -24,16 +24,22 @@ public final class WikiCommand {
 		dispatcher.register(Commands.literal("wiki")
 			.executes(context -> {
 				ServerPlayer player = context.getSource().getPlayer();
-				String name = "";
-				if (player != null) {
-					ItemStack held = player.getMainHandItem();
-					String dish = CookData.tag(held).getStringOr("dish", "");
-					name = !dish.isEmpty() ? dish : BuiltInRegistries.ITEM.getKey(held.getItem()).getNamespace().equals("deepworld") ? BuiltInRegistries.ITEM.getKey(held.getItem()).getPath() : "";
-				}
-				return send(context.getSource(), name);
+				return send(context.getSource(), player == null ? "" : name_of(player.getMainHandItem()));
 			})
 			.then(Commands.argument("name", StringArgumentType.greedyString())
 				.executes(context -> send(context.getSource(), StringArgumentType.getString(context, "name")))));
+	}
+
+	public static String name_of(ItemStack stack) {
+		String dish = CookData.tag(stack).getStringOr("dish", "");
+		if (!dish.isEmpty()) {
+			return dish;
+		}
+		return BuiltInRegistries.ITEM.getKey(stack.getItem()).getNamespace().equals("deepworld") ? BuiltInRegistries.ITEM.getKey(stack.getItem()).getPath() : "";
+	}
+
+	public static void link(ServerPlayer player, ItemStack stack) {
+		send(player.createCommandSourceStack(), name_of(stack));
 	}
 
 	public static String path_for(String raw) {

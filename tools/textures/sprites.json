@@ -414,6 +414,26 @@
 			"name": "safety_lamp",
 			"template": "lantern",
 			"palette": "safety_lamp"
+		},
+		{
+			"name": "jar",
+			"template": "jar",
+			"palette": "canning_jar"
+		},
+		{
+			"name": "lunchbox",
+			"template": "lunchbox",
+			"palette": "lunchbox"
+		},
+		{
+			"name": "ration_pack",
+			"template": "pack",
+			"palette": "ration_pack"
+		},
+		{
+			"name": "insulated_hamper",
+			"template": "hamper",
+			"palette": "insulated_hamper"
 		}
 	],
 	"stones": [

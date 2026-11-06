@@ -138,6 +138,12 @@ def selftest_gates():
     return results
 
 
+def recipe_gate():
+    check = subprocess.run([sys.executable, str(root / "tools" / "content" / "check_recipes.py")], capture_output=True, text=True)
+    lines = check.stdout.strip().splitlines()
+    return ("recipes reachable", check.returncode == 0, lines[:-1] if check.returncode else [])
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--worldgen", action="store_true")
@@ -152,14 +158,14 @@ def main():
         stderr=subprocess.STDOUT,
     )
     booted = wait_for_boot(server)
-    results = []
+    results = [recipe_gate()]
     if booted:
         if args.worldgen:
             results.extend(worldgen_gates())
         results.extend(selftest_gates())
         log_text = log_file.read_text(errors="replace")
         passed, detail = gate_clean_boot(log_text)
-        results.insert(0, ("clean boot", passed, detail))
+        results.insert(1, ("clean boot", passed, detail))
         try:
             rcon.run("stop")
         except OSError:

@@ -14,7 +14,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public class BoardGui extends SimpleGui {
+public class BoardGui extends dev.kaileh57.deepworld.hud.DwGui {
 	private String note = "";
 
 	public BoardGui(ServerPlayer player) {

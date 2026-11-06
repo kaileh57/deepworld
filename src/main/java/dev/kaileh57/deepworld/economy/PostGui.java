@@ -13,7 +13,7 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public class PostGui extends SimpleGui {
+public class PostGui extends dev.kaileh57.deepworld.hud.DwGui {
 	private final SimpleContainer reward = new SimpleContainer(7);
 	private final SimpleContainer wanted = new SimpleContainer(1);
 	private int count = 1;
