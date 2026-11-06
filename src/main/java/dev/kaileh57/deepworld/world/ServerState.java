@@ -22,6 +22,8 @@ public class ServerState extends SavedData {
 	public long goal_ends;
 	public long bonus_until;
 	public long next_tremor;
+	public long boost_until;
+	public long breach;
 
 	public static final Codec<ServerState> codec = RecordCodecBuilder.create(i -> i.group(
 		Codec.INT.optionalFieldOf("bonus_meal_slots", 0).forGetter(s -> s.bonus_meal_slots),
@@ -35,8 +37,10 @@ public class ServerState extends SavedData {
 		Codec.INT.optionalFieldOf("goal_progress", 0).forGetter(s -> s.goal_progress),
 		Codec.LONG.optionalFieldOf("goal_ends", 0L).forGetter(s -> s.goal_ends),
 		Codec.LONG.optionalFieldOf("bonus_until", 0L).forGetter(s -> s.bonus_until),
-		Codec.LONG.optionalFieldOf("next_tremor", 0L).forGetter(s -> s.next_tremor)
-	).apply(i, (slots, gourmet, tasting, breakthrough, who, events, goal_counter, goal_target, goal_progress, goal_ends, bonus_until, next_tremor) -> {
+		Codec.LONG.optionalFieldOf("next_tremor", 0L).forGetter(s -> s.next_tremor),
+		Codec.LONG.optionalFieldOf("boost_until", 0L).forGetter(s -> s.boost_until),
+		Codec.LONG.optionalFieldOf("breach", 0L).forGetter(s -> s.breach)
+	).apply(i, (slots, gourmet, tasting, breakthrough, who, events, goal_counter, goal_target, goal_progress, goal_ends, bonus_until, next_tremor, boost_until, breach) -> {
 		ServerState state = new ServerState();
 		state.bonus_meal_slots = slots;
 		state.gourmet_awarded = gourmet;
@@ -50,6 +54,8 @@ public class ServerState extends SavedData {
 		state.goal_ends = goal_ends;
 		state.bonus_until = bonus_until;
 		state.next_tremor = next_tremor;
+		state.boost_until = boost_until;
+		state.breach = breach;
 		return state;
 	}));
 

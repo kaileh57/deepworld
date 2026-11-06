@@ -40,6 +40,7 @@ public final class Living {
 
 	public static void register() {
 		ExtraTests.register();
+		Events.register();
 		SelfTest.add("feast feeds the table with merged buffs", server -> {
 			ServerLevel level = server.overworld();
 			BlockPos pos = SelfTest.test_pos(level, 30);

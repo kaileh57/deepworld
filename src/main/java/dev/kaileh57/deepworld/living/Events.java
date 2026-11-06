@@ -31,6 +31,33 @@ import net.minecraft.world.level.block.state.BlockState;
 public final class Events {
 	public static final long week_ms = 7L * 24 * 60 * 60 * 1000;
 	public static final int breakthrough_y = 0;
+	public static final long boost_ticks = 24000L;
+	public static final int boost_radius = 512;
+
+	public static boolean boosted(MinecraftServer server, net.minecraft.world.phys.Vec3 where) {
+		ServerState state = ServerState.get(server);
+		if (!state.breakthrough_done || server.overworld().getGameTime() >= state.boost_until) {
+			return false;
+		}
+		BlockPos breach = BlockPos.of(state.breach);
+		return where == null || where.distanceToSqr(breach.getX(), breach.getY(), breach.getZ()) < (double) boost_radius * boost_radius;
+	}
+
+	public static void register() {
+		net.fabricmc.fabric.api.loot.v3.LootTableEvents.MODIFY_DROPS.register((table, context, drops) -> {
+			var key = table.unwrapKey().orElse(null);
+			if (key == null || !(key.equals(net.minecraft.world.level.storage.loot.BuiltInLootTables.NETHER_BRIDGE) || key.identifier().getPath().startsWith("chests/bastion"))) {
+				return;
+			}
+			if (boosted(context.getLevel().getServer(), context.getOptional(net.minecraft.world.level.storage.loot.parameters.LootContextParams.ORIGIN))) {
+				java.util.List<net.minecraft.world.item.ItemStack> extra = new java.util.ArrayList<>();
+				for (net.minecraft.world.item.ItemStack stack : drops) {
+					extra.add(stack.copy());
+				}
+				drops.addAll(extra);
+			}
+		});
+	}
 
 	private Events() {
 	}
@@ -84,6 +111,8 @@ public final class Events {
 		String name = player.getGameProfile().name();
 		state.breakthrough_done = true;
 		state.breakthrough_player = name;
+		state.boost_until = server.overworld().getGameTime() + boost_ticks;
+		state.breach = player.blockPosition().asLong();
 		state.log(name + " broke through to the nether stratum");
 		state.setDirty();
 		Hud.title_all(server, Component.literal("breakthrough").withStyle(ChatFormatting.GOLD), Component.literal(name + " reached the nether stratum").withStyle(ChatFormatting.GRAY));

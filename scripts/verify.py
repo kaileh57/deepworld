@@ -37,6 +37,7 @@ def prepare_run_dir(fresh):
     props_file = run_dir / "server.properties"
     props = read_props(props_file)
     props["enable-rcon"] = "true"
+    props["max-tick-time"] = "-1"
     props.setdefault("rcon.port", "25575")
     if not props.get("rcon.password"):
         props["rcon.password"] = secrets.token_urlsafe(18)

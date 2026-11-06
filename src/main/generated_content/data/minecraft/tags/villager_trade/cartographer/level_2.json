@@ -9,6 +9,8 @@
   "minecraft:cartographer/2/emerald_and_compass_village_plains_map",
   "minecraft:cartographer/2/emerald_and_compass_explorer_jungle_map",
   "minecraft:cartographer/2/emerald_and_compass_village_desert_map",
-  "deepworld:cartographer/2/emerald_survey_kit"
+  "deepworld:cartographer/2/emerald_survey_kit",
+  "deepworld:cartographer/2/map_miners_camp",
+  "deepworld:cartographer/2/map_fossil_dig"
  ]
 }

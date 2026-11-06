@@ -26,6 +26,12 @@ def trade(wants, wants_count, gives, gives_count, max_uses=12, xp=5):
     return entry
 
 
+def landmark_map(kind, price):
+    entry = trade("minecraft:emerald", price, "deepworld:landmark_map", 1, max_uses=3)
+    entry["gives"]["components"] = {"minecraft:custom_data": {"deepworld": {"map": kind}}}
+    return entry
+
+
 def notes(tier, price):
     entry = trade("minecraft:emerald", price, "deepworld:cooking_notes", 1, max_uses=4)
     entry["gives"]["components"] = {"minecraft:custom_data": {"deepworld": {"tier": tier}}}
@@ -48,8 +54,12 @@ add = {
     ("toolsmith", 5): {"emerald_smithing_bench": trade("minecraft:emerald", 12, "deepworld:smithing_bench", 1)},
     ("cleric", 2): {"emerald_sulfur": trade("minecraft:emerald", 2, "minecraft:sulfur", 4)},
     ("cleric", 3): {"emerald_sulfur_salt": trade("minecraft:emerald", 3, "deepworld:sulfur_salt", 4), "emerald_glowcap_essence": trade("minecraft:emerald", 6, "deepworld:glowcap_essence", 1)},
-    ("cartographer", 2): {"emerald_survey_kit": trade("minecraft:emerald", 8, "deepworld:survey_kit", 1)},
-    ("librarian", 2): {"emerald_logbook": trade("minecraft:emerald", 5, "deepworld:logbook", 1)},
+    ("cartographer", 2): {"emerald_survey_kit": trade("minecraft:emerald", 8, "deepworld:survey_kit", 1), "map_miners_camp": landmark_map("miners_camp", 6), "map_fossil_dig": landmark_map("fossil_dig", 8)},
+    ("cartographer", 3): {"map_crystal_cathedral": landmark_map("crystal_cathedral", 12), "map_sulfur_works": landmark_map("sulfur_works", 10), "map_tide_ruin": landmark_map("tide_ruin", 12)},
+    ("cartographer", 4): {"map_sculk_shrine": landmark_map("sculk_shrine", 16), "map_mantle_forge": landmark_map("mantle_forge", 18)},
+    ("cartographer", 5): {"map_the_gate": landmark_map("the_gate", 24)},
+    ("librarian", 2): {"emerald_logbook": trade("minecraft:emerald", 5, "deepworld:logbook", 1), "map_terminal": landmark_map("terminal", 4)},
+    ("librarian", 4): {"map_drowned_pump_station": landmark_map("drowned_pump_station", 10)},
     ("librarian", 3): {"emerald_guild_journal": trade("minecraft:emerald", 4, "deepworld:guild_journal", 1)},
     ("armorer", 3): {"emerald_safety_lamp": trade("minecraft:emerald", 6, "deepworld:safety_lamp", 1)},
     ("mason", 2): {"emerald_amethyst_lamp": trade("minecraft:emerald", 5, "deepworld:amethyst_lamp", 2)},

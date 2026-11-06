@@ -40,6 +40,7 @@ public final class Exploration {
 
 	public static void register() {
 		net.minecraft.core.Registry.register(BuiltInRegistries.FEATURE_TYPE, DeepWorld.id("landmark"), LandmarkFeature.codec);
+		ExplorerMaps.register();
 		ExplorationTests.register();
 		UseItemCallback.EVENT.register((player, level, hand) -> {
 			if (!(player instanceof ServerPlayer server_player)) {

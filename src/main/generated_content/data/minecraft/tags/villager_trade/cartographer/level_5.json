@@ -1,0 +1,8 @@
+{
+ "replace": true,
+ "values": [
+  "minecraft:cartographer/5/emerald_globe_banner_pattern",
+  "minecraft:cartographer/5/emerald_and_compass_woodland_mansion_map",
+  "deepworld:cartographer/5/map_the_gate"
+ ]
+}

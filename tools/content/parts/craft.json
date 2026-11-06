@@ -74,6 +74,11 @@
 			"id": "guild_journal",
 			"name": "guild journal",
 			"base": "minecraft:book"
+		},
+		{
+			"id": "landmark_map",
+			"name": "explorer map",
+			"base": "minecraft:map"
 		}
 	],
 	"ingredients": {

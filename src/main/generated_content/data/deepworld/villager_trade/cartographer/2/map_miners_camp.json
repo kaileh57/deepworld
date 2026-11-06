@@ -1,0 +1,19 @@
+{
+ "gives": {
+  "id": "deepworld:landmark_map",
+  "components": {
+   "minecraft:custom_data": {
+    "deepworld": {
+     "map": "miners_camp"
+    }
+   }
+  }
+ },
+ "max_uses": 3,
+ "reputation_discount": 0.05,
+ "wants": {
+  "id": "minecraft:emerald",
+  "count": 6
+ },
+ "xp": 5
+}

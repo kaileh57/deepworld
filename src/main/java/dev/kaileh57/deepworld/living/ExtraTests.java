@@ -63,6 +63,62 @@ public final class ExtraTests {
 			cook.setAttached(dev.kaileh57.deepworld.cooking.Cookbook.learned, new java.util.ArrayList<>());
 			return knows && first.tier() <= 1 && after == before + 1 && name.equals("bone broth|potato") ? null : "first " + (first == null ? "none" : first.id() + " t" + first.tier()) + " " + before + "->" + after + " " + name;
 		});
+		SelfTest.add("tide ruins build in lava", server -> {
+			ServerLevel level = server.overworld();
+			BlockPos origin = new BlockPos(-60, 1490, 40);
+			for (BlockPos pos : BlockPos.betweenClosed(origin.offset(-5, -4, -5), origin.offset(5, 3, 5))) {
+				level.setBlock(pos, pos.getY() < origin.getY() - 2 ? Blocks.STONE.defaultBlockState() : pos.getY() <= origin.getY() ? Blocks.LAVA.defaultBlockState() : Blocks.AIR.defaultBlockState(), 2);
+			}
+			boolean built = new dev.kaileh57.deepworld.exploration.LandmarkFeature("tide_ruin").build(level, level.getRandom(), origin);
+			boolean chest = level.getBlockState(origin).is(Blocks.CHEST);
+			if (level.getBlockEntity(origin) instanceof net.minecraft.world.Container container) {
+				container.clearContent();
+			}
+			for (BlockPos pos : BlockPos.betweenClosed(origin.offset(-5, -4, -5), origin.offset(5, 3, 5))) {
+				level.setBlock(pos, Blocks.AIR.defaultBlockState(), 2);
+			}
+			return built && chest ? null : "built " + built + " chest " + chest;
+		});
+		SelfTest.add("explorer maps point at the nearest station", server -> {
+			ServerLevel level = server.overworld();
+			BlockPos target = dev.kaileh57.deepworld.exploration.ExplorerMaps.target(level, new BlockPos(200, 1300, 30), "terminal");
+			ItemStack map = dev.kaileh57.deepworld.exploration.ExplorerMaps.draw(level, target, "terminal");
+			return target.getX() == 250 && map.is(Items.FILLED_MAP) && map.getHoverName().getString().contains("deepline station") ? null : "target " + target + " " + map;
+		});
+		SelfTest.add("breakthrough boosts nether loot near the breach", server -> {
+			dev.kaileh57.deepworld.world.ServerState state = dev.kaileh57.deepworld.world.ServerState.get(server);
+			boolean done = state.breakthrough_done;
+			long until = state.boost_until;
+			long breach = state.breach;
+			state.breakthrough_done = true;
+			state.boost_until = server.overworld().getGameTime() + 100;
+			state.breach = new BlockPos(0, -20, 0).asLong();
+			boolean near = Events.boosted(server, new net.minecraft.world.phys.Vec3(30, -40, 30));
+			boolean far = Events.boosted(server, new net.minecraft.world.phys.Vec3(2000, -40, 30));
+			state.breakthrough_done = done;
+			state.boost_until = until;
+			state.breach = breach;
+			state.setDirty();
+			return near && !far ? null : "near " + near + " far " + far;
+		});
+		SelfTest.add("settlements grow stalls and wells", server -> {
+			ServerLevel level = server.overworld();
+			BlockPos a = new BlockPos(-20, 1500, 40);
+			BlockPos b = new BlockPos(-10, 1500, 40);
+			for (BlockPos spot : List.of(a, b)) {
+				for (BlockPos pos : BlockPos.betweenClosed(spot.offset(-2, -2, -2), spot.offset(2, 4, 2))) {
+					level.setBlock(pos, pos.getY() < spot.getY() ? Blocks.STONE.defaultBlockState() : Blocks.AIR.defaultBlockState(), 2);
+				}
+			}
+			boolean stall = dev.kaileh57.deepworld.economy.Settlements.stall(level, a) && level.getBlockState(a).is(Blocks.BARREL);
+			boolean well = dev.kaileh57.deepworld.economy.Settlements.well(level, b) && level.getBlockState(b.below()).is(Blocks.WATER);
+			for (BlockPos spot : List.of(a, b)) {
+				for (BlockPos pos : BlockPos.betweenClosed(spot.offset(-2, -2, -2), spot.offset(2, 4, 2))) {
+					level.setBlock(pos, Blocks.AIR.defaultBlockState(), 2);
+				}
+			}
+			return stall && well ? null : "stall " + stall + " well " + well;
+		});
 		SelfTest.add("world border is the column width", server -> {
 			double size = server.overworld().getWorldBorder().getSize();
 			return size <= DeepWorld.world_border ? null : "border " + size;

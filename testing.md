@@ -107,7 +107,9 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - expedition logbook (leather + book and quill): writes itself. layers, landmarks, pages, deaths.
 - `/dw landmarks` lists generated landmarks.
 - the cathedral lectern holds the tuning notes for that cathedral.
-- simplified: landmarks are small builds, not jigsaw structures. no explorer maps yet (phase 9 trades).
+- explorer maps: cartographers sell maps to each landmark kind, librarians sell deepline station maps. use one to draw a real map with a red x on the nearest one already generated. if none has generated yet it stays blank.
+- tide ruins: sunken deepline ruins in the lava sea at y 486-488. they only surface at the lowest tide, with a chest inside.
+- simplified: landmarks are small builds, not jigsaw structures.
 
 ## 8 hazards
 
@@ -128,7 +130,7 @@ each one can be turned off in `config/deepworld.json` (cave_ins, firedamp, cold_
 - commissions board (craftable, put one at spawn): post a request with a reward (put the reward in the top row, one of the wanted item in the slot, set the count, post). others accept, then deliver; you collect what they brought from "collect deliveries". the deepline co-op posts up to 3 npc requests every half day.
 - serving counter: the first person to open it owns it. owner view: 18 stock slots, the till, and 4 trades (example stack to sell on top, price below and right). everyone else sees a shop and buys straight from your stock, even while you're offline.
 - villagers: trades are fixed per villager (rerolling the job block gives the same list). farmers no longer buy crops for emeralds; diamond gear is gone from smiths. new trades: regional seeds, spices, cookware, rails, lift stations, survey kits, journals, safety lamps, amethyst lamps.
-- settlements: places where people spend 90+ minutes attract a wandering trader every half day and slowly gain lamp posts, benches and barrels. deep outposts get a trader that buys torches, ice and food for deep goods.
+- settlements: places where people spend 90+ minutes attract a wandering trader every half day and slowly gain lamp posts, benches, barrels, market stalls and wells. deep outposts grow the same way and get a trader that buys torches, ice and food for deep goods.
 - simplified: no chef villager profession (the butcher sells spices instead). no player-minted currency.
 
 ## 10 living server
@@ -137,7 +139,7 @@ each one can be turned off in `config/deepworld.json` (cave_ins, firedamp, cold_
 - tasting menu: serve 10 dishes that between them use a signature ingredient from every layer (list in `tools/content/parts/economy.json`, `tasting_layers`). the first time, everyone gets a permanent extra meal slot.
 - 72 more dishes, 125 total.
 - record board (lectern recipe): server bests for depth, dishes, feasts, landmarks, pages, commissions, forging and more. nothing is announced.
-- breakthrough: the first player below y=0 puts a title on everyone's screen. only fires once per world.
+- breakthrough: the first player below y=0 puts a title on everyone's screen. for one in-game day after, fortress and bastion chests within 512 blocks of the breach hold double loot. only fires once per world.
 - tremors: every 30-60 minutes a random layer with players in it shakes. your camera shakes for 2-3 seconds. wide unsupported rooms may cave in, and a fresh ore seam appears inside nearby rock. tremors only touch blocks 12+ below the surface and out of the sky. off with `tremors` in the config. `/dw tremor` starts one where you stand.
 - weekly goal: one shared counter per real week (shown on the record board). meeting it gives everyone an extra meal slot for a week.
 - `/wiki` links the held item's page. `/wiki <name>` links any item, block or dish. set `wiki_url` in `config/deepworld.json`.

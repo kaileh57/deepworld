@@ -88,8 +88,8 @@ public class Settlements extends SavedData {
 					}
 				}
 			}
-			if (!deep && level.getRandom().nextInt(3) == 0) {
-				decorate(level, center);
+			if (level.getRandom().nextInt(3) == 0) {
+				decorate(level, center, deep);
 			}
 		}
 	}
@@ -117,10 +117,72 @@ public class Settlements extends SavedData {
 		offers.add(new MerchantOffer(new ItemCost(Items.COOKED_BEEF, 16), new ItemStack(Content.item("hush_moss"), 3), 4, 8, 0.05F));
 	}
 
-	private static void decorate(ServerLevel level, BlockPos center) {
+	public static boolean clear_area(ServerLevel level, BlockPos spot, int radius, int height) {
+		for (int x = -radius; x <= radius; x++) {
+			for (int z = -radius; z <= radius; z++) {
+				if (!level.getBlockState(spot.offset(x, -1, z)).isSolid()) {
+					return false;
+				}
+				for (int y = 0; y < height; y++) {
+					if (!level.getBlockState(spot.offset(x, y, z)).isAir()) {
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}
+
+	public static boolean stall(ServerLevel level, BlockPos spot) {
+		if (!clear_area(level, spot, 1, 4)) {
+			return false;
+		}
+		for (int x = -1; x <= 1; x += 2) {
+			for (int z = -1; z <= 1; z += 2) {
+				level.setBlockAndUpdate(spot.offset(x, 0, z), Blocks.SPRUCE_FENCE.defaultBlockState());
+				level.setBlockAndUpdate(spot.offset(x, 1, z), Blocks.SPRUCE_FENCE.defaultBlockState());
+			}
+		}
+		for (int x = -1; x <= 1; x++) {
+			for (int z = -1; z <= 1; z++) {
+				level.setBlockAndUpdate(spot.offset(x, 2, z), (x + z) % 2 == 0 ? Blocks.WOOL.red().defaultBlockState() : Blocks.WOOL.white().defaultBlockState());
+			}
+		}
+		level.setBlockAndUpdate(spot, Blocks.BARREL.defaultBlockState());
+		level.setBlockAndUpdate(spot.offset(0, 0, 1), Blocks.SPRUCE_SLAB.defaultBlockState());
+		return true;
+	}
+
+	public static boolean well(ServerLevel level, BlockPos spot) {
+		if (!clear_area(level, spot, 1, 4)) {
+			return false;
+		}
+		for (int x = -1; x <= 1; x++) {
+			for (int z = -1; z <= 1; z++) {
+				boolean middle = x == 0 && z == 0;
+				level.setBlockAndUpdate(spot.offset(x, -1, z), middle ? Blocks.WATER.defaultBlockState() : Blocks.COBBLESTONE.defaultBlockState());
+				if (!middle) {
+					level.setBlockAndUpdate(spot.offset(x, 0, z), Math.abs(x) + Math.abs(z) == 2 ? Blocks.COBBLESTONE_WALL.defaultBlockState() : Blocks.COBBLESTONE_SLAB.defaultBlockState());
+				}
+				level.setBlockAndUpdate(spot.offset(x, 2, z), Blocks.SPRUCE_SLAB.defaultBlockState());
+			}
+		}
+		for (int x = -1; x <= 1; x += 2) {
+			for (int z = -1; z <= 1; z += 2) {
+				level.setBlockAndUpdate(spot.offset(x, 1, z), Blocks.SPRUCE_FENCE.defaultBlockState());
+			}
+		}
+		return true;
+	}
+
+	private static void decorate(ServerLevel level, BlockPos center, boolean deep) {
 		var random = level.getRandom();
-		BlockPos spot = level.getHeightmapPos(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, center.offset(random.nextInt(17) - 8, 0, random.nextInt(17) - 8));
-		if (!level.getBlockState(spot).isAir() || !level.getBlockState(spot.below()).isSolid()) {
+		BlockPos spot = deep ? floor(level, center.offset(random.nextInt(17) - 8, 0, random.nextInt(17) - 8)) : level.getHeightmapPos(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, center.offset(random.nextInt(17) - 8, 0, random.nextInt(17) - 8));
+		if (spot == null || !level.getBlockState(spot).isAir() || !level.getBlockState(spot.below()).isSolid()) {
+			return;
+		}
+		int roll = random.nextInt(10);
+		if (roll == 0 && well(level, spot) || roll == 1 && stall(level, spot)) {
 			return;
 		}
 		switch (random.nextInt(3)) {

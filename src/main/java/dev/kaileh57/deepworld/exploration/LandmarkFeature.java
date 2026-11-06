@@ -158,6 +158,40 @@ public record LandmarkFeature(String kind) implements Feature {
 				set(level, o.offset(-3, 0, -1), Blocks.SULFUR.defaultBlockState());
 				chest(level, o.offset(3, 0, -2), "landmarks/sulfur_works");
 			}
+			case "tide_ruin" -> {
+				if (!level.getBlockState(o).is(Blocks.LAVA)) {
+					return false;
+				}
+				for (int x = -3; x <= 3; x++) {
+					for (int z = -3; z <= 3; z++) {
+						for (int y = -1; y > -40; y--) {
+							BlockPos pos = o.offset(x, y, z);
+							BlockState there = level.getBlockState(pos);
+							if (y < -1 && !there.isAir() && !there.is(Blocks.LAVA)) {
+								break;
+							}
+							set(level, pos, (x + z) % 3 == 0 ? Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS.defaultBlockState() : Blocks.POLISHED_BLACKSTONE_BRICKS.defaultBlockState());
+							if (y < -1 && Math.abs(x) < 3 && Math.abs(z) < 3) {
+								break;
+							}
+						}
+						boolean edge = Math.abs(x) == 3 || Math.abs(z) == 3;
+						if (edge && random.nextInt(3) > 0) {
+							set(level, o.offset(x, 0, z), Blocks.POLISHED_BLACKSTONE_BRICKS.defaultBlockState());
+							if (random.nextBoolean()) {
+								set(level, o.offset(x, 1, z), Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS.defaultBlockState());
+							}
+						}
+					}
+				}
+				for (int x = -2; x <= 2; x++) {
+					if (random.nextInt(3) > 0) {
+						set(level, o.offset(x, 0, 1), Blocks.RAIL.defaultBlockState());
+					}
+				}
+				chest(level, o, "landmarks/tide_ruin");
+				Landmarks.record("tide_ruin", o);
+			}
 			case "bridge_pylons" -> {
 				for (int p = 0; p < 4; p++) {
 					BlockPos base = o.offset(p * 5 - 7, 0, 0);

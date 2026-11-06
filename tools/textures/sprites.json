@@ -494,6 +494,11 @@
 			"name": "magma_eel",
 			"template": "fish",
 			"palette": "magma_eel"
+		},
+		{
+			"name": "landmark_map",
+			"template": "notes",
+			"palette": "landmark_map"
 		}
 	],
 	"stones": [

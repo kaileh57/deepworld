@@ -223,8 +223,8 @@ def main():
         write(data / "deepworld" / "worldgen" / "placed_feature" / "landmark" / f"{landmark['kind']}.json", {"feature": f"deepworld:landmark/{landmark['kind']}", "placement": [
             {"type": "minecraft:rarity_filter", "chance": max(2, landmark["rarity"] // 2)}, {"type": "minecraft:count", "count": 8}, {"type": "minecraft:in_square"},
             {"type": "minecraft:height_range", "height": {"type": "minecraft:uniform", "min_inclusive": {"absolute": landmark["y"][0]}, "max_inclusive": {"absolute": landmark["y"][1]}}},
-            {"type": "minecraft:environment_scan", "direction_of_search": "down", "max_steps": 32, "target_condition": {"type": "minecraft:solid"}, "allowed_search_condition": {"type": "minecraft:matching_block_tag", "tag": "minecraft:air"}},
-            {"type": "minecraft:offset", "x": 0, "y": 1, "z": 0}, {"type": "minecraft:biome"}]})
+            *([{"type": "minecraft:environment_scan", "direction_of_search": "down", "max_steps": 32, "target_condition": {"type": "minecraft:solid"}, "allowed_search_condition": {"type": "minecraft:matching_block_tag", "tag": "minecraft:air"}},
+            {"type": "minecraft:offset", "x": 0, "y": 1, "z": 0}] if landmark.get("scan", True) else []), {"type": "minecraft:biome"}]})
     pages_by_landmark = {}
     for page in content.get("journal_pages", []):
         pages_by_landmark.setdefault(page["landmark"], []).append(page)

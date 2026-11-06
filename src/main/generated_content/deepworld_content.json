@@ -352,6 +352,11 @@
    "base": "minecraft:book"
   },
   {
+   "id": "landmark_map",
+   "name": "explorer map",
+   "base": "minecraft:map"
+  },
+  {
    "id": "safety_lamp",
    "name": "safety lamp",
    "base": "minecraft:soul_lantern"
@@ -7392,6 +7397,20 @@
    ],
    "rarity": 60,
    "note_tier": 4
+  },
+  {
+   "kind": "tide_ruin",
+   "name": "tide ruin",
+   "biomes": [
+    "deepworld:lava_sea"
+   ],
+   "y": [
+    486,
+    488
+   ],
+   "rarity": 16,
+   "note_tier": 3,
+   "scan": false
   }
  ],
  "weekly_goals": [

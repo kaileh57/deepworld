@@ -924,6 +924,10 @@
 					{
 						"id": "deepworld:landmark/bridge_pylons",
 						"step": 7
+					},
+					{
+						"id": "deepworld:landmark/tide_ruin",
+						"step": 7
 					}
 				]
 			},
