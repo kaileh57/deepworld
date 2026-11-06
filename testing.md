@@ -20,6 +20,7 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - try: `/tp @s 0 1050 0`, then 950, 850, 750, 650, 520, 380, 220, 80, -60. fog, music and rock change per layer.
 - lava sea at y≈480-540. fortress: `/dw fortress` prints one below y=0.
 - `/dw slice 0 -300 600` writes a cross-section png to the server folder.
+- `/dw survey` on fresh terrain can take over a minute and trip the server watchdog. run it where chunks already exist.
 
 ## 3 mining
 
