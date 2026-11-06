@@ -23,6 +23,10 @@
   "deepworld:commissions_board",
   "deepworld:serving_counter",
   "deepworld:feast_table",
-  "deepworld:record_board"
+  "deepworld:record_board",
+  "deepworld:rail_station",
+  "deepworld:ticket_machine",
+  "deepworld:switch_box",
+  "deepworld:rail_signal"
  ]
 }

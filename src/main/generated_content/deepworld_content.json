@@ -1271,6 +1271,58 @@
     "L": "minecraft:leather",
     "B": "minecraft:writable_book"
    }
+  },
+  {
+   "result": "deepworld:rail_station",
+   "pattern": [
+    "B",
+    "R",
+    "S"
+   ],
+   "key": {
+    "B": "minecraft:bell",
+    "R": "minecraft:rail",
+    "S": "minecraft:polished_andesite"
+   }
+  },
+  {
+   "result": "deepworld:ticket_machine",
+   "pattern": [
+    "IPI",
+    "IRI",
+    "III"
+   ],
+   "key": {
+    "I": "minecraft:iron_ingot",
+    "P": "minecraft:paper",
+    "R": "minecraft:redstone"
+   }
+  },
+  {
+   "result": "deepworld:switch_box",
+   "pattern": [
+    "L",
+    "R",
+    "P"
+   ],
+   "key": {
+    "L": "minecraft:lever",
+    "R": "minecraft:redstone",
+    "P": "minecraft:spruce_planks"
+   }
+  },
+  {
+   "result": "deepworld:rail_signal",
+   "count": 2,
+   "pattern": [
+    "G",
+    "B",
+    "B"
+   ],
+   "key": {
+    "G": "minecraft:redstone_lamp",
+    "B": "minecraft:iron_bars"
+   }
   }
  ],
  "lang": {
@@ -6260,6 +6312,122 @@
      "y": 1.0,
      "z": 0.0,
      "rx": 70,
+     "ry": 0,
+     "rz": 0
+    }
+   ]
+  },
+  {
+   "id": "rail_station",
+   "name": "rail station",
+   "kind": "rail_station",
+   "station": "rail_station",
+   "icon": "minecraft:bell",
+   "visual": [
+    {
+     "block": "minecraft:polished_andesite",
+     "scale": 0.9,
+     "x": 0.0,
+     "y": 0.0,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "block": "minecraft:bell[attachment=floor]",
+     "scale": 0.6,
+     "x": 0.0,
+     "y": 0.9,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    }
+   ]
+  },
+  {
+   "id": "ticket_machine",
+   "name": "ticket machine",
+   "kind": "ticket",
+   "station": "ticket",
+   "icon": "minecraft:paper",
+   "visual": [
+    {
+     "block": "minecraft:iron_block",
+     "scale": 0.7,
+     "x": 0.0,
+     "y": 0.0,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "block": "minecraft:dispenser[facing=north]",
+     "scale": 0.6,
+     "x": 0.0,
+     "y": 0.7,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    }
+   ]
+  },
+  {
+   "id": "switch_box",
+   "name": "switch box",
+   "kind": "switch",
+   "station": "switch",
+   "icon": "minecraft:lever",
+   "visual": [
+    {
+     "block": "minecraft:spruce_planks",
+     "scale": 0.7,
+     "x": 0.0,
+     "y": 0.0,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "block": "minecraft:redstone_lamp[lit=false]",
+     "scale": 0.35,
+     "x": 0.0,
+     "y": 0.7,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    }
+   ]
+  },
+  {
+   "id": "rail_signal",
+   "name": "rail signal",
+   "kind": "signal",
+   "station": "signal",
+   "icon": "minecraft:redstone_torch",
+   "visual": [
+    {
+     "block": "minecraft:iron_bars",
+     "scale": 1.0,
+     "x": 0.0,
+     "y": 0.0,
+     "z": 0.0,
+     "rx": 0,
+     "ry": 0,
+     "rz": 0
+    },
+    {
+     "block": "minecraft:lime_concrete",
+     "scale": 0.3,
+     "x": 0.0,
+     "y": 1.0,
+     "z": 0.0,
+     "rx": 0,
      "ry": 0,
      "rz": 0
     }

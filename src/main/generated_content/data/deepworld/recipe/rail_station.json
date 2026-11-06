@@ -1,0 +1,17 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "B": "minecraft:bell",
+  "R": "minecraft:rail",
+  "S": "minecraft:polished_andesite"
+ },
+ "pattern": [
+  "B",
+  "R",
+  "S"
+ ],
+ "result": {
+  "id": "deepworld:rail_station"
+ }
+}

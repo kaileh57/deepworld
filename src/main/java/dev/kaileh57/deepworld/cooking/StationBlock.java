@@ -38,8 +38,20 @@ public class StationBlock extends Block implements PolymerBlock, BlockWithElemen
 		this.station = station;
 	}
 
+	public static final java.util.Set<String> rail_kinds = java.util.Set.of("rail_station", "switch", "signal");
+
 	public CookData.Station station() {
 		return station;
+	}
+
+	@Override
+	protected boolean isSignalSource(BlockState state) {
+		return station.kind().equals("switch");
+	}
+
+	@Override
+	protected int getSignal(BlockState state, net.minecraft.world.level.BlockGetter level, BlockPos pos, net.minecraft.core.Direction direction) {
+		return level.getBlockEntity(pos) instanceof dev.kaileh57.deepworld.transit.RailDevice device && device.powered ? 15 : 0;
 	}
 
 	@Override
@@ -88,12 +100,21 @@ public class StationBlock extends Block implements PolymerBlock, BlockWithElemen
 		if (station.kind().equals("counter")) {
 			return new dev.kaileh57.deepworld.economy.ShopBlockEntity(pos, state);
 		}
+		if (rail_kinds.contains(station.kind())) {
+			return new dev.kaileh57.deepworld.transit.RailDevice(pos, state);
+		}
 		return null;
 	}
 
 	@Override
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-		if (level.isClientSide() || type != Cooking.cook_entity) {
+		if (level.isClientSide()) {
+			return null;
+		}
+		if (type == dev.kaileh57.deepworld.transit.Transit.rail_entity) {
+			return (tick_level, pos, tick_state, entity) -> ((dev.kaileh57.deepworld.transit.RailDevice) entity).server_tick((ServerLevel) tick_level, pos);
+		}
+		if (type != Cooking.cook_entity) {
 			return null;
 		}
 		return (tick_level, pos, tick_state, entity) -> ((CookBlockEntity) entity).server_tick((ServerLevel) tick_level, pos);
@@ -108,6 +129,14 @@ public class StationBlock extends Block implements PolymerBlock, BlockWithElemen
 				new dev.kaileh57.deepworld.economy.BoardGui(server_player).open();
 			} else if (level.getBlockEntity(pos) instanceof dev.kaileh57.deepworld.economy.ShopBlockEntity shop) {
 				new dev.kaileh57.deepworld.economy.ShopGui(server_player, shop).open();
+			} else if (level.getBlockEntity(pos) instanceof dev.kaileh57.deepworld.transit.RailDevice device) {
+				switch (station.kind()) {
+					case "switch" -> dev.kaileh57.deepworld.transit.RailGui.switch_box(server_player, device);
+					case "signal" -> dev.kaileh57.deepworld.transit.RailGui.signal(server_player);
+					default -> dev.kaileh57.deepworld.transit.RailGui.station(server_player, device);
+				}
+			} else if (station.kind().equals("ticket")) {
+				dev.kaileh57.deepworld.transit.RailGui.ticket(server_player);
 			} else if (station.kind().equals("feast")) {
 				new dev.kaileh57.deepworld.living.FeastGui(server_player, pos).open();
 			} else if (station.kind().equals("records")) {

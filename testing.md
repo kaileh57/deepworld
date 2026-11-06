@@ -49,11 +49,19 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 ## 5 transit
 
 - rail speed comes from the block under the rail: copper 16 m/s, gold 32, cobalt steel block 48. carts speed up on their own over those beds. straight runs only at top speed, curves can derail.
-- lift: place lift stations at the same x/z on different floors. click one, pick a floor. the shaft between them must be clear. 8 m/s.
+- lift: place lift stations at the same x/z on different floors. click one, pick a floor. the shaft between them must be clear. 8 m/s (12 for focused engineers).
+- lift cable: each gold block installed (click the gold block button) lets the shaft reach 64 blocks. new shafts have none.
+- lift car: there's one car per shaft. if it's on another floor, call it and wait. freight mode sends everything in a chest or barrel next to this station to the one next to the other station.
 - paved blocks (gravel, cobble, packed mud, paths, stone bricks...) give speed i on foot, speed ii to horses. grass you walk over a lot becomes a path.
 - the deepline terminal sits at spawn (0, 1212, 0). lines run east 250 (depot), west 450 (worker camp), south 1000 and north 2000 (stations). tunnels, bridges, gaps every 500, collapses, signal cabins, derelict chest carts.
 - `/dw map 0 0 320` writes a top-down png.
-- simplified: no junction routing, signals or timetables yet. lift has no cable cost and no express car. shoring blocks are vanilla logs/fences/walls/bars (used by cave-ins in phase 8).
+- trains: click a cart with an iron chain, then the cart that goes behind it. up to 6 carts. shears on a cart uncouple it. the lead cart sets the speed.
+- rail station (bell on rail on andesite): put it beside the track. name it, and carts headed there stop there. modes: stop, unload (matching cargo from chest carts into a chest beside the station), load (the other way), dispatch (push a waiting cart east/west/north/south every 1-20 minutes, optionally with a destination). the top row of its menu is the cargo filter.
+- ticket machine: pick a named station. your cart, and any train you lead, is routed there.
+- switch box: put it beside the middle rail of a t-junction. tick which stations take the branch. it flips the rail as a routed cart comes near, and you can flip it by hand.
+- rail signal: put it beside the track. it holds a cart while any other cart is on the track ahead, up to the next signal. works both ways.
+- deepline signal cabins: 4 iron ingots on the rusted lever turn it into a working switch box.
+- simplified: shoring blocks are vanilla logs/fences/walls/bars (used by cave-ins in phase 8). followers are pulled along the lead cart's path rather than running their own physics.
 
 ## 6 disciplines and crafts
 

@@ -1,0 +1,17 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "G": "minecraft:redstone_lamp",
+  "B": "minecraft:iron_bars"
+ },
+ "pattern": [
+  "G",
+  "B",
+  "B"
+ ],
+ "result": {
+  "id": "deepworld:rail_signal",
+  "count": 2
+ }
+}

@@ -88,6 +88,7 @@ public class DeepWorld implements ModInitializer {
 			dev.kaileh57.deepworld.living.Events.tick(server, tick);
 			dev.kaileh57.deepworld.living.Live.tick(server, tick);
 			dev.kaileh57.deepworld.hud.Shake.tick(server);
+			dev.kaileh57.deepworld.transit.Carts.tick(server);
 			if (tick % 20 == 0) {
 				Hud.flush(server);
 			}

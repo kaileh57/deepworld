@@ -2,7 +2,6 @@ package dev.kaileh57.deepworld.transit;
 
 import dev.kaileh57.deepworld.content.Content;
 import eu.pb4.sgui.api.elements.GuiElementBuilder;
-import eu.pb4.sgui.api.gui.SimpleGui;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -76,30 +75,132 @@ public final class Lifts {
 		return true;
 	}
 
+	private static final Map<String, Long> calls = new HashMap<>();
+	private static final Map<UUID, Boolean> freight_mode = new HashMap<>();
+
+	public static String call_state(ServerLevel level, BlockPos here) {
+		LiftNetwork network = LiftNetwork.get(level.getServer());
+		Long arrives = calls.get(LiftNetwork.column(here) + " " + here.getY());
+		if (arrives != null) {
+			if (level.getGameTime() < arrives) {
+				return "coming";
+			}
+			calls.remove(LiftNetwork.column(here) + " " + here.getY());
+			network.move_car(here);
+		}
+		return network.car_y(here) == here.getY() ? "here" : "away";
+	}
+
+	public static void call(ServerLevel level, BlockPos here) {
+		LiftNetwork network = LiftNetwork.get(level.getServer());
+		int distance = Math.abs(network.car_y(here) - here.getY());
+		calls.put(LiftNetwork.column(here) + " " + here.getY(), level.getGameTime() + Math.max(20, (long) (distance / speed)));
+	}
+
+	public static net.minecraft.world.Container freight_box(ServerLevel level, BlockPos station) {
+		for (net.minecraft.core.Direction direction : net.minecraft.core.Direction.values()) {
+			if (direction != net.minecraft.core.Direction.UP && level.getBlockEntity(station.relative(direction)) instanceof net.minecraft.world.Container container) {
+				return container;
+			}
+		}
+		return null;
+	}
+
+	public static int send_freight(ServerLevel level, BlockPos from, BlockPos to) {
+		net.minecraft.world.Container source = freight_box(level, from);
+		net.minecraft.world.Container target = freight_box(level, to);
+		if (source == null || target == null) {
+			return -1;
+		}
+		int moved = 0;
+		for (int slot = 0; slot < source.getContainerSize(); slot++) {
+			net.minecraft.world.item.ItemStack stack = source.getItem(slot);
+			for (int t = 0; t < target.getContainerSize() && !stack.isEmpty(); t++) {
+				net.minecraft.world.item.ItemStack there = target.getItem(t);
+				if (there.isEmpty()) {
+					target.setItem(t, stack.copy());
+					moved += stack.getCount();
+					stack.setCount(0);
+				} else if (net.minecraft.world.item.ItemStack.isSameItemSameComponents(there, stack) && there.getCount() < there.getMaxStackSize()) {
+					int amount = Math.min(stack.getCount(), there.getMaxStackSize() - there.getCount());
+					there.grow(amount);
+					stack.shrink(amount);
+					moved += amount;
+				}
+			}
+			source.setItem(slot, stack.isEmpty() ? net.minecraft.world.item.ItemStack.EMPTY : stack);
+		}
+		source.setChanged();
+		target.setChanged();
+		LiftNetwork.get(level.getServer()).move_car(to);
+		return moved;
+	}
+
 	private static void open(ServerPlayer player, ServerLevel level, BlockPos here) {
 		List<BlockPos> list = stations(level, here);
-		SimpleGui gui = new SimpleGui(MenuType.GENERIC_9x3, player, false);
-		gui.setTitle(Component.literal("lift"));
+		LiftNetwork network = LiftNetwork.get(level.getServer());
+		String car = call_state(level, here);
+		boolean freight = freight_mode.getOrDefault(player.getUUID(), false);
+		dev.kaileh57.deepworld.hud.DwGui gui = new dev.kaileh57.deepworld.hud.DwGui(MenuType.GENERIC_9x3, player, false);
+		gui.setTitle(Component.literal(freight ? "lift · freight" : "lift"));
 		int index = 0;
 		for (BlockPos stop : list) {
-			if (index >= 27) {
+			if (index >= 24) {
 				break;
 			}
 			boolean current = stop.equals(here);
 			Layers.Layer layer = Layers.at(stop.getY());
 			String where = layer == null ? "surface" : layer.name();
 			boolean open_path = current || clear(level, here, stop);
-			GuiElementBuilder button = new GuiElementBuilder(current ? Items.CONCRETE_POWDER.lime() : open_path ? Items.GOLD_INGOT : Items.BARRIER)
+			boolean cabled = current || network.reaches(here, stop);
+			boolean ready = car.equals("here");
+			String note = current ? "you are here" : !open_path ? "shaft blocked" : !cabled ? "needs more cable" : !ready ? "call the car first" : freight ? "click to send the box next to this station" : "click to ride";
+			GuiElementBuilder button = new GuiElementBuilder(current ? Items.CONCRETE_POWDER.lime() : open_path && cabled && ready ? Items.GOLD_INGOT : Items.BARRIER)
 				.setName(Component.literal("y " + stop.getY() + " · " + where))
-				.addLoreLine(Component.literal(current ? "you are here" : open_path ? "click to ride" : "shaft blocked"));
-			if (!current && open_path) {
+				.addLoreLine(Component.literal(note));
+			if (!current && open_path && cabled && ready) {
 				button.setCallback((slot, type, action, g) -> {
 					g.close();
-					start(player, level, here, stop);
+					if (freight) {
+						int moved = send_freight(level, here, stop);
+						dev.kaileh57.deepworld.hud.Hud.notice(player, Component.literal(moved < 0 ? "both stations need a chest or barrel beside them" : "sent " + moved + " items"));
+					} else {
+						network.move_car(stop);
+						start(player, level, here, stop);
+					}
 				});
 			}
 			gui.setSlot(index++, button.build());
 		}
+		int cable = network.cable_at(here);
+		gui.setSlot(24, new GuiElementBuilder(Items.GOLD_BLOCK).setName(Component.literal("cable: " + cable + " (reaches " + cable * LiftNetwork.blocks_per_cable + " blocks)")).addLoreLine(Component.literal("click to install a gold block of cable")).setCallback((slot, type, action, g) -> {
+			if (player.getInventory().countItem(Items.GOLD_BLOCK) > 0 || player.isCreative()) {
+				if (!player.isCreative()) {
+					for (int slot_index = 0; slot_index < player.getInventory().getContainerSize(); slot_index++) {
+						if (player.getInventory().getItem(slot_index).is(Items.GOLD_BLOCK)) {
+							player.getInventory().getItem(slot_index).shrink(1);
+							break;
+						}
+					}
+				}
+				network.add_cable(here, 1);
+				level.playSound(null, here, SoundEvents.CHAIN_PLACE, SoundSource.BLOCKS, 1.0F, 1.0F);
+			}
+			g.close();
+			open(player, level, here);
+		}).build());
+		gui.setSlot(25, new GuiElementBuilder(car.equals("here") ? Items.MINECART : Items.BELL).setName(Component.literal(car.equals("here") ? "the car is here" : car.equals("coming") ? "the car is on its way" : "call the car")).setCallback((slot, type, action, g) -> {
+			if (car.equals("away")) {
+				call(level, here);
+				level.playSound(null, here, SoundEvents.BELL_BLOCK, SoundSource.BLOCKS, 1.0F, 1.0F);
+			}
+			g.close();
+		}).build());
+		gui.setSlot(26, new GuiElementBuilder(freight ? Items.CHEST : Items.SADDLE).setName(Component.literal(freight ? "freight mode" : "passenger mode")).addLoreLine(Component.literal("click to switch")).setCallback((slot, type, action, g) -> {
+			freight_mode.put(player.getUUID(), !freight);
+			g.close();
+			open(player, level, here);
+		}).build());
 		gui.open();
 	}
 
