@@ -77,7 +77,23 @@ join `localhost`, accept the pack. `/dw selftest` runs the built-in checks.
 - smithing bench (cauldron on smithing table): quench with water, rendered fat (tough), brine (keen), lava (tempered), ghast tear cordial (pristine). socket resonant shard (ore hum), lapis (xp), diamond (durability), quartz (mining speed), echo shard.
 - alchemy: brewing stands take sulfur as fuel. still makes mint oil, ember extract, glowcap essence, tonics. rendered fat and brine from the pot. saltpeter drops from tuff.
 - charges: black powder (3x3x3, half drops), shaped (12-deep bore), mining (ore only), demolition (5x5x3, no drops). right-click a block, run.
-- simplified: no truffle pig, pack mule, cave goat. hardy/calm traits are minor. lava fishing isn't in (lava fish come from striders).
+- truffle pig: feed a pig 6 brown mushrooms. trained pigs standing on moss underground dig up moss truffles now and then while you're near.
+- pack mule: use a pack harness (3 leather, 2 iron, chest) on a tamed llama. it gets 15 chest slots.
+- cave goats: goats living below y 1100 step up full blocks. milk them with a bucket for cave milk (cave custard, truffle milk stew).
+- lava fishing: an ember rod (steel, magma cream, fishing rod) cast into lava while you have fire resistance. hold the rod and wait. lava fish in the lava sea, magma eels below y 0.
+- honey: a full hive near cherry blossoms, sunflowers or glow berry vines gives cherry blossom (fresh), sunflower (sweet) or glow (glowing) honey instead of plain.
+- simplified: hardy/calm traits are minor. lava fishing has no bobber; the line is particles in the lava.
+
+## hunting
+
+- deep creatures are vanilla mobs changed when they spawn, since a vanilla client can't draw new ones:
+  - cave spider matriarchs (y 900-1000): nearly twice the size, 32 health. drop string and a matriarch fang.
+  - armored husks (y 800-900): iron helmet and chestplate. drop iron nuggets, sometimes a rusted helm.
+  - crystal creepers (y 700-800): a little bigger with amethyst on their backs. killed, they drop shards and sometimes a crystal heart. if they explode, they burst into shards.
+  - lava sea ghasts (y 450-600): an extra ghast tear, sometimes a ghast trophy.
+  - wardens: 2 echo shards and a warden trophy. deep hoglins (below y 300): sometimes a hoglin tusk.
+- trophies hang in item frames, count toward hunter milestones and the record board.
+- the hunters' lodge posts one bounty at a time on the commissions board, asking for trophies, ghast tears or echo shards.
 
 ## 7 exploration
 

@@ -121,7 +121,15 @@ public final class CookData {
 		String key = key(stack);
 		Ingredient ingredient = ingredients.get(key);
 		if (ingredient != null) {
-			return ingredient.props();
+			CompoundTag extra = tag(stack).getCompoundOrEmpty("props");
+			if (extra.isEmpty()) {
+				return ingredient.props();
+			}
+			Map<String, Integer> merged = new LinkedHashMap<>(ingredient.props());
+			for (String name : extra.keySet()) {
+				merged.merge(name, extra.getIntOr(name, 0), Integer::sum);
+			}
+			return merged;
 		}
 		Dish dish = dishes_by_key.get(key);
 		if (dish != null) {

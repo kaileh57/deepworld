@@ -32,6 +32,7 @@ public class Records extends SavedData {
 		tracked.put("crops_harvested", "crops harvested");
 		tracked.put("animals_bred", "animals bred");
 		tracked.put("deep_kills", "deep kills");
+		tracked.put("trophies", "trophies taken");
 		tracked.put("rails_laid", "rails laid");
 	}
 

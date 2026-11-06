@@ -83,9 +83,24 @@ public class Commissions extends SavedData {
 		{"deepworld:salt", "16"}, {"minecraft:experience_bottle", "8"}, {"deepworld:growth_tonic", "4"}, {"deepworld:black_powder_charge", "6"}
 	};
 
+	private static final String[][] bounties = {
+		{"deepworld:matriarch_fang", "1", "minecraft:diamond", "3"}, {"deepworld:rusted_helm", "1", "deepworld:steel_ingot", "8"},
+		{"deepworld:crystal_heart", "1", "minecraft:emerald", "16"}, {"deepworld:ghast_trophy", "1", "minecraft:gold_block", "2"},
+		{"deepworld:warden_trophy", "1", "minecraft:netherite_scrap", "1"}, {"deepworld:hoglin_tusk", "1", "minecraft:diamond", "4"},
+		{"minecraft:ghast_tear", "3", "minecraft:emerald", "12"}, {"minecraft:echo_shard", "4", "minecraft:diamond", "3"}
+	};
+
 	public void tick_npc(MinecraftServer server, RandomSource random) {
 		long npc_count = open.stream().filter(Commission::npc).count();
-		if (npc_count >= 3) {
+		if (npc_count >= 4) {
+			return;
+		}
+		boolean has_bounty = open.stream().anyMatch(c -> c.npc() && c.poster_name().equals("the hunters' lodge"));
+		if (!has_bounty && random.nextFloat() < 0.5F) {
+			String[] bounty = bounties[random.nextInt(bounties.length)];
+			List<ItemStack> prize = new ArrayList<>();
+			prize.add(new ItemStack(BuiltInRegistries.ITEM.getValue(Identifier.parse(bounty[2])), Integer.parseInt(bounty[3])));
+			post(new Commission(next_id, "", "the hunters' lodge", bounty[0], Integer.parseInt(bounty[1]), prize, "", "", true));
 			return;
 		}
 		String[] want = npc_wants[random.nextInt(npc_wants.length)];

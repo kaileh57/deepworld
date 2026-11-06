@@ -41,10 +41,6 @@ public final class GuildHooks {
 			}
 			if (entity.getType() == EntityTypes.WARDEN) {
 				Guild.add(player, "wardens", 1);
-				Guild.add(player, "trophies", 1);
-			}
-			if (entity.getType() == EntityTypes.GHAST && entity.getY() < 600 || entity.getType() == EntityTypes.HOGLIN && entity.getY() < 300) {
-				Guild.add(player, "trophies", 1);
 			}
 		});
 		HeatSystem.add_protection(player -> Guild.focused(player, "delver") ? 1 : 0);

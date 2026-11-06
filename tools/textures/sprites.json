@@ -444,6 +444,56 @@
 			"name": "cooking_notes",
 			"template": "notes",
 			"palette": "cooking_notes"
+		},
+		{
+			"name": "matriarch_fang",
+			"template": "bone",
+			"palette": "matriarch_fang"
+		},
+		{
+			"name": "rusted_helm",
+			"template": "helmet",
+			"palette": "rusted_helm"
+		},
+		{
+			"name": "crystal_heart",
+			"template": "shard",
+			"palette": "crystal_heart"
+		},
+		{
+			"name": "ghast_trophy",
+			"template": "blob",
+			"palette": "ghast_trophy"
+		},
+		{
+			"name": "warden_trophy",
+			"template": "blob",
+			"palette": "warden_trophy"
+		},
+		{
+			"name": "hoglin_tusk",
+			"template": "bone",
+			"palette": "hoglin_tusk"
+		},
+		{
+			"name": "cave_milk",
+			"template": "bottle",
+			"palette": "cave_milk"
+		},
+		{
+			"name": "ember_rod",
+			"template": "rod",
+			"palette": "ember_rod"
+		},
+		{
+			"name": "pack_harness",
+			"template": "kit",
+			"palette": "pack_harness"
+		},
+		{
+			"name": "magma_eel",
+			"template": "fish",
+			"palette": "magma_eel"
 		}
 	],
 	"stones": [

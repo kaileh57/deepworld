@@ -60,6 +60,7 @@ public class DeepWorld implements ModInitializer {
 		Exploration.register();
 		Hazards.register();
 		Economy.register();
+		dev.kaileh57.deepworld.hunting.Creatures.register();
 		dev.kaileh57.deepworld.living.Living.register();
 		ServerLifecycleEvents.SERVER_STARTED.register(server -> Meals.server_bonus_slots = ServerState.get(server).bonus_meal_slots);
 		ServerLifecycleEvents.SERVER_STARTED.register(ForgingRecipes::reload);
@@ -89,6 +90,7 @@ public class DeepWorld implements ModInitializer {
 			dev.kaileh57.deepworld.living.Live.tick(server, tick);
 			dev.kaileh57.deepworld.hud.Shake.tick(server);
 			dev.kaileh57.deepworld.transit.Carts.tick(server);
+			dev.kaileh57.deepworld.hunting.Animals.tick(server, tick);
 			if (tick % 20 == 0) {
 				Hud.flush(server);
 			}

@@ -357,6 +357,56 @@
    "base": "minecraft:soul_lantern"
   },
   {
+   "id": "matriarch_fang",
+   "name": "matriarch fang",
+   "base": "minecraft:bone"
+  },
+  {
+   "id": "rusted_helm",
+   "name": "rusted helm",
+   "base": "minecraft:iron_nugget"
+  },
+  {
+   "id": "crystal_heart",
+   "name": "crystal heart",
+   "base": "minecraft:amethyst_shard"
+  },
+  {
+   "id": "ghast_trophy",
+   "name": "ghast trophy",
+   "base": "minecraft:ghast_tear"
+  },
+  {
+   "id": "warden_trophy",
+   "name": "warden trophy",
+   "base": "minecraft:echo_shard"
+  },
+  {
+   "id": "hoglin_tusk",
+   "name": "hoglin tusk",
+   "base": "minecraft:bone"
+  },
+  {
+   "id": "cave_milk",
+   "name": "cave milk",
+   "base": "minecraft:bucket"
+  },
+  {
+   "id": "ember_rod",
+   "name": "ember rod",
+   "base": "minecraft:fishing_rod"
+  },
+  {
+   "id": "pack_harness",
+   "name": "pack harness",
+   "base": "minecraft:leather"
+  },
+  {
+   "id": "magma_eel",
+   "name": "magma eel",
+   "base": "minecraft:cod"
+  },
+  {
    "id": "dowsing_rod",
    "name": "dowsing rod",
    "base": "minecraft:stick"
@@ -1247,6 +1297,31 @@
    }
   },
   {
+   "result": "deepworld:ember_rod",
+   "pattern": [
+    "  S",
+    " SM",
+    "S R"
+   ],
+   "key": {
+    "S": "deepworld:steel_ingot",
+    "M": "minecraft:magma_cream",
+    "R": "minecraft:fishing_rod"
+   }
+  },
+  {
+   "result": "deepworld:pack_harness",
+   "pattern": [
+    "LLL",
+    "ICI"
+   ],
+   "key": {
+    "L": "minecraft:leather",
+    "I": "minecraft:iron_ingot",
+    "C": "minecraft:chest"
+   }
+  },
+  {
    "result": "deepworld:dowsing_rod",
    "pattern": [
     "  R",
@@ -1820,6 +1895,20 @@
     "preserved": 2
    },
    "fresh": 0
+  },
+  "deepworld:cave_milk": {
+   "properties": {
+    "rich": 2,
+    "earthy": 1
+   },
+   "fresh": 2400
+  },
+  "deepworld:magma_eel": {
+   "properties": {
+    "warming": 2,
+    "hearty": 1
+   },
+   "fresh": 2400
   }
  },
  "dishes": [
@@ -3322,6 +3411,93 @@
    "preserved": false,
    "heat": "none",
    "kind": "drink"
+  },
+  {
+   "id": "cave_custard",
+   "name": "cave custard",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:cave_milk",
+    "minecraft:egg",
+    "minecraft:sugar"
+   ],
+   "buffs": {
+    "rich": 2,
+    "sweet": 1
+   },
+   "nutrition": 7,
+   "saturation": 0.9,
+   "template": "bowl",
+   "palette": [
+    "#5a4a30",
+    "#8c7448",
+    "#c8b07a",
+    "#efe0b8",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "duration": 480,
+   "preserved": false,
+   "heat": "low",
+   "kind": "dish"
+  },
+  {
+   "id": "truffle_milk_stew",
+   "name": "truffle milk stew",
+   "station": "pot",
+   "ingredients": [
+    "deepworld:cave_milk",
+    "deepworld:moss_truffle",
+    "minecraft:potato"
+   ],
+   "buffs": {
+    "rich": 2,
+    "earthy": 2
+   },
+   "nutrition": 9,
+   "saturation": 1.0,
+   "template": "bowl",
+   "palette": [
+    "#3a2a1a",
+    "#6a4c2c",
+    "#a88458",
+    "#e0d0b0",
+    "#ffffff"
+   ],
+   "tier": 2,
+   "duration": 540,
+   "preserved": false,
+   "heat": "medium",
+   "kind": "dish"
+  },
+  {
+   "id": "fire_baked_eel",
+   "name": "fire-baked eel",
+   "station": "oven",
+   "ingredients": [
+    "deepworld:magma_eel",
+    "deepworld:blaze_spice",
+    "deepworld:butter"
+   ],
+   "buffs": {
+    "warming": 3,
+    "hearty": 2
+   },
+   "nutrition": 10,
+   "saturation": 1.1,
+   "template": "plate",
+   "palette": [
+    "#4a1408",
+    "#8a2a10",
+    "#d05a20",
+    "#f0a050",
+    "#ffe0a0"
+   ],
+   "tier": 4,
+   "duration": 600,
+   "preserved": false,
+   "heat": "extreme",
+   "kind": "dish"
   },
   {
    "id": "baked_apples",

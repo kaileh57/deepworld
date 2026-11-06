@@ -1,0 +1,17 @@
+{
+ "type": "minecraft:crafting_shaped",
+ "category": "misc",
+ "key": {
+  "S": "deepworld:steel_ingot",
+  "M": "minecraft:magma_cream",
+  "R": "minecraft:fishing_rod"
+ },
+ "pattern": [
+  "  S",
+  " SM",
+  "S R"
+ ],
+ "result": {
+  "id": "deepworld:ember_rod"
+ }
+}
